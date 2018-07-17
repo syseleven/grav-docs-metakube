@@ -1,5 +1,5 @@
 ---
-title: 'Change the SysEleven Stack password'
+title: 'Update the SysEleven Stack password'
 media_order: metakube_updating-openstack-password_01.png
 published: false
 date: '17-07-2018 16:57'
