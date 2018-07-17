@@ -4,6 +4,10 @@ media_order: 'metakube_create-cluster_00.png,metakube_create-cluster_01.png,meta
 published: false
 date: '17-07-2018 16:26'
 publish_date: '01-08-2018 12:00'
+taxonomy:
+    tag:
+        - metakube
+        - gui
 ---
 
 ## Place to live
