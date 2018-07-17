@@ -8,6 +8,7 @@ taxonomy:
     tag:
         - metakube
         - gui
+        - cluster
 ---
 
 ## Place to live
