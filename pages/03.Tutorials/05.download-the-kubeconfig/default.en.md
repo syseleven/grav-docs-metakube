@@ -1,5 +1,6 @@
 ---
 title: 'Download the kubeconfig'
+media_order: metakube_download-kubeconfig_01.png
 published: false
 date: '17-07-2018 16:45'
 publish_date: '01-08-2018 12:00'
