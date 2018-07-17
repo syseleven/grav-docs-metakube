@@ -7,11 +7,10 @@ taxonomy:
     tag:
         - metakube
         - cli
+        - node
 ---
 
-Worker nodes can be managed with our Web UI as described in [Add a worker node](./add-worker-node.md).
-Once you installed [kubectl](./using-kubectl.md), you can also manage them via Command-Line-Interface
-in order to automate creation, deletion and upgrades of nodes.
+Worker nodes can be managed with our Web UI as described in [add a worker node](/tutorials/add-a-worker-node). Once you installed [kubectl](/tutorials/using-kubectl), you can also manage them via Command-Line-Interface in order to automate creation, deletion and upgrades of nodes.
 
 ## Listing all available nodes
 
