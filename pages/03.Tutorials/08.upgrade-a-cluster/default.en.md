@@ -1,5 +1,6 @@
 ---
 title: 'Upgrade a cluster'
+media_order: 'metakube_upgrade-cluster_01.png,metakube_upgrade-cluster_02.png'
 published: false
 date: '17-07-2018 16:59'
 publish_date: '01-08-2018 12:00'
