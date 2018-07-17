@@ -10,9 +10,7 @@ taxonomy:
         - cli
 ---
 
-In order to use persistent storage over a [PersistentVolumeClaim](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) in your cluster,
-a [StorageClass](https://kubernetes.io/docs/concepts/storage/storage-classes/) needs to be specified there.
-
+In order to use persistent storage over a [PersistentVolumeClaim](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) in your cluster, a [StorageClass](https://kubernetes.io/docs/concepts/storage/storage-classes/) needs to be specified there.
 Kubernetes clusters managed by SysEleven already come with a default StorageClass for our [SysEleven Stack Block Storage](https://doc.syselevenstack.com/en/faq/block-storage/) as the default StorageClass built-in:
 
 ```bash
