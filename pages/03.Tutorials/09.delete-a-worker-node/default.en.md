@@ -11,8 +11,7 @@ taxonomy:
         - node
 ---
 
-To delete a worker node, navigate to `Manage cluster` and choose the cluster, from which you want to delete a worker node from.
-Click on the Trashbin button right besides the node you want to delete. You will get a popup, where you have to confirm the deletion.
+To delete a worker node, navigate to `Manage cluster` and choose the cluster, from which you want to delete a worker node from. Click on the trashbin button right besides the node you want to delete. You will get a popup, where you have to confirm the deletion
 
 ![](metakube_delete-node_01.png)
 
