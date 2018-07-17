@@ -18,12 +18,11 @@ When binding an external IP to the Load Balancer it is by default not directly r
 ## Install the Openstack Client
 
 You need to have `python-openstackclient` and `python-octaviaclient` installed on your workstation (which includes the `neutron` binary).
-
 See the [SysEleven Stack documentation](https://doc.syselevenstack.com/en/tutorials/openstack-cli/) for more information on how to install these.
 
 ## Configuring the LB Security Group
 
-Start by creating the LBaaS security group and allow the needed ports:
+Start by creating the LBaaS security group and allow the needed ports
 
 ```bash
 # create LBaaS Security Group, the name is arbitrary
@@ -81,11 +80,11 @@ $ openstack server add security group kubermatic-9jchzq5h7m nodeports
 
 ## Change the external IP
 
-If you want to change the external IP of the Load Balancer, you can associate a floating IP to the Load Balancer in the SysEleven Stack dashboard. A newly created Load Balancer already has an IP associated, to disassociate it open the menu `Project -> Network -> Load Balancers` and click on `Disassociate Floating IP`:
+If you want to change the external IP of the Load Balancer, you can associate a floating IP to the Load Balancer in the SysEleven Stack dashboard. A newly created Load Balancer already has an IP associated, to disassociate it open the menu `Project -> Network -> Load Balancers` and click on `Disassociate Floating IP`
 
 ![](kubernetes_create-loadbalancer_01.png)
 
-Afterwards you can associate another IP by clicking on `Associate Floating IP` in the same menu. This will trigger a popup, where you can either select an already existing floating IP or a floating IP pool:
+Afterwards you can associate another IP by clicking on `Associate Floating IP` in the same menu. This will trigger a popup, where you can either select an already existing floating IP or a floating IP pool
 
 ![](kubernetes_create-loadbalancer_02.png)
 
@@ -93,7 +92,7 @@ Afterwards you can associate another IP by clicking on `Associate Floating IP` i
 
 ### I created a Load Balancer, but can't reach the application
 
-This can have multiple reasons. Typical problems are:
+This can have multiple reasons. Typical problems are
 
 * _Your application is not reachable_. Try to use `kubectl port-forward $PODNAME 8080:80` \(port might differ\) and check, if you can reach your application on Port 80.
 * _The required port is not defined in the service manifest_. Check if the service lists all required ports with `kubectl get svc`.
