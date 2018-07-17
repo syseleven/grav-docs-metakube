@@ -11,10 +11,7 @@ taxonomy:
         - cli
 ---
 
-In order to route traffic to applications deploying in Kubernetes it is good practice to use an Ingress Controller which proxies
-incoming request to the correct Services and can handle for example TLS offloading.
-
-For more information on Ingress resources and Ingress Controllers see the [official Kubernetes documentation](https://kubernetes.io/docs/concepts/services-networking/ingress/).
+In order to route traffic to applications deploying in Kubernetes it is good practice to use an Ingress Controller which proxies incoming request to the correct Services and can handle for example TLS offloading. For more information on Ingress resources and Ingress Controllers see the [official Kubernetes documentation](https://kubernetes.io/docs/concepts/services-networking/ingress/).
 
 ## Nginx Ingress Controller
 
@@ -23,7 +20,6 @@ A popular ingress controller is the [nginx ingress controller](https://kubernete
 ### Nginx Ingress Controller Installation
 
 The easiest way to install it in your cluster is through [Helm](/tutorials/install-helm).
-
 When Helm is ready to be used, run
 
 ```bash
@@ -34,18 +30,15 @@ to install the Nginx Ingress Controller in the cluster. This will automatically 
 
 ### Configuring the Load Balancer in the SysEleven Stack
 
-When binding an external IP to the Load Balancer it is by default not directly reachable from the outside.
-
-See [Configure Load Balancer](/tutorials/configure-a-load-balancer) for a documentation how to make it accessible.
+When binding an external IP to the Load Balancer it is by default not directly reachable from the outside. See [Configure Load Balancer](/tutorials/configure-a-load-balancer) for a documentation how to make it accessible.
 
 ## Cert-Manager
 
-If you want to use [Let's Encrypt](https://letsencrypt.org/) to automatically manage TLS certificates for your ingress resources,
-you also have to install [cert-manager](https://cert-manager.readthedocs.io/en/latest/).
+If you want to use [Let's Encrypt](https://letsencrypt.org/) to automatically manage TLS certificates for your ingress resources, you also have to install [cert-manager](https://cert-manager.readthedocs.io/en/latest/).
 
 ### Cert-Manager Installation
 
-This can be done through [Helm](/tutorials/install-helm) as well:
+This can be done through [Helm](/tutorials/install-helm) as well
 
 ```bash
 helm install cert-manager --name cert-manager --namespace kube-system stable/cert-manager
@@ -53,7 +46,7 @@ helm install cert-manager --name cert-manager --namespace kube-system stable/cer
 
 ### Configure cluster issuer
 
-After installing the cert-manager you have to configure how it can fetch certificates. For that you have to add a ClusterIssuer to your Kubernetes Cluster:
+After installing the cert-manager you have to configure how it can fetch certificates. For that you have to add a _ClusterIssuer_ to your Kubernetes cluster
 
 ```bash
 cat <<'EOF' | kubectl apply -f -
