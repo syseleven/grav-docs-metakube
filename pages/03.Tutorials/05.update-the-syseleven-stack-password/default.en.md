@@ -10,9 +10,7 @@ taxonomy:
         - gui
 ---
 
-If you change your login password for the SysEleven Stack, you also have to change it in all clusters you created with these
-credentials.
-
+If you change your login password for the SysEleven Stack, you also have to change it in all clusters you created with these credentials.
 To do that go the the detail page of your cluster and click on `Edit Settings`.
 
 ![](metakube_updating-openstack-password_01.png)
