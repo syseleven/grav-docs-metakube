@@ -1,5 +1,5 @@
 ---
-title: 'Create Ingress Controller'
+title: 'Create an Ingress Controller'
 published: false
 date: '17-07-2018 17:17'
 publish_date: '01-08-2018 12:00'
