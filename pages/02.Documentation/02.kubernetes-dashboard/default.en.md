@@ -11,18 +11,19 @@ taxonomy:
 ---
 
 For convenience we install the [Kubernetes Dashboard](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) into every cluster.
-Though for security reasons it is not exposed publicly. In order to access it, [install kubectl](./using-kubectl.md) and run:
+Though for security reasons it is not exposed publicly. In order to access it, [install kubectl](/tutorials/using-kubectl) and run:
 
 ```bash
 kubectl proxy
 ```
 
-And then go to:
-
+And then open the following link in your browser:
 [`http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/`](http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/)
 
-![](kubernetes-dashboard-login.png)
-
-Use the downloaded kubeconfig to log in.
+Use the downloaded kubeconfig to log in
 
 ![](kubernetes-dashboard.png)
+
+You should now see the dashboard
+
+![](kubernetes-dashboard-login.png)
