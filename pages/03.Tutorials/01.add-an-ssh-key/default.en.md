@@ -10,7 +10,6 @@ taxonomy:
 ---
 
 MetaKube needs your SSH Public Key to create Kubernetes Clusters, so that you also can SSH into the created VMs if needed.
-
 To add an SSH Key navigate to `Manage SSH Keys` in the Dashboard and click on `Add SSH Key`.
 
 ![](metakube_add-ssh-key_01.png)
