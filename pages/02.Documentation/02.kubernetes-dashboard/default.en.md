@@ -1,5 +1,6 @@
 ---
 title: 'Kubernetes Dashboard'
+media_order: 'kubernetes-dashboard.png,kubernetes-dashboard-login.png'
 published: true
 date: '17-07-2018 16:47'
 publish_date: '01-08-2018 12:00'
