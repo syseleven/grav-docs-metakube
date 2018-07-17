@@ -3,6 +3,10 @@ title: 'Supported Kubernetes Versions'
 published: false
 date: '17-07-2018 16:54'
 publish_date: '01-08-2018 12:00'
+taxonomy:
+    tag:
+        - metakube
+        - kubernetes
 ---
 
 We automatically offer new Kubernetes versions once they are released and tested by us to be stable.
