@@ -59,7 +59,7 @@ When you click on next, you will see a summary and the cluster creation will sta
 ![Create Cluster](metakube_create-cluster_12.png)
 
 After all master components are ready, you cluster will create the configured amount of worker nodes in your SysEleven Stack tenant.
-Fully created nodes will be marked with a green dot, pending ones with a yellow circle. You should [download the kubeconfig](/metakube/download-kubeconfig.md) now,
+Fully created nodes will be marked with a green dot, pending ones with a yellow circle. You should [download the kubeconfig](/tutorials/download-the-kubeconfig) now,
 to be able to use `kubectl` with your cluster.
 
 After all nodes are created you can use `kubectl` to view and check the status of the created nodes:
