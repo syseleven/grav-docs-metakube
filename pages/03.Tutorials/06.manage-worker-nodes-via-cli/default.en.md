@@ -94,7 +94,7 @@ EOF
 
 ## Deleting a node
 
-Find the machine name of the node you want to delete (see [Listing all available nodes](#Listing all available nodes)) and execute
+Find the machine name of the node you want to delete (see _Listing all available nodes_) and execute
 
 ```bash
 kubectl delete machine machine-kubermatic-name
