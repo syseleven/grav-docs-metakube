@@ -8,7 +8,6 @@ taxonomy:
         - kubernetes
         - cli
         - service
-        - ingress
         - deployment
 ---
 
@@ -16,7 +15,7 @@ This tutorial describes how you can deploy a demo application to the cluster.
 
 ## Requirements
 
-* A working ingress controller and cert-manager as described in [Create Ingress Controller](create-ingress-controller.md).
+* A working ingress controller and cert-manager as described in [Create Ingress Controller](/tutorials/create-ingress-controller).
 * A DNS record pointing to the external IP of the ingress controller.
 
 ## Deploying an application
