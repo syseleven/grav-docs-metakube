@@ -1,5 +1,6 @@
 ---
 title: 'Add a worker node'
+media_order: 'metakube_add-node_01.png,metakube_add-node_02.png,metakube_add-node_03.png,metakube_add-node_04.png'
 date: '17-07-2018 17:45'
 taxonomy:
     tag:
