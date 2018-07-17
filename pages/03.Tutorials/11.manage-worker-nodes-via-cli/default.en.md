@@ -10,11 +10,11 @@ taxonomy:
         - node
 ---
 
-Worker nodes can be managed with our Web UI as described in [add a worker node](/tutorials/add-a-worker-node). Once you installed [kubectl](/tutorials/using-kubectl), you can also manage them via Command-Line-Interface in order to automate creation, deletion and upgrades of nodes.
+Worker nodes can be managed with our web UI as described in [add a worker node](/tutorials/add-a-worker-node). Once you installed [kubectl](/tutorials/using-kubectl), you can also manage them via Command-Line-Interface (CLI) in order to automate creation, deletion and upgrades of nodes.
 
 ## Listing all available nodes
 
-To see a list of all nodes execute:
+To see a list of all nodes execute
 
 ```bash
 kubectl get nodes -o wide
@@ -28,7 +28,7 @@ kubectl get machines
 
 ## Adding a node
 
-To add a node via CLI, set up the following variables:
+To add a node via CLI, set up the following variables
 
 ```bash
 # Set up the flavor for the node
@@ -43,8 +43,7 @@ SSH_PUBLIC_KEY=$(cat ~/.ssh/id_rsa.pub)
 CLUSTER_NAME=$(kubectl config current-context)
 ```
 
-Afterwards run the following commands. You most likely do not need to change any
-of the remaining variables:
+Afterwards run the following commands. You most likely do not need to change any of the remaining variables
 
 ```bash
 OPERATING_SYSTEM="ubuntu"
