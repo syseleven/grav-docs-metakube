@@ -1,5 +1,6 @@
 ---
 title: 'Configure a Load Balancer'
+media_order: 'kubernetes_create-loadbalancer_01.png,kubernetes_create-loadbalancer_02.png'
 published: false
 date: '17-07-2018 17:14'
 publish_date: '01-08-2018 12:00'
@@ -87,12 +88,12 @@ If you want to change the external IP of the Load Balancer, you can associate a 
 A newly created Load Balancer already has an IP associated, to disassociate it open the menu `Project -> Network -> Load Balancers` and click
 on `Disassociate Floating IP`:
 
-![Create Load Balancer](../assets/kubernetes_create-loadbalancer_01.png)
+![](kubernetes_create-loadbalancer_01.png)
 
 Afterwards you can associate another IP by clicking on `Associate Floating IP` in the same menu. This will trigger a popup,
 where you can either select an already existing floating IP or a floating IP pool:
 
-![Associate IP](../assets/kubernetes_create-loadbalancer_02.png)
+![](kubernetes_create-loadbalancer_02.png)
 
 ## Troubleshooting
 
