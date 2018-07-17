@@ -8,6 +8,8 @@ taxonomy:
     tag:
         - metakube
         - gui
+routable: true
+visible: true
 ---
 
 To gain access to SysEleven MetaKube you need to register for [SysEleven Stack](https://www.syseleven.de/syseleven-stack/). Once you have access to the SysEleven Stack open a webbrowser and visit [metakube.syseleven.de](https://metakube.syseleven.de/).
