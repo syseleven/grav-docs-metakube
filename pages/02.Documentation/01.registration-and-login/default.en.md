@@ -6,7 +6,7 @@ date: '17-07-2018 15:33'
 publish_date: '01-08-2018 12:00'
 taxonomy:
     tag:
-        - kubermatic
+        - metakube
         - gui
 ---
 
