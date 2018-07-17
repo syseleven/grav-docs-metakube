@@ -13,7 +13,7 @@ In order to make it accessible you have to add a security group to the SysEleven
 it can be reached from the outside, and to your cluster nodes so they can be reached by (at least) the
 load balancer.
 
-## Install the SysEleven Stack Client
+## Install the Openstack Client
 
 You need to have `python-openstackclient` and `python-octaviaclient` installed on your workstation \(which includes the `neutron` binary\).
 
