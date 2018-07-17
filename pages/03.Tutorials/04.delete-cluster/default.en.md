@@ -11,7 +11,7 @@ taxonomy:
         - cluster
 ---
 
-To delete a cluster, navigate to `Manage cluster` and choose the cluster, which you want to delete. On the top right is a button `delete cluster`:
+To delete a cluster, navigate to `Manage cluster` and choose the cluster, which you want to delete. On the top right is a button `delete cluster`
 
 ![](metakube_delete-cluster_01.png)
 
