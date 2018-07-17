@@ -6,6 +6,8 @@ publish_date: '01-08-2018 12:00'
 taxonomy:
     tag:
         - helm
+        - kubernetes
+        - cli
 ---
 
 Helm is a package manager for Kubernetes which makes it easy to install common applications like an [Ingress Controller](create-ingress-controller.md) into your Kubernetes cluster.
