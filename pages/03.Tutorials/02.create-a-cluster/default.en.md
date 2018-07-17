@@ -1,5 +1,6 @@
 ---
 title: 'Create a cluster'
+media_order: 'metakube_create-cluster_00.png,metakube_create-cluster_01.png,metakube_create-cluster_02.png,metakube_create-cluster_03.png'
 published: false
 date: '17-07-2018 16:26'
 publish_date: '01-08-2018 12:00'
