@@ -15,5 +15,3 @@ MetaKube needs your SSH public key to create Kubernetes clusters, so that you al
  This will create a pop up. Enter a unique name and paste the complete content of the SSH key into the respective field
 
 ![Dialog to add an SSH key](image_add-key-dialog_01.png)
-
-test
