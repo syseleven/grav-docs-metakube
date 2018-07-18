@@ -44,4 +44,4 @@ This loadbalancer now exposes port 80 to the outside world and maps it to port 3
 
 ## Configuring the Load Balancer in the SysEleven Stack
 
-When binding an external IP to the Load Balancer it is by default not directly reachable from the outside. Also, it will actually not be able to reach the NodePorts of the cluster nodes (31228 and 30279 in the above example). See [Configure a Load Balancer](tutorials/configure-a-load-balancer) for a documentation how to make it accessible.
+When binding an external IP to the Load Balancer it is by default not directly reachable from the outside. Also, it will actually not be able to reach the NodePorts of the cluster nodes (31228 and 30279 in the above example). See [Configure a Load Balancer](/tutorials/configure-a-load-balancer) for a documentation how to make it accessible.
