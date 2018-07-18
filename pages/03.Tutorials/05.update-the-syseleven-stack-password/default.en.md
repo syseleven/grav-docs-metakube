@@ -1,5 +1,5 @@
 ---
-title: 'Update the Stack password'
+title: 'Update the SysEleven Stack password'
 published: true
 date: '18-07-2018 13:00'
 taxonomy:
