@@ -11,7 +11,7 @@ taxonomy:
 
 {{ page.content | toc }}
 
-# Place to live
+## Place to live
 
 To create a new cluster open the MetaKube dashboard and select the menu entry `Create Cluster`.
 Start by choosing a name
@@ -27,7 +27,7 @@ and the region, where the cluster shall live
 
 ![Menu to choose datacenter](image_datacenter_01.png)
 
-# Create the cluster
+## Create the cluster
 
 In the next step of the installer, enter the domain-name and your SysEleven Stack credentials into the `Provide credentials` tab
 
