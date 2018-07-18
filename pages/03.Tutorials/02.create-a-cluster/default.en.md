@@ -1,6 +1,5 @@
 ---
 title: 'Create a cluster'
-media_order: 'metakube_create-cluster_00.png,metakube_create-cluster_01.png,metakube_create-cluster_02.png,metakube_create-cluster_03.png,metakube_create-cluster_06.png,metakube_create-cluster_08.png,metakube_create-cluster_09.png,metakube_create-cluster_10.png,metakube_create-cluster_07.png,metakube_create-cluster_05.png,metakube_create-cluster_06.png,metakube_create-cluster_11.png,metakube_create-cluster_12.png'
 published: true
 date: '18-07-2018 13:00'
 taxonomy:
@@ -15,48 +14,48 @@ taxonomy:
 To create a new cluster open the MetaKube dashboard and select the menu entry `Create Cluster`.
 Start by choosing a name
 
-![](metakube_create-cluster_00.png)
-![](metakube_create-cluster_01.png)
+![Overview of cluster creation](image_overview_01.png)
+![Overview of cluster creation with filled out name](image_overview_02.png)
 
 the provider (on writing this document only SysEleven Stack is supported)
 
-![](metakube_create-cluster_02.png)
+![Menu to chose cloud provider](image_provider_01.png)
 
 and the region, where the cluster shall live
 
-![](metakube_create-cluster_03.png)
+![Menu to choose datacenter](image_datacenter_01.png)
 
 ## Create the cluster
 
 In the next step of the installer, enter the domain-name and your SysEleven Stack credentials into the `Provide credentials` tab
 
-![](metakube_create-cluster_06.png)
+![Overview of cluster settings](image_cluster-settings_01.png)
 
 Then choose the tenant where you want to create the cluster in in the drop-down
 
-![](metakube_create-cluster_07.png)
+![Overview of cluster settings with filled out tenant](image_cluster-settings_02.png)
 
 As node settings, we recommend at least 3 nodes sized `m1.small` or bigger
 
-![](metakube_create-cluster_08.png)
+![Overview of cluster settings with opened flavor dropdown](image_cluster-settings_03.png)
 
 You can also choose the operating system you want to use for your worker nodes
 
-![](metakube_create-cluster_09.png)
+![Overview of cluster settings with opened OS dropdown](image_cluster-settings_04.png)
 
 A default image tested and maintained by SysEleven is automatically chosen for the nodes, but you can also enter any image available to you in SysEleven Stack. To get a list of current base images, navigate to `Project -> Compute -> Images` in the SysEleven Stack dashbaord
 
-![](metakube_create-cluster_05.png)
+![Overview of openstack images](image_stack-images_01.png)
 
 Make sure to enter the exact name of the image you want to run on your machines, as listed in the images tab of the SysEleven stack dashboard.  
 The chosen SSH key will be used for authentication as user `apiserver` on all worker nodes.
 
-![](metakube_create-cluster_10.png)
+![Overview of cluster settings with opened SSH key dropdown](image_cluster-settings_05.png)
 
 When you click on next, you will see a summary and the cluster creation will start if you confirm. You will be forwarded to the creation overview on confirmation, to see your new cluster being deployed
 
-![](metakube_create-cluster_11.png)
-![](metakube_create-cluster_12.png)
+![Final overview of cluster settings](image_cluster-settings_06.png)
+![Cluster details in creation state](image_cluster-details_01.png)
 
 After all master components are ready, your cluster will create the configured amount of worker nodes in your SysEleven Stack tenant. Fully created nodes will be marked with a green dot, pending ones with a yellow circle. You should [download the kubeconfig](/tutorials/download-the-kubeconfig) now, to be able to use `kubectl` with your cluster.
 After all nodes are created you can use `kubectl` to view and check the status of the created nodes
