@@ -1,6 +1,5 @@
 ---
 title: 'Download the kubeconfig'
-media_order: metakube_download-kubeconfig_01.png
 published: true
 date: '18-07-2018 13:00'
 taxonomy:
@@ -11,4 +10,4 @@ taxonomy:
 
 To download the kubeconfig, navigate to `Manage Cluster` and select the correct cluster. On the top right you can find a button `Download config`.
 
-![](metakube_download-kubeconfig_01.png)
+![Downlaod config button in the top right corner](image_download-kubeconfig_01.png)
