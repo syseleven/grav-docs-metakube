@@ -73,8 +73,10 @@ $ openstack security group create nodeports
 # define Security Group Rules
 $ openstack security group rule create --ingress --protocol tcp --dst-port 30000:32767 --remote-ip 0.0.0.0/0 nodeports
 
-# add the security group to the cluster security group attached to all nodes
-$ openstack server add security group kubermatic-9jchzq5h7m nodeports
+# add the security group to the to all nodes
+$ openstack server add security group kubermatic-9jchzq5h7m-248n3 nodeports
+$ openstack server add security group kubermatic-9jchzq5h7m-dpvjh nodeports
+...
 ```
 
 ## Change the external IP
