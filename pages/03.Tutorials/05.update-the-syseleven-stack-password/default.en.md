@@ -1,12 +1,12 @@
 ---
-title: 'Update the SysEleven Stack password'
+title: 'Update the Stack password'
 media_order: metakube_updating-openstack-password_01.png
 published: true
 date: '18-07-2018 13:00'
 taxonomy:
     tag:
-        - metakube
         - gui
+        - metakube
 ---
 
 If you change your login password for the SysEleven Stack, you also have to change it in all clusters you created with these credentials.
