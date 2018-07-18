@@ -64,19 +64,21 @@ The previous step exposed the load balancer's external IP and ports to the outsi
 
 What's missing is that you'll have to make your cluster nodes accessible to the LB as well, so it can successfully forward TCP traffic to them. The nodes will receive the traffic on the service NodePorts belonging to the loadbalancer service. In the example setup from [Create a Load Balancer](/tutorials/create-a-load-balancer), those were ports 31228 and 30279. Kubernetes always chooses these ports to lie within the Kubernetes node port range, 30000...32767.
 
-You can either expose the entire node port range or just the specific NodePorts that the service is accessible on. In this example, we'll expose the entire range because it won't ever change and thus will be easier to manage when setting this up manually.
+You can either expose the entire node port range or just the specific NodePorts that the service is accessible on. In this example, we'll expose the entire range because it won't ever change and thus will be easier to manage when setting this up manually. Please be aware that this will also expose any other NodePort services that you might have created manually.
+
+So we need to add an ingress rule for TCP ports 30000...32767 to an Openstack security group on all nodes. We could create such a group and add it to all nodes, but fortunatey MetaKube already defines a security group that's automatically added to all nodes (sometimes called the "node security group"). We'll just add our ingress rule to that group. The group's is named `kubermatic-<cluster id>`, where `cluster id` is your cluster's unique ID, which is the second part of all the node names (see also the [Issue reporting guideline](/tutorials/Support/issue-reporting-guideline)):
 
 ```bash
-# create Node Security Group, the name is arbitrary
-$ openstack security group create nodeports
+# figure out cluster name from the node names
+$ kubectl get node
+NAME                          STATUS    ROLES     AGE       VERSION
+kubermatic-9jchzq5h7m-248n3   Ready     <none>    14d       v1.10.3
+kubermatic-9jchzq5h7m-dpvjh   Ready     <none>    14d       v1.10.3
+kubermatic-9jchzq5h7m-pk7dm   Ready     <none>    14d       v1.10.3
 
-# define Security Group Rules
-$ openstack security group rule create --ingress --protocol tcp --dst-port 30000:32767 --remote-ip 0.0.0.0/0 nodeports
-
-# add the security group to the to all nodes
-$ openstack server add security group kubermatic-9jchzq5h7m-248n3 nodeports
-$ openstack server add security group kubermatic-9jchzq5h7m-dpvjh nodeports
-...
+# => the cluster name is 9jchzq5h7m => the node security group is named kubermatic-9jchzq5h7m
+# add ingress rules to it exposing the NodePort range
+$ openstack security group rule create --ingress --protocol tcp --dst-port 30000:32767 --remote-ip 0.0.0.0/0 kubermatic-9jchzq5h7m
 ```
 
 ## Change the external IP
