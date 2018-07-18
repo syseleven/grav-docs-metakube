@@ -1,5 +1,5 @@
 ---
-title: 'Delete cluster'
+title: 'Delete a cluster'
 published: true
 date: '18-07-2018 13:00'
 taxonomy:
