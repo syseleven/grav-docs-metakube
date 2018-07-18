@@ -6,6 +6,7 @@ taxonomy:
     tag:
         - gui
         - metakube
+menu: 'Update the Stack password'
 ---
 
 If you change your login password for SysEleven Stack, you also have to change it in all clusters you created with these credentials.
