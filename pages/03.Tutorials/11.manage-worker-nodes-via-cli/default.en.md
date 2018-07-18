@@ -11,9 +11,13 @@ taxonomy:
 
 Worker nodes can be managed with our web UI as described in [add a worker node](/tutorials/add-a-worker-node). Once you installed [kubectl](/tutorials/using-kubectl), you can also manage them via Command-Line-Interface (CLI) in order to automate creation, deletion and upgrades of nodes.
 
-## Listing all available nodes
+[List all available nodes](#list-all-available-nodes)
+[Add a node](#add-a-node)
+[Delete a node](#delete-a-node)
 
-To see a list of all nodes execute
+## List all available nodes
+
+To get a list of all nodes execute
 
 ```bash
 kubectl get nodes -o wide
@@ -25,7 +29,7 @@ Every node is managed by a machine resource, to list all machine resources, exec
 kubectl get machines
 ```
 
-## Adding a node
+## Add a node
 
 To add a node via CLI, set up the following variables
 
@@ -89,7 +93,7 @@ spec:
 EOF
 ```
 
-## Deleting a node
+## Delete a node
 
 Find the machine name of the node you want to delete (see _Listing all available nodes_) and execute
 

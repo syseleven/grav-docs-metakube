@@ -10,6 +10,11 @@ taxonomy:
         - node
 ---
 
+[Add a new node](#add-a-new-node)
+[Duplicate an existing node](#duplicate-an-existing-node)
+
+## Add a new node
+
 To add a new worker node, navigate to `Manage Cluster` and choose the cluster, in which you want to add a new worker node. On the top right, click on `Add Node`
 
 ![Add Node button in the top right corner](image_add-node-button_01.png)
@@ -20,7 +25,7 @@ You will get a popup, where you can select how many nodes and which image the no
 
 When you click on `Add Node(s)` the popup will close, and you can see the new nodes in pending status.
 
-## Duplicating an existing node
+## Duplicate an existing node
 
 To make the process of adding a node faster, you can also duplicate an existing node configuration.
 Click on `duplicate node`.

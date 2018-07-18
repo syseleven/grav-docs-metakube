@@ -9,6 +9,9 @@ taxonomy:
         - cluster
 ---
 
+[Upgrade master components](#upgrade-master-components)
+[Upgrade worker nodes](#upgrade-worker-nodes)
+
 ## Upgrade master components
 
 When an upgrade for the master nodes is available, a blue text `upgrade available` will be shown besides the Master version
@@ -25,17 +28,17 @@ When initiated the master components will be upgraded in the background. All new
 
 The worker nodes can not be upgraded in place. This means they have to be replaced by newer versions to be upgraded. The basic upgrade path is
 
-1. Create new worker nodes
-2. Disable scheduling on the old worker nodes
-3. Drain one old worker node
-4. Delete drained worker node
+1. [Create new worker nodes](#create-new-worker-nodes)
+2. [Disable scheduling on old worker nodes](#disable-scheduling-on-old-worker-nodes)
+3. [Drain one old worker node](#drain-one-old-worker-node)
+4. [Delete drained worker node](#delete-drained-worker-node)
 5. go to 3 (or 1, if you did not create equally many new worker nodes) until all old worker nodes are deleted
 
 ### Create new worker nodes
 
 Create a set of new worker nodes. For detailed information on how to do this, refer to [Add a worker node](/tutorials/add-a-worker-node)
 
-### Disable scheduling on the old worker nodes
+### Disable scheduling on old worker nodes
 
 You can disable scheduling onto a worker node with `kubectl cordon ${node}`. Example:
 

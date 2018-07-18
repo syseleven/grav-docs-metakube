@@ -10,6 +10,10 @@ taxonomy:
         - deployment
 ---
 
+[Requirements](#requirements)
+[Deploy an application](#deploy-an-application)
+[Make the application accessible from the outside](#make-the-application-accessible-from-the-outside)
+
 This tutorial describes how you can deploy a demo application to the cluster.
 
 ## Requirements
@@ -17,7 +21,7 @@ This tutorial describes how you can deploy a demo application to the cluster.
 * A working ingress controller and cert-manager as described in [Create an Ingress Controller](/tutorials/create-an-ingress-controller).
 * A DNS record pointing to the external IP of the ingress controller.
 
-## Deploying an application
+## Deploy an application
 
 For this tutorial we are going the deploy the [nginx hello image](https://hub.docker.com/r/nginxdemos/hello/) to our cluster.
 For this create a [Deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)

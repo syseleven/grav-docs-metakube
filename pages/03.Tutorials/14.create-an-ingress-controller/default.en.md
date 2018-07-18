@@ -10,9 +10,15 @@ taxonomy:
         - cli
 ---
 
+[Nginx Ingress Controller](#nginx-ingress-controller)
+[Cert-Manager](3cert-manager)
+
 In order to route traffic to applications deploying in Kubernetes it is good practice to use an Ingress Controller which proxies incoming request to the correct Services and can handle for example TLS offloading. For more information on Ingress resources and Ingress Controllers see the [official Kubernetes documentation](https://kubernetes.io/docs/concepts/services-networking/ingress/).
 
 ## Nginx Ingress Controller
+
+[Nginx Ingress Controller Installation](#nginx-ingress-controller-installation)
+[Configuring the Load Balancer in SysEleven Stack](#configuring-the-load-balancer-in-syseleven-stack)
 
 A popular ingress controller is the [nginx ingress controller](https://kubernetes.github.io/ingress-nginx/).
 
@@ -26,11 +32,14 @@ helm install stable/nginx-ingress --name nginx-ingress --namespace kube-system  
 
 to install the Nginx Ingress Controller in the cluster. This will automatically create a [Type Load Balancer service](/tutorials/create-a-load-balancer) for you.
 
-### Configuring the Load Balancer in the SysEleven Stack
+### Configuring the Load Balancer in SysEleven Stack
 
 When binding an external IP to the Load Balancer it is by default not directly reachable from the outside. See [Configure Load Balancer](/tutorials/configure-a-load-balancer) for a documentation how to make it accessible.
 
 ## Cert-Manager
+
+[Cert-Manager Installation](#cert-manager-installation)
+[Configure cluster issuer](#configure-cluster-issuer)
 
 If you want to use [Let's Encrypt](https://letsencrypt.org/) to automatically manage TLS certificates for your ingress resources, you also have to install [cert-manager](https://cert-manager.readthedocs.io/en/latest/).
 

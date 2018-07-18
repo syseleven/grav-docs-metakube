@@ -10,9 +10,16 @@ taxonomy:
         - loadbalacer
 ---
 
+[Security group](#security-group)
+[Install the Openstack Client](#install-the-openstack-client)
+[Configuring the LB Security Group](#configuring-the-lb-security-group)
+[Configuring the Node Security Group](#configuring-the-node-security-group)
+[Change the external IP](#change-the-external-ip)
+[Troubleshooting](#troubleshooting)
+
 ## Security group
 
-When binding an external IP to the Load Balancer it is by default not directly reachable from the outside.In order to make it accessible you have to add a security group to the SysEleven Stack Load Balancer Resource so it can be reached from the outside, and to your cluster nodes so they can be reached by (at least) the load balancer.
+When binding an external IP to the Load Balancer it is by default not directly reachable from the outside. In order to make it accessible you have to add a security group to the SysEleven Stack Load Balancer Resource so it can be reached from the outside, and to your cluster nodes so they can be reached by (at least) the load balancer.
 
 ## Install the Openstack Client
 
