@@ -10,13 +10,13 @@ taxonomy:
         - node
 ---
 
-To add a new worker node, navigate to `Manage cluster` and choose the cluster, in which you want to add a new worker node. On the top right, click on `Add node`
+To add a new worker node, navigate to `Manage Cluster` and choose the cluster, in which you want to add a new worker node. On the top right, click on `Add Node`
 
-![](metakube_add-node_01.png)
+![Add Node button in the top right corner](image_add-node-button_01.png)
 
 You will get a popup, where you can select how many nodes and which image the nodes shall be based on
 
-![](metakube_add-node_02.png)
+![Dialog to add a new Node](image_add-node-dialog_01.png)
 
 When you click on `Add Node(s)` the popup will close, and you can see the new nodes in pending status.
 
@@ -25,8 +25,8 @@ When you click on `Add Node(s)` the popup will close, and you can see the new no
 To make the process of adding a node faster, you can also duplicate an existing node configuration.
 Click on `duplicate node`.
 
-![](metakube_add-node_03.png)
+![Duplicate Node button besides a node](image_duplicate-button_01.png)
 
 And confirm the creation of the new node
 
-![](metakube_add-node_04.png)
+![Dialog to duplicate Node](image_duplicate-dialog_01.png)
