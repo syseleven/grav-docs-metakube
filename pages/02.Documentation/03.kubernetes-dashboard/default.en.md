@@ -20,8 +20,8 @@ Then open the following link in your browser
 
 Use the [downloaded kubeconfig](/tutorials/download-the-kubeconfig) to log in
 
-![](kubernetes-dashboard-login.png)
+![Kubernetes Dashboard Login Page](kubernetes-dashboard-login.png)
 
 You should now see the dashboard
 
-![](kubernetes-dashboard.png)
+![Kubernetes Dashboard Main Page](kubernetes-dashboard.png)

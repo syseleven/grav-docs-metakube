@@ -91,7 +91,8 @@ Afterwards you can associate another IP by clicking on `Associate Floating IP` i
 
 ## Troubleshooting
 
-**I created a Load Balancer, but can't reach the application**
+### I created a Load Balancer, but can't reach the application
+
 This can have multiple reasons. Typical problems are
 
 * _Your application is not reachable_. Try to use `kubectl port-forward $PODNAME 8080:80` \(port might differ\) and check, if you can reach your application on Port 80.

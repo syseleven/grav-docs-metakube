@@ -1,0 +1,10 @@
+{
+  "name": "grav-docu-metakube",
+  "private": true,
+  "scripts": {
+    "lint": "markdownlint -c .markdownlint.json pages"
+  },
+  "devDependencies": {
+    "markdownlint-cli": "^0.11.0"
+  }
+}

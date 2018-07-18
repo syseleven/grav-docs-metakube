@@ -1,0 +1,12 @@
+{
+  "default": true,
+  "no-trailing-punctuation": {
+    "punctuation": ".,;:!"
+  },
+  "line-length": false,
+  "no-inline-html": false,
+  "first-heading-h1": {
+    "level": 2
+  },
+  "first-line-h1": false
+}
