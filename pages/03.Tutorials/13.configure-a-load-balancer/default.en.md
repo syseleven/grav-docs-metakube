@@ -83,16 +83,15 @@ $ openstack server add security group kubermatic-9jchzq5h7m-dpvjh nodeports
 
 If you want to change the external IP of the Load Balancer, you can associate a floating IP to the Load Balancer in the SysEleven Stack dashboard. A newly created Load Balancer already has an IP associated, to disassociate it open the menu `Project -> Network -> Load Balancers` and click on `Disassociate Floating IP`
 
-![](kubernetes_create-loadbalancer_01.png)
+![Disassociate Floating IP in SysEleven Stack](image_stack-fip-disassociate_01.png)
 
 Afterwards you can associate another IP by clicking on `Associate Floating IP` in the same menu. This will trigger a popup, where you can either select an already existing floating IP or a floating IP pool
 
-![](kubernetes_create-loadbalancer_02.png)
+![Associate Floating IP in SysEleven Stack](image_stack-fip-associate_01.png)
 
 ## Troubleshooting
 
 **I created a Load Balancer, but can't reach the application**
-
 This can have multiple reasons. Typical problems are
 
 * _Your application is not reachable_. Try to use `kubectl port-forward $PODNAME 8080:80` \(port might differ\) and check, if you can reach your application on Port 80.
