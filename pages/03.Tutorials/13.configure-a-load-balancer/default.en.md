@@ -5,9 +5,9 @@ published: true
 date: '18-07-2018 13:00'
 taxonomy:
     tag:
-        - loadbalacer
         - kubernetes
         - cli
+        - loadbalacer
 ---
 
 ## Security group
