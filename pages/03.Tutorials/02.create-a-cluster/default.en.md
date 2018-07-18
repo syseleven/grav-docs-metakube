@@ -9,7 +9,8 @@ taxonomy:
         - cluster
 ---
 
-{{ page.content | toc }}
+* [Place to live](#place_to_live)
+* [Create the cluster](#create_the_cluster)
 
 ## Place to live
 
