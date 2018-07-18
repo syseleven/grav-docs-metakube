@@ -9,8 +9,8 @@ taxonomy:
         - cluster
 ---
 
-* [Place to live](#place_to_live)
-* [Create the cluster](#create_the_cluster)
+* [Place to live](#place-to-live)
+* [Create the cluster](#create-the-cluster)
 
 ## Place to live
 
