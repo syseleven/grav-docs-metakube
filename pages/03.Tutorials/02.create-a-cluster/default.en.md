@@ -9,7 +9,6 @@ taxonomy:
         - cluster
 ---
 
-## Table of Content
 [Place to live](#place-to-live)
 [Create the cluster](#create-the-cluster)
 
