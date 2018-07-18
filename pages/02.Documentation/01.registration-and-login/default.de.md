@@ -1,8 +1,7 @@
 ---
 title: 'Registration and Login'
-published: false
-date: '17-07-2018 15:33'
-publish_date: '01-08-2018 12:00'
+published: true
+date: '18-07-2018 13:00'
 ---
 
 To gain access to SysEleven Kubernetes you need to register for [SysEleven Stack](https://www.syseleven.de/syseleven-stack/). Once you have access to the Stack open a webbrowser and visit [metakube.syseleven.de](https://metakube.syseleven.de).

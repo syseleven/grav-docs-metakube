@@ -1,9 +1,8 @@
 ---
 title: 'Update the SysEleven Stack password'
 media_order: metakube_updating-openstack-password_01.png
-published: false
-date: '17-07-2018 16:57'
-publish_date: '01-08-2018 12:00'
+published: true
+date: '18-07-2018 13:00'
 taxonomy:
     tag:
         - metakube

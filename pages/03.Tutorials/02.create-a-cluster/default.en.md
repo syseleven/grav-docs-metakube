@@ -1,9 +1,8 @@
 ---
 title: 'Create a cluster'
 media_order: 'metakube_create-cluster_00.png,metakube_create-cluster_01.png,metakube_create-cluster_02.png,metakube_create-cluster_03.png,metakube_create-cluster_06.png,metakube_create-cluster_08.png,metakube_create-cluster_09.png,metakube_create-cluster_10.png,metakube_create-cluster_07.png,metakube_create-cluster_05.png,metakube_create-cluster_06.png,metakube_create-cluster_11.png,metakube_create-cluster_12.png'
-published: false
-date: '17-07-2018 16:26'
-publish_date: '01-08-2018 12:00'
+published: true
+date: '18-07-2018 13:00'
 taxonomy:
     tag:
         - metakube

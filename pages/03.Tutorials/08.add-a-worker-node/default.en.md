@@ -1,9 +1,8 @@
 ---
 title: 'Add a worker node'
 media_order: 'metakube_add-node_01.png,metakube_add-node_02.png,metakube_add-node_03.png,metakube_add-node_04.png'
-published: false
-date: '17-07-2018 17:45'
-publish_date: '01-08-2018 12:00'
+published: true
+date: '18-07-2018 13:00'
 taxonomy:
     tag:
         - kubernetes

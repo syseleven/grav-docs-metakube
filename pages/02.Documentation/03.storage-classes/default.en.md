@@ -1,8 +1,7 @@
 ---
 title: 'Storage Classes'
-published: false
-date: '17-07-2018 17:24'
-publish_date: '01-08-2018 12:00'
+published: true
+date: '18-07-2018 13:00'
 taxonomy:
     tag:
         - storage
