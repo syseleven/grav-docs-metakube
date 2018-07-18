@@ -89,7 +89,7 @@ Afterwards you can associate another IP by clicking on `Associate Floating IP` i
 
 ## Troubleshooting
 
-### I created a Load Balancer, but can't reach the application
+**I created a Load Balancer, but can't reach the application**
 
 This can have multiple reasons. Typical problems are
 

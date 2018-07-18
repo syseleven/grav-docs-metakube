@@ -18,7 +18,7 @@ kubectl proxy
 Then open the following link in your browser
 [http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/](http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/)
 
-Use the [downloaded kubeconfig](/tutorials/download-kubeconfig) to log in
+Use the [downloaded kubeconfig](/tutorials/download-the-kubeconfig) to log in
 
 ![](kubernetes-dashboard-login.png)
 

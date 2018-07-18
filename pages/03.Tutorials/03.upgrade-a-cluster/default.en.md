@@ -69,8 +69,7 @@ node "kubermatic-w9tk8cmw62-22wgv" drained
 
 ### Delete drained worker node
 
-When the worker node is drained, you can safely delete them. For detailed information on how to do this, refer to [Delete a worker node](/tutorials/delete-a-worker-node). If you had enough free resources to create a complete set of new worker nodes, or have created enough to hold the current load, you can continue to drain the next old node ('go to 3').
-Otherwise you should create more new workernodes now ('go to 1').
+When the worker node is drained, you can safely delete them. For detailed information on how to do this, refer to [Delete a worker node](/tutorials/delete-a-worker-node). If you had enough free resources to create a complete set of new worker nodes, or have created enough to hold the current load, you can continue to drain the next old node ('go to 3'). Otherwise you should create more new workernodes now ('go to 1').
 When everything is done, you should have a new set of worker nodes with the new version
 
 ```bash

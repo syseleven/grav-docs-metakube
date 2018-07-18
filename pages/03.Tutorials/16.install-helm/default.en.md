@@ -9,7 +9,7 @@ taxonomy:
         - cli
 ---
 
-Helm is a package manager for Kubernetes which makes it easy to install common applications like an [Ingress Controller](create-ingress-controller.md) into your Kubernetes cluster.
+Helm is a package manager for Kubernetes which makes it easy to install common applications like an [Ingress Controller](tutorials/create-an-ingress-controller) into your Kubernetes cluster.
 
 ## Installation
 
