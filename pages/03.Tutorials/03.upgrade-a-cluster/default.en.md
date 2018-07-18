@@ -1,6 +1,5 @@
 ---
 title: 'Upgrade a cluster'
-media_order: 'metakube_upgrade-cluster_01.png,metakube_upgrade-cluster_02.png'
 published: true
 date: '18-07-2018 13:00'
 taxonomy:
@@ -14,11 +13,11 @@ taxonomy:
 
 When an upgrade for the master nodes is available, a blue text `upgrade available` will be shown besides the Master version
 
-![](metakube_upgrade-cluster_01.png)
+![Cluster with available upgrade](image_upgrade-available_01.png)
 
 To start the upgrade, just click on the link and choose the desired version (most recent, tested version is selected)
 
-![](metakube_upgrade-cluster_02.png)
+![Dialog to choose upgrade version](image_upgrade-version_01.png)
 
 When initiated the master components will be upgraded in the background. All newly created worker nodes will be installed with the new version, but existing nodes will not be changed. Refer to the next chapter on how to upgrade your existing worker nodes.
 
