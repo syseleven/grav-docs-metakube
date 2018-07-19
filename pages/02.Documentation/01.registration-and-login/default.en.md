@@ -14,4 +14,4 @@ You will be greeted with a `Login / Sign-In` button
 
 ![MetaKube Start Page](registration-login_01.png)
 
-Click on the button, enter your SysEleven Stack credentials and start using SysEleven MetaKube, e.g. by [creating your first cluster](/tutorials/create-a-cluster).
+Click on the button, enter your SysEleven Stack credentials and start using SysEleven MetaKube, e.g. by [creating your first cluster](../../03.Tutorials/02.create-a-cluster/default.en.md).

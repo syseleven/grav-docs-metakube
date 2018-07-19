@@ -11,7 +11,7 @@ taxonomy:
 ---
 
 [Nginx Ingress Controller](#nginx-ingress-controller)
-[Cert-Manager](3cert-manager)
+[Cert-Manager](#cert-manager)
 
 In order to route traffic to applications deploying in Kubernetes it is good practice to use an Ingress Controller which proxies incoming request to the correct Services and can handle for example TLS offloading. For more information on Ingress resources and Ingress Controllers see the [official Kubernetes documentation](https://kubernetes.io/docs/concepts/services-networking/ingress/).
 
@@ -30,11 +30,11 @@ The easiest way to install it in your cluster is through [Helm](../16.install-he
 helm install stable/nginx-ingress --name nginx-ingress --namespace kube-system  --set "rbac.create=true"
 ```
 
-to install the Nginx Ingress Controller in the cluster. This will automatically create a [Type Load Balancer service](/tutorials/create-a-load-balancer) for you.
+to install the Nginx Ingress Controller in the cluster. This will automatically create a [Type Load Balancer service](../12.create-a-load-balancer/default.en.md) for you.
 
 ### Configuring the Load Balancer in SysEleven Stack
 
-When binding an external IP to the Load Balancer it is by default not directly reachable from the outside. See [Configure Load Balancer](/tutorials/configure-a-load-balancer) for a documentation how to make it accessible.
+When binding an external IP to the Load Balancer it is by default not directly reachable from the outside. See [Configure Load Balancer](../13.configure-a-load-balancer/default.en.md) for a documentation how to make it accessible.
 
 ## Cert-Manager
 
@@ -45,7 +45,7 @@ If you want to use [Let's Encrypt](https://letsencrypt.org/) to automatically ma
 
 ### Cert-Manager Installation
 
-This can be done through [Helm](/tutorials/install-helm) as well
+This can be done through [Helm](../16.install-helm/default.en.md) as well
 
 ```bash
 helm install cert-manager --name cert-manager --namespace kube-system stable/cert-manager
@@ -75,4 +75,4 @@ spec:
 EOF
 ```
 
-In [Deploy Application](/tutorials/deploy-an-application) you can see how you can use this issuer to fetch a certificate.
+In [Deploy Application](../15.deploy-an-application/default.en.md) you can see how you can use this issuer to fetch a certificate.

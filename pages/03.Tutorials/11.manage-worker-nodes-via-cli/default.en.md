@@ -9,7 +9,7 @@ taxonomy:
         - node
 ---
 
-Worker nodes can be managed with our web UI as described in [add a worker node](/tutorials/add-a-worker-node). Once you installed [kubectl](/tutorials/using-kubectl), you can also manage them via Command-Line-Interface (CLI) in order to automate creation, deletion and upgrades of nodes.
+Worker nodes can be managed with our web UI as described in [add a worker node](../08.add-a-worker-node/default.en.md). Once you installed [kubectl](../07.using-kubectl/default.en.md), you can also manage them via Command-Line-Interface (CLI) in order to automate creation, deletion and upgrades of nodes.
 
 [List all available nodes](#list-all-available-nodes)
 [Add a node](#add-a-node)

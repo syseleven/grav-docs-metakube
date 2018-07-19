@@ -69,11 +69,11 @@ $ openstack port set --security-group lbaas 6ac4637a-dcc5-42fa-a363-ccca26c98bb2
 
 The previous step exposed the load balancer's external IP and ports to the outside world.
 
-What's missing is that you'll have to make your cluster nodes accessible to the LB as well, so it can successfully forward TCP traffic to them. The nodes will receive the traffic on the service NodePorts belonging to the loadbalancer service. In the example setup from [Create a Load Balancer](/tutorials/create-a-load-balancer), those were ports 31228 and 30279. Kubernetes always chooses these ports to lie within the Kubernetes node port range, 30000...32767.
+What's missing is that you'll have to make your cluster nodes accessible to the LB as well, so it can successfully forward TCP traffic to them. The nodes will receive the traffic on the service NodePorts belonging to the loadbalancer service. In the example setup from [Create a Load Balancer](../12.create-a-load-balancer/default.en.md), those were ports 31228 and 30279. Kubernetes always chooses these ports to lie within the Kubernetes node port range, 30000...32767.
 
 You can either expose the entire node port range or just the specific NodePorts that the service is accessible on. In this example, we'll expose the entire range because it won't ever change and thus will be easier to manage when setting this up manually. Please be aware that this will also expose any other NodePort services that you might have created manually.
 
-So we need to add an ingress rule for TCP ports 30000...32767 to an Openstack security group on all nodes. We could create such a group and add it to all nodes, but fortunatey MetaKube already defines a security group that's automatically added to all nodes (sometimes called the "node security group"). We'll just add our ingress rule to that group. The group's is named `kubermatic-<cluster id>`, where `cluster id` is your cluster's unique ID, which is the second part of all the node names (see also the [Issue reporting guideline](/support/issue-reporting-guideline)):
+So we need to add an ingress rule for TCP ports 30000...32767 to an Openstack security group on all nodes. We could create such a group and add it to all nodes, but fortunatey MetaKube already defines a security group that's automatically added to all nodes (sometimes called the "node security group"). We'll just add our ingress rule to that group. The group's is named `kubermatic-<cluster id>`, where `cluster id` is your cluster's unique ID, which is the second part of all the node names (see also the [Issue reporting guideline](../../04.Support/01.issue-reporting-guideline/default.en.md)):
 
 ```bash
 # figure out cluster name from the node names

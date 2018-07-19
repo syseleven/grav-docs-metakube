@@ -18,17 +18,17 @@ The following document describes the required form and level of details when rep
 
 To minimize the time to resolution we need as much of the following information as possible:
 
-* [How can we reach you?](#how-can-we-reach-you)
+* [How can we reach you?](#how-can-we-reach-you?)
 
-* [What is the desired behavior and what do you observe?](#what-is-the-desired-behavior-and-what-do-you-observe)
+* [What is the desired behavior and what do you observe?](#what-is-the-desired-behavior-and-what-do-you-observe?)
 
-* [Which cluster is affected?](#which-cluster-is-affected)
+* [Which cluster is affected?](#which-cluster-is-affected?)
 
-* [Since when does the problem occur?](#since-when-does-the-problem-occur)
+* [Since when does the problem occur?](#since-when-does-the-problem-occur?)
 
-* [How does the problem affect you?](#how-does-the-problem-affect-you)
+* [How does the problem affect you?](#how-does-the-problem-affect-you?)
 
-* [What were the last steps you did before the problem occured?](#what-were-the-last-steps-you-did-before-the-problem-occured)
+* [What were the last steps you did before the problem occured?](#what-were-the-last-steps-you-did-before-the-problem-occured?)
 
 ### How can we reach you?
 
@@ -38,7 +38,7 @@ If you provide us with further contact options like a phone number we can reach 
 
 Give us a brief overview which behavior you observed in your cluster and what you expected to see.
 
-### **Which cluster is affected?**
+### Which cluster is affected?
 
 Each cluster has a unique Identifier. If you don't know your Identifier, you can check the second part of the name of your nodes:
 
