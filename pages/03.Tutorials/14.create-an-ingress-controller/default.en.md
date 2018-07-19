@@ -24,7 +24,7 @@ A popular ingress controller is the [nginx ingress controller](https://kubernete
 
 ### Nginx Ingress Controller Installation
 
-The easiest way to install it in your cluster is through [Helm](/tutorials/install-helm). When Helm is ready to be used, run
+The easiest way to install it in your cluster is through [Helm](../16.install-helm/default.en.md). When Helm is ready to be used, run
 
 ```bash
 helm install stable/nginx-ingress --name nginx-ingress --namespace kube-system  --set "rbac.create=true"
