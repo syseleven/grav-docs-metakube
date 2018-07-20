@@ -5,7 +5,7 @@
   },
   "line-length": false,
   "no-inline-html": false,
-  "first-heading-h1": {
+  "first-header-h1": {
     "level": 2
   },
   "first-line-h1": false,
