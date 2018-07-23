@@ -22,7 +22,7 @@ Log into the [SysEleven Stack dashboard](https://dashboard.cloud.syseleven.net/)
 
 ![Overview of the images tab](images_overview.png)
 
-When you click on this button the image creation dialog will open. Enter a name and choose the image file and format
+When you click on this button the image creation dialog will open. Enter a name, choose the image file and format and click on `Create Image`
 
 ![Image creation tab with filled out information](images_creation.png)
 
