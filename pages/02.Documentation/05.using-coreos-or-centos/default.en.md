@@ -1,6 +1,6 @@
 ---
 title: 'Using CoreOS or CentOS'
-published: false
+published: true
 date: '23-07-2018 16:26'
 taxonomy:
     tag:
