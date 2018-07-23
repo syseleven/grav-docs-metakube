@@ -1,5 +1,5 @@
 ---
-title: 'Using a custom Image for your nodes'
+title: 'How to use custom images for your nodes'
 published: false
 date: '23-07-2018 16:29'
 taxonomy:
@@ -7,5 +7,6 @@ taxonomy:
         - metakube
         - cluster
         - node
+menu: 'How to use custom images'
 ---
 
