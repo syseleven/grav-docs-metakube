@@ -1,5 +1,7 @@
 {
   "name": "grav-docu-metakube",
+  "description": "SysEleven Metakube Documentation Repository",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "lint": "markdownlint -c .markdownlint.json -r node_modules/markdownlint-rules-grav-pages/rules/ pages/"

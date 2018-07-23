@@ -1,5 +1,7 @@
 # grav-docu-metakube
 
+![travis.ci Status](https://api.travis-ci.org/syseleven/grav-docu-metakube.svg?branch=master)
+
 SysEleven MetaKube Documentation Repository
 
 The content of master is automatically displayed at [https://docs.syseleven.de/metakube](https://docs.syseleven.de/metakube) in a [Grav CMS](https://getgrav.org/) installation.
