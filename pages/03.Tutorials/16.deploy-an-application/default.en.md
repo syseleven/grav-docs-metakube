@@ -18,7 +18,7 @@ This tutorial describes how you can deploy a demo application to the cluster.
 
 ## Requirements
 
-* A working ingress controller and cert-manager as described in [Create an Ingress Controller](../14.create-an-ingress-controller/default.en.md).
+* A working ingress controller and cert-manager as described in [Create an Ingress Controller](../15.create-an-ingress-controller/default.en.md).
 * A DNS record pointing to the external IP of the ingress controller.
 
 ## Deploy an application

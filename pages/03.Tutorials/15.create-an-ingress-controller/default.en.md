@@ -24,17 +24,17 @@ A popular ingress controller is the [nginx ingress controller](https://kubernete
 
 ### Nginx Ingress Controller Installation
 
-The easiest way to install it in your cluster is through [Helm](../16.install-helm/default.en.md). When Helm is ready to be used, run
+The easiest way to install it in your cluster is through [Helm](../17.install-helm/default.en.md). When Helm is ready to be used, run
 
 ```bash
 helm install stable/nginx-ingress --name nginx-ingress --namespace kube-system  --set "rbac.create=true"
 ```
 
-to install the Nginx Ingress Controller in the cluster. This will automatically create a [Type Load Balancer service](../12.create-a-load-balancer/default.en.md) for you.
+to install the Nginx Ingress Controller in the cluster. This will automatically create a [Type Load Balancer service](../13.create-a-load-balancer/default.en.md) for you.
 
 ### Configuring the Load Balancer in SysEleven Stack
 
-When binding an external IP to the Load Balancer it is by default not directly reachable from the outside. See [Configure Load Balancer](../13.configure-a-load-balancer/default.en.md) for a documentation how to make it accessible.
+When binding an external IP to the Load Balancer it is by default not directly reachable from the outside. See [Configure Load Balancer](../14.configure-a-load-balancer/default.en.md) for a documentation how to make it accessible.
 
 ## Cert-Manager
 
@@ -45,7 +45,7 @@ If you want to use [Let's Encrypt](https://letsencrypt.org/) to automatically ma
 
 ### Cert-Manager Installation
 
-This can be done through [Helm](../16.install-helm/default.en.md) as well
+This can be done through [Helm](../17.install-helm/default.en.md) as well
 
 ```bash
 helm install cert-manager --name cert-manager --namespace kube-system stable/cert-manager
@@ -75,4 +75,4 @@ spec:
 EOF
 ```
 
-In [Deploy Application](../15.deploy-an-application/default.en.md) you can see how you can use this issuer to fetch a certificate.
+In [Deploy Application](../16.deploy-an-application/default.en.md) you can see how you can use this issuer to fetch a certificate.

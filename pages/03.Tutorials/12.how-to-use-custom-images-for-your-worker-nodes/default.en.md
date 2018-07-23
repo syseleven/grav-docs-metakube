@@ -16,7 +16,7 @@ To use a custom image for your metakube clusters, you need to upload it SysEleve
 1 [Upload to SysEleven Stack](#upload-to-syseleven-stack)
 2 [Choose in cluster creation](#choose-in-cluster-creation)
 
-# Upload to SysEleven Stack
+## Upload to SysEleven Stack
 
 Log into the [SysEleven Stack dashboard](https://dashboard.cloud.syseleven.net/) and navigate to `Project -> Compute -> Images`. In the top right corner you can find the `Create Image` button to upload a new image
 
@@ -28,8 +28,8 @@ When you click on this button the image creation dialog will open. Enter a name,
 
 When the upload is finished the image will be visible in your images Tab.
 
-# Choose in cluster creation
+## Choose in cluster creation
 
-In the [cluster creation process](../create-a-cluster) you will be asked, which image and operating system (OS) you want to use. Choose the correct OS and enter the name you chose for your image before. The cluster will then be created with your custom image
+In the [cluster creation process](../02.create-a-cluster/default.en.md) you will be asked, which image and operating system (OS) you want to use. Choose the correct OS and enter the name you chose for your image before. The cluster will then be created with your custom image
 
 ![Cluster creation tab with custom image chosen](cluster_creation.png)

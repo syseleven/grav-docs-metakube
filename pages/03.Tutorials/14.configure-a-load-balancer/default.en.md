@@ -72,7 +72,7 @@ $ openstack port set --security-group lbaas 6ac4637a-dcc5-42fa-a363-ccca26c98bb2
 
 The previous step exposed the load balancer's external IP and ports to the outside world.
 
-What's missing is that you'll have to make your cluster nodes accessible to the LB as well, so it can successfully forward TCP traffic to them. The nodes will receive the traffic on the service NodePorts belonging to the loadbalancer service. In the example setup from [Create a Load Balancer](../12.create-a-load-balancer/default.en.md), those were ports 31228 and 30279. Kubernetes always chooses these ports to lie within the Kubernetes node port range, 30000...32767.
+What's missing is that you'll have to make your cluster nodes accessible to the LB as well, so it can successfully forward TCP traffic to them. The nodes will receive the traffic on the service NodePorts belonging to the loadbalancer service. In the example setup from [Create a Load Balancer](../13.create-a-load-balancer/default.en.md), those were ports 31228 and 30279. Kubernetes always chooses these ports to lie within the Kubernetes node port range, 30000...32767.
 
 You can either expose the entire node port range or just the specific NodePorts that the service is accessible on. In this example, we'll expose the entire range because it won't ever change and thus will be easier to manage when setting this up manually. Please be aware that this will also expose any other NodePort services that you might have created manually.
 
