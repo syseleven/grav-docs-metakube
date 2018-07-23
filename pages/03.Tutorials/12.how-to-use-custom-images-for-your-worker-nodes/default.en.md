@@ -1,7 +1,7 @@
 ---
 title: 'How to use custom images for your worker nodes'
 media_order: 'images_creation.png,images_overview.png,cluster_creation.png'
-published: false
+published: true
 date: '23-07-2018 16:29'
 taxonomy:
     tag:
