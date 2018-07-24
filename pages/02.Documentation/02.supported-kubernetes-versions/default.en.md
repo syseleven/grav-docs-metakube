@@ -4,17 +4,17 @@ published: true
 date: '18-07-2018 13:00'
 taxonomy:
     tag:
-        - metakube
         - kubernetes
+        - metakube
 ---
 
-We automatically offer new Kubernetes versions once they are released and tested by us. For the creation of new clusters we aim to always support:
+We automatically offer new Kubernetes versions once they are released and tested by us. For the creation of new clusters we aim to support:
 
-* The latest two versions of the latest non x.x.0 release
-* The latest version of the previous two non x.x.0 releases
-* The x.x.0 release of latest version (if newest)
+* The latest two versions of the latest tested non x.x.0 release
+* The latest version of the previous two tested non x.x.0 releases
+* The x.x.0 release of latest version (if newest and tested)
 
-The default version for new clusters is the latest non x.x.0 release. Existing clusters will continue to run and can continue to be upgraded even though their Kubernetes version is not supported for new clusters anymore.
+The default version for new clusters is the latest tested non x.x.0 release. Existing clusters will continue to run and can continue to be upgraded even though their Kubernetes version might not be supported for new clusters anymore.
 
 ## Examples
 
