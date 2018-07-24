@@ -1,5 +1,5 @@
 ---
-title: 'Supported operating systems'
+title: 'Supported Operating Systems'
 published: true
 date: '23-07-2018 16:26'
 taxonomy:
