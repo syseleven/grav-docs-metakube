@@ -12,7 +12,7 @@ We automatically offer new Kubernetes versions once they are released and tested
 
 * The latest two versions of the latest tested non x.x.0 release
 * The latest version of the previous two tested non x.x.0 releases
-* The x.x.0 release of latest version (if newest and tested)
+* The x.x.0 release of the latest version (if newest and tested)
 
 The default version for new clusters is the latest tested non x.x.0 release. Existing clusters will continue to run and can continue to be upgraded even though their Kubernetes version might not be supported for new clusters anymore.
 
