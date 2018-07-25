@@ -14,31 +14,31 @@ taxonomy:
 
 ## Place to live
 
-To create a new cluster open the MetaKube dashboard and select the menu entry `Create Cluster`.
+To create a new cluster, open the MetaKube dashboard and select the menu entry `Create Cluster`.
 Start by choosing a name
 
 ![Overview of cluster creation](image_overview_01.png)
 ![Overview of cluster creation with filled out name](image_overview_02.png)
 
-the provider (on writing this document only SysEleven Stack is supported)
+the provider (at the time of writing, only SysEleven Stack is supported)
 
 ![Menu to chose cloud provider](image_provider_01.png)
 
-and the region, where the cluster shall live
+and the region where the cluster shall live
 
 ![Menu to choose datacenter](image_datacenter_01.png)
 
 ## Create the cluster
 
-In the next step of the installer, enter the domain-name and your SysEleven Stack credentials into the `Provide credentials` tab
+In the next step of the installer, enter the domain name and your SysEleven Stack credentials into the `Provide credentials` tab
 
 ![Overview of cluster settings](image_cluster-settings_01.png)
 
-Then choose the tenant where you want to create the cluster in in the drop-down
+Then choose the tenant where you want to create the cluster from the drop-down list
 
 ![Overview of cluster settings with filled out tenant](image_cluster-settings_02.png)
 
-As node settings, we recommend at least 3 nodes sized `m1.small` or bigger
+For node settings we recommend at least 3 nodes sized `m1.small` or bigger
 
 ![Overview of cluster settings with opened flavor dropdown](image_cluster-settings_03.png)
 
@@ -55,12 +55,12 @@ The chosen SSH key will be used for authentication as user `apiserver` on all wo
 
 ![Overview of cluster settings with opened SSH key dropdown](image_cluster-settings_05.png)
 
-When you click on next, you will see a summary and the cluster creation will start if you confirm. You will be forwarded to the creation overview on confirmation, to see your new cluster being deployed
+When you click on next, you will see a summary and the cluster creation will start if you confirm. You will be forwarded to the creation overview to see your new cluster being deployed
 
 ![Final overview of cluster settings](image_cluster-settings_06.png)
 ![Cluster details in creation state](image_cluster-details_01.png)
 
-After all master components are ready, your cluster will create the configured amount of worker nodes in your SysEleven Stack tenant. Fully created nodes will be marked with a green dot, pending ones with a yellow circle. You should [download the kubeconfig](../06.download-the-kubeconfig/default.en.md) now, to be able to use `kubectl` with your cluster.
+After all master components are ready, your cluster will create the configured amount of worker nodes in your SysEleven Stack tenant. Fully created nodes will be marked with a green dot, pending ones with a yellow circle. You should [download the kubeconfig](../06.download-the-kubeconfig/default.en.md) now to be able to use `kubectl` with your cluster.
 After all nodes are created you can use `kubectl` to view and check the status of the created nodes
 
 ```bash

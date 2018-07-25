@@ -76,7 +76,7 @@ What's missing is that you'll have to make your cluster nodes accessible to the 
 
 You can either expose the entire node port range or just the specific NodePorts that the service is accessible on. In this example, we'll expose the entire range because it won't ever change and thus will be easier to manage when setting this up manually. Please be aware that this will also expose any other NodePort services that you might have created manually.
 
-So we need to add an ingress rule for TCP ports 30000...32767 to an Openstack security group on all nodes. We could create such a group and add it to all nodes, but fortunatey MetaKube already defines a security group that's automatically added to all nodes (sometimes called the "node security group"). We'll just add our ingress rule to that group. The group's is named `kubermatic-<cluster id>`, where `cluster id` is your cluster's unique ID, which is the second part of all the node names (see also the [Issue reporting guideline](../../04.Support/01.issue-reporting-guideline/default.en.md)):
+So we need to add an ingress rule for TCP ports 30000...32767 to an Openstack security group on all nodes. We could create such a group and add it to all nodes, but fortunatey MetaKube already defines a security group that's automatically added to all nodes (sometimes called the "node security group"). We'll just add our ingress rule to that group. The group is named `kubermatic-<cluster id>`, where `cluster id` is your cluster's unique ID, which is the second part of all the node names (see also the [Issue reporting guideline](../../04.Support/01.issue-reporting-guideline/default.en.md)):
 
 ```bash
 # figure out cluster name from the node names
@@ -103,11 +103,11 @@ Afterwards you can associate another IP by clicking on `Associate Floating IP` i
 
 ## Troubleshooting
 
-### I created a Load Balancer, but can't reach the application
+### I created a load balancer but can't reach the application
 
 This can have multiple reasons. Typical problems are
 
-* _Your application is not reachable_. Try to use `kubectl port-forward $PODNAME 8080:80` \(port might differ\) and check, if you can reach your application on Port 80.
+* _Your application is not reachable_. Try to use `kubectl port-forward $PODNAME 8080:80` \(port might differ\) and check if you can reach your application on Port 80.
 * _The required port is not defined in the service manifest_. Check if the service lists all required ports with `kubectl get svc`.
-* _The service port is not reachable._ Check, if you can reach the service port on any of your worker nodes. Therefor you need to open the port \(temporarily\) in the cluster security group.
-* _The Load Balancer can't reach the worker nodes_. Make sure, that your cluster security group has opened the port range `30000 - 32767` for the internal network `192.168.0.0/16`.
+* _The service port is not reachable._ Check if you can reach the service port on any of your worker nodes. Therefore you need to open the port \(temporarily\) in the cluster security group.
+* _The Load Balancer can't reach the worker nodes_. Make sure that your cluster security group has opened the port range `30000 - 32767` for the internal network `192.168.0.0/16`.

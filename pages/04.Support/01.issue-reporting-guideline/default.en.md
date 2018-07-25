@@ -24,7 +24,7 @@ To minimize the time to resolution we need as much of the following information 
 
 * [Which cluster is affected?](#which-cluster-is-affected?)
 
-* [Since when does the problem occur?](#since-when-does-the-problem-occur?)
+* [Since when has the problem been occurring?](#since-when-has-the-problem-been-occurring?)
 
 * [How does the problem affect you?](#how-does-the-problem-affect-you?)
 
@@ -32,7 +32,7 @@ To minimize the time to resolution we need as much of the following information 
 
 ### How can we reach you?
 
-If you provide us with further contact options like a phone number we can reach out faster to you, if we have any open questions.
+If you provide us with further contact options like a phone number we can reach out to you faster if we have any open questions.
 
 ### What is the desired behavior and what do you observe?
 
@@ -40,7 +40,7 @@ Give us a brief overview which behavior you observed in your cluster and what yo
 
 ### Which cluster is affected?
 
-Each cluster has a unique Identifier. If you don't know your Identifier, you can check the second part of the name of your nodes:
+Each cluster has a unique identifier. If you don't know your identifier, you can check the second part of the name of your nodes:
 
 ```bash
 $ kubectl get nodes
@@ -52,23 +52,23 @@ kubermatic-vwj2q4slrk-z25vc   Ready     <none>    13d       v1.10.2
 
 In this example the cluster name is `vwj2q4slrk`.
 
-### Since when does the problem occur?
+### Since when has the problem been occurring?
 
 It is sufficient to give us a rough estimate like
 
 * a few minutes ago
-* since about two hours
+* for about two hours
 * I did just realize it does not work, but have never used this feature before
 
 But the more specific you are, the better!
 
 ### How does the problem affect you?
 
-Please give us a description, how you found out about the problem and what you tried before contacting us.
+Please give us a description how you found out about the problem and what you tried before contacting us.
 
-### What were the last steps you did before the problem occured?
+### What were the last steps you did before the problem occurred?
 
-It might speed up the debugging process, if we know on which services you worked right before the interruption.
+It might speed up the debugging process if we know on which services you worked right before the interruption.
 
 ## Steps you can take in the meantime
 
