@@ -23,7 +23,7 @@ To get a list of all nodes execute
 kubectl get nodes -o wide
 ```
 
-Every node is managed by a machine resource, to list all machine resources, execute
+Every node is managed by a machine resource. To list all machine resources, execute
 
 ```bash
 kubectl get machines

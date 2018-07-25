@@ -10,7 +10,7 @@ taxonomy:
 menu: 'How to use custom images'
 ---
 
-To use a custom image for your metakube clusters, you need to upload an image of a [supported operating system](../../02.Documentation/03.supported-operating-systems/default.en.md) to SysEleven Stack and choose it in the worker node creation afterwards.
+To use a custom image for your Metakube clusters, you need to upload an image of a [supported operating system](../../02.Documentation/03.supported-operating-systems/default.en.md) to SysEleven Stack and choose it in the worker node creation afterwards.
 
 [Upload to SysEleven Stack](#upload-to-syseleven-stack) (alternatively via [CLI](#upload-to-syseleven-stack-via-cli))
 [Choose in cluster creation](#choose-in-cluster-creation)
@@ -21,11 +21,11 @@ Log into the [SysEleven Stack dashboard](https://dashboard.cloud.syseleven.net/)
 
 ![Overview of the images tab](image_images-overview.png)
 
-When you click on this button the image creation dialog will open. Enter a name, choose the image file and format and click on `Create Image`
+When you click on this button, the image creation dialog will open. Enter a name, choose the image file and format and click on `Create Image`
 
 ![Image creation tab with filled out information](image_images-creation.png)
 
-When the upload is finished the image will be visible in your images Tab.
+When the upload is finished, the image will be visible in your images Tab.
 
 ## Upload to SysEleven Stack via CLI
 
@@ -43,6 +43,6 @@ glance image-create \
 
 ## Choose in cluster creation
 
-In the [cluster creation process](../02.create-a-cluster/default.en.md) you will be asked, which image and operating system you want to use. Choose the correct OS and enter the name you chose for your image before. The cluster will then be created with your custom image
+In the [cluster creation process](../02.create-a-cluster/default.en.md) you will be asked which image and operating system you want to use. Choose the correct OS and enter the name you chose for your image before. The cluster will then be created with your custom image
 
 ![Cluster creation tab with custom image chosen](image_cluster-creation.png)
