@@ -12,7 +12,7 @@ As vendor of SysEleven MetaKube we provide support directly from our engineering
 
 ## Helpdesk / E-Mail
 
-Please send your request to [kubernetes@syseleven.de](mailto:kubernetes@syseleven.de).
+Please send your request to [metakube-support@syseleven.de](mailto:metakube-support@syseleven.de).
 If you already have an account, you can visit our [helpdesk](https://helpdesk.syseleven.de/) and create your support request directly on the web-frontend.
 
 ## Newsletter
