@@ -24,7 +24,7 @@ To minimize the time to resolution we need as much of the following information 
 
 * [Which cluster is affected?](#which-cluster-is-affected?)
 
-* [Since when has the problem been occurring?](#since-when-has-the-problem-been-occurring?)
+* [Since when has the problem occurred?](#since-when-has-the-problem-occurred?)
 
 * [How does the problem affect you?](#how-does-the-problem-affect-you?)
 
