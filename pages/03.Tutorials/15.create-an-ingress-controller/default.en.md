@@ -13,7 +13,7 @@ taxonomy:
 [Nginx Ingress Controller](#nginx-ingress-controller)
 [Cert-Manager](#cert-manager)
 
-In order to route traffic to applications deploying in Kubernetes it is good practice to use an Ingress Controller which proxies incoming request to the correct Services and can handle things like TLS offloading. For more information on Ingress resources and Ingress Controllers see the [official Kubernetes documentation](https://kubernetes.io/docs/concepts/services-networking/ingress/).
+In order to route traffic to applications deployed in Kubernetes it is good practice to use an Ingress Controller which proxies incoming request to the correct services and can handle things like TLS offloading. For more information on Ingress resources and Ingress Controllers see the [official Kubernetes documentation](https://kubernetes.io/docs/concepts/services-networking/ingress/).
 
 ## Nginx Ingress Controller
 

@@ -76,7 +76,7 @@ What's missing is that you'll have to make your cluster nodes accessible to the 
 
 You can either expose the entire node port range or just the specific NodePorts that the service is accessible on. In this example, we'll expose the entire range because it won't ever change and thus will be easier to manage when setting this up manually. Please be aware that this will also expose any other NodePort services that you might have created manually.
 
-So we need to add an ingress rule for TCP ports 30000...32767 to an Openstack security group on all nodes. We could create such a group and add it to all nodes, but fortunatey MetaKube already defines a security group that's automatically added to all nodes (sometimes called the "node security group"). We'll just add our ingress rule to that group. The group is named `kubermatic-<cluster id>`, where `cluster id` is your cluster's unique ID, which is the second part of all the node names (see also the [Issue reporting guideline](../../04.Support/01.issue-reporting-guideline/default.en.md)):
+So we need to add an ingress rule for TCP ports 30000...32767 to an Openstack security group on all nodes. We could create such a group and add it to all nodes, but fortunately MetaKube already defines a security group that's automatically added to all nodes (sometimes called the "node security group"). We'll just add our ingress rule to that group. The group is named `kubermatic-<cluster id>`, where `cluster id` is your cluster's unique ID, which is the second part of all the node names (see also the [Issue reporting guideline](../../04.Support/01.issue-reporting-guideline/default.en.md)):
 
 ```bash
 # figure out cluster name from the node names

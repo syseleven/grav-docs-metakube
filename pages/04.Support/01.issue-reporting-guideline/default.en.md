@@ -18,7 +18,7 @@ The following document describes the required form and level of details when rep
 
 To minimize the time to resolution we need as much of the following information as possible:
 
-* [How can we reach you?](#how-can-we-reach-you?)
+* [How can we contact you?](#how-can-we-contact-you?)
 
 * [What is the desired behavior and what do you observe?](#what-is-the-desired-behavior-and-what-do-you-observe?)
 
@@ -30,9 +30,9 @@ To minimize the time to resolution we need as much of the following information 
 
 * [What were the last steps you did before the problem occured?](#what-were-the-last-steps-you-did-before-the-problem-occurred?)
 
-### How can we reach you?
+### How can we contact you?
 
-If you provide us with further contact options like a phone number we can reach out to you faster if we have any open questions.
+If you provide us with additonal contact options like a phone number we can contact you faster if we have any open questions.
 
 ### What is the desired behavior and what do you observe?
 
@@ -52,7 +52,7 @@ kubermatic-vwj2q4slrk-z25vc   Ready     <none>    13d       v1.10.2
 
 In this example the cluster name is `vwj2q4slrk`.
 
-### Since when has the problem been occurring?
+### Since when has the problem occured?
 
 It is sufficient to give us a rough estimate like
 
@@ -66,9 +66,9 @@ But the more specific you are, the better!
 
 Please give us a description how you found out about the problem and what you tried before contacting us.
 
-### What were the last steps you did before the problem occurred?
+### What were your last steps before the problem occurred?
 
-It might speed up the debugging process if we know on which services you worked right before the interruption.
+It might speed up the debugging process if we know which services you worked on right before the interruption.
 
 ## Steps you can take in the meantime
 
