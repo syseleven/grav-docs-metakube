@@ -1,6 +1,6 @@
 {
   "name": "grav-docu-metakube",
-  "description": "SysEleven Metakube Documentation Repository",
+  "description": "SysEleven MetaKube Documentation Repository",
   "license": "MIT",
   "private": true,
   "scripts": {
