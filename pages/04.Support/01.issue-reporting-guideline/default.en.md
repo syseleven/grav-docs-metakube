@@ -28,7 +28,7 @@ To minimize the time to resolution we need as much of the following information 
 
 * [How does the problem affect you?](#how-does-the-problem-affect-you?)
 
-* [What were the last steps you did before the problem occured?](#what-were-the-last-steps-you-did-before-the-problem-occurred?)
+* [What were your last steps before the problem occured?](#what-were-your-last-steps-before-the-problem-occurred?)
 
 ### How can we contact you?
 
