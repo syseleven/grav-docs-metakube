@@ -28,7 +28,7 @@ To minimize the time to resolution we need as much of the following information 
 
 * [How does the problem affect you?](#how-does-the-problem-affect-you?)
 
-* [What were your last steps before the problem occured?](#what-were-your-last-steps-before-the-problem-occurred?)
+* [What were your last steps before the problem occurred?](#what-were-your-last-steps-before-the-problem-occurred?)
 
 ### How can we contact you?
 
@@ -52,7 +52,7 @@ kubermatic-vwj2q4slrk-z25vc   Ready     <none>    13d       v1.10.2
 
 In this example the cluster name is `vwj2q4slrk`.
 
-### Since when has the problem occured?
+### Since when has the problem occurred?
 
 It is sufficient to give us a rough estimate like
 
