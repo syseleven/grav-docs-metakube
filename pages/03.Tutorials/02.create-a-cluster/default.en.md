@@ -20,7 +20,7 @@ Start by choosing a name
 ![Overview of cluster creation](image_overview_01.png)
 ![Overview of cluster creation with filled out name](image_overview_02.png)
 
-the provider (at the time of writing, only SysEleven Stack is supported)
+the provider (at the time of writing, only the SysEleven Stack is supported)
 
 ![Menu to chose cloud provider](image_provider_01.png)
 
@@ -55,12 +55,12 @@ The chosen SSH key will be used for authentication as user `apiserver` on all wo
 
 ![Overview of cluster settings with opened SSH key dropdown](image_cluster-settings_05.png)
 
-When you click on next, you will see a summary and the cluster creation will start if you confirm. You will be forwarded to the creation overview to see your new cluster being deployed
+When you click on next, you will see a summary and the cluster creation will start after you confirm. You will then be forwarded to the cluster creation page where you can view the cluster creation process.
 
 ![Final overview of cluster settings](image_cluster-settings_06.png)
 ![Cluster details in creation state](image_cluster-details_01.png)
 
-After all master components are ready, your cluster will create the configured amount of worker nodes in your SysEleven Stack tenant. Fully created nodes will be marked with a green dot, pending ones with a yellow circle. You should [download the kubeconfig](../06.download-the-kubeconfig/default.en.md) now to be able to use `kubectl` with your cluster.
+After all of the master components are ready, your cluster will create the configured number of worker nodes in your SysEleven Stack tenant. Fully created nodes will be marked with a green dot, pending ones with a yellow circle. You may [download the kubeconfig](../06.download-the-kubeconfig/default.en.md) now to be able to use `kubectl` with your cluster.
 After all nodes are created you can use `kubectl` to view and check the status of the created nodes
 
 ```bash

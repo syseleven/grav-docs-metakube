@@ -55,7 +55,7 @@ kubermatic-w9tk8cmw62-hm5vl   Ready,SchedulingDisabled   <none>    6h        v1.
 kubermatic-w9tk8cmw62-slh7v   Ready                      <none>    1m        v1.10.2
 ```
 
-Before you start draining old nodes, you should disable scheduling on all old nodes to reduce rescheduling overhead. If you do otherwise, a pod could be rescheduled from A to B, and on drain of B to C etc, going through the whole (old) cluster.
+Before you start draining old nodes, you should disable scheduling on all old nodes to reduce rescheduling overhead. If you do not, a pod could be rescheduled from A to B, and on drain of B to C etc, and cycle through all of the outdated worker nodes.
 
 ### Drain one old worker node
 
@@ -71,8 +71,8 @@ node "kubermatic-w9tk8cmw62-22wgv" drained
 
 ### Delete drained worker node
 
-When the worker node is drained, you can safely delete them. For detailed information on how to do this, refer to [Delete a worker node](../09.delete-a-worker-node/default.en.md). If you had enough free resources to create a complete set of new worker nodes, or have created enough to hold the current load, you can continue to drain the next old node ('go to 3'). Otherwise you should create more new worker nodes now ('go to 1').
-When everything is done, you should have a new set of worker nodes with the new version
+When the worker node is drained, you can safely delete it. For detailed information on how to do this, refer to [Delete a worker node](../09.delete-a-worker-node/default.en.md). If you had enough free resources to create a complete set of new worker nodes, or have created enough to hold the current load, you can continue to drain the next old node ('go to 3'). Otherwise you should create more new worker nodes now ('go to 1').
+When everything is done, you should have a new set of worker nodes with the new kubernetes/kubelet version
 
 ```bash
 $ kubectl get nodes

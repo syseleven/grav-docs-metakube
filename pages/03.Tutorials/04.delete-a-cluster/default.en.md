@@ -9,7 +9,7 @@ taxonomy:
         - cluster
 ---
 
-To delete a cluster, navigate to `Manage cluster` and choose the cluster that you want to delete. On the top right is a button `delete cluster`
+To delete a cluster, navigate to `Manage cluster` and choose the cluster that you would like to delete. On the top right is a button `delete cluster`
 
 ![Cluster deletion button in the top right corner](image_delete-cluster_01.png)
 

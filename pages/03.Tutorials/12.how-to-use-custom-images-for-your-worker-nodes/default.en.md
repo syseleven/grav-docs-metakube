@@ -29,7 +29,7 @@ When the upload is finished, the image will be visible in your images Tab.
 
 ## Upload to SysEleven Stack via CLI
 
-Alternatively to the upload via GUI, you can upload a new image to SysEleven Stack via CLI. You need to have the `python-openstackclient` installed, which includes the CLI tool `glance`.
+Alternatively to the upload via GUI, you can upload a new image to the SysEleven Stack via CLI. You need to have the `python-openstackclient` installed, which includes the CLI tool `glance`.
 
 You can simply upload it to the cloud with the following command
 
