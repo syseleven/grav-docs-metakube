@@ -9,5 +9,6 @@
     "level": 2
   },
   "first-line-h1": false,
-  "valid-metadata-block": true
+  "valid-metadata-block": true,
+  "no-multiple-blanks": false
 }
