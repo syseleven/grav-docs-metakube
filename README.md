@@ -1,6 +1,6 @@
-# grav-docu-metakube
+# grav-docs-metakube
 
-[![Build Status](https://travis-ci.org/syseleven/grav-docu-metakube.svg?branch=master)](https://travis-ci.org/syseleven/grav-docu-metakube)
+[![Build Status](https://travis-ci.org/syseleven/grav-docs-metakube.svg?branch=master)](https://travis-ci.org/syseleven/grav-docu-metakube)
 
 SysEleven MetaKube Documentation Repository
 
