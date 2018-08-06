@@ -19,7 +19,7 @@ To add a new worker node, navigate to `Manage Cluster` and choose the cluster in
 
 ![Add Node button in the top right corner](image_add-node-button_01.png)
 
-You will get a popup where you can select how many nodes you want to add and which image the nodes shall be based on
+You will get a popup where you can select how many nodes you want to add and which image the nodes shall be based on. For an overview of the possible node flavors see the [SysEleven Stack documentation](https://doc.syselevenstack.com/en/faq/compute/).
 
 ![Dialog to add a new Node](image_add-node-dialog_01.png)
 
