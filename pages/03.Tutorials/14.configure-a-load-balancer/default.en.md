@@ -24,7 +24,7 @@ When binding an external IP to the Load Balancer it is by default not directly r
 ## Install the Openstack Client
 
 You need to have `python-openstackclient` and `python-octaviaclient` installed on your workstation (which includes the `neutron` binary).
-See the [SysEleven Stack documentation](https://doc.syselevenstack.com/en/tutorials/openstack-cli/) for more information on how to install these.
+See the [SysEleven Stack documentation](https://docs.syseleven.de/syseleven-stack/en/tutorials/openstack-cli) for more information on how to install these.
 
 !!! Please not that the minimum required OpenStack client version to work with the SysEleven Stack is 3.13.x.
 !!! Please make sure to install the latest stable version.
