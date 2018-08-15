@@ -10,9 +10,10 @@ taxonomy:
 
 ## Prerequisites
 
-* You need have [created a MetaKube cluster](../02.create-a-cluster/default.en.md) and [installed and configured kubectl](../07.using-kubectl/default.en.md).
+* You need to have [created a MetaKube cluster](../02.create-a-cluster/default.en.md) and [installed and configured kubectl](../07.using-kubectl/default.en.md).
 * You need to have the Ark CLI installed, which can be download for your OS from [GitHub](https://github.com/heptio/ark/releases).
-* For inspection for the S3 Bucket where the backups are stored, install and configure [S3cmd](https://s3tools.org/s3cmd) as described in the [SysEleven Stack documentation](https://docs.syseleven.de/syseleven-stack/en/documentation/object-storage).
+* If you use Mac OSX you may install the ark client with home brew 
+* For inspection of the S3 Bucket where the backups are stored, install and configure [S3cmd](https://s3tools.org/s3cmd) as described in the [SysEleven Stack documentation](https://docs.syseleven.de/syseleven-stack/en/documentation/object-storage).
 
 ## Deploy an application
 
@@ -30,7 +31,7 @@ $ kubectl run hello-app --image=nginxdemos/hello --port=80 --replicas=2 --namesp
 deployment.apps/hello-app created
 ```
 
-Check that the pods of the new app were created successfully and are running:
+Check that the pods of the new application were created successfully and are running:
 
 ```shell
 $ kubectl get pods --namespace backup-tutorial
@@ -74,7 +75,7 @@ Restore request "hello-app-backup-1-20180813145116" submitted successfully.
 Run `ark restore describe hello-app-backup-1-20180813145116` for more details.
 ```
 
-Ark will now restore the namespace and the deployment and pods running in it:
+Ark will now restore the namespace the deployment and the pods running in it:
 
 ```shel
 $ kubectl get pods
@@ -108,7 +109,7 @@ $ kubectl delete namespace backup-tutorial
 namespace "backup-tutorial" deleted
 ```
 
-Delete the backup (due to a bug in ark this has to be done **two** times to actually delete the backup):
+Delete the backup (due to a bug in ark this has to be done **twice to actually delete the backup):
 
 ```shell
 $ ark backup delete hello-app-backup-1
