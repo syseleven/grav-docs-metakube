@@ -11,7 +11,7 @@ taxonomy:
 
 * You need to have [created a MetaKube cluster](../02.create-a-cluster/default.en.md) and [installed and configured kubectl](../07.using-kubectl/default.en.md).
 * You need to have the Ark CLI installed, which can be download for your OS from [GitHub](https://github.com/heptio/ark/releases).
-* If you use Mac OSX you may install the ark client with home brew 
+* If you use Mac OSX you may install the ark client with home brew. 
 * For inspection of the S3 Bucket where the backups are stored, install and configure [S3cmd](https://s3tools.org/s3cmd) as described in the [SysEleven Stack documentation](https://docs.syseleven.de/syseleven-stack/en/documentation/object-storage).
 
 ## Deploy an application
