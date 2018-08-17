@@ -12,7 +12,7 @@ taxonomy:
 
 Every MetaKube Kubernetes cluster comes with [Heptio Ark](https://heptio.github.io/ark/) installed and configured automatically.
 
-Ark gives you tools to back up and restore your Kubernetes cluster resources and persistent volumes. Which means you can take backups
+Ark gives you tools to back up and restore your Kubernetes cluster resources. Which means you can take backups
 of your cluster and restore in case of loss or replicate your production environment for development and testing environments.
 
 Backups are automatically stored in a [SysEleven Stack Object Storage](https://docs.syseleven.de/syseleven-stack/en/documentation/object-storage) bucket on a different cloud region than your cluster.
@@ -27,7 +27,7 @@ these backups anymore, you can delete them manually.
 Install and configure [S3cmd](https://s3tools.org/s3cmd) as described in the [SysEleven Stack documentation](https://docs.syseleven.de/syseleven-stack/en/documentation/object-storage).
 The region is `s3.cbk.cloud.syseleven.net`. Your credentials can be retrieved with `openstack ec2 credentials list`.
 
-Every cluster gets one bucket created for ark and restic each.
+We create two S3 buckets for every cluster. One bucket is used for ark and one for restic.
 
 To list all available buckets run:
 
