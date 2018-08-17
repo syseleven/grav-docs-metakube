@@ -38,6 +38,6 @@ s3cmd ls
 Pick the buckets with the cluster id, that you want to delete and run
 
 ```shell
-s3cmd rb s3://metakube-cluster-backup-clusterId-ark
-s3cmd rb s3://metakube-cluster-backup-clusterId-restic
+s3cmd rb s3://metakube-cluster-backup-clusterId-ark --recursive
+s3cmd rb s3://metakube-cluster-backup-clusterId-restic --recursive
 ```
