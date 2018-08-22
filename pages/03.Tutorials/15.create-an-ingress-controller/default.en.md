@@ -32,10 +32,6 @@ helm install stable/nginx-ingress --name nginx-ingress --namespace kube-system  
 
 to install the Nginx Ingress Controller in the cluster. This will automatically create a [Type Load Balancer service](../13.create-a-load-balancer/default.en.md) for you.
 
-### Configuring the Load Balancer in SysEleven Stack
-
-When binding an external IP to the Load Balancer, it is by default not directly reachable from the outside. See [Configure Load Balancer](../14.configure-a-load-balancer/default.en.md) for a documentation on how to make it accessible.
-
 ## Cert-Manager
 
 [Cert-Manager Installation](#cert-manager-installation)

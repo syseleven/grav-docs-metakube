@@ -44,7 +44,3 @@ loadbalancer   LoadBalancer   10.10.10.202   195.192.128.46   80:31228/TCP,443:3
 ```
 
 This load balancer now exposes port 80 to the outside world and maps it to port 31228 on all cluster nodes, and it exposes port 443 to the outside world and maps it to ports 30279 on all cluster nodes. This means that a loadbalancer service is also a NodePort service (i.e. a service that exposes pods on specific "NodePorts" on all nodes).
-
-## Configure the Load Balancer in SysEleven Stack
-
-When binding an external IP to the load balancer, it is by default not directly reachable from the outside. Also, it will actually not be able to reach the NodePorts of the cluster nodes (31228 and 30279 in the above example). See [Configure a Load Balancer](../14.configure-a-load-balancer/default.en.md) for a documentation on how to make it accessible.
