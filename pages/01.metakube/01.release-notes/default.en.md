@@ -12,7 +12,7 @@ taxonomy:
 * Clusters now come with managed Cross-Region Cluster Backup Solution, see [Backups](../../02.Documentation/06.backups/default.en.md)
 * Security Groups in LoadBalancer Services are managed automatically
 * Clusters now come with managed metrics-server which enables Horizontal Pod AutoScaling
-* Cluster Creation: Drop-Downs instead of free-text input boxes to choose from available Floating IP Pools, Security Groups, Networks and Subnets 
+* Cluster Creation: Drop-Downs instead of free-text input boxes to choose from available Floating IP Pools, Security Groups, Networks and Subnets
 
 ## 2018-08-08
 
