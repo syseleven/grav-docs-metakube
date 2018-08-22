@@ -1,6 +1,6 @@
 ---
 title: 'Create a backup and restore from it'
-published: false
+published: true
 taxonomy:
     tag:
         - backup

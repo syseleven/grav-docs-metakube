@@ -1,6 +1,6 @@
 ---
 title: Backups
-published: false
+published: true
 taxonomy:
     tag:
         - backup
