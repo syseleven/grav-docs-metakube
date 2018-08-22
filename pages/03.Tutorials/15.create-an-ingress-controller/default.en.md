@@ -18,7 +18,6 @@ In order to route traffic to applications deployed in Kubernetes it is good prac
 ## Nginx Ingress Controller
 
 [Nginx Ingress Controller Installation](#nginx-ingress-controller-installation)
-[Configuring the Load Balancer in SysEleven Stack](#configuring-the-load-balancer-in-syseleven-stack)
 
 A popular ingress controller is the [nginx ingress controller](https://kubernetes.github.io/ingress-nginx/).
 

@@ -10,7 +10,6 @@ taxonomy:
 ---
 
 [The Kubernetes manifest](#the-kubernetes-manifest)
-[Configure the Load Balancer in SysEleven Stack](#configure-the-load-balancer-in-syseleven-stack)
 
 ## The Kubernetes Manifest
 
