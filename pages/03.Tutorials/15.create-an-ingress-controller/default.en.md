@@ -43,7 +43,7 @@ If you want to use [Let's Encrypt](https://letsencrypt.org/) to automatically ma
 This can be done through [Helm](../17.install-helm/default.en.md) as well
 
 ```bash
-helm install cert-manager --name cert-manager --namespace kube-system stable/cert-manager
+helm install --name cert-manager --namespace kube-system stable/cert-manager
 ```
 
 ### Configure cluster issuer
