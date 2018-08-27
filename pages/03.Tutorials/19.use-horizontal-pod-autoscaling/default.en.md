@@ -8,8 +8,8 @@ taxonomy:
         - cli
 ---
 
-Kubernetes offers Horizontal Pod Autoscaling. This tutorial gives you an example on how to use this. For more generic information
-see the [Kubernetes Documentation](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/) on it.
+Kubernetes offers Horizontal Pod Autoscaling and MetaKube clusters automatically come with the necessary metrics-server and configuration out of the box.
+This tutorial gives you an example on how to use this. For more generic information see the [Kubernetes Documentation](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/) on it.
 
 ## Prerequisites
 
