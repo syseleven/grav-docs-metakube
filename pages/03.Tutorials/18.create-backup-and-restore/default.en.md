@@ -79,7 +79,7 @@ Run `ark restore describe hello-app-backup-1-20180813145116` for more details.
 Ark will now restore the namespace the deployment and the pods running in it:
 
 ```shel
-$ kubectl get pods
+$ kubectl get pods --namespace backup-tutorial
 NAME                         READY     STATUS    RESTARTS   AGE
 hello-app-5c7477d7b7-2qpmm   1/1       Running   0          6s
 hello-app-5c7477d7b7-64psb   1/1       Running   0          6s
