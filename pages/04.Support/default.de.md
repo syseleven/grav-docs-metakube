@@ -2,6 +2,8 @@
 title: Support
 published: true
 date: '16-08-2018 14:05'
+page-toc:
+    active: false
 taxonomy:
     tag:
         - kubernetes

@@ -1,5 +1,7 @@
 ---
 title: Tutorials
+page-toc:
+    active: false
 ---
 
 All pages listed as Tutorials will give you an overview about how to use our services.

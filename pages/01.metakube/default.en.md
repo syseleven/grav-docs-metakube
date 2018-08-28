@@ -1,5 +1,7 @@
 ---
 title: MetaKube
+page-toc:
+    active: false
 body_classes: 'title-center title-h1h2'
 ---
 
