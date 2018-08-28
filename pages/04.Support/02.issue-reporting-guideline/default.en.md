@@ -10,25 +10,9 @@ taxonomy:
 
 The following document describes the required form and level of details when reporting issues. It is not required but helps to investigate issues faster. It serves as a guideline on how to report issues.
 
-* [Required information for faster resolutions](#required-information-for-faster-resolutions)
-
-* [Steps you can take in the meantime](#steps-you-can-take-in-the-meantime)
-
 ## Required information for faster resolutions
 
 To minimize the time to resolution we need as much of the following information as possible:
-
-* [How can we contact you?](#how-can-we-contact-you?)
-
-* [What is the desired behavior and what do you observe?](#what-is-the-desired-behavior-and-what-do-you-observe?)
-
-* [Which cluster is affected?](#which-cluster-is-affected?)
-
-* [Since when has the problem occurred?](#since-when-has-the-problem-occurred?)
-
-* [How does the problem affect you?](#how-does-the-problem-affect-you?)
-
-* [What were your last steps before the problem occurred?](#what-were-your-last-steps-before-the-problem-occurred?)
 
 ### How can we contact you?
 
