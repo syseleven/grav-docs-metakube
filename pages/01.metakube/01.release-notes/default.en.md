@@ -6,6 +6,11 @@ taxonomy:
         - release-notes
 ---
 
+## 2018-09-05
+
+* The `default` namespace now comes with a [LimitRange](https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/memory-default-namespace/)
+  that assigns a default CPU and Memory Request to pods that do not define one explicitly.
+
 ## 2018-08-22
 
 * Kubernetes version 1.11.1 and 1.11.2 are now available
