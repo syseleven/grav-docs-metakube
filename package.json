@@ -8,11 +8,11 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint"
+      "pre-push": "npm run lint"
     }
   },
   "devDependencies": {
-    "husky": "^0.14.3",
+    "husky": "^1.0.0-rc.13",
     "markdownlint-cli": "^0.13.0",
     "markdownlint-rules-grav-pages": "^1.0.7"
   }
