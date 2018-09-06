@@ -8,11 +8,27 @@ The content of master is automatically displayed at [https://docs.syseleven.de/m
 
 ## Development
 
-To check if the markdown is valid run:
+To check if the markdown is valid, node.js markdownlint is used. If you want to run the lint checks locall, you need a current node.js version installed. 
 
-```bash
+On MacOS with homebrew:
+
+```shell
+$ brew install node
+```
+ 
+After the initial checkout you have to fetch markdownlint and all of it's dependencies by running
+
+```shell
+$ npm install
+```  
+ 
+Then run
+
+```shell
 $ npm run lint
 ```
+
+to run the markdownlint on the whole repository.
 
 ## Contributions
 
