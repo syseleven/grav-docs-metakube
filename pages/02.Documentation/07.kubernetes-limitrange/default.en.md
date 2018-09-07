@@ -9,13 +9,13 @@ taxonomy:
         - request limit
 ---
 
-The `default` namespace now comes with a [LimitRange](https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/memory-default-namespace/) that assigns a default CPU and memory request to pods that do not define one explicitly. We enabled this feature to try and prevent people from breaking their clusters. Now if a container is created in the default namespace, and the container does not specify its own values for memory and CPU request. The container is given a default memory request of 100MiB and a default CPU request of 100Mi which is 100 millicpus. You can check view the limitranges with:
+The `default` namespace comes with a [LimitRange](https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/memory-default-namespace/) that assigns a default CPU and memory request to pods that do not define one explicitly. We enabled this feature to try and prevent people from breaking their clusters. The default request are inforced if a container is created in the default namespace, and the container does not specify its own values for memory and CPU requests. The container is then given a default memory request of 100MiB and a default CPU request of 100Mi which is 100 millicpus. You can view the limitranges with:
 
 ```bash
 kubectl get limitranges
 ```
 
-You can delete or modifiy our default settings if that is nessesary for your use case. We only inforce the default requests in the default namespace. You can find addional information about requests, limits and quotas in the kubernetes documentation.
+We only inforce the default requests in the default namespace. You can find addional information about requests, limits and quotas in the kubernetes documentation.
 
 Default LimitRange:
 
