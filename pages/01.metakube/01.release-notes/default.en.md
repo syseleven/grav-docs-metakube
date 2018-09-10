@@ -9,7 +9,7 @@ taxonomy:
 ## 2018-09-05
 
 * The `default` namespace now comes with a [LimitRange](https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/memory-default-namespace/)
-  that assigns a default CPU and memory request to pods that do not define one explicitly.
+  that assigns a default CPU and memory request to pods that do not define one explicitly. See also [LimitRange](../../02.Documentation/07.kubernetes-limitrange/default.en.md).
 
 ## 2018-08-22
 
