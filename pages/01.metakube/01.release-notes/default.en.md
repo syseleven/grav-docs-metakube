@@ -6,6 +6,10 @@ taxonomy:
         - release-notes
 ---
 
+## 2018-09-12
+
+* [kubernetes-dashboard](../../02.Documentation/04.kubernetes-dashboard/default.en.md) is updated to version 1.10.0 ([Release Notes](https://github.com/kubernetes/dashboard/releases/tag/v1.10.0))
+
 ## 2018-09-05
 
 * The `default` namespace now comes with a [LimitRange](https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/memory-default-namespace/)
