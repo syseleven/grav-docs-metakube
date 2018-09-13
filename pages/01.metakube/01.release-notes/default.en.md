@@ -5,6 +5,10 @@ taxonomy:
         - metakube
         - release-notes
 ---
+## 2018-09-13
+
+* Kubernetes versions 1.10.7 and 1.11.3 are now available
+
 
 ## 2018-09-05
 
