@@ -5,10 +5,14 @@ taxonomy:
         - metakube
         - release-notes
 ---
+
+## 2018-09-14
+
+* MetaKube is now a [Certified Hosted Kubernetes Platform](https://landscape.cncf.io/landscape=certified-kubernetes-hosted&selected=sys-eleven-meta-kube). The conformance test results are publicly available for Kubernetes [1.10](https://github.com/cncf/k8s-conformance/tree/master/v1.10/metakube) and [1.11](https://github.com/cncf/k8s-conformance/tree/master/v1.11/metakube)
+
 ## 2018-09-13
 
 * Kubernetes versions 1.10.7 and 1.11.3 are now available
-
 
 ## 2018-09-12
 
