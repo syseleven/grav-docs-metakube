@@ -145,7 +145,7 @@ nginx-logs   Bound     pvc-24afa31c-bc19-11e8-b699-0a580af40873   1Gi        RWO
 
 ## Remove the backup backup-turorial
 
-Delete the backup (due to a bug in ark this has to be done **twice to actually delete the backup):
+Delete the backup (due to a bug in ark this has to be done **twice** to actually delete the backup):
 
 ```shell
 $ ark backup delete backup-tutorial
@@ -216,4 +216,4 @@ Patch an existing deplyoment with kubectl to add the annotation to include volum
 kubectl -n backup-tutorial patch deployment nginx-deployment -p '{"spec":{"template":{"metadata":{"annotations":{"backup.ark.heptio.com/backup-volumes": "nginx-logs"}}}}}'
 ```
 
-We recommend creating a seperate backup job for each namespace you would like to backup. Otherwise you might have problems trying to restore individual objects across namespaces.
+**We recommend creating a seperate backup job for each namespace you would like to backup. Otherwise you might have problems trying to restore individual objects across namespaces.**
