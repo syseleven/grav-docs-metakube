@@ -6,6 +6,10 @@ taxonomy:
         - release-notes
 ---
 
+## 2018-09-18
+
+* Updated the backup utility [ark](https://github.com/heptio/ark) to 0.9.5 which fixes the restic integration ([Release Notes](https://github.com/heptio/ark/releases/tag/v0.9.5))
+
 ## 2018-09-14
 
 * MetaKube is now a [Certified Hosted Kubernetes Platform](https://landscape.cncf.io/landscape=certified-kubernetes-hosted&selected=sys-eleven-meta-kube). The conformance test results are publicly available for Kubernetes [1.10](https://github.com/cncf/k8s-conformance/tree/master/v1.10/metakube) and [1.11](https://github.com/cncf/k8s-conformance/tree/master/v1.11/metakube)
