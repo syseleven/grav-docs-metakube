@@ -26,9 +26,9 @@ $ kubectl create namespace backup-tutorial
 namespace/backup-tutorial created
 ```
 
-For our tutorial we will deploy an NGINX container with a persistent volume named nginx-logs. It is important to note the annotation which is added to the pod spec. Without the annotation your volume will not be included in the backup task. The annotation must include the names of the volumes to backup.
+For our tutorial we will deploy an NGINX container with a persistent volume named nginx-logs. It is important to note the annotation which is added to the pod spec. Without the annotation your volume will not be included in the backup task. The annotation must include the names of the volumes to backup. This can be a single volume or a comma seperated list of volumes. The backup task is performed with the [Ark Restic] (https://heptio.github.io/ark/master/restic.html) integration. 
 
-Note: hostPath volumes are not supported, but the new local volume type is supported.
+Note: [hostPath] (https://kubernetes.io/docs/concepts/storage/volumes/#hostpath) volumes are not supported, but the new [local volume] (https://kubernetes.io/docs/concepts/storage/volumes/#local) type is supported.
 
 ```shell
 cat <<'EOF' | kubectl --namespace=backup-tutorial apply -f -
@@ -135,7 +135,7 @@ NAME                               READY     STATUS    RESTARTS   AGE
 nginx-deployment-c7df76c4f-bq2zj   1/1       Running   0          29s
 ```
 
-Ark will also make sure that your persistent volume is restored if you add the correct annotation to the pod spec:
+Ark will also make sure that your persistent volume including the content is restored if you add the correct annotation to the pod spec:
 
 ```shell
 $ kubectl -n backup-tutorial get pvc
