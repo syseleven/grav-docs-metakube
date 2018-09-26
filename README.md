@@ -10,18 +10,18 @@ The content of master is automatically displayed at [https://docs.syseleven.de/m
 
 To check if the markdown is valid, node.js markdownlint is used. If you want to run the lint checks locall, you need a current node.js version installed. 
 
-On MacOS with homebrew:
+On macOS with homebrew:
 
 ```shell
 $ brew install node
 ```
- 
+
 After the initial checkout you have to fetch markdownlint and all of it's dependencies by running
 
 ```shell
 $ npm install
-```  
- 
+```
+
 Then run
 
 ```shell
@@ -32,7 +32,7 @@ to run the markdownlint on the whole repository.
 
 ## Contributions
 
-We welcome contributions and fixes for our documentation. 
+We welcome contributions and fixes for our documentation.
 
 It is important that you respect the directory structure pattern already present under `/pages`, so that grav is able to find and link the pages correctly:
 
