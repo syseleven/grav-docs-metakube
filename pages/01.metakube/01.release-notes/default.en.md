@@ -6,6 +6,10 @@ taxonomy:
         - release-notes
 ---
 
+## 2018-09-27
+
+* Clusters now come with [Helm](https://www.helm.sh/) already installed and configured. See also [Using Helm](../../03.Tutorials/17.using-helm/default.en.md).
+
 ## 2018-09-18
 
 * Updated the backup utility [ark](https://github.com/heptio/ark) to 0.9.5 which fixes the restic integration ([Release Notes](https://github.com/heptio/ark/releases/tag/v0.9.5))
