@@ -14,4 +14,4 @@ To do that go the the detail page of your cluster and click on `Edit Settings` i
 
 ![Edit Settings dialog opened](image_edit-settings_01.png)
 
-!! The cloud-config on the nodes will not be udated. You have to recreate your nodes or update the cloud-config manually (edit the file `/etc/kubernetes/cloud-config`).
+!! The cloud-config on the nodes will not be updated. You have to recreate your worker nodes or update the cloud-config manually on every worker node. For this ssh into to external IP of every worker node (on Ubuntu with the username `ubuntu`) and edit the file `/etc/kubernetes/cloud-config`.
