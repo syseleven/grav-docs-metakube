@@ -12,8 +12,8 @@
     }
   },
   "devDependencies": {
-    "husky": "^1.0.0-rc.14",
+    "husky": "^1.1.0",
     "markdownlint-cli": "^0.13.0",
-    "markdownlint-rules-grav-pages": "^1.0.8"
+    "markdownlint-rules-grav-pages": "^1.0.9"
   }
 }
