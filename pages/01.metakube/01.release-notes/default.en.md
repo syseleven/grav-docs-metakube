@@ -5,6 +5,10 @@ taxonomy:
         - metakube
         - release-notes
 ---
+## 2018-10-4
+
+* Kubernetes versions 1.9.11 and 1.10.8 are now available
+* Updated the backup utility [ark](https://github.com/heptio/ark) to 0.9.6 
 
 ## 2018-09-27
 

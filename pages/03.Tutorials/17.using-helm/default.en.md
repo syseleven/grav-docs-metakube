@@ -13,7 +13,7 @@ Helm is a package manager for Kubernetes which makes it easy to install common a
 
 ## Installation
 
-All MetaKube clusters come pre-configured to work with Helm out of the box.
+All MetaKube clusters come pre-configured with Helm out of the box.
 You just have to install the helm command line client to start deploying Helm charts.
 
 See the official Helm [installation guide](https://docs.helm.sh/using_helm/#installing-the-helm-client) for instructions for your operation system.
