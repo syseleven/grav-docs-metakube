@@ -23,7 +23,7 @@ A popular ingress controller is the [nginx ingress controller](https://kubernete
 
 ### Nginx Ingress Controller Installation
 
-The easiest way to install it in your cluster is through [Helm](../17.install-helm/default.en.md). When Helm is ready to be used, run
+The easiest way to install it in your cluster is through [Helm](../17.using-helm/default.en.md). When Helm is ready to be used, run
 
 ```bash
 helm install stable/nginx-ingress --name nginx-ingress --namespace kube-system  --set "rbac.create=true"
@@ -40,7 +40,7 @@ If you want to use [Let's Encrypt](https://letsencrypt.org/) to automatically ma
 
 ### Cert-Manager Installation
 
-This can be done through [Helm](../17.install-helm/default.en.md) as well
+This can be done through [Helm](../17.using-helm/default.en.md) as well
 
 ```bash
 helm install --name cert-manager --namespace kube-system stable/cert-manager

@@ -5,6 +5,14 @@ taxonomy:
         - metakube
         - release-notes
 ---
+## 2018-10-4
+
+* Kubernetes versions 1.9.11 and 1.10.8 are now available
+* Updated the backup utility [ark](https://github.com/heptio/ark) to 0.9.6
+
+## 2018-09-27
+
+* Clusters now come with [Helm](https://www.helm.sh/) already installed and configured. See also [Using Helm](../../03.Tutorials/17.using-helm/default.en.md).
 
 ## 2018-09-18
 
