@@ -9,7 +9,7 @@ taxonomy:
 menu: 'Update the Stack password'
 ---
 
-## Update the password for the master components
+## Update the master components
 
 If you change your login password for SysEleven Stack, you also have to change it in all clusters you created with these credentials.
 To do that go the the detail page of your cluster and click on `Edit Settings` in the burger menu
@@ -19,7 +19,7 @@ To do that go the the detail page of your cluster and click on `Edit Settings` i
 !! The cloud-config on the nodes will not be updated automatically. You have to recreate your worker nodes or update the cloud-config on every
 !! worker node.
 
-## Update the password on the worker nodes
+## Update the worker nodes
 
 To update the stack password in the cloud-config on the worker nodes, you can either recreate all worker nodes or use a script we provide to update all cloud-configs in place. To use the script clone our [migrations repository](https://github.com/syseleven/metakube-migration), which includes the `update-node-passwords.sh` script. You can execute the script on any unix-based client system (including macOS).
 
