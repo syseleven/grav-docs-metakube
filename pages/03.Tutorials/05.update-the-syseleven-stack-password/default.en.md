@@ -16,8 +16,7 @@ To do that go the the detail page of your cluster and click on `Edit Settings` i
 
 ![Edit Settings dialog opened](image_edit-settings_01.png)
 
-!! The cloud-config on the nodes will not be updated automatically. You have to recreate your worker nodes or update the cloud-config on every
-!! worker node.
+!! The cloud-config on the nodes will not be updated automatically. You have to recreate your worker nodes or update the cloud-config on every worker node.
 
 ## Update the worker nodes
 
