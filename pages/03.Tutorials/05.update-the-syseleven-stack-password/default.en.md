@@ -9,6 +9,8 @@ taxonomy:
 menu: 'Update the Stack password'
 ---
 
+## Update the password for the master components
+
 If you change your login password for SysEleven Stack, you also have to change it in all clusters you created with these credentials.
 To do that go the the detail page of your cluster and click on `Edit Settings` in the burger menu
 
