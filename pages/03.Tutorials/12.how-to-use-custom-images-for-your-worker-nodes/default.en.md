@@ -10,7 +10,7 @@ taxonomy:
 menu: 'How to use custom images'
 ---
 
-To use a custom image for your MetaKube clusters, you need to upload an image of a [supported operating system](../../02.Documentation/03.supported-operating-systems/default.en.md) to SysEleven Stack and choose it in the worker node creation afterwards.
+To use a custom image for your MetaKube clusters, you need to upload an image of a [supported operating system](../../02.Documentation/04.supported-operating-systems/default.en.md) to SysEleven Stack and choose it in the worker node creation afterwards.
 
 [Upload to SysEleven Stack](#upload-to-syseleven-stack) (alternatively via [CLI](#upload-to-syseleven-stack-via-cli))
 [Choose in cluster creation](#choose-in-cluster-creation)

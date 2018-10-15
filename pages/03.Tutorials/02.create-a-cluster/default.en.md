@@ -15,6 +15,8 @@ taxonomy:
 ## Place to live
 
 To create a new cluster, open the MetaKube dashboard and select the menu entry `Create Cluster`.
+Clusters are tied to a [project](../../02.Documentation/02.projects/default.en.md). You can create as many clusters within one project as you want.
+
 Start by choosing a name
 
 ![Overview of cluster creation](image_overview_01.png)
