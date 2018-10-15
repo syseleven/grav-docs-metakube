@@ -1,7 +1,7 @@
 ---
 title: Roadmap
 published: false
-'date: 15.10.2018 12:00'
+date: '15-10-2018 12:00'
 ---
 This is a basic roadmap for orientation and guidance towards the future of MetaKube.  
 We do not provide specific time and date with this roadmap! The topics are sorted by importance in descending order for the next months.    
