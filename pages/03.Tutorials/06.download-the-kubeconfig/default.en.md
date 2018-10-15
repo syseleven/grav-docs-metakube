@@ -10,4 +10,4 @@ taxonomy:
 
 To download the kubeconfig, navigate to `Manage Cluster` and select the correct cluster. On the top right you can find a button `Download config`.
 
-![Downlaod config button in the top right corner](image_download-kubeconfig_01.png)
+![Download config button in the top right corner](image_download-kubeconfig_01.png)
