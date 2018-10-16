@@ -15,4 +15,4 @@ We do not provide specific time and date with this roadmap! The topics are sorte
 * **Service mesh** - Since the release of istio some of the features creating a demand in our customer base. We are looking into this as well.
 * **Multi-region kubernetes** - Deploying one cluster on different regions is another highly sought after feature for Kubernetes and it does not come for free. Our team is looking into an easy to use approach without additional engineering from our customers.
 
-If you would like to discuss additional features or request information please mail us: metakube@syseleven.de
+If you would like to discuss additional features or request information please mail us: [metakube@syseleven.de](mailto:metakube@syseleven.de)
