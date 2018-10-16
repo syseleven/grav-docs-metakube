@@ -7,8 +7,8 @@ taxonomy:
 ---
 ## 2018-10-
 
-* MetaKube supports now [projects](../../02.Documentation/02.projects/default.en.md) to group clusters and maintain and access them with multiple users
-* Kubernetes versions 1.12.0 and 1.12. are now available
+* MetaKube now supports [projects](../../02.Documentation/02.projects/default.en.md) to group, maintain and access clusters with multiple users
+* Kubernetes versions 1.12.0 and 1.12.1 are now available
 * etcd is updated to 3.3.9
 
 ## 2018-10-08
