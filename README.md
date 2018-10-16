@@ -1,6 +1,7 @@
 # grav-docs-metakube
 
 [![Build Status](https://travis-ci.org/syseleven/grav-docs-metakube.svg?branch=master)](https://travis-ci.org/syseleven/grav-docs-metakube)
+[![GitHub license](https://img.shields.io/github/license/syseleven/grav-docs-metakube.svg)](https://github.com/syseleven/grav-docs-metakube/blob/master/LICENSE)
 
 SysEleven MetaKube Documentation Repository
 
