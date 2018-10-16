@@ -9,8 +9,6 @@ taxonomy:
         - loadbalancer
 ---
 
-[The Kubernetes manifest](#the-kubernetes-manifest)
-
 ## The Kubernetes Manifest
 
 Kubernetes defines [Service](https://kubernetes.io/docs/concepts/services-networking/service/) a resource type "LoadBalancer" that you can use to create a managed load balancer in SysEleven Stack for every service.
