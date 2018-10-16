@@ -1,10 +1,13 @@
 ---
 title: 'Release Notes'
+page-toc:
+    active: false
 taxonomy:
     tag:
         - metakube
         - release-notes
 ---
+
 ## 2018-10-08
 
 * Updated the backup utility [ark](https://github.com/heptio/ark) to 0.9.7
