@@ -145,7 +145,7 @@ nginx-logs   Bound     pvc-24afa31c-bc19-11e8-b699-0a580af40873   1Gi        RWO
 
 ## Remove the backup backup-turorial
 
-Delete the backup (due to a bug in ark this has to be done **twice** to actually delete the backup):
+Delete the backup:
 
 ```shell
 $ ark backup delete backup-tutorial
