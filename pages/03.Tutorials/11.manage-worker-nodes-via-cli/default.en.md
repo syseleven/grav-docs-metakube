@@ -23,10 +23,10 @@ To get a list of all nodes execute
 kubectl get nodes -o wide
 ```
 
-Every node is managed by a machine resource. To list all machine resources, execute
+Every node is managed by a machine resource in the `kube-system` namespace. To list all machine resources, execute
 
 ```bash
-kubectl get machines
+kubectl get machines --namespace kube-system
 ```
 
 ## Add a node
@@ -50,45 +50,43 @@ Afterwards run the following commands. You most likely do not need to change any
 
 ```bash
 OPERATING_SYSTEM="ubuntu"
-IMAGE_NAME="Ubuntu 16.04 LTS 2018.03.26"
+IMAGE_NAME="Ubuntu 18.04 LTS sys11 optimized - 2018-08-13"
 REGION="dbl"
 AVAILABILITY_ZONE="dbl1"
 FLOATING_IP_POOL="ext-net"
-K8S_VERSION="1.10.3"
-DOCKER_VERSION="17.03.2"
+K8S_VERSION="1.12.2"
 MACHINE_NAME=$(cat /dev/urandom | base64 | tr -cd 'a-z0-9' | head -c 5)
 
 cat <<EOF | kubectl apply -f -
-apiVersion: machine.k8s.io/v1alpha1
+apiVersion: cluster.k8s.io/v1alpha1
 kind: Machine
 metadata:
   name: machine-kubermatic-${CLUSTER_NAME}-${MACHINE_NAME}
+  namespace: kube-system  
 spec:
   metadata:
     name: kubermatic-${CLUSTER_NAME}-${MACHINE_NAME}
   providerConfig:
-    cloudProvider: openstack
-    cloudProviderSpec:
-      availabilityZone: ${AVAILABILITY_ZONE}
-      flavor: ${FLAVOR}
-      floatingIpPool: ${FLOATING_IP_POOL}
-      identityEndpoint: "https://api.${REGION}.cloud.syseleven.net:5000/v3"
-      image: "${IMAGE_NAME}"
-      network: kubermatic-${CLUSTER_NAME}
-      region: ${REGION}
-      securityGroups:
-      - kubermatic-${CLUSTER_NAME}
-    operatingSystem: ${OPERATING_SYSTEM}
-    operatingSystemSpec:
-      distUpgradeOnBoot: false
-    sshPublicKeys:
-    - "${SSH_PUBLIC_KEY}"
+    value:
+        cloudProvider: openstack
+        cloudProviderSpec:
+          availabilityZone: ${AVAILABILITY_ZONE}
+          flavor: ${FLAVOR}
+          floatingIpPool: ${FLOATING_IP_POOL}
+          identityEndpoint: "https://api.${REGION}.cloud.syseleven.net:5000/v3"
+          image: "${IMAGE_NAME}"
+          network: kubermatic-${CLUSTER_NAME}
+          region: ${REGION}
+          securityGroups:
+          - kubermatic-${CLUSTER_NAME}
+        operatingSystem: ${OPERATING_SYSTEM}
+        operatingSystemSpec:
+          distUpgradeOnBoot: false
+        sshPublicKeys:
+        - "${SSH_PUBLIC_KEY}"
   roles:
   - Node
   versions:
-    containerRuntime:
-      name: docker
-      version: ${DOCKER_VERSION}
     kubelet: "v${K8S_VERSION}"
 EOF
 ```
@@ -98,5 +96,5 @@ EOF
 Find the machine name of the node you want to delete (see _Listing all available nodes_) and execute
 
 ```bash
-kubectl delete machine machine-kubermatic-name
+kubectl delete machine machine-kubermatic-name --namespace kube-system
 ```

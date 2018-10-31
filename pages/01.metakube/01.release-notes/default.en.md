@@ -7,6 +7,11 @@ taxonomy:
         - metakube
         - release-notes
 ---
+## 2018-10-31
+
+* MetaKube now supports [projects](../../02.Documentation/02.projects/default.en.md) to group, maintain and access clusters with multiple users
+* Kubernetes versions 1.10.9, 1.12.1 and 1.12.2 are now available
+* etcd is updated to 3.3.9
 
 ## 2018-10-08
 
@@ -35,17 +40,17 @@ taxonomy:
 
 ## 2018-09-12
 
-* [kubernetes-dashboard](../../02.Documentation/04.kubernetes-dashboard/default.en.md) is updated to version 1.10.0 ([Release Notes](https://github.com/kubernetes/dashboard/releases/tag/v1.10.0))
+* [kubernetes-dashboard](../../02.Documentation/05.kubernetes-dashboard/default.en.md) is updated to version 1.10.0 ([Release Notes](https://github.com/kubernetes/dashboard/releases/tag/v1.10.0))
 
 ## 2018-09-05
 
 * The `default` namespace now comes with a [LimitRange](https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/memory-default-namespace/)
-  that assigns a default CPU and memory request to pods that do not define one explicitly. See also [LimitRange](../../02.Documentation/07.kubernetes-limitrange/default.en.md).
+  that assigns a default CPU and memory request to pods that do not define one explicitly. See also [LimitRange](../../02.Documentation/08.kubernetes-limitrange/default.en.md).
 
 ## 2018-08-22
 
 * Kubernetes version 1.11.1 and 1.11.2 are now available
-* Clusters now come with managed cross-region cluster backup solution, see [Backups](../../02.Documentation/06.backups/default.en.md)
+* Clusters now come with managed cross-region cluster backup solution, see [Backups](../../02.Documentation/07.backups/default.en.md)
 * Security groups in [LoadBalancer services](../../03.Tutorials/13.create-a-load-balancer/default.en.md) are managed automatically
 * Clusters now come with managed metrics-server which enables [Horizontal Pod AutoScaling](../../03.Tutorials/19.use-horizontal-pod-autoscaling/default.en.md)
 * Cluster creation: Drop-downs instead of free-text input boxes to choose from available floating IP pools, security groups, networks and subnets
