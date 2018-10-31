@@ -12,7 +12,7 @@ taxonomy:
 * MetaKube now supports [projects](../../02.Documentation/02.projects/default.en.md) to group, maintain and access clusters with multiple users
 * Kubernetes versions 1.10.9, 1.12.1 and 1.12.2 are now available
 * etcd is updated to 3.3.9
-* Updated the backup utility [ark](https://github.com/heptio/ark) to 0.9.8
+* Updated the backup utility [ark](https://github.com/heptio/ark) to 0.9.9
 * New Ubuntu worker nodes are now using Ubuntu 18.04
 
 ## 2018-10-08
