@@ -7,7 +7,7 @@ taxonomy:
         - metakube
         - release-notes
 ---
-## 2018-10-
+## 2018-10-31
 
 * MetaKube now supports [projects](../../02.Documentation/02.projects/default.en.md) to group, maintain and access clusters with multiple users
 * Kubernetes versions 1.10.9, 1.12.1 and 1.12.2 are now available
