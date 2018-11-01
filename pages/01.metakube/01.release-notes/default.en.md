@@ -1,12 +1,13 @@
 ---
 title: 'Release Notes'
-page-toc:
-    active: false
 taxonomy:
     tag:
         - metakube
         - release-notes
+page-toc:
+    active: false
 ---
+
 ## 2018-10-31
 
 * MetaKube now supports [projects](../../02.Documentation/02.projects/default.en.md) to group, maintain and access clusters with multiple users
@@ -14,6 +15,7 @@ taxonomy:
 * etcd is updated to 3.3.9
 * Updated the backup utility [ark](https://github.com/heptio/ark) to 0.9.9
 * New Ubuntu worker nodes are now using Ubuntu 18.04
+* Kubernetes versions 1.11.* are now disabled due to a [bug in kubernetes](https://github.com/kubernetes/kubernetes/issues/68270) that nodes will loose their IP addresses
 
 ## 2018-10-08
 
