@@ -15,7 +15,7 @@ page-toc:
 * etcd is updated to 3.3.9
 * Updated the backup utility [ark](https://github.com/heptio/ark) to 0.9.9
 * New Ubuntu worker nodes are now using Ubuntu 18.04
-* Kubernetes versions 1.11.* are now disabled due to a [bug in kubernetes](https://github.com/kubernetes/kubernetes/issues/68270) that nodes will loose their IP addresses
+* Kubernetes versions 1.11.* are now disabled due to a [bug in kubernetes](https://github.com/kubernetes/kubernetes/issues/68270) where nodes will loose their IP addresses
 
 ## 2018-10-08
 
