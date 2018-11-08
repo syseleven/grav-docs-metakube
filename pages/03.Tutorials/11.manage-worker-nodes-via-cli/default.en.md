@@ -91,6 +91,8 @@ spec:
 EOF
 ```
 
+For more details on Machines see [Cluster Management API](../../02.Documentation/11.cluster-api/default.en.md).
+
 ## Delete a node
 
 Find the machine name of the node you want to delete (see _Listing all available nodes_) and execute
