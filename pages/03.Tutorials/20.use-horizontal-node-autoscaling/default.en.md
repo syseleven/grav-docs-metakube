@@ -179,7 +179,7 @@ spec:
             image: "${IMAGE_NAME}"
             network: kubermatic-${CLUSTER_NAME}
             password: ""
-            region: dbl
+            region: ${REGION}
             securityGroups:
             - kubermatic-${CLUSTER_NAME}
             tenantName: ""
