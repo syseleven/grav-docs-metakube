@@ -146,8 +146,8 @@ apiVersion: cluster.k8s.io/v1alpha1
 kind: MachineDeployment
 metadata:
   annotations:
-    cluster-autoscaler/minsize: 0
-    cluster-autoscaler/maxsize: 15
+    cluster-autoscaler/min-size: "0"
+    cluster-autoscaler/max-size: "15"
   name: scalable-machine-deployment
   namespace: kube-system
 spec:
