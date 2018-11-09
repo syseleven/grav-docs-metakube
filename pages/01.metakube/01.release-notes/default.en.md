@@ -7,6 +7,11 @@ taxonomy:
 page-toc:
     active: false
 ---
+
+## 2018-11-09
+
+* Updated the backup utility [ark](https://github.com/heptio/ark) to 0.9.11
+
 ## 2018-11-02
 
 * Updated the backup utility [ark](https://github.com/heptio/ark) to 0.9.10
