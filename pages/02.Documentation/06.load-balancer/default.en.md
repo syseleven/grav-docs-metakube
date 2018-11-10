@@ -10,7 +10,7 @@ taxonomy:
 
 ## External Load Balancers
 
-MetaKube clusters come with built in support of external load balancers through OpenStack Neutron, which allows you to
+MetaKube clusters come with built-in support for external load balancers through OpenStack Neutron, which allows you to
 easily get an external IP address for a [service](https://kubernetes.io/docs/concepts/services-networking/service/).
 
 Traffic to this IP address will be automatically load balanced over all available pods of the exposed service.

@@ -31,7 +31,7 @@ $ kubectl run hello-app --image=nginxdemos/hello --port=80 --namespace hpa-tutor
 deployment.apps/hello-app created
 ```
 
-Check that the pod of the new application were created successfully and are running:
+Check that the pod of the new application was created successfully and is running:
 
 ```shell
 $ kubectl get pods --namespace hpa-tutorial

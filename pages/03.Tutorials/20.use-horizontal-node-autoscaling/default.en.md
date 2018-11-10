@@ -8,8 +8,8 @@ taxonomy:
         - cli
 ---
 
-MetaKube Kubernetes clusters support horizontal node autoscaling out of the box. This tutorial shows you, how
-you can configure and activate it, and how it plays together nicely with [horizontal pod autoscaling](../19.use-horizontal-pod-autoscaling/default.en.md).
+MetaKube Kubernetes clusters support horizontal node autoscaling out of the box. This tutorial shows how
+you can configure and activate it and how it plays together nicely with [horizontal pod autoscaling](../19.use-horizontal-pod-autoscaling/default.en.md).
 
 ## Prerequisites
 
@@ -24,14 +24,14 @@ $ kubectl create namespace hna-tutorial
 namespace/hpa-tutorial created
 ```
 
-For our tutorial we will just deploy a NGINX Hello World app, run:
+For our tutorial we will just deploy an NGINX Hello World app, run:
 
 ```shell
 $ kubectl run hello-app --image=nginxdemos/hello --port=80 --namespace hna-tutorial --requests="cpu=500m,memory=700Mi"
 deployment.apps/hello-app created
 ```
 
-Check that the pod of the new application were created successfully and are running:
+Check that the pod of the new application was created successfully and is running:
 
 ```shell
 $ kubectl get pods --namespace hna-tutorial
@@ -123,7 +123,7 @@ but for this tutorial, let's use the cluster autoscaler.
 For this we have to create a scalable MachineDeployment in our cluster:
 
 ```bash
-# Choose the public key, you want to deploy on the node
+# Choose the public key you want to deploy on the node
 SSH_PUBLIC_KEY=$(cat ~/.ssh/id_rsa.pub)
 
 # Getting the cluster name like this only works if you did not rename the
@@ -195,7 +195,7 @@ spec:
 EOF
 ```
 
-This will create a MachineDeployment, that initially contains 0 machines, but can be scaled up by the cluster autoscaler to a maximum
+This will create a MachineDeployment that initially contains 0 machines, but can be scaled up by the cluster autoscaler to a maximum
 of 15 machines, if you have enough quota of course. For every machine a VM will be automatically created in OpenStack, provisioned and joined as a node to the
 Kubernetes cluster.
 
@@ -232,7 +232,7 @@ scalable-machine-deployment-5c4cbbc47b-62wsd   Ready      <none>   2m58s   v1.12
 scalable-machine-deployment-5c4cbbc47b-zwrts   Ready      <none>   2m30s   v1.12.2
 ```
 
-And the before pending pods are now successfully scheduled and running:
+And the previously pending pods are now successfully scheduled and running:
 
 ```shell
 $ kubectl get pods --namespace hna-tutorial
