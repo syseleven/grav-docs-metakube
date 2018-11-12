@@ -8,6 +8,10 @@ page-toc:
     active: false
 ---
 
+## 2018-11-13
+
+* Allow resizing of persistent volumes. See [Resizing persistent volumes](../../03.Tutorials/21.resize-persistent-volume/default.en.md).
+
 ## 2018-11-09
 
 * Updated the backup utility [ark](https://github.com/heptio/ark) to 0.9.11
