@@ -42,7 +42,7 @@ Create a set of new worker nodes. For detailed information on how to do this, re
 
 You can disable scheduling onto a worker node with `kubectl cordon ${node}`. Example:
 
-```bash
+```shell
 $ kubectl cordon kubermatic-w9tk8cmw62-hm5vl
 node "kubermatic-w9tk8cmw62-hm5vl" cordoned
 
@@ -61,7 +61,7 @@ Before you start draining old nodes, you should disable scheduling on all old no
 
 When all old nodes are disabled for scheduling, you can start to drain these nodes. This means, all pods are evicted from the node. As daemonsets are scheduled on all available nodes, you must ignore them with `--ignore-daemonsets` and local storage must be deleted with `--delete-local-data`.
 
-```bash
+```shell
 $ kubectl drain --delete-local-data --ignore-daemonsets kubermatic-w9tk8cmw62-22wgv
 node "kubermatic-w9tk8cmw62-22wgv" already cordoned
 WARNING: Ignoring DaemonSet-managed pods: canal-hgrlh, kube-proxy-s5tnt, npd-v0.4.1-g5wqj
@@ -74,7 +74,7 @@ node "kubermatic-w9tk8cmw62-22wgv" drained
 When the worker node is drained, you can safely delete it. For detailed information on how to do this, refer to [Delete a worker node](../09.delete-a-worker-node/default.en.md). If you had enough free resources to create a complete set of new worker nodes, or have created enough to hold the current load, you can continue to drain the next old node ('go to 3'). Otherwise you should create more new worker nodes now ('go to 1').
 When everything is done, you should have a new set of worker nodes with the new kubernetes/kubelet version
 
-```bash
+```shell
 $ kubectl get nodes
 NAME                          STATUS    ROLES     AGE       VERSION
 kubermatic-w9tk8cmw62-7q9nx   Ready     <none>    10m       v1.10.2

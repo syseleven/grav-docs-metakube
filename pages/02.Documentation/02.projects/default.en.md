@@ -12,7 +12,7 @@ member to the project.
 
 ## Switching the current project
 
-You can see and switch the currently active project with the dropdown menu in
+You can see and switch the currently active project with the drop-down menu in
 the upper left corner.
 
 ![Show current project](show-project.png)
@@ -22,7 +22,7 @@ the upper left corner.
 ## Adding a new project
 
 In the list of all your projects you can create new projects or delete existing
-ones. Additionally you can find an `Add Project` button in the dropdown menu in
+ones. Additionally you can find an `Add Project` button in the drop-down menu in
 the upper left corner.
 
 ## Adding members to a project

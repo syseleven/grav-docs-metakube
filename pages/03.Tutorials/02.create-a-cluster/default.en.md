@@ -42,20 +42,20 @@ Then choose the tenant where you want to create the cluster from the drop-down l
 
 For node settings we recommend at least 3 nodes sized `m1.small` or bigger. For an overview of the possible node flavors see the [SysEleven Stack documentation](https://docs.syseleven.de/syseleven-stack/en/documentation/flavors).
 
-![Overview of cluster settings with opened flavor dropdown](image_cluster-settings_03.png)
+![Overview of cluster settings with opened flavor drop-down](image_cluster-settings_03.png)
 
 You can also choose the operating system you want to use for your worker nodes
 
-![Overview of cluster settings with opened OS dropdown](image_cluster-settings_04.png)
+![Overview of cluster settings with opened OS drop-down](image_cluster-settings_04.png)
 
-A default image tested and maintained by SysEleven is automatically chosen for the nodes, but you can also enter any image available to you in SysEleven Stack. To get a list of current base images, navigate to `Project -> Compute -> Images` in the SysEleven Stack dashbaord
+A default image tested and maintained by SysEleven is automatically chosen for the nodes, but you can also enter any image available to you in SysEleven Stack. To get a list of current base images, navigate to `Project -> Compute -> Images` in the SysEleven Stack dashboard
 
 ![Overview of openstack images](image_stack-images_01.png)
 
 Make sure to enter the exact name of the image you want to run on your machines, as listed in the images tab of the SysEleven stack dashboard.  
 The chosen SSH key will be used for authentication as user `apiserver` on all worker nodes.
 
-![Overview of cluster settings with opened SSH key dropdown](image_cluster-settings_05.png)
+![Overview of cluster settings with opened SSH key drop-down](image_cluster-settings_05.png)
 
 When you click on next, you will see a summary and the cluster creation will start after you confirm. You will then be forwarded to the cluster creation page where you can view the cluster creation process.
 
