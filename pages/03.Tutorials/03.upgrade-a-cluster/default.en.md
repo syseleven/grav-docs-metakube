@@ -14,11 +14,11 @@ taxonomy:
 
 ## Upgrade master components
 
-When an upgrade for the master nodes is available, a blue text `upgrade available` will be shown besides the Master version
+When an upgrade for the master nodes is available, a blue text `upgrade available` will be shown besides the Master version:
 
 ![Cluster with available upgrade](image_upgrade-available_01.png)
 
-To start the upgrade, just click on the link and choose the desired version (most recent, tested version is selected)
+To start the upgrade, just click on the link and choose the desired version (most recent, tested version is selected):
 
 ![Dialog to choose upgrade version](image_upgrade-version_01.png)
 
@@ -26,7 +26,7 @@ After the update is initiated, the master components will be upgraded in the bac
 
 ## Upgrade worker nodes
 
-The worker nodes can not be upgraded in place. This means they have to be replaced by newer versions to be upgraded. The basic upgrade path is
+The worker nodes can not be upgraded in place. This means they have to be replaced by newer versions to be upgraded. The basic upgrade path is:
 
 1. [Create new worker nodes](#create-new-worker-nodes)
 2. [Disable scheduling on old worker nodes](#disable-scheduling-on-old-worker-nodes)
@@ -36,11 +36,11 @@ The worker nodes can not be upgraded in place. This means they have to be replac
 
 ### Create new worker nodes
 
-Create a set of new worker nodes. For detailed information on how to do this, refer to [Add a worker node](../08.add-a-worker-node/default.en.md)
+Create a set of new worker nodes. For detailed information on how to do this, refer to [Add a worker node](../08.add-a-worker-node/default.en.md):
 
 ### Disable scheduling on old worker nodes
 
-You can disable scheduling onto a worker node with `kubectl cordon ${node}`. Example:
+You can disable scheduling onto a worker node with `kubectl cordon ${node}`:
 
 ```shell
 $ kubectl cordon kubermatic-w9tk8cmw62-hm5vl
@@ -59,7 +59,7 @@ Before you start draining old nodes, you should disable scheduling on all old no
 
 ### Drain one old worker node
 
-When all old nodes are disabled for scheduling, you can start to drain these nodes. This means, all pods are evicted from the node. As daemonsets are scheduled on all available nodes, you must ignore them with `--ignore-daemonsets` and local storage must be deleted with `--delete-local-data`.
+When all old nodes are disabled for scheduling, you can start to drain these nodes. This means, all pods are evicted from the node. As DaemonSets are scheduled on all available nodes, you must ignore them with `--ignore-daemonsets` and local storage must be deleted with `--delete-local-data`.
 
 ```shell
 $ kubectl drain --delete-local-data --ignore-daemonsets kubermatic-w9tk8cmw62-22wgv
@@ -72,7 +72,7 @@ node "kubermatic-w9tk8cmw62-22wgv" drained
 ### Delete drained worker node
 
 When the worker node is drained, you can safely delete it. For detailed information on how to do this, refer to [Delete a worker node](../09.delete-a-worker-node/default.en.md). If you had enough free resources to create a complete set of new worker nodes, or have created enough to hold the current load, you can continue to drain the next old node ('go to 3'). Otherwise you should create more new worker nodes now ('go to 1').
-When everything is done, you should have a new set of worker nodes with the new kubernetes/kubelet version
+When everything is done, you should have a new set of worker nodes with the new kubernetes/kubelet version:
 
 ```shell
 $ kubectl get nodes

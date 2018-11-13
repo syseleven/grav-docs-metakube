@@ -10,10 +10,6 @@ taxonomy:
         - deployment
 ---
 
-[Requirements](#requirements)
-[Deploy an application](#deploy-an-application)
-[Make the application accessible from the outside](#make-the-application-accessible-from-the-outside)
-
 This tutorial describes how you can deploy a demo application to the cluster.
 
 ## Requirements
@@ -23,8 +19,7 @@ This tutorial describes how you can deploy a demo application to the cluster.
 
 ## Deploy an application
 
-For this tutorial we are going the deploy the [nginx hello image](https://hub.docker.com/r/nginxdemos/hello/) to our cluster.
-For this create a [Deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
+For this tutorial we are going the deploy the [nginx hello image](https://hub.docker.com/r/nginxdemos/hello/) to our cluster. Therefor create a [Deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/):
 
 ```bash
 cat <<'EOF' | kubectl apply -f -
@@ -60,7 +55,7 @@ EOF
 
 ## Make the application accessible from the outside
 
-In order to make the application accessible from the outside, we first have to expose it with a [Service](https://kubernetes.io/docs/concepts/services-networking/service/)
+In order to make the application accessible from the outside, we first have to expose it with a [Service](https://kubernetes.io/docs/concepts/services-networking/service/):
 
 ```bash
 cat <<'EOF' | kubectl apply -f -
@@ -79,7 +74,7 @@ spec:
 EOF
 ```
 
-And then create an [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/) resource which registers it at our ingress controller and fetches a TLS certificate for it
+And then create an [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/) resource which registers it at our ingress controller and fetches a TLS certificate for it:
 
 ```bash
 cat <<'EOF' | kubectl apply -f -

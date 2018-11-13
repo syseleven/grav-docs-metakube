@@ -8,8 +8,7 @@ taxonomy:
         - cli
 ---
 
-See the [Official kubectl Install Instructions](https://kubernetes.io/docs/tasks/tools/install-kubectl/) for a tutorial on how to install kubectl on your system.
-Once you have it installed, [download the kubeconfig](../06.download-the-kubeconfig/default.en.md) and export it to your environment
+See the [Official kubectl Install Instructions](https://kubernetes.io/docs/tasks/tools/install-kubectl/) for a tutorial on how to install kubectl on your system. Once you have it installed, [download the kubeconfig](../06.download-the-kubeconfig/default.en.md) and export it to your environment:
 
 ```bash
 $ export KUBECONFIG=~/Downloads/kubeconfig-fhgbvx12xg
