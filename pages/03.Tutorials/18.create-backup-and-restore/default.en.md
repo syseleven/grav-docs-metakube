@@ -76,7 +76,7 @@ spec:
 EOF
 ```
 
-Check that the nginx pod has been created successfully and is running:
+Check that the NGINX pod has been created successfully and is running:
 
 ```shell
 $ kubectl get pods --namespace backup-tutorial
