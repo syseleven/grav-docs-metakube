@@ -11,19 +11,15 @@ taxonomy:
 
 Worker nodes can be managed with our web UI as described in [add a worker node](../08.add-a-worker-node/default.en.md). Once you installed [kubectl](../07.using-kubectl/default.en.md), you can also manage them via Command-Line-Interface (CLI) in order to automate creation, deletion and upgrades of nodes.
 
-[List all available nodes](#list-all-available-nodes)
-[Add a node](#add-a-node)
-[Delete a node](#delete-a-node)
-
 ## List all available nodes
 
-To get a list of all nodes execute
+To get a list of all nodes execute:
 
 ```bash
 kubectl get nodes -o wide
 ```
 
-Every node is managed by a machine resource in the `kube-system` namespace. To list all machine resources, execute
+Every node is managed by a machine resource in the `kube-system` namespace. To list all machine resources, execute:
 
 ```bash
 kubectl get machines --namespace kube-system
@@ -31,7 +27,7 @@ kubectl get machines --namespace kube-system
 
 ## Add a node
 
-To add a node via CLI, set up the following variables
+To add a node via CLI, set up the following variables:
 
 ```bash
 # Set up the flavor for the node
@@ -46,7 +42,7 @@ SSH_PUBLIC_KEY=$(cat ~/.ssh/id_rsa.pub)
 CLUSTER_NAME=$(kubectl config current-context)
 ```
 
-Afterwards run the following commands. You most likely do not need to change any of the remaining variables
+Afterwards run the following commands. You most likely do not need to change any of the remaining variables:
 
 ```bash
 OPERATING_SYSTEM="ubuntu"
@@ -62,7 +58,7 @@ apiVersion: cluster.k8s.io/v1alpha1
 kind: Machine
 metadata:
   name: machine-kubermatic-${CLUSTER_NAME}-${MACHINE_NAME}
-  namespace: kube-system  
+  namespace: kube-system
 spec:
   metadata:
     name: kubermatic-${CLUSTER_NAME}-${MACHINE_NAME}
@@ -93,7 +89,7 @@ EOF
 
 ## Delete a node
 
-Find the machine name of the node you want to delete (see _Listing all available nodes_) and execute
+Find the machine name of the node you want to delete (see _Listing all available nodes_) and execute:
 
 ```bash
 kubectl delete machine machine-kubermatic-name --namespace kube-system

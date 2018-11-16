@@ -14,12 +14,11 @@ taxonomy:
 * You need to have [created a MetaKube cluster](../02.create-a-cluster/default.en.md) and [installed and configured kubectl](../07.using-kubectl/default.en.md).
 * You need to have the Ark CLI installed, which can be download for your OS from [GitHub](https://github.com/heptio/ark/releases).
 * If you use macOS you may install the ark client with home brew.
-* For inspection of the S3 Bucket where the backups are stored, install and configure [S3cmd](https://s3tools.org/s3cmd) as described in the [SysEleven Stack documentation](https://docs.syseleven.de/syseleven-stack/en/documentation/object-storage).
-  The region is `s3.cbk.cloud.syseleven.net`. Your credentials can be retrieved with `openstack ec2 credentials list`.
+* For inspection of the S3 Bucket where the backups are stored, install and configure [S3cmd](https://s3tools.org/s3cmd) as described in the [SysEleven Stack documentation](https://docs.syseleven.de/syseleven-stack/en/documentation/object-storage). The region is `s3.cbk.cloud.syseleven.net`. Your credentials can be retrieved with `openstack ec2 credentials list`.
 
 ## Deploy an application
 
-For easy cleanups we create a new namespace for our tutorial
+For easy cleanups we create a new namespace for our tutorial:
 
 ```shell
 $ kubectl create namespace backup-tutorial
@@ -27,7 +26,6 @@ namespace/backup-tutorial created
 ```
 
 For our tutorial we will deploy an NGINX container with a persistent volume named nginx-logs. It is important to note the annotation which is added to the pod spec. Without the annotation your volume will not be included in the backup task. The annotation must include the names of the volumes to backup. This can be a single volume or a comma separated list of volumes. The backup task is performed with the [Ark Restic](https://heptio.github.io/ark/master/restic.html) integration.
-
 Note: [hostPath](https://kubernetes.io/docs/concepts/storage/volumes/#hostpath) volumes are not supported, but the new [local volume](https://kubernetes.io/docs/concepts/storage/volumes/#local) type is supported.
 
 ```shell

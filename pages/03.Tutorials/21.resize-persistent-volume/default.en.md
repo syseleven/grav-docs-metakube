@@ -8,8 +8,7 @@ taxonomy:
         - cli
 ---
 
-The MetaKube [Storage Class](../../02.Documentation/10.storage-classes/default.en.md) also allows resizing persistent volumes
-without loosing any data, as long as they are not currently in use by a pod. This tutorial shows how to do this.
+The MetaKube [Storage Class](../../02.Documentation/10.storage-classes/default.en.md) also allows resizing persistent volumes without loosing any data, as long as they are not currently in use by a pod. This tutorial shows how to do this.
 
 ## Prerequisites
 
@@ -17,14 +16,14 @@ without loosing any data, as long as they are not currently in use by a pod. Thi
 
 ## Deploy an application
 
-For easy cleanups we create a new namespace for our tutorial
+For easy cleanups we create a new namespace for our tutorial:
 
 ```shell
 $ kubectl create namespace resize-storage-tutorial
 namespace/resize-storage-tutorial created
 ```
 
-For our tutorial we will deploy an NGINX container with a persistent volume named nginx-logs.
+For our tutorial we will deploy an NGINX container with a persistent volume named nginx-logs:
 
 ```shell
 cat <<'EOF' | kubectl --namespace=resize-storage-tutorial apply -f -
@@ -96,8 +95,7 @@ pvc-9b7f6820-e695-11e8-85a5-0a580af403f8   1Gi        RWO            Delete     
 
 ## Resize the persistent volume
 
-Because of limitations in Kubernetes and OpenStack volumes can not be resized while they are in use. So we first must ensure
-that no running pod is using the volume. The easiest way is to scale the deployment the NGINX application down:
+Because of limitations in Kubernetes and OpenStack volumes can not be resized while they are in use. So we first must ensure that no running pod is using the volume. The easiest way is to scale the deployment the NGINX application down:
 
 ```shell
 $ kubectl scale deployment nginx-deployment --replicas 0 --namespace resize-storage-tutorial
