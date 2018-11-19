@@ -11,8 +11,7 @@ taxonomy:
 
 ## The Kubernetes Manifest
 
-Kubernetes defines [Service](https://kubernetes.io/docs/concepts/services-networking/service/) a resource type "LoadBalancer" that you can use to create a managed load balancer in SysEleven Stack for every service.
-To create a Kubernetes managed load balancer, use a manifest like the following:
+Kubernetes defines [Service](https://kubernetes.io/docs/concepts/services-networking/service/) a resource type "LoadBalancer" that you can use to create a managed load balancer in SysEleven Stack for every service. To create a Kubernetes managed load balancer, use a manifest like the following:
 
 ```yaml
 kind: Service
@@ -32,7 +31,7 @@ spec:
   type: LoadBalancer
 ```
 
-Be sure to match the [label](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) and value of the [selector](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) to your application and preferably choose a speaking name for the Load Balancer. The created Load Balancer might look like this
+Be sure to match the [label](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) and value of the [selector](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) to your application and preferably choose a speaking name for the Load Balancer. The created Load Balancer might look like this:
 
 ```bash
 $ kubectl get svc

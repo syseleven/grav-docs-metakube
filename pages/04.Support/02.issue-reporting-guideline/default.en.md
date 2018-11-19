@@ -16,7 +16,7 @@ To minimize the time to resolution we need as much of the following information 
 
 ### How can we contact you?
 
-If you provide us with additonal contact options like a phone number we can contact you faster if we have any open questions.
+If you provide us with additional contact options like a phone number we can contact you faster if we have any open questions.
 
 ### What is the desired behavior and what do you observe?
 

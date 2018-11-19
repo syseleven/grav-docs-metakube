@@ -8,8 +8,7 @@ taxonomy:
         - cli
 ---
 
-Kubernetes offers Horizontal Pod Autoscaling and MetaKube clusters automatically come with the necessary metrics-server and configuration out of the box.
-This tutorial gives you an example on how to use this. For more generic information see the [Kubernetes Documentation](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/) on it.
+Kubernetes offers Horizontal Pod Autoscaling and MetaKube clusters automatically come with the necessary metrics-server and configuration out of the box. This tutorial gives you an example on how to use this. For more generic information see the [Kubernetes Documentation](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/) on it.
 
 ## Prerequisites
 
@@ -17,7 +16,7 @@ This tutorial gives you an example on how to use this. For more generic informat
 
 ## Deploy an application
 
-For easy cleanups we create a new namespace for our tutorial
+For easy cleanups we create a new namespace for our tutorial:
 
 ```shell
 $ kubectl create namespace hpa-tutorial
@@ -76,10 +75,7 @@ $ kubectl autoscale deployment hello-app --namespace=hpa-tutorial --min=1 --max=
 horizontalpodautoscaler.autoscaling/hello-app autoscaled
 ```
 
-In real life you do not want to use 5% CPU as a limit, but this way we can more easily see the effect of the autoscaler in a tutorial setting.
-Have a look at the official [Kubernetes Documentation](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/) for more information about possible limit settings.
-
-You can check that the autoscaler was created with:
+In real life you do not want to use 5% CPU as a limit, but this way we can more easily see the effect of the autoscaler in a tutorial setting. Have a look at the official [Kubernetes Documentation](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/) for more information about possible limit settings. You can check that the autoscaler was created with:
 
 ```shell
 $ kubectl get horizontalpodautoscaler hello-app --namespace=hpa-tutorial
@@ -121,8 +117,7 @@ hello-app-5d6bcff5dd-948xr   1/1       Running   0         8s
 For more information on the decisions the autoscaler made, you check its events:
 
 ```shell
-$ kubectl describe horizontalpodautoscaler hello-app --namespace=hpa-tutorial                                                                                                    bhofmann: Mon Aug 27 14:08:20 2018
-
+$ kubectl describe horizontalpodautoscaler hello-app --namespace=hpa-tutorial
 Name:                                                  hello-app
 Namespace:                                             hpa-tutorial
 Labels:                                                <none>

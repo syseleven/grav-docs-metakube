@@ -12,32 +12,27 @@ taxonomy:
 
 In order to route traffic to applications deployed in Kubernetes it is good practice to use an Ingress Controller which proxies incoming request to the correct services and can handle things like TLS offloading. For more information on Ingress resources and Ingress Controllers see the [official Kubernetes documentation](https://kubernetes.io/docs/concepts/services-networking/ingress/).
 
-## Nginx Ingress Controller
-
-[Nginx Ingress Controller Installation](#nginx-ingress-controller-installation)
+## NGINX Ingress Controller
 
 A popular ingress controller is the [nginx ingress controller](https://kubernetes.github.io/ingress-nginx/).
 
-### Nginx Ingress Controller Installation
+### NGINX Ingress Controller Installation
 
-The easiest way to install it in your cluster is through [Helm](../17.using-helm/default.en.md). When Helm is ready to be used, run
+The easiest way to install it in your cluster is through [Helm](../17.using-helm/default.en.md). When Helm is ready to be used, run:
 
 ```bash
 helm install stable/nginx-ingress --name nginx-ingress --namespace kube-system  --set "rbac.create=true"
 ```
 
-to install the Nginx Ingress Controller in the cluster. This will automatically create a [Type Load Balancer service](../13.create-a-load-balancer/default.en.md) for you.
+to install the NGINX Ingress Controller in the cluster. This will automatically create a [Type Load Balancer service](../13.create-a-load-balancer/default.en.md) for you.
 
 ## Cert-Manager
-
-[Cert-Manager Installation](#cert-manager-installation)
-[Configure cluster issuer](#configure-cluster-issuer)
 
 If you want to use [Let's Encrypt](https://letsencrypt.org/) to automatically manage TLS certificates for your ingress resources, you also have to install [cert-manager](https://cert-manager.readthedocs.io/en/latest/).
 
 ### Cert-Manager Installation
 
-This can be done through [Helm](../17.using-helm/default.en.md) as well
+This can be done through [Helm](../17.using-helm/default.en.md) as well:
 
 ```bash
 helm install --name cert-manager --namespace kube-system stable/cert-manager
@@ -45,7 +40,7 @@ helm install --name cert-manager --namespace kube-system stable/cert-manager
 
 ### Configure cluster issuer
 
-After installing the cert-manager you have to configure how it can fetch certificates. For that you have to add a _ClusterIssuer_ to your Kubernetes cluster
+After installing the cert-manager you have to configure how it can fetch certificates. For that you have to add a _ClusterIssuer_ to your Kubernetes cluster:
 
 ```bash
 cat <<'EOF' | kubectl apply -f -

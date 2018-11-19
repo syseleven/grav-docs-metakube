@@ -12,11 +12,11 @@ taxonomy:
 
 ## Change the external IP
 
-If you want to change the external IP of the Load Balancer, you can associate a floating IP to the Load Balancer in the SysEleven Stack dashboard. A newly created Load Balancer already has an IP associated, to disassociate it open the menu `Project -> Network -> Load Balancers` and click on `Disassociate Floating IP`
+If you want to change the external IP of the Load Balancer, you can associate a floating IP to the Load Balancer in the SysEleven Stack dashboard. A newly created Load Balancer already has an IP associated, to disassociate it open the menu `Project -> Network -> Load Balancers` and click on `Disassociate Floating IP`:
 
 ![Disassociate Floating IP in SysEleven Stack](image_stack-fip-disassociate_01.png)
 
-Afterwards you can associate another IP by clicking on `Associate Floating IP` in the same menu. This will trigger a popup, where you can either select an already existing floating IP or a floating IP pool
+Afterwards you can associate another IP by clicking on `Associate Floating IP` in the same menu. This will trigger a popup, where you can either select an already existing floating IP or a floating IP pool:
 
 ![Associate Floating IP in SysEleven Stack](image_stack-fip-associate_01.png)
 

@@ -14,7 +14,7 @@ As vendor of [SysEleven MetaKube](https://www.syseleven.de/produkte-services/man
 
 ## Help Center
 
-The [Help Center](https://docs.syseleven.de/helpcenter/en/taxonomy?name=category&val=MetaKube) guides you toward answers to your questions.  
+The [Help Center](https://docs.syseleven.de/helpcenter/en/taxonomy?name=category&val=MetaKube) guides you toward answers to your questions.
 Please first have a look into the [Help Center](https://docs.syseleven.de/helpcenter/en/taxonomy?name=category&val=MetaKube) before contacting us. Of course you are welcome to contact us at any time if you have further questions.
 
 ## Contact Support
