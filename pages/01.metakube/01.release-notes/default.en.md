@@ -8,6 +8,10 @@ page-toc:
     active: false
 ---
 
+## 2018-11-19
+
+* Kubernetes version 1.10.10 is now available
+
 ## 2018-11-13
 
 * Allow resizing of persistent volumes. See [Resizing persistent volumes](../../03.Tutorials/21.resize-persistent-volume/default.en.md).
