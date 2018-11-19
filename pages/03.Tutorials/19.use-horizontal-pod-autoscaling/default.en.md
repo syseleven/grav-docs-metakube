@@ -30,13 +30,12 @@ $ kubectl run hello-app --image=nginxdemos/hello --port=80 --namespace hpa-tutor
 deployment.apps/hello-app created
 ```
 
-Check that the pods of the new application were created successfully and are running:
+Check that the pod of the new application was created successfully and is running:
 
 ```shell
 $ kubectl get pods --namespace hpa-tutorial
 NAME                           READY     STATUS    RESTARTS   AGE
 hello-app-5c7477d7b7-n44wq     1/1       Running   0          9s
-hello-app-5c7477d7b7-sv5sw     1/1       Running   0          9s
 ```
 
 Once the pods are running, we expose it with a [load balancer](../13.create-a-load-balancer/default.en.md), so that we can reach it from the outside:
