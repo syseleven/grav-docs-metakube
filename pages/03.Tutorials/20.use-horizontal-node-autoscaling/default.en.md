@@ -11,6 +11,8 @@ taxonomy:
 MetaKube Kubernetes clusters support horizontal node autoscaling out of the box. This tutorial shows how
 you can configure and activate it and how it plays together nicely with [horizontal pod autoscaling](../19.use-horizontal-pod-autoscaling/default.en.md).
 
+!!! Currently the node autoscaler can only automatically create nodes, removing nodes automatically to scale a cluster down is on our [roadmap](../../01.metakube/02.roadmap/default.en.md) and will be released in the near future.
+
 ## Prerequisites
 
 * You need to have [created a MetaKube cluster](../02.create-a-cluster/default.en.md) and [installed and configured kubectl](../07.using-kubectl/default.en.md).
