@@ -17,7 +17,7 @@ you can configure and activate it and how it plays together nicely with [horizon
 
 ## Deploy an application
 
-For easy cleanups we create a new namespace for our tutorial
+For easy cleanups we create a new namespace for our tutorial:
 
 ```shell
 $ kubectl create namespace hna-tutorial
@@ -42,7 +42,7 @@ hello-app-5c7477d7b7-n44wq     1/1       Running   0          9s
 Not that we defined fairly high CPU and memory requests for our pod. This way we will quickly get to the point where the
 scheduler can not schedule new pods due to insufficient resources, if we try to scale the deployment up.
 
-Let's now manually scale the deployment, in real life this would likely be done by the horizontal pod autoscaler
+Let's now manually scale the deployment, in real life this would likely be done by the horizontal pod autoscaler:
 
 ```shell
 $ kubectl scale deployment/hello-app --replicas 15 --namespace hna-tutorial
@@ -72,7 +72,7 @@ hello-app-6f488fcdfc-zx8st   0/1     Pending   0          13s
 ```
 
 If you describe one of these pending pods, you can see that the scheduling failed because of insufficient memory and CPU
-resources
+resources:
 
 ```shell
 kubectl describe pod hello-app-6f488fcdfc-m2n8x
@@ -220,7 +220,7 @@ $ kubectl get machinedeployment -n kube-system scalable-machine-deployment -o js
 2
 ```
 
-After a few minutes, once the VMs are started and provisioned, new nodes will appear in the cluster as well
+After a few minutes, once the VMs are started and provisioned, new nodes will appear in the cluster as well:
 
 ```shell
 $ kubectl get nodes
