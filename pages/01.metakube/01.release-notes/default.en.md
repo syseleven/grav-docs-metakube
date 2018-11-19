@@ -10,7 +10,7 @@ page-toc:
 
 ## 2018-11-19
 
-* MetaKube now supports [horizontal node autoscaling](../../03.Tutorials/20.use-horizontal-node-autoscaling) 
+* MetaKube now supports [horizontal node autoscaling](../../03.Tutorials/20.use-horizontal-node-autoscaling/default.en.md)
 * Kubernetes version 1.10.10 is now available
 
 ## 2018-11-13
