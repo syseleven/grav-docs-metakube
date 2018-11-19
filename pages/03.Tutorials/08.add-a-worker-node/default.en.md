@@ -10,9 +10,6 @@ taxonomy:
         - node
 ---
 
-[Add a new node](#add-a-new-node)
-[Duplicate an existing node](#duplicate-an-existing-node)
-
 ## Add a new node
 
 To add a new worker node, navigate to `Manage Cluster` and choose the cluster in which you want to add a new worker node. On the top right, click on `Add Node`:
