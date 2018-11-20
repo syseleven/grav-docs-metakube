@@ -3,8 +3,8 @@ title: 'Using ReadWriteMany Volumes'
 published: true
 taxonomy:
     tag:
-        - storage
         - kubernetes
+        - storage
 ---
 
 The default MetaKube [Storage Class](../../02.Documentation/10.storage-classes/default.en.md) which uses the OpenStack Cinder API does only support ReadWriteOnce volumes. This means that one volume can only be mounted in one container at the same time. While this is usually fine and you should use databases or [Object Storage](https://docs.syseleven.de/syseleven-stack/en/documentation/object-storage) if you need to read and write from multiple instances, there are some use cases, especially in legacy software, where ReadWriteMany volumes may be needed.
@@ -25,7 +25,7 @@ You can deploy the [nfs-server-provisioner](https://github.com/helm/charts/tree/
 helm install stable/nfs-server-provisioner --name nfs-provisioner --namespace nfs --set=persistence.enabled=true,persistence.storageClass=sys11-quobyte,persistence.size=5Gi
 ```
 
-This will deployed a NFS server, that stores its data on a replicated ReadWriteOnce Quobyte volume. The NFS server is exposed through an additional StorageClass called `nfs`:
+This will deploy a NFS server, that stores its data on a replicated ReadWriteOnce Quobyte volume. The NFS server is exposed through an additional StorageClass called `nfs`:
 
 ```shell
 $ kubectl get storageclasses nfs
@@ -43,7 +43,7 @@ nfs-provisioner-nfs-server-provisioner-0   1/1     Running   0          3m53s
 
 ## Deploy an application
 
-After the NFS server and the new StorageClass are ready, we can now deploy an application that uses this StorageClass to create a ReadWriteMany volume.
+After the NFS server and the new StorageClass are ready, you can deploy an application that uses this StorageClass to create a ReadWriteMany volume.
 
 For easy cleanups we create a new namespace for our tutorial:
 
@@ -52,7 +52,7 @@ $ kubectl create namespace read-write-many-tutorial
 namespace/read-write-many-tutorial created
 ```
 
-For our tutorial we will deploy an NGINX container with two replicas and a persistent volume named nginx-data:
+For the tutorial we will deploy a NGINX container with two replicas and a persistent volume named nginx-data:
 
 ```shell
 cat <<'EOF' | kubectl --namespace=read-write-many-tutorial apply -f -
