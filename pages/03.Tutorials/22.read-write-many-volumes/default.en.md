@@ -7,11 +7,11 @@ taxonomy:
         - storage
 ---
 
-The default MetaKube [Storage Class](../../02.Documentation/10.storage-classes/default.en.md) which uses the OpenStack Cinder API does only support ReadWriteOnce volumes. This means that one volume can only be mounted in one container at the same time. While this is usually fine and you should use databases or [Object Storage](https://docs.syseleven.de/syseleven-stack/en/documentation/object-storage) if you need to read and write from multiple instances, there are some use cases, especially in legacy software, where ReadWriteMany volumes may be needed.
+The default MetaKube [Storage Class](../../02.Documentation/10.storage-classes/default.en.md) which uses the OpenStack Cinder API only supports ReadWriteOnce volumes. This means that a volume can only be mounted in one container at the same time. While this is usually fine and you should use databases or [Object Storage](https://docs.syseleven.de/syseleven-stack/en/documentation/object-storage) if you need to read and write from multiple instances, there are some use cases, especially in legacy software, where ReadWriteMany volumes may be needed.
 
 This tutorial shows how you can enable this, by deploying a NFS server into your cluster that provides ReadWriteMany volumes.
 
-!!! Note that the I/O performance of these NFS powered ReadWriteMany volumes will not be the greatest since reads and writes have to go through an additional NFS server. Also this NFS server is not highly available, though the data in the underlying volume is replicated over the OpenStack cluster.
+!!! Note that the I/O performance of these NFS powered ReadWriteMany volumes will not be the greatest since reads and writes have to go through an additional NFS server. Also this NFS server is not highly available, the data in the underlying volume is replicated over the OpenStack cluster.
 
 ## Prerequisites
 
@@ -45,7 +45,7 @@ nfs-provisioner-nfs-server-provisioner-0   1/1     Running   0          3m53s
 
 After the NFS server and the new StorageClass are ready, you can deploy an application that uses this StorageClass to create a ReadWriteMany volume.
 
-For easy cleanups we create a new namespace for our tutorial:
+For easy cleanups we will create a new namespace for our tutorial:
 
 ```shell
 $ kubectl create namespace read-write-many-tutorial
@@ -107,13 +107,13 @@ nginx-deployment-8f75f7dbf-dtc77   1/1     Running   0          24s
 nginx-deployment-8f75f7dbf-f82x6   1/1     Running   0          24s
 ```
 
-If you now store data into the volume of the first pod:
+You can now store data into the volume of the first pod:
 
 ```shell
 kubectl exec --namespace read-write-many-tutorial $(kubectl get pods --namespace read-write-many-tutorial -o jsonpath='{.items[0].metadata.name}') -i -t -- bash -c 'echo "TEST" > /data/test.txt'
 ```
 
-You can read this file from both pods:
+Now should be able to read this file from both pods:
 
 ```shell
 $ kubectl exec --namespace read-write-many-tutorial $(kubectl get pods --namespace read-write-many-tutorial -o jsonpath='{.items[0].metadata.name}') -i -t -- bash -c 'cat /data/test.txt'
