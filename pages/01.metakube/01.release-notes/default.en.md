@@ -12,6 +12,7 @@ page-toc:
 
 * Updated the backup utility [ark](https://github.com/heptio/ark) to [0.10.0](https://github.com/heptio/ark/releases/tag/v0.10.0)
 * Updated [metrics-server](https://github.com/kubernetes-incubator/metrics-server) to [0.3.1](https://github.com/kubernetes-incubator/metrics-server/releases/tag/v0.3.1)
+* Kubernetes version 1.12.3 is now available
 
 ## 2018-11-19
 
