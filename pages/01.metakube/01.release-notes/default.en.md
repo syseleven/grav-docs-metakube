@@ -8,6 +8,10 @@ page-toc:
     active: false
 ---
 
+## 2018-11-26
+
+* Updated the backup utility [ark](https://github.com/heptio/ark) to [0.10.0](https://github.com/heptio/ark/releases/tag/v0.10.0)
+
 ## 2018-11-19
 
 * MetaKube now supports [horizontal node autoscaling](../../03.Tutorials/20.use-horizontal-node-autoscaling/default.en.md)
@@ -19,29 +23,29 @@ page-toc:
 
 ## 2018-11-09
 
-* Updated the backup utility [ark](https://github.com/heptio/ark) to 0.9.11
+* Updated the backup utility [ark](https://github.com/heptio/ark) to [0.9.11](https://github.com/heptio/ark/releases/tag/v0.9.11)
 
 ## 2018-11-02
 
-* Updated the backup utility [ark](https://github.com/heptio/ark) to 0.9.10
+* Updated the backup utility [ark](https://github.com/heptio/ark) to [0.9.10](https://github.com/heptio/ark/releases/tag/v0.9.10)
 
 ## 2018-10-31
 
 * MetaKube now supports [projects](../../02.Documentation/02.projects/default.en.md) to group, maintain and access clusters with multiple users
 * Kubernetes versions 1.10.9, 1.12.1 and 1.12.2 are now available
 * etcd is updated to 3.3.9
-* Updated the backup utility [ark](https://github.com/heptio/ark) to 0.9.9
+* Updated the backup utility [ark](https://github.com/heptio/ark) to [0.9.9](https://github.com/heptio/ark/releases/tag/v0.9.9)
 * New Ubuntu worker nodes are now using Ubuntu 18.04
 * Kubernetes versions 1.11.* are now disabled due to a [bug in kubernetes](https://github.com/kubernetes/kubernetes/issues/68270) where nodes will loose their IP addresses
 
 ## 2018-10-08
 
-* Updated the backup utility [ark](https://github.com/heptio/ark) to 0.9.7
+* Updated the backup utility [ark](https://github.com/heptio/ark) to [0.9.7](https://github.com/heptio/ark/releases/tag/v0.9.7)
 
 ## 2018-10-04
 
 * Kubernetes versions 1.9.11 and 1.10.8 are now available
-* Updated the backup utility [ark](https://github.com/heptio/ark) to 0.9.6
+* Updated the backup utility [ark](https://github.com/heptio/ark) to [0.9.6](https://github.com/heptio/ark/releases/tag/v0.9.6)
 
 ## 2018-09-27
 
@@ -49,7 +53,7 @@ page-toc:
 
 ## 2018-09-18
 
-* Updated the backup utility [ark](https://github.com/heptio/ark) to 0.9.5 which fixes the restic integration ([Release Notes](https://github.com/heptio/ark/releases/tag/v0.9.5))
+* Updated the backup utility [ark](https://github.com/heptio/ark) to [0.9.5](https://github.com/heptio/ark/releases/tag/v0.9.5) which fixes the restic integration ([Release Notes](https://github.com/heptio/ark/releases/tag/v0.9.5))
 
 ## 2018-09-14
 
@@ -61,7 +65,7 @@ page-toc:
 
 ## 2018-09-12
 
-* [kubernetes-dashboard](../../02.Documentation/05.kubernetes-dashboard/default.en.md) is updated to version 1.10.0 ([Release Notes](https://github.com/kubernetes/dashboard/releases/tag/v1.10.0))
+* [kubernetes-dashboard](../../02.Documentation/05.kubernetes-dashboard/default.en.md) is updated to version [1.10.0](https://github.com/kubernetes/dashboard/releases/tag/v1.10.0)
 
 ## 2018-09-05
 
