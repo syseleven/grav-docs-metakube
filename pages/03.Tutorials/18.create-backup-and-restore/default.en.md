@@ -16,6 +16,8 @@ taxonomy:
 * If you use macOS you may install the ark client with home brew.
 * For inspection of the S3 Bucket where the backups are stored, install and configure [S3cmd](https://s3tools.org/s3cmd) as described in the [SysEleven Stack documentation](https://docs.syseleven.de/syseleven-stack/en/documentation/object-storage). The region is `s3.cbk.cloud.syseleven.net`. Your credentials can be retrieved with `openstack ec2 credentials list`.
 
+! Because of an issue in the ark restic integration with OpenStack Object Storage the first backup of a volume in a namespace may fail because the restic repository is not ready in time. We are working with the vendor to solve this [issue](https://github.com/heptio/ark/issues/1078). Until then, just create a second backup a few seconds later which will work as expected.
+
 ## Deploy an application
 
 For easy cleanups we create a new namespace for our tutorial:
