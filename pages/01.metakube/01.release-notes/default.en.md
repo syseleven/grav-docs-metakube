@@ -8,6 +8,10 @@ page-toc:
     active: false
 ---
 
+## 2018-12-04
+
+* Disable all Kubernetes versions before 1.10.11 and 1.12.3 for new clusters and cluster updates due to a [Kubernetes security incident](https://github.com/kubernetes/kubernetes/issues/71411)
+
 ## 2018-11-26
 
 * Updated the backup utility [ark](https://github.com/heptio/ark) to [0.10.0](https://github.com/heptio/ark/releases/tag/v0.10.0)
