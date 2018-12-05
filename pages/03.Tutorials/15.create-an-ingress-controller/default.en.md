@@ -63,3 +63,8 @@ EOF
 ```
 
 In [Deploy Application](../16.deploy-an-application/default.en.md) you can see how you can use this issuer to fetch a certificate.
+
+## Further information
+
+* [Nginx Ingress Controller Documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/)
+* [Cert Manager Documentation](http://docs.cert-manager.io/en/latest/)
