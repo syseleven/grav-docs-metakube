@@ -22,7 +22,7 @@ In the list of all your projects you can create new projects or delete existing 
 
 ## Adding members to a project
 
-In the members list of a project you can add or remove additional members to your project. All members can [download a kubeconfig](../../03.Tutorials/06.download-the-kubeconfig/default.en.md) with full admin rights to interact with the Kubernetes cluster itself. The following permission roles are available:
+In the members list of a project you can add or remove additional members to your project. You can only add members with a SysEleven Stack account, that have logged into the MetaKube interface at least once (see [Registration and Login](../01.registration-and-login/default.en.md)) . All members can [download a kubeconfig](../../03.Tutorials/06.download-the-kubeconfig/default.en.md) with full admin rights to interact with the Kubernetes cluster itself. The following permission roles are available:
 
 ### Owner
 
