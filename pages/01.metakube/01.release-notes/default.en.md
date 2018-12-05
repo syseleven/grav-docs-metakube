@@ -10,7 +10,7 @@ page-toc:
 
 ## 2018-12-04
 
-* Disable all Kubernetes versions before 1.10.11 and 1.12.3 for new clusters and cluster updates due to a [Kubernetes security incident](https://github.com/kubernetes/kubernetes/issues/71411)
+* Disabled all Kubernetes versions before 1.10.11 and 1.12.3 due to a [Kubernetes security incident](https://github.com/kubernetes/kubernetes/issues/71411)
 
 ## 2018-11-26
 
