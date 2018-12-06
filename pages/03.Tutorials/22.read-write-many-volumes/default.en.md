@@ -21,7 +21,7 @@ This tutorial shows how you can enable RWX, by deploying [rook](https://rook.io)
 
 ### Known limitations
 
-* You should use local storage nodes (flavors beginning with `l1.`) for the rook deployment. See [Add a new node](../08.add-a-worker-node/default.en.md) for how to add local storage nodes and [Assigning pods to nodes](https://kubernetes.io/docs/concepts/configuration/assign-pod-node/) for how to limit rook and ceph to these local storage nodes. 
+* You should use local storage nodes (flavors beginning with `l1.`) for the rook deployment. See [Add a new node](../08.add-a-worker-node/default.en.md) for how to add local storage nodes and [Assigning pods to nodes](https://kubernetes.io/docs/concepts/configuration/assign-pod-node/) for how to limit rook and ceph to these local storage nodes.
 * Rook supports only one shared file system. If you need multiple shared file systems you need to set the env `ROOK_ALLOW_MULTIPLE_FILESYSTEMS=true`. This is an experimental feature! Further information can be found in the [ceph docs](http://docs.ceph.com/docs/master/cephfs/experimental-features/#multiple-filesystems-within-a-ceph-cluster) and the [rook docs](https://github.com/rook/rook/blob/master/Documentation/filesystem.md).
 * Even though it should be possible to change the rook namespaces, we observed strange issues with the Ceph cluster when using different namespaces.
 
