@@ -19,13 +19,13 @@ This tutorial shows how you can enable RWX, by deploying [rook](https://rook.io)
 
 !!! Note that rook builds up a Ceph cluster in the background. You must have deeper knowledge about Ceph to operate a cluster in production grade clusters. We will not provide support for Ceph clusters in your MetaKube clusters!
 
-### Known limitations
+### Known Limitations
 
 * You should use local storage nodes (flavors beginning with `l1.`) for the rook deployment. See [Add a new node](../08.add-a-worker-node/default.en.md) for how to add local storage nodes and [Assigning pods to nodes](https://kubernetes.io/docs/concepts/configuration/assign-pod-node/) for how to limit rook and ceph to these local storage nodes.
 * Rook supports only one shared file system. If you need multiple shared file systems you need to set the env `ROOK_ALLOW_MULTIPLE_FILESYSTEMS=true`. This is an experimental feature! Further information can be found in the [ceph docs](http://docs.ceph.com/docs/master/cephfs/experimental-features/#multiple-filesystems-within-a-ceph-cluster) and the [rook docs](https://github.com/rook/rook/blob/master/Documentation/filesystem.md).
 * Even though it should be possible to change the rook namespaces, we observed strange issues with the Ceph cluster when using different namespaces.
 
-### Deploy the rook operator
+### Deploy the Rook Operator
 
 You can deploy the [rook operator](https://github.com/rook/rook) with Helm, which is automatically included in MetaKube clusters (See [Using Helm](../17.using-helm/default.en.md)):
 
@@ -48,7 +48,213 @@ rook-discover-vbd2z                  1/1     Running   0          4m
 rook-discover-wrkhp                  1/1     Running   0          4m
 ```
 
-### Deploy the rook shared file system
+### Create a Rook Cluster
+
+Now that the Rook operator, agent, and discover pods are running, we can create the Rook cluster.
+
+```shell
+cat <<'EOF' | kubectl apply -f -
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: rook-ceph
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: rook-ceph-osd
+  namespace: rook-ceph
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: rook-ceph-mgr
+  namespace: rook-ceph
+---
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: rook-ceph-osd
+  namespace: rook-ceph
+rules:
+- apiGroups: [""]
+  resources: ["configmaps"]
+  verbs: [ "get", "list", "watch", "create", "update", "delete" ]
+---
+# Aspects of ceph-mgr that require access to the system namespace
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: rook-ceph-mgr-system
+  namespace: rook-ceph
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - configmaps
+  verbs:
+  - get
+  - list
+  - watch
+---
+# Aspects of ceph-mgr that operate within the cluster's namespace
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: rook-ceph-mgr
+  namespace: rook-ceph
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - pods
+  - services
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - batch
+  resources:
+  - jobs
+  verbs:
+  - get
+  - list
+  - watch
+  - create
+  - update
+  - delete
+- apiGroups:
+  - ceph.rook.io
+  resources:
+  - "*"
+  verbs:
+  - "*"
+---
+# Allow the operator to create resources in this cluster's namespace
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: rook-ceph-cluster-mgmt
+  namespace: rook-ceph
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: rook-ceph-cluster-mgmt
+subjects:
+- kind: ServiceAccount
+  name: rook-ceph-system
+  namespace: rook-ceph-system
+---
+# Allow the osd pods in this namespace to work with configmaps
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: rook-ceph-osd
+  namespace: rook-ceph
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: rook-ceph-osd
+subjects:
+- kind: ServiceAccount
+  name: rook-ceph-osd
+  namespace: rook-ceph
+---
+# Allow the ceph mgr to access the cluster-specific resources necessary for the mgr modules
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: rook-ceph-mgr
+  namespace: rook-ceph
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: rook-ceph-mgr
+subjects:
+- kind: ServiceAccount
+  name: rook-ceph-mgr
+  namespace: rook-ceph
+---
+# Allow the ceph mgr to access the rook system resources necessary for the mgr modules
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: rook-ceph-mgr-system
+  namespace: rook-ceph-system
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: rook-ceph-mgr-system
+subjects:
+- kind: ServiceAccount
+  name: rook-ceph-mgr
+  namespace: rook-ceph
+---
+# Allow the ceph mgr to access cluster-wide resources necessary for the mgr modules
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: rook-ceph-mgr-cluster
+  namespace: rook-ceph
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: rook-ceph-mgr-cluster
+subjects:
+- kind: ServiceAccount
+  name: rook-ceph-mgr
+  namespace: rook-ceph
+---
+#################################################################################
+# The Ceph Cluster CRD example
+#################################################################################
+apiVersion: ceph.rook.io/v1
+kind: CephCluster
+metadata:
+  name: rook-ceph
+  namespace: rook-ceph
+spec:
+  cephVersion:
+    # For the latest ceph images, see https://hub.docker.com/r/ceph/ceph/tags
+    image: ceph/ceph:v13.2.2-20181023
+  dataDirHostPath: /var/lib/rook
+  dashboard:
+    enabled: true
+  mon:
+    count: 3
+    allowMultiplePerNode: true
+  storage:
+    useAllNodes: true
+    useAllDevices: false
+    config:
+      databaseSizeMB: "1024"
+      journalSizeMB: "1024"
+EOF
+```
+
+You can use `kubectl` to check that the operator has created all the daemon pods corresponding to the cluster. The output should look something like this (there should be one OSD daemon and one completed prepare pod for each node):
+
+```shell
+$ kubectl --namespace=rook-ceph get pod
+NAME                                                        READY     STATUS      RESTARTS   AGE
+rook-ceph-mds-rook-shared-fs-a-6944db7659-qj6kc             1/1       Running     0          74m
+rook-ceph-mds-rook-shared-fs-b-667494fd7-qnt7j              1/1       Running     0          73m
+rook-ceph-mgr-a-6c79786fc6-kqj9q                            1/1       Running     0          3h43m
+rook-ceph-mon-a-f4d9f7bd4-pps2z                             1/1       Running     0          3h44m
+rook-ceph-mon-b-79b8d6b45d-qmn59                            1/1       Running     0          3h44m
+rook-ceph-mon-d-7d45d85798-bdnqb                            1/1       Running     0          175m
+rook-ceph-osd-0-86457f578b-pjpl6                            1/1       Running     0          3h42m
+rook-ceph-osd-1-dbdc869bc-vfnpw                             1/1       Running     0          3h42m
+rook-ceph-osd-2-6c54cc97b7-bcpzh                            1/1       Running     0          3h42m
+rook-ceph-osd-prepare-rookmachines-869665964c-gsrfs-lmgnv   0/2       Completed   0          3h42m
+rook-ceph-osd-prepare-rookmachines-869665964c-rfh7c-6t44k   0/2       Completed   0          3h42m
+rook-ceph-osd-prepare-rookmachines-869665964c-xxlnx-mpblb   0/2       Completed   0          3h42m
+rook-ceph-tools-575756777b-tlvts                            1/1       Running     0          42m
+```
+
+
+### Deploy the Rook Shared File System
 
 As soon as the rook-operator is functional, you can deploy the shared file system:
 
@@ -60,8 +266,8 @@ kind: Namespace
 metadata:
   name: rook-ceph
 ---
-apiVersion: ceph.rook.io/v1beta1
-kind: Filesystem
+apiVersion: ceph.rook.io/v1
+kind: CephFilesystem
 metadata:
   name: rook-shared-fs
   namespace: rook-ceph
@@ -78,16 +284,18 @@ spec:
 EOF
 ```
 
+For more options, see the [Rook documentation](https://rook.github.io/docs/rook/v0.9/ceph-filesystem-crd.html) on creating shared file systems.
+
 After some minutes the filesystem should be up and running:
 
 ```shell
-$ kubectl get pods -n rook-ceph
-NAME                                           READY   STATUS      RESTARTS   AGE
-rook-ceph-mds-rook-shared-fs-7bd69578d7-plwfv  1/1     Running     0          1m
-rook-ceph-mds-rook-shared-fs-7bd69578d7-qlvnh  1/1     Running     0          1m
+$ kubectl -n rook-ceph get pod -l app=rook-ceph-mds
+NAME                                              READY     STATUS    RESTARTS   AGE
+rook-ceph-mds-rook-shared-fs-a-6944db7659-qj6kc   1/1       Running   0          84m
+rook-ceph-mds-rook-shared-fs-b-667494fd7-qnt7j    1/1       Running   0          84m
 ```
 
-### Deploy an application with rook
+### Deploy an Application with Rook
 
 For easy cleanups we will create a new namespace for our tutorial:
 
@@ -157,7 +365,7 @@ $ kubectl exec --namespace read-write-many-tutorial $(kubectl get pods --namespa
 TEST
 ```
 
-### Cleanup rook
+### Cleanup Rook
 
 Delete the namespace:
 
@@ -185,7 +393,7 @@ Additionally you have to remove some files from the nodes after deleting the clu
 sudo rm -rf /var/lib/rook
 ```
 
-### Further information
+### Further Information
 
 * Besides a shared file system rook also supports object and block storage. Compare the [offical docs](https://github.com/rook/rook/tree/master/Documentation) for further information.
 * The rook cluster requires quite some memory and cpu. On a 3-node setup with 300GB storage we observed about 2GiB RAM and about 200Mi CPU usage on the cluster. This may heavily depend on the usage of the cluster.
@@ -220,7 +428,7 @@ NAME                                       READY   STATUS    RESTARTS   AGE
 nfs-provisioner-nfs-server-provisioner-0   1/1     Running   0          3m53s
 ```
 
-### Deploy an application with NFS
+### Deploy an Application with NFS
 
 After the NFS server and the new StorageClass are ready, you can deploy an application that uses this StorageClass to create a ReadWriteMany volume.
 
