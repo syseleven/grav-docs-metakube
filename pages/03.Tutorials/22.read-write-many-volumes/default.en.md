@@ -22,7 +22,7 @@ This tutorial shows how you can enable RWX, by deploying [rook](https://rook.io)
 ### Known Limitations
 
 * You should use local storage nodes (flavors beginning with `l1.`) for the rook deployment. See [Add a new node](../08.add-a-worker-node/default.en.md) for how to add local storage nodes and [Assigning pods to nodes](https://kubernetes.io/docs/concepts/configuration/assign-pod-node/) for how to limit rook and ceph to these local storage nodes.
-* Rook supports only one shared file system. If you need multiple shared file systems you need to set the env `ROOK_ALLOW_MULTIPLE_FILESYSTEMS=true`. This is an experimental feature! Further information can be found in the [ceph docs](http://docs.ceph.com/docs/master/cephfs/experimental-features/#multiple-filesystems-within-a-ceph-cluster) and the [rook docs](https://github.com/rook/rook/blob/master/Documentation/filesystem.md).
+* Rook supports only one shared file system. If you need multiple shared file systems you need to set the env `ROOK_ALLOW_MULTIPLE_FILESYSTEMS=true`. This is an experimental feature! Further information can be found in the [ceph docs](http://docs.ceph.com/docs/master/cephfs/experimental-features/#multiple-filesystems-within-a-ceph-cluster) and the [rook docs](https://rook.io/docs/rook/v0.9/ceph-filesystem.html).
 * Even though it should be possible to change the rook namespaces, we observed strange issues with the Ceph cluster when using different namespaces.
 
 ### Deploy the Rook Operator
@@ -253,6 +253,7 @@ rook-ceph-osd-prepare-rookmachines-869665964c-xxlnx-mpblb   0/2       Completed 
 rook-ceph-tools-575756777b-tlvts                            1/1       Running     0          42m
 ```
 
+The cluster resource is also where you can affect the placement of the OSD pods on the nodes, e.g. in case you have some nodes that should not be used as ceph storage nodes. See the [Rook documentation](https://rook.io/docs/rook/v0.9/ceph-cluster-crd.html#placement-configuration-settings) for details.
 
 ### Deploy the Rook Shared File System
 
