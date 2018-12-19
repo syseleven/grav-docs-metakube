@@ -17,6 +17,8 @@ The default MetaKube [Storage Class](../../02.Documentation/10.storage-classes/d
 
 This tutorial shows how you can enable RWX, by deploying [rook](https://rook.io) with a shared file system.
 
+!!! This tutorial was tested with Rook version 0.9.0. If you encounter problems, please make sure to check the [Rook documentation](https://rook.io/docs/rook/v0.9/) for breaking changes.
+
 !!! Note that rook builds up a Ceph cluster in the background. You must have deeper knowledge about Ceph to operate a cluster in production grade clusters. We will not provide support for Ceph clusters in your MetaKube clusters!
 
 ### Known Limitations
