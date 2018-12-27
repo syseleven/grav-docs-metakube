@@ -8,6 +8,12 @@ page-toc:
     active: false
 ---
 
+## 2018-12-20
+
+* Kubernetes versions 1.10.12 and 1.12.4 are now available
+* Updated [Helm](https://www.helm.sh/) to [2.12.1](https://github.com/helm/helm/releases/tag/v2.12.1)
+* Updated [kubernetes-dashboard](../../02.Documentation/05.kubernetes-dashboard/default.en.md) to [1.10.1](https://github.com/kubernetes/dashboard/releases/tag/v1.10.1)
+
 ## 2018-12-04
 
 * Disabled all Kubernetes versions before 1.10.11 and 1.12.3 due to a [Kubernetes security incident](https://github.com/kubernetes/kubernetes/issues/71411)
