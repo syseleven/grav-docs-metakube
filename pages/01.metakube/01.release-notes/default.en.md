@@ -8,6 +8,11 @@ page-toc:
     active: false
 ---
 
+## 2019-01-15
+
+* Updated [Helm](https://www.helm.sh/) to [2.12.2](https://github.com/helm/helm/releases/tag/v2.12.2)
+* The cluster details page now comes with [a dashboard](../../02.Documentation/09.metakube-dashboard/default.en.md) showing the amount of pods in the cluster and the cpu and memory usage of the worker nodes
+
 ## 2018-12-20
 
 * Kubernetes versions 1.10.12 and 1.12.4 are now available

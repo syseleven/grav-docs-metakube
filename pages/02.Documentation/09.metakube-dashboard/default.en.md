@@ -1,6 +1,6 @@
 ---
 title: 'MetaKube Dashboard'
-published: false
+published: true
 taxonomy:
     tag:
         - kubernetes
