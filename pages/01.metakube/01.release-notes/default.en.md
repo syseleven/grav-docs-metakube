@@ -7,6 +7,9 @@ taxonomy:
 page-toc:
     active: false
 ---
+## 2019-01-17
+
+* Kubernetes versions 1.13.1 and 1.13.2 are now available
 
 ## 2019-01-15
 
