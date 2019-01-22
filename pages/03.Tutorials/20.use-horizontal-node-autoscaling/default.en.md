@@ -201,7 +201,7 @@ This will create a MachineDeployment that initially contains 0 machines, but can
 of 15 machines, if you have enough quota of course. For every machine a VM will be automatically created in OpenStack, provisioned and joined as a node to the
 Kubernetes cluster.
 
-For more details on MachineDeployments see [Cluster Management API](../../02.Documentation/11.cluster-api/default.en.md).
+For more details on MachineDeployments see [Cluster Management API](../../02.Documentation/12.cluster-api/default.en.md).
 
 If you list all available machines, you can see that a few new machines have been automatically created by the autoscaler:
 

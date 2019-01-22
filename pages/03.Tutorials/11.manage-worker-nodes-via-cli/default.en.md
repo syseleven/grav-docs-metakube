@@ -87,7 +87,7 @@ spec:
 EOF
 ```
 
-For more details on Machines see [Cluster Management API](../../02.Documentation/11.cluster-api/default.en.md).
+For more details on Machines see [Cluster Management API](../../02.Documentation/12.cluster-api/default.en.md).
 
 ## Delete a node
 
