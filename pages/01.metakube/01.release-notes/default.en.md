@@ -7,9 +7,14 @@ taxonomy:
 page-toc:
     active: false
 ---
+## 2019-01-23
+
+* Updated [Helm](https://www.helm.sh/) to [2.12.3](https://github.com/helm/helm/releases/tag/v2.12.3)
+
 ## 2019-01-22
 
 * Kubernetes version 1.12.5 is now available
+* The master service health indicators on the cluster details page now contains all services that are fully managed
 
 ## 2019-01-17
 
