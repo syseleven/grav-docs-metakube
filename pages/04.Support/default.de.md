@@ -21,7 +21,7 @@ Bitte schauen Sie zuerst ins [Hilfe Center](https://docs.syseleven.de/helpcenter
 
 ### via E-Mail
 
-Senden Sie uns eine E-Mail an [metakube-support@syseleven.de](mailto:metakube-support@syseleven.de).
+Senden Sie uns eine E-Mail an [support@syseleven.de](mailto:support@syseleven.de).
 
 ### via Ticketsystem
 
