@@ -7,6 +7,10 @@ taxonomy:
 page-toc:
     active: false
 ---
+## 2019-02-07
+
+* Kubernetes version 1.13.3 is now available
+
 ## 2019-01-23
 
 * Updated [Helm](https://www.helm.sh/) to [2.12.3](https://github.com/helm/helm/releases/tag/v2.12.3)
