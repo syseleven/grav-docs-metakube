@@ -1,6 +1,6 @@
 ---
 title: 'MetaKube Web Terminal'
-published: false
+published: true
 taxonomy:
     tag:
         - kubernetes

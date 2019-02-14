@@ -7,6 +7,11 @@ taxonomy:
 page-toc:
     active: false
 ---
+
+## 2019-02-13
+
+* Every MetaKube cluster comes now with a [web-terminal](../../02.Documentation/10.metakube-webterminal/default.en.md) that is accessible from the [MetaKube dashboard](../../02.Documentation/09.metakube-dashboard/default.en.md)
+
 ## 2019-02-07
 
 * Kubernetes version 1.13.3 is now available
