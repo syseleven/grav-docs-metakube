@@ -8,6 +8,15 @@ page-toc:
     active: false
 ---
 
+## 2019-02-14
+
+* Kubernetes versions 1.10.x are not available anymore corresponding to our [Supported Versions Matrix](../../02.Documentation/03.supported-kubernetes-versions/default.en.md)
+* You can now add [tags](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) to nodes when adding them
+* For new clusters and new nodes in existing clusters, nodes are now wrapped inside of NodeDeployments which makes it possible to trigger rolling updates of nodes within a cluster from the dashboard
+* New nodes now receive Docker 18.9.2 which fixes [CVE-2019-5736 in Runc](https://kubernetes.io/blog/2019/02/11/runc-and-cve-2019-5736/) for all new nodes
+* Multiple owners can now be added to one MetaKube [project](../../02.Documentation/02.projects/default.en.md)
+* Detailed events for the lifecycle of a node are shown in the dashboard 
+
 ## 2019-02-13
 
 * Every MetaKube cluster comes now with a [web-terminal](../../02.Documentation/10.metakube-webterminal/default.en.md) that is accessible from the [MetaKube dashboard](../../02.Documentation/09.metakube-dashboard/default.en.md)

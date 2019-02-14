@@ -169,7 +169,7 @@ spec:
       labels:
         deployment: scalable-machine-deployment
     spec:
-      providerConfig:
+      providerSpec:
         value:
           cloudProvider: openstack
           cloudProviderSpec:

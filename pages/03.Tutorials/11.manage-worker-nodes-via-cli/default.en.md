@@ -62,7 +62,7 @@ metadata:
 spec:
   metadata:
     name: kubermatic-${CLUSTER_NAME}-${MACHINE_NAME}
-  providerConfig:
+  providerSpec:
     value:
         cloudProvider: openstack
         cloudProviderSpec:
