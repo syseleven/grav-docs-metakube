@@ -8,6 +8,10 @@ page-toc:
     active: false
 ---
 
+## 2019-02-15
+
+* The dashboard shows now the Kernel and Container Runtime Versions of nodes, which makes it easier to see if a node is affected by a security vulnerability
+
 ## 2019-02-14
 
 * Kubernetes versions 1.10.x are not available anymore corresponding to our [Supported Versions Matrix](../../02.Documentation/03.supported-kubernetes-versions/default.en.md)
