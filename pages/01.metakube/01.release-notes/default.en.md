@@ -19,7 +19,7 @@ page-toc:
 * For new clusters and new nodes in existing clusters, nodes are now wrapped inside of NodeDeployments which makes it possible to trigger rolling updates of nodes within a cluster from the dashboard
 * New nodes now receive Docker 18.9.2 which fixes [CVE-2019-5736 in Runc](https://kubernetes.io/blog/2019/02/11/runc-and-cve-2019-5736/) for all new nodes
 * Multiple owners can now be added to one MetaKube [project](../../02.Documentation/02.projects/default.en.md)
-* Detailed events for the lifecycle of a node are shown in the dashboard 
+* Detailed events for the lifecycle of a node are shown in the dashboard
 
 ## 2019-02-13
 
