@@ -9,9 +9,6 @@ taxonomy:
         - cluster
 ---
 
-[Place to live](#place-to-live)
-[Create the cluster](#create-the-cluster)
-
 ## Place to live
 
 To create a new cluster, open the MetaKube dashboard and select the menu entry `Create Cluster`. Clusters are tied to a [project](../../02.Documentation/02.projects/default.en.md). You can create as many clusters within one project as you want.
@@ -36,28 +33,20 @@ In the next step of the installer, enter the domain name and your SysEleven Stac
 
 Then choose the tenant where you want to create the cluster from the drop-down list:
 
-![Overview of cluster settings with filled out tenant](image_cluster-settings_02.png)
+![Overview of cluster settings with highlighted tenant section](image_cluster-settings_02.png)
 
-For node settings we recommend at least 3 nodes sized `m1.small` or bigger. For an overview of the possible node flavors see the [SysEleven Stack documentation](https://docs.syseleven.de/syseleven-stack/en/documentation/flavors):
+For node settings we recommend at least 3 nodes sized `m1.small` or bigger. For an overview of the possible node flavors see the [SysEleven Stack documentation](https://docs.syseleven.de/syseleven-stack/en/documentation/flavors). It is also possible to choose the operating system and image used for your worker nodes:
 
-![Overview of cluster settings with opened flavor drop-down](image_cluster-settings_03.png)
+![Overview of cluster settings with highlighted node section](image_cluster-settings_03.png)
 
-You can also choose the operating system you want to use for your worker nodes:
-
-![Overview of cluster settings with opened OS drop-down](image_cluster-settings_04.png)
 
 A default image tested and maintained by SysEleven is automatically chosen for the nodes, but you can also enter any image available to you in SysEleven Stack. To get a list of current base images, navigate to `Project -> Compute -> Images` in the SysEleven Stack dashboard:
 
 ![Overview of openstack images](image_stack-images_01.png)
 
 Make sure to enter the exact name of the image you want to run on your machines, as listed in the images tab of the SysEleven stack dashboard.
-The chosen SSH key will be used for authentication as user `apiserver` on all worker nodes:
+The chosen SSH key will be used for authentication for the default user (e.g. `ubuntu` for Ubuntu images) on all worker nodes. When you click on next, you will see a summary and the cluster creation will start after you confirm. You will then be forwarded to the cluster creation page where you can view the cluster creation process:
 
-![Overview of cluster settings with opened SSH key drop-down](image_cluster-settings_05.png)
-
-When you click on next, you will see a summary and the cluster creation will start after you confirm. You will then be forwarded to the cluster creation page where you can view the cluster creation process:
-
-![Final overview of cluster settings](image_cluster-settings_06.png)
 ![Cluster details in creation state](image_cluster-details_01.png)
 
 After all of the master components are ready, your cluster will create the configured number of worker nodes in your SysEleven Stack tenant. Fully created nodes will be marked with a green dot, pending ones with a yellow circle. You may [download the kubeconfig](../06.download-the-kubeconfig/default.en.md) now to be able to use `kubectl` with your cluster. After all nodes are created you can use `kubectl` to view and check the status of the created nodes:

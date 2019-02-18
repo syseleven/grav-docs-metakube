@@ -119,7 +119,7 @@ Events:
 ```
 
 This means we need to increase the capacity of our cluster by adding more nodes. Of course this could be done manually through
-the MetaKube dashboard (see [Adding a worker node](../08.add-a-worker-node/default.en.md)) or over CLI (see [Managing worker nodes over CLI](../11.manage-worker-nodes-via-cli/default.en.md)),
+the MetaKube dashboard (see [Manage number of worker nodes](../09.manage-node-deployments/default.en.md)) or over CLI (see [Managing worker nodes over CLI](../11.manage-worker-nodes-via-cli/default.en.md)),
 but for this tutorial, let's use the cluster autoscaler.
 
 For this we have to create a scalable MachineDeployment in our cluster:

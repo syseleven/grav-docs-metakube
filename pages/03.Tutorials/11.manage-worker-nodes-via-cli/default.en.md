@@ -9,7 +9,7 @@ taxonomy:
         - node
 ---
 
-Worker nodes can be managed with our web UI as described in [add a worker node](../08.add-a-worker-node/default.en.md). Once you installed [kubectl](../07.using-kubectl/default.en.md), you can also manage them via Command-Line-Interface (CLI) in order to automate creation, deletion and upgrades of nodes.
+Worker nodes can be managed with our web UI as described in [manage node deployments](../09.manage-node-deployments/default.en.md). Once you installed [kubectl](../07.using-kubectl/default.en.md), you can also manage them via Command-Line-Interface (CLI) in order to automate creation, deletion and upgrades of nodes.
 
 ## List all available nodes
 
@@ -19,80 +19,89 @@ To get a list of all nodes execute:
 kubectl get nodes -o wide
 ```
 
-Every node is managed by a machine resource in the `kube-system` namespace. To list all machine resources, execute:
+Every node is managed by a machine resource in the `kube-system` namespace, which are bundled into machinedeployments. To list all machinedeployment resources, execute:
 
 ```bash
-kubectl get machines --namespace kube-system
+kubectl get machinedeployments --namespace kube-system
 ```
 
-## Add a node
+## Manage sets worker nodes
 
-To add a node via CLI, set up the following variables:
+When you want to change a machinedeployment you can edit the machinedeployment resource directly:
 
 ```bash
-# Set up the flavor for the node
-FLAVOR="m1.micro"
-
-# Choose the public key, you want to deploy on the node
-SSH_PUBLIC_KEY=$(cat ~/.ssh/id_rsa.pub)
-
-# Getting the cluster name like this only works if you did not rename the
-# context in the downloaded kubeconfig. If you did, choose the original name of
-# the cluster (10 character alphanumeric string).
-CLUSTER_NAME=$(kubectl config current-context)
+kubectl edit machinedeployment ${machinedeployment} --namespace kube-system
 ```
 
-Afterwards run the following commands. You most likely do not need to change any of the remaining variables:
+A machinedeployment looks like the following:
 
-```bash
-OPERATING_SYSTEM="ubuntu"
-IMAGE_NAME="Ubuntu 18.04 LTS sys11 optimized - 2018-08-13"
-REGION="dbl"
-AVAILABILITY_ZONE="dbl1"
-FLOATING_IP_POOL="ext-net"
-K8S_VERSION="1.12.2"
-MACHINE_NAME=$(cat /dev/urandom | base64 | tr -cd 'a-z0-9' | head -c 5)
-
-cat <<EOF | kubectl apply -f -
+```yaml
 apiVersion: cluster.k8s.io/v1alpha1
-kind: Machine
+kind: MachineDeployment
 metadata:
-  name: machine-kubermatic-${CLUSTER_NAME}-${MACHINE_NAME}
+  annotations:
+    machinedeployment.clusters.k8s.io/revision: "2"
+  creationTimestamp: "2019-02-18T18:10:57Z"
+  generateName: kubermatic-92r62cx8j6-
+  generation: 2
+  name: kubermatic-92r62cx8j6-xmljg
   namespace: kube-system
+  resourceVersion: "4015"
+  selfLink: /apis/cluster.k8s.io/v1alpha1/namespaces/kube-system/machinedeployments/kubermatic-92r62cx8j6-xmljg
+  uid: 89e8b9f0-33a8-11e9-9e48-0a580af40383
 spec:
-  metadata:
-    name: kubermatic-${CLUSTER_NAME}-${MACHINE_NAME}
-  providerSpec:
-    value:
-        cloudProvider: openstack
-        cloudProviderSpec:
-          availabilityZone: ${AVAILABILITY_ZONE}
-          flavor: ${FLAVOR}
-          floatingIpPool: ${FLOATING_IP_POOL}
-          identityEndpoint: "https://api.${REGION}.cloud.syseleven.net:5000/v3"
-          image: "${IMAGE_NAME}"
-          network: kubermatic-${CLUSTER_NAME}
-          region: ${REGION}
-          securityGroups:
-          - kubermatic-${CLUSTER_NAME}
-        operatingSystem: ${OPERATING_SYSTEM}
-        operatingSystemSpec:
-          distUpgradeOnBoot: false
-        sshPublicKeys:
-        - "${SSH_PUBLIC_KEY}"
-  roles:
-  - Node
-  versions:
-    kubelet: "v${K8S_VERSION}"
-EOF
+  minReadySeconds: 0
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 1
+  selector:
+    matchLabels:
+      machine: md-92r62cx8j6-cc45b75qqf
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        machine: md-92r62cx8j6-cc45b75qqf
+    spec:
+      metadata:
+        creationTimestamp: null
+      providerSpec:
+        value:
+          cloudProvider: openstack
+          cloudProviderSpec:
+            availabilityZone: dbl1
+            domainName: ""
+            flavor: m1.micro
+            floatingIpPool: ext-net
+            identityEndpoint: https://api.dbl.cloud.syseleven.net:5000/v3
+            image: Ubuntu 18.04 LTS sys11 optimized - 2018-08-13
+            network: kubermatic-92r62cx8j6
+            password: ""
+            region: dbl
+            securityGroups:
+            - kubermatic-92r62cx8j6
+            subnet: 86db31c3-d5dd-4a88-bc92-ab8a148062c8
+            tags:
+              kubermatic-cluster: 92r62cx8j6
+            tenantName: ""
+            tokenId: ""
+            username: ""
+          operatingSystem: ubuntu
+          operatingSystemSpec:
+            distUpgradeOnBoot: false
+          sshPublicKeys: []
+      versions:
+        kubelet: 1.13.3
 ```
 
-For more details on Machines see [Cluster Management API](../../02.Documentation/12.cluster-api/default.en.md).
+The most common fields to update are:
 
-## Delete a node
-
-Find the machine name of the node you want to delete (see _Listing all available nodes_) and execute:
-
-```bash
-kubectl delete machine machine-kubermatic-name --namespace kube-system
-```
+* `spec.replicas`: The amount of worker nodes managed by this set
+* `spec.template.providerSpec.value.cloudProvicerspec.flavor`: The OpenStack flavor
+* `spec.template.providerSpec.value.cloudProvicerspec.image`: The OpenStack image
+* `spec.template.providerSpec.value.operatingSystem`: The operating system of the virtual machine
