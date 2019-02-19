@@ -99,7 +99,7 @@ spec:
         kubelet: 1.13.3
 ```
 
-The most common fields to update are:
+When you edit a field in the resource the machinecontroller will take care of updating the nodes as described in the (update-) strategy. Per default it does a one-by-one rolling upgrade of all machines. Therefor it will create a new node and when this node is ready will drain and delete an old node and so on until all nodes are updated. The most common fields to update in the machinedeployment are:
 
 * `spec.replicas`: The amount of worker nodes managed by this set
 * `spec.template.providerSpec.value.cloudProvicerspec.flavor`: The OpenStack flavor

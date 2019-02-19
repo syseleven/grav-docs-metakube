@@ -19,10 +19,12 @@ To add or delete a worker node you can easily edit the node deployment in your c
 
 ![Node deployment overview with highlighted edit button](image_edit_np_button_hightlight.png)
 
-In the popup you can now in- or decrease the number of worker nodes, which are managed by this node deployment:
+In the popup you can now in- or decrease the number of, as well as the kubelet version, operating system, used image etc of the worker nodes which are managed by this node deployment:
 
 ![Node deployment overview with opened edit modal](image_edit_np_modal.png)
 
 Save your changes and wait for MetaKube to add or delete your extra worker node(s):
 
 ![Overview of currently built worker node](image_edit_np_wait_for_node.png)
+
+The nodes will be upgraded in a rolling upgrade, which means it does a one-by-one upgrade of all machines. Therefor it will create a new node and when this node is ready will drain and delete an old node and so on until all nodes are updated.
