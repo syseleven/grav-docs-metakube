@@ -8,26 +8,19 @@ taxonomy:
         - cli
 ---
 
-MetaKube uses the Kubernetes [Cluster Management API](https://github.com/kubernetes-sigs/cluster-api) to manage OpenStack
-VMs that become nodes in the Kubernetes Cluster.
-
-This API defines the Kubernetes resources MachineDeployment, MachineSet and Machine to manage Kubernetes nodes. These
-resources behave similarly to Deployments, ReplicaSets and Pods for containers.
+MetaKube uses the Kubernetes [Cluster Management API](https://github.com/kubernetes-sigs/cluster-api) to manage OpenStack VMs that become nodes in the Kubernetes Cluster.
+This API defines the Kubernetes resources MachineDeployment, MachineSet and Machine to manage Kubernetes nodes. These resources behave similarly to Deployments, ReplicaSets and Pods for containers.
 
 ## Machines
 
-If you want to create or delete a single node in your Kubernetes cluster, you can create or delete a Machine,
-see this [tutorial](../../03.Tutorials/11.manage-worker-nodes-via-cli/default.en.md).
+A Machine is a wrapper object for an OpenStack VM. This resource will represent a to be expected node in the kubernetes cluster. When the machinecontroller can't find a node matching a machine it will create a new node and also delete nodes, which do not have a matching machine. You normally do not interact with machines directly.
 
 ## MachineSets
 
-A MachineSet groups one or more Machines (replicas) together and allows to easily scale this set of Machines up and down
-by modifying the replica count. Usually you don't interact with MachineSets directly.
+A MachineSet groups one or more Machines (replicas) together and allows to easily scale this set of Machines up and down by modifying the replica count. Usually you don't interact with MachineSets directly.
 
 ## MachineDeployments
 
-MachineDeployments wrap a rolling update mechanism around MachineSets. This means that when you edit the machine template in a
-MachineDeployment, the machine-controller will create new VMs matching the new specification and delete old VMs while ensuring
-that enough nodes are in the cluster to satisfy your the update strategy defined in the MachineDeployment.
+MachineDeployments wrap a rolling update mechanism around MachineSets. This means that when you edit the machine template in a MachineDeployment, the machine-controller will create new VMs matching the new specification and delete old VMs while ensuring that enough nodes are in the cluster to satisfy your the update strategy defined in the MachineDeployment. For more information have a look at [how to manage node deployments](../../03.Tutorials/09.manage-node-deployments/default.en.md).
 
 They also provide autoscaling support through the [node autoscaler](../../03.Tutorials/20.use-horizontal-node-autoscaling/default.en.md).
