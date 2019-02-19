@@ -11,7 +11,12 @@ taxonomy:
 
 ## Add new node deployment
 
-TODO
+To add a new node deployment navigate to your cluster view and click on the `Add Node Deployment` button:
+
+![Cluster overview with highlighted add button](image_add_np_overview.png)
+
+In the popup you can then choose the number of nodes (replicas), kubelet version, flavor, etc for your newly created nodedeployment. All nodes created in this nodedeployment will have the chosen settings.
+
 
 ## Edit the node deployment
 
