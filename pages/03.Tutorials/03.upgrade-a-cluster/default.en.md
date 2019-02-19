@@ -9,75 +9,29 @@ taxonomy:
         - cluster
 ---
 
-[Upgrade master components](#upgrade-master-components)
-[Upgrade worker nodes](#upgrade-worker-nodes)
-
 ## Upgrade master components
 
 When an upgrade for the master nodes is available, a blue text `upgrade available` will be shown besides the Master version:
 
-![Cluster with available upgrade](image_upgrade-available_01.png)
+![Cluster with available upgrade](image_upgrade_master_01.png)
 
 To start the upgrade, just click on the link and choose the desired version (most recent, tested version is selected):
 
-![Dialog to choose upgrade version](image_upgrade-version_01.png)
+![Dialog to choose upgrade version](image_upgrade_master_02.png)
 
 After the update is initiated, the master components will be upgraded in the background. All newly created worker nodes will be installed with the new version, but existing nodes will not be changed. Refer to the next chapter on how to upgrade your existing worker nodes.
 
 ## Upgrade worker nodes
 
-The worker nodes can not be upgraded in place. This means they have to be replaced by newer versions to be upgraded. The basic upgrade path is:
+When you want to upgrade your worker nodes you can easily edit your node deployment for the active cluster and MetaKube will take care of the updates. To do so, open the node deployment overview and click on the `Edit Node Deployment` button:
 
-1. [Create new worker nodes](#create-new-worker-nodes)
-2. [Disable scheduling on old worker nodes](#disable-scheduling-on-old-worker-nodes)
-3. [Drain one old worker node](#drain-one-old-worker-node)
-4. [Delete drained worker node](#delete-drained-worker-node)
-5. go to 3 (or 1, if you did not create equally many new worker nodes) until all old worker nodes are deleted
+![Node deployment overview with highlighted edit button](image_edit_np_button_hightlight.png)
 
-### Create new worker nodes
+This will open a popup where you can choose the to be installed Kubernetes version:
 
-Create a set of new worker nodes. For detailed information on how to do this, refer to [Add a worker node](../08.add-a-worker-node/default.en.md):
+![Node deployment edit modal](image_edit_np_modal.png)
 
-### Disable scheduling on old worker nodes
+Your worker nodes will now be updated one by one:
 
-You can disable scheduling onto a worker node with `kubectl cordon ${node}`:
-
-```shell
-$ kubectl cordon kubermatic-w9tk8cmw62-hm5vl
-node "kubermatic-w9tk8cmw62-hm5vl" cordoned
-
-$ kubectl get nodes
-NAME                          STATUS                     ROLES     AGE       VERSION
-kubermatic-w9tk8cmw62-22wgv   Ready,SchedulingDisabled   <none>    6h        v1.9.6
-kubermatic-w9tk8cmw62-58pd6   Ready,SchedulingDisabled   <none>    6h        v1.9.6
-kubermatic-w9tk8cmw62-7q9nx   Ready                      <none>    1m        v1.10.2
-kubermatic-w9tk8cmw62-hm5vl   Ready,SchedulingDisabled   <none>    6h        v1.9.6
-kubermatic-w9tk8cmw62-slh7v   Ready                      <none>    1m        v1.10.2
-```
-
-Before you start draining old nodes, you should disable scheduling on all old nodes to reduce rescheduling overhead. If you do not, a pod could be rescheduled from A to B, and on drain of B to C etc, and cycle through all of the outdated worker nodes.
-
-### Drain one old worker node
-
-When all old nodes are disabled for scheduling, you can start to drain these nodes. This means, all pods are evicted from the node. As DaemonSets are scheduled on all available nodes, you must ignore them with `--ignore-daemonsets` and local storage must be deleted with `--delete-local-data`.
-
-```shell
-$ kubectl drain --delete-local-data --ignore-daemonsets kubermatic-w9tk8cmw62-22wgv
-node "kubermatic-w9tk8cmw62-22wgv" already cordoned
-WARNING: Ignoring DaemonSet-managed pods: canal-hgrlh, kube-proxy-s5tnt, npd-v0.4.1-g5wqj
-pod "traefik-ingress-controller-57b4767f99-8rrgg" evicted
-node "kubermatic-w9tk8cmw62-22wgv" drained
-```
-
-### Delete drained worker node
-
-When the worker node is drained, you can safely delete it. For detailed information on how to do this, refer to [Delete a worker node](../09.delete-a-worker-node/default.en.md). If you had enough free resources to create a complete set of new worker nodes, or have created enough to hold the current load, you can continue to drain the next old node ('go to 3'). Otherwise you should create more new worker nodes now ('go to 1').
-When everything is done, you should have a new set of worker nodes with the new kubernetes/kubelet version:
-
-```shell
-$ kubectl get nodes
-NAME                          STATUS    ROLES     AGE       VERSION
-kubermatic-w9tk8cmw62-7q9nx   Ready     <none>    10m       v1.10.2
-kubermatic-w9tk8cmw62-q2zr4   Ready     <none>    4m        v1.10.2
-kubermatic-w9tk8cmw62-slh7v   Ready     <none>    10m       v1.10.2
-```
+![Worker node update in progress](image_edit_np_wait_for_node.png)
+![Worker node update finished](image_edit_np_finished.png)

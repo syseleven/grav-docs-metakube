@@ -12,4 +12,4 @@ To access the dashboard just click on the `Dashboard` link on the cluster detail
 
 ![MetaKube Cluster Detail Page](metakube-cluster-detail.png)
 
-![MetaKube Cluster List](metakube-cluster-list.png)
+![MetaKube Dashboard](metakube-dashboard.png)
