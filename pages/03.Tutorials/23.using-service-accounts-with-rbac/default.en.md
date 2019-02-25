@@ -9,7 +9,7 @@ taxonomy:
         - user management
 ---
 
-The default MetaKube Cluster comes with one admin account to use.  
+The default MetaKube Cluster comes with one admin account to use.
 
 ## Prerequisites
 
@@ -45,9 +45,9 @@ secrets:
 $ kubectl get secrets metakube-token-n9w5x -o yaml
 apiVersion: v1
 data:
-  ca.crt: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX 
+  ca.crt: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
   namespace: XXXXX==
-  token: bWFuYWdlZDprdWJlcm5ldGVzPW1ldGFrdWJl 
+  token: bWFuYWdlZDprdWJlcm5ldGVzPW1ldGFrdWJl
 kind: Secret
 metadata:
   annotations:
@@ -70,12 +70,14 @@ managed:kubernetes=metakube
 ```
 
 ### Copy the decoded token to a kube config file
+
 See [Download the kubeconfig](../06.download-the-kubeconfig/default.en.md)
 
 ### Add a cluster role binding (cluster wide policy) to the users service account
 
 ```shell
 $ kubectl create clusterrolebinding serviceaccounts-view --clusterrole=view --serviceaccount=default:metakube
+clusterrolebinding.rbac.authorization.k8s.io/serviceaccounts-view created
 ```
 
 ### Test the service account with the view cluster role
@@ -100,17 +102,17 @@ wordpress-wordpress-5b8c898c86-xkwzr             1/1     Running   0          16
 I am allowed to view pods but not nodes. What about deleting pods. I would expect this not to work with a view account. Lets try and delete one of the pods
 
 ```shell
-kubectl delete pods ghost-5b496bfd64-v24ng
+$ kubectl delete pods ghost-5b496bfd64-v24ng
 Error from server (Forbidden): pods "ghost-5b496bfd64-v24ng" is forbidden: User "system:serviceaccount:default:metakube" cannot delete resource "pods" in API group "" in the namespace "default
 ```
 
-That looks good the created service account with view privileges cannot delete pods. 
+That looks good the created service account with view privileges cannot delete pods.
 
 ### You may view the contents of the "view cluster" role with this commmand
 
 ```shell
-kubectl get clusterrole view -o yaml
+$ kubectl get clusterrole view -o yaml
+no output shown here
 ```
 
 You can use this clusterrole as a base to create addional clusteroles. Please be careful when using the cluster-admin clusterrole. This clusterrole is equivalent to having root access to a linux server.
-
