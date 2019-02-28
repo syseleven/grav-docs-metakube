@@ -67,7 +67,6 @@ metadata:
   labels:
     app: backup
 spec:
-  storageClassName: sys11-quobyte
   accessModes:
     - ReadWriteOnce
   resources:
