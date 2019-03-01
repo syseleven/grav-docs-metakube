@@ -13,6 +13,8 @@ you can configure and activate it and how it plays together nicely with [horizon
 
 !!! Currently the node autoscaler can only automatically create nodes, removing nodes automatically to scale a cluster down is on our [roadmap](../../01.metakube/02.roadmap/default.en.md) and will be released in the near future.
 
+!!! Scaling up a MachineDeployment from 0 replicas does currently only work on clusters running on OpenStack.
+
 ## Prerequisites
 
 * You need to have [created a MetaKube cluster](../02.create-a-cluster/default.en.md) and [installed and configured kubectl](../07.using-kubectl/default.en.md).
