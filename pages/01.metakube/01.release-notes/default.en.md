@@ -8,6 +8,13 @@ page-toc:
     active: false
 ---
 
+## 2019-03-04
+
+* Kubernetes versions 1.12.6 and 1.13.4 are now available
+* Disabled all Kubernetes versions before 1.12.6 and 1.13.4 due to a [Kubernetes security incident](https://discuss.kubernetes.io/t/kubernetes-security-announcement-v1-11-8-1-12-6-1-13-4-released-to-address-medium-severity-cve-2019-1002100/5147), all existing clusters have been upgraded automatically
+* Updated the backup utility [ark](https://github.com/heptio/ark) to [0.10.1](https://github.com/heptio/ark/releases/tag/v0.10.1)
+* Updated [Helm](https://www.helm.sh/) to [2.13.0](https://github.com/helm/helm/releases/tag/v2.13.0)
+
 ## 2019-02-15
 
 * The dashboard shows now the Kernel and Container Runtime Versions of nodes, which makes it easier to see if a node is affected by a security vulnerability
