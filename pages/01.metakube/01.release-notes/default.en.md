@@ -8,6 +8,10 @@ page-toc:
     active: false
 ---
 
+## 2019-03-05
+
+* OpenStack CLI tools are available in [Web Terminal](../../02.Documentation/10.metakube-webterminal/default.en.md)
+
 ## 2019-03-04
 
 * Kubernetes versions 1.12.6 and 1.13.4 are now available
