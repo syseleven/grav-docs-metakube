@@ -17,89 +17,91 @@ Ensure that the user used to create clusters via MetaKube has (at least) the fol
     "Version": "2012-10-17",
     "Statement": [
         {
+            "Sid": "VisualEditor0",
             "Effect": "Allow",
             "Action": "iam:ListInstanceProfiles",
             "Resource": "arn:aws:iam::YOUR_ACCOUNT_ID:instance-profile/*"
         },
         {
+            "Sid": "VisualEditor1",
             "Effect": "Allow",
             "Action": [
-                "iam:DeleteRolePolicy",
-                "iam:DetachRolePolicy",
                 "iam:GetRole",
+                "iam:PassRole",
+                "iam:DetachRolePolicy",
+                "iam:DeleteRolePolicy",
                 "iam:ListAttachedRolePolicies",
-                "iam:ListRolePolicies",
-                "iam:PassRole"
+                "iam:ListRolePolicies"
             ],
             "Resource": [
-                "arn:aws:iam::YOUR_ACCOUNT_ID:role/SpacesKubermatic",
-                "arn:aws:iam::YOUR_ACCOUNT_ID:role/kubermatic-*"
+                "arn:aws:iam::YOUR_ACCOUNT_ID:role/SpacesMetakube",
+                "arn:aws:iam::YOUR_ACCOUNT_ID:role/metakube-*"
             ]
         },
         {
+            "Sid": "VisualEditor2",
             "Effect": "Allow",
             "Action": [
-                "iam:AddRoleToInstanceProfile",
                 "iam:CreateInstanceProfile",
                 "iam:DeleteInstanceProfile",
-                "iam:DeleteRole",
                 "iam:GetInstanceProfile",
-                "iam:RemoveRoleFromInstanceProfile"
+                "iam:RemoveRoleFromInstanceProfile",
+                "iam:DeleteRole",
+                "iam:AddRoleToInstanceProfile"
             ],
-            "Resource": "arn:aws:iam::YOUR_ACCOUNT_ID:instance-profile/kubermatic-*"
+            "Resource": [
+                "arn:aws:iam::*:role/*",
+                "arn:aws:iam::YOUR_ACCOUNT_ID:instance-profile/metakube-*"
+            ]
         },
         {
+            "Sid": "VisualEditor3",
             "Effect": "Allow",
             "Action": [
-                "ec2:*",
-                "elasticloadbalancing:*",
-                "elasticloadbalancing:CreateListener",
-                "elasticloadbalancing:CreateRule",
-                "elasticloadbalancing:CreateTargetGroup",
-                "elasticloadbalancing:DeleteListener",
-                "elasticloadbalancing:DeleteRule",
-                "elasticloadbalancing:DeleteTargetGroup",
-                "elasticloadbalancing:DeregisterTargets",
-                "elasticloadbalancing:DescribeListeners",
-                "elasticloadbalancing:DescribeRules",
-                "elasticloadbalancing:DescribeTargetGroupAttributes",
-                "elasticloadbalancing:DescribeTargetGroups",
-                "elasticloadbalancing:DescribeTargetHealth",
                 "elasticloadbalancing:ModifyListener",
-                "elasticloadbalancing:ModifyRule",
-                "elasticloadbalancing:ModifyTargetGroup",
-                "elasticloadbalancing:ModifyTargetGroupAttributes",
+                "sts:GetFederationToken",
                 "elasticloadbalancing:RegisterTargets",
-                "elasticloadbalancing:RemoveListenerCertificates",
                 "elasticloadbalancing:SetIpAddressType",
                 "elasticloadbalancing:SetRulePriorities",
-                "elasticloadbalancing:SetSecurityGroups",
-                "elasticloadbalancing:SetSubnets",
+                "elasticloadbalancing:RemoveListenerCertificates",
                 "elasticloadbalancing:SetWebAcl",
-                "sts:GetFederationToken"
+                "elasticloadbalancing:CreateListener",
+                "elasticloadbalancing:DescribeListeners",
+                "elasticloadbalancing:CreateRule",
+                "elasticloadbalancing:ModifyTargetGroupAttributes",
+                "elasticloadbalancing:DeleteRule",
+                "s3:*",
+                "elasticloadbalancing:CreateTargetGroup",
+                "elasticloadbalancing:*",
+                "elasticloadbalancing:DeregisterTargets",
+                "elasticloadbalancing:SetSubnets",
+                "elasticloadbalancing:DeleteTargetGroup",
+                "elasticloadbalancing:DescribeTargetGroupAttributes",
+                "elasticloadbalancing:ModifyRule",
+                "elasticloadbalancing:DescribeTargetHealth",
+                "elasticloadbalancing:SetSecurityGroups",
+                "elasticloadbalancing:DescribeTargetGroups",
+                "ec2:*",
+                "elasticloadbalancing:DescribeRules",
+                "elasticloadbalancing:ModifyTargetGroup",
+                "elasticloadbalancing:DeleteListener"
             ],
             "Resource": "*"
         },
         {
+            "Sid": "VisualEditor4",
             "Effect": "Allow",
             "Action": [
-                "iam:AttachRolePolicy",
-                "iam:CreateRole",
                 "iam:DeleteInstanceProfile",
-                "iam:DeleteRole"
+                "iam:CreateRole",
+                "iam:DeleteRole",
+                "iam:AttachRolePolicy"
             ],
-            "Resource": "arn:aws:iam::YOUR_ACCOUNT_ID:role/kubermatic-*"
-        },
-        {
-            "Sid":"statement1",
-            "Effect":"Allow",
-            "Action":[
-                 "s3:*"
-            ],
-            "Resource":[
-                 "arn:aws:s3:::*"
+            "Resource": [
+                "arn:aws:iam::YOUR_ACCOUNT_ID:role/metakube-*",
+                "arn:aws:iam::*:instance-profile/*"
             ]
-         }
+        }
     ]
 }
 ```
