@@ -50,7 +50,7 @@ Ensure that the user used to create clusters via MetaKube has (at least) the fol
                 "iam:AddRoleToInstanceProfile"
             ],
             "Resource": [
-                "arn:aws:iam::*:role/*",
+                "arn:aws:iam::YOUR_ACCOUNT_ID:role/metakube-*",
                 "arn:aws:iam::YOUR_ACCOUNT_ID:instance-profile/metakube-*"
             ]
         },
@@ -99,7 +99,7 @@ Ensure that the user used to create clusters via MetaKube has (at least) the fol
             ],
             "Resource": [
                 "arn:aws:iam::YOUR_ACCOUNT_ID:role/metakube-*",
-                "arn:aws:iam::*:instance-profile/*"
+                "arn:aws:iam::YOUR_ACCOUNT_ID:instance-profile/metakube-*"
             ]
         }
     ]
