@@ -17,7 +17,7 @@ This bash terminal runs on Alpine Linux in the background and comes installed wi
 1) [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 2) [helm](https://helm.sh/)
 3) [tiller](https://docs.helm.sh/install/#installing-tiller)
-4) [Ark](https://github.com/heptio/ark)
+4) [Velero](https://github.com/heptio/velero)
 5) [OpenStack CLI Tools](https://docs.syseleven.de/syseleven-stack/en/tutorials/openstack-cli)
 6) curl, wget and git
 

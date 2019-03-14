@@ -8,6 +8,10 @@ page-toc:
     active: false
 ---
 
+## 2019-03-14
+
+* Updated the backup utility [ark](https://github.com/heptio/velero) to [0.11.0](https://github.com/heptio/velero/releases/tag/v0.11.0). This includes a rename to [velero](https://github.com/heptio/velero)
+
 ## 2019-03-05
 
 * OpenStack CLI tools are available in [Web Terminal](../../02.Documentation/10.metakube-webterminal/default.en.md)
