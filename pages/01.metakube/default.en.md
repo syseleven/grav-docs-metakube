@@ -9,7 +9,7 @@ body_classes: 'title-center title-h1h2'
 
 ![Certified Kubernets Logo](certified-kubernetes-color.png?resize=100&classes=float-right)
 
-MetaKube is a [Certified Hosted Kubernetes Platform](https://landscape.cncf.io/landscape=certified-kubernetes-hosted&selected=sys-eleven-meta-kube), which ensures that the Kubernetes clusters are fully standard compliant. The conformance test results are publicly available for Kubernetes [1.10](https://github.com/cncf/k8s-conformance/tree/master/v1.10/metakube) and [1.11](https://github.com/cncf/k8s-conformance/tree/master/v1.11/metakube).
+MetaKube is a [Certified Hosted Kubernetes Platform](https://landscape.cncf.io/landscape=certified-kubernetes-hosted&selected=sys-eleven-meta-kube), which ensures that the Kubernetes clusters are fully standard compliant. The conformance test results are publicly available for all supported versions in the [CNCF k8s-conformance Github repository](https://github.com/cncf/k8s-conformance).
 
 ## Architectural Overview
 
