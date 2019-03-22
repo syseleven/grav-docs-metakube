@@ -10,7 +10,7 @@ page-toc:
 
 ## 2019-03-14
 
-* Updated the backup utility [ark](https://github.com/heptio/velero) to [0.11.0](https://github.com/heptio/velero/releases/tag/v0.11.0). This includes a rename to [velero](https://github.com/heptio/velero)
+* Updated the backup utility [velero](https://github.com/heptio/velero) to [0.11.0](https://github.com/heptio/velero/releases/tag/v0.11.0). This includes a rename to [velero](https://github.com/heptio/velero)
 
 ## 2019-03-05
 
