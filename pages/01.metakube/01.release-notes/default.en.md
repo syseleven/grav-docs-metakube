@@ -8,6 +8,10 @@ page-toc:
     active: false
 ---
 
+## 2019-03-25
+
+* MetaKube clusters can now be created in the second SysEleven OpenStack region `cbk`
+
 ## 2019-03-14
 
 * Updated the backup utility [velero](https://github.com/heptio/velero) to [0.11.0](https://github.com/heptio/velero/releases/tag/v0.11.0). This includes a rename to [velero](https://github.com/heptio/velero)
@@ -66,7 +70,7 @@ page-toc:
 
 * Kubernetes versions 1.10.12 and 1.12.4 are now available
 * Updated [Helm](https://www.helm.sh/) to [2.12.1](https://github.com/helm/helm/releases/tag/v2.12.1)
-* Updated [kubernetes-dashboard](../../02.Documentation/05.kubernetes-dashboard/default.en.md) to [1.10.1](https://github.com/kubernetes/dashboard/releases/tag/v1.10.1)
+* Updated [kubernetes-dashboard](../../02.Documentation/13.kubernetes-dashboard/default.en.md) to [1.10.1](https://github.com/kubernetes/dashboard/releases/tag/v1.10.1)
 
 ## 2018-12-04
 
@@ -131,7 +135,7 @@ page-toc:
 
 ## 2018-09-12
 
-* [kubernetes-dashboard](../../02.Documentation/05.kubernetes-dashboard/default.en.md) is updated to version [1.10.0](https://github.com/kubernetes/dashboard/releases/tag/v1.10.0)
+* [kubernetes-dashboard](../../02.Documentation/13.kubernetes-dashboard/default.en.md) is updated to version [1.10.0](https://github.com/kubernetes/dashboard/releases/tag/v1.10.0)
 
 ## 2018-09-05
 

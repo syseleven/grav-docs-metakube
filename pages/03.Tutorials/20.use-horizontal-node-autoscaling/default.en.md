@@ -138,10 +138,12 @@ CLUSTER_NAME=$(kubectl config current-context)
 # Set up the flavor for the node
 FLAVOR="m1.micro"
 
-OPERATING_SYSTEM="ubuntu"
-IMAGE_NAME="Ubuntu 18.04 LTS sys11 optimized - 2018-08-13"
+# Set up the correct region and availability zone
 REGION="dbl"
 AVAILABILITY_ZONE="dbl1"
+
+OPERATING_SYSTEM="ubuntu"
+IMAGE_NAME="Ubuntu 18.04 LTS sys11 optimized - 2018-08-13"
 FLOATING_IP_POOL="ext-net"
 K8S_VERSION="1.12.2"
 
