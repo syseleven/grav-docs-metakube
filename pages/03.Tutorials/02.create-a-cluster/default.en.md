@@ -17,7 +17,7 @@ Start by choosing a name:
 ![Overview of cluster creation](image_overview_01.png)
 ![Overview of cluster creation with filled out name](image_overview_02.png)
 
-the [provider](../../02.Documentation/05.supported-cloud-providers/default.en.md) (at the time of writing, only the SysEleven Stack is supported):
+the [provider](../../02.Documentation/05.supported-cloud-providers/default.en.md):
 
 ![Menu to chose cloud provider](image_provider_01.png)
 
