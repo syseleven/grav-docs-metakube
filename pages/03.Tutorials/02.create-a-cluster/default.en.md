@@ -44,7 +44,7 @@ A default image tested and maintained by SysEleven is automatically chosen for t
 
 ![Overview of openstack images](image_stack-images_01.png)
 
-Make sure to enter the exact name of the image you want to run on your machines, as listed in the images tab of the SysEleven stack dashboard.
+Make sure to enter the exact name of the image you want to run on your machines, as listed in the images tab of the SysEleven stack dashboard. See also [supported operating systems](../../02.Documentation/04.supported-operating-systems/default.en.md).
 The chosen SSH key will be used for authentication for the default user (e.g. `ubuntu` for Ubuntu images) on all worker nodes. When you click on next, you will see a summary and the cluster creation will start after you confirm. You will then be forwarded to the cluster creation page where you can view the cluster creation process:
 
 ![Cluster details in creation state](image_cluster-details_01.png)
