@@ -20,7 +20,7 @@ For more information on supported images and how to upload your own see the [Sys
 | ---------------- | ------------ |
 | Ubuntu Bionic 18.04 | ubuntu |
 | CentOS 7 | centos |
-| CoreOS stable | coreos |
+| CoreOS stable | core |
 
 ## Timezone
 
