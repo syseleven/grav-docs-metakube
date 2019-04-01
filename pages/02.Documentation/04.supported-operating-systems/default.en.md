@@ -8,12 +8,20 @@ taxonomy:
         - cluster
 ---
 
-## Default
+The default operating system for MetaKube clusters is **Ubuntu**. You can also create clusters with **CentOS** or **CoreOS Container Linux**. We provide images for the latest tested release of all operating systems.
 
-The default operating system for MetaKube clusters is **Ubuntu**. We provide images for the latest tested release.
+You can also [upload and use your own images](../../03.Tutorials/12.how-to-use-custom-images-for-your-worker-nodes/default.en.md), though you need to ensure that you are using an image with a supported version of the correct operating systems (see below).
 
-## Supported
+For more information on supported images and how to upload your own see the [SysEleven Stack documentation](https://docs.syseleven.de/syseleven-stack/en/reference/images).
 
-In addition to Ubuntu, we support clusters running **CentOS** or **CoreOS Container Linux**, but as of writing this document, we do not provide images for either of these distributions.
+## Supported Operating Systems and Versions
 
-To run a cluster with one of them, you can use the official [CoreOS](https://coreos.com/os/docs/latest/booting-on-openstack.html) or [CentOS](http://cloud.centos.org/centos/7/images/) cloud images. Follow the guideline on [how to use a custom image](../../03.Tutorials/12.how-to-use-custom-images-for-your-worker-nodes/default.en.md) and use the qcow2 image of your choice.
+| Name and Version | SSH username |
+| ---------------- | ------------ |
+| Ubuntu Bionic 18.04 | ubuntu |
+| CentOS 7 | centos |
+| CoreOS stable | coreos |
+
+## Timezone
+
+The timezone on all provided images is UTC. If you want to set a different timezone you have to use your own image, though using UTC is generally recommended to not run into problems with daylight saving times.

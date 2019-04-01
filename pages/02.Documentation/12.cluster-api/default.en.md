@@ -73,7 +73,7 @@ spec:
             flavor: m1.micro
             floatingIpPool: ext-net
             identityEndpoint: https://api.dbl.cloud.syseleven.net:5000/v3
-            image: Ubuntu 18.04 LTS sys11 optimized - 2018-08-13
+            image: Ubuntu Bionic 18.04 (2019-03-27)
             network: kubermatic-92r62cx8j6
             password: ""
             region: dbl

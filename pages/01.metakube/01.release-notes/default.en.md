@@ -8,6 +8,16 @@ page-toc:
     active: false
 ---
 
+## 2019-04-01
+
+* Kubernetes versions 1.12.7 and 1.13.5 are now available
+* We now provide up to date default images for Ubuntu, CoreOS and CentOS, see [Supported Operating Systems](../../02.Documentation/04.supported-operating-systems/default.en.md) for details
+* The [Web Terminal](../../02.Documentation/10.metakube-webterminal/default.en.md) now contains the alpine coreutils package
+
+## 2019-03-28
+
+* Updated [Helm](https://www.helm.sh/) to [2.13.1](https://github.com/helm/helm/releases/tag/v2.13.1)
+
 ## 2019-03-25
 
 * MetaKube clusters can now be created in the second SysEleven OpenStack region `cbk`
