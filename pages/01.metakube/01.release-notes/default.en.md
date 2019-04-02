@@ -8,6 +8,11 @@ page-toc:
     active: false
 ---
 
+## 2019-04-02
+
+* The [Web Terminal](../../02.Documentation/10.metakube-webterminal/default.en.md) access is now restricted to owners and editors
+* The kubeconfig download is now restricted to owners and editors
+
 ## 2019-04-01
 
 * Kubernetes versions 1.12.7 and 1.13.5 are now available

@@ -34,4 +34,4 @@ An editor has full admin access to all clusters, but can not add or remove membe
 
 ### Viewer
 
-A viewer can see clusters, but neither add new ones nor edit or delete existing clusters.
+A viewer can see clusters, but neither add new ones nor edit or delete existing clusters. All services to interact with the cluster, e.g. the webterminal or kubeconfig download, are disabled for a viewer. Please note: changing the role of a member from editor to viewer does not invalidate the kubeconfig. If the person already downloaded the config the access will not be revoked automatically.
