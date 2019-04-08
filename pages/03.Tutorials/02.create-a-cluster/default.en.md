@@ -35,7 +35,7 @@ Then choose the tenant where you want to create the cluster from the drop-down l
 
 ![Overview of cluster settings with highlighted tenant section](image_cluster-settings_02.png)
 
-For node settings we recommend at least 3 nodes sized `m1.small` or bigger. For an overview of the possible node flavors see the [SysEleven Stack documentation](https://docs.syseleven.de/syseleven-stack/en/documentation/flavors). It is also possible to choose the operating system and image used for your worker nodes:
+For node settings we recommend at least 3 nodes sized `m1.small` or bigger. For an overview of the possible node flavors see the [SysEleven Stack documentation](https://docs.syseleven.de/syseleven-stack/en/reference/compute#flavors). It is also possible to choose the operating system and image used for your worker nodes:
 
 ![Overview of cluster settings with highlighted node section](image_cluster-settings_03.png)
 

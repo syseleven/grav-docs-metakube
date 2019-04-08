@@ -7,7 +7,7 @@ taxonomy:
         - storage
 ---
 
-The default MetaKube [Storage Class](../../02.Documentation/11.storage-classes/default.en.md) which uses the OpenStack Cinder API only supports ReadWriteOnce (RWO) volumes. This means that a volume can only be mounted in one container at the same time. While this is usually fine and you should use databases or [Object Storage](https://docs.syseleven.de/syseleven-stack/en/documentation/object-storage) if you need to read and write from multiple instances, there are some use cases, especially in legacy software, where ReadWriteMany (RWX) volumes may be needed.
+The default MetaKube [Storage Class](../../02.Documentation/11.storage-classes/default.en.md) which uses the OpenStack Cinder API only supports ReadWriteOnce (RWO) volumes. This means that a volume can only be mounted in one container at the same time. While this is usually fine and you should use databases or [Object Storage](https://docs.syseleven.de/syseleven-stack/en/reference/object-storage) if you need to read and write from multiple instances, there are some use cases, especially in legacy software, where ReadWriteMany (RWX) volumes may be needed.
 
 ## Prerequisites
 

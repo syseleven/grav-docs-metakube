@@ -9,7 +9,7 @@ taxonomy:
         - cli
 ---
 
-In order to use persistent storage over a [PersistentVolumeClaim](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) in your cluster, a [StorageClass](https://kubernetes.io/docs/concepts/storage/storage-classes/) needs to be specified there. MetaKube clusters already come with a default StorageClass for our [SysEleven Stack Block Storage](https://docs.syseleven.de/syseleven-stack/en/documentation/block-storage) as the default StorageClass built-in:
+In order to use persistent storage over a [PersistentVolumeClaim](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) in your cluster, a [StorageClass](https://kubernetes.io/docs/concepts/storage/storage-classes/) needs to be specified there. MetaKube clusters already come with a default StorageClass for our [SysEleven Stack Block Storage](https://docs.syseleven.de/syseleven-stack/en/reference/block-storage) as the default StorageClass built-in:
 
 ```bash
 $ kubectl get storageclasses

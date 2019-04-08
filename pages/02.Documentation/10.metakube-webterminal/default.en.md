@@ -18,7 +18,7 @@ This bash terminal runs on Alpine Linux in the background and comes installed wi
 2) [helm](https://helm.sh/)
 3) [tiller](https://docs.helm.sh/install/#installing-tiller)
 4) [Velero](https://github.com/heptio/velero)
-5) [OpenStack CLI Tools](https://docs.syseleven.de/syseleven-stack/en/tutorials/openstack-cli)
+5) [OpenStack CLI Tools](https://docs.syseleven.de/syseleven-stack/en/howtos/openstack-cli)
 6) curl, wget and git
 
 ![MetaKube Webterminal](metakube-webterminal.png)
