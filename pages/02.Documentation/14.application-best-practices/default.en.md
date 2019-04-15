@@ -37,9 +37,9 @@ For more information see [Namespaces](https://kubernetes.io/docs/concepts/overvi
 
 ### Amount of replicas
 
-For high availability of your application and to enable deployments without down times you should have **at least** 2, better more, replicas of every component in your cluster. This includes stateless applications as well as databases, proxies and caching systems. Having only 1 replica will mean that it is very likely to create down times for this component, which your application would need to handle.
+For high availability of your application and to enable deployments without downtimes you should have **at least** 2, better more, replicas of every component in your cluster. This includes stateless applications as well as databases, proxies and caching systems. Having only 1 replica will mean that it is very likely to create downtimes for this component, which your application would need to handle.
 
-Of course you should also test that your service stay available when you delete and recreate a pod or trigger a deployment.
+Of course you should also test that your service stays available when you delete and recreate a pod or trigger a deployment.
 
 For more information see [Running Multiple Instances of Your App](https://kubernetes.io/docs/tutorials/kubernetes-basics/scale/scale-intro/).
 
@@ -103,15 +103,15 @@ Even in the most robust application designs there may be the need to take an app
 
 You should plan for these cases by having an easy way to show the users a nice, static maintenance page instead of some default nginx error.
 
-You can do this for example by deploying a small application that just serves a static page, where you can switch a Service too, or by configuring custom fallback error pages in your ingress controller.
+You can do this for example by deploying a small application that just serves a static page, where you can switch a Service to, or by configuring custom fallback error pages in your ingress controller.
 
 For more information see [Connecting Applications with Services](https://kubernetes.io/docs/concepts/services-networking/connect-applications-service/) and [Custom Errors](https://kubernetes.github.io/ingress-nginx/examples/customization/custom-errors/).
 
 ### Persistent Volumes
 
-When creating persistent volumes, you should create them in the right size. Increasing the size of a volume is not possible, while the application is running and the volume is bound to a pod.
+When creating persistent volumes, you should create them in the right size. Increasing the size of a volume is not possible while the application is running and the volume is bound to a pod.
 
-For higher IO performance you may want to consider using local storage nodes, though you (or your database) have to take care of replication yourself then, since volume data is not automatically spread in the OpenStack cluster.
+For higher IO performance you may want to consider using local storage nodes. Since local storage volume data is not automatically spread in the OpenStack cluster, you (or your database) have to take care of replication then.
 
 For more information see [Persistent Volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/).
 
@@ -119,9 +119,11 @@ For more information see [Persistent Volumes](https://kubernetes.io/docs/concept
 
 Even though persistent volumes are replicated in our OpenStack cluster, you should still configure and create backups for your stateful data.
 
+For more information see [Backups](../07.backups/default.en.md)
+
 ## Security
 
-You should think about pod security. For example if possible, do not run a pod as root.
+You should think about pod security contexts. For example if possible, do not run a pod as root.
 
 For more information see [Configure a Security Context for a Pod or Container](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/).
 
@@ -135,7 +137,7 @@ For more information see [Deployments](https://kubernetes.io/docs/concepts/workl
 
 ## Monitoring
 
-You should monitor all your components and create sensible dashboard to quickly see their state. The [prometheus-operator](https://github.com/coreos/prometheus-operator) works quite well with Kubernetes and the [kube-prometheus](https://github.com/coreos/kube-prometheus) project helps you with deploying a Prometheus setup that already scrapes basic information about the state of Pods and Nodes inside of Kubernetes.
+You should monitor all your components and create sensible dashboards to quickly see their state. The [prometheus-operator](https://github.com/coreos/prometheus-operator) works quite well with Kubernetes and the [kube-prometheus](https://github.com/coreos/kube-prometheus) project helps you with deploying a Prometheus setup that already scrapes basic information about the state of Pods and Nodes inside of Kubernetes.
 
 You should also add Prometheus exporters for all the other services and databases that you use.
 
