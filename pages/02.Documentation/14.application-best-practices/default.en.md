@@ -14,7 +14,7 @@ This article is meant as a starting point and check list to help you with that:
 
 ## Application design
 
-When writing your application, you should keep in mind, that it will run inside of containers on Kubernetes. Keep the principles of a [12 factor app](https://12factor.net) in mind.
+When writing your application, you should keep in mind that it will run inside of containers on Kubernetes. Keep the principles of a [12 factor app](https://12factor.net) in mind.
 
 ## Deployments
 
@@ -24,7 +24,7 @@ When creating Deployments, DaemonSets, StatefulSets or CronJobs there are certai
 
 * Your images are as small as possible, there should be no build artifacts or unused packages, logs or caching data in your image. You can use [multi-stage builds](https://docs.docker.com/develop/develop-images/multistage-build/) to help you with this.
 * You should scan your images for known security vulnerabilities. For example with [Clair](https://github.com/coreos/clair), which is also already integrated in several docker registries.
-* You should keep packages and base images up to date, to prevent bugs or security vulnerabilities.
+* You should keep packages and base images up to date to prevent bugs or security vulnerabilities.
 * When referencing a docker image in a Kubernetes resource like a Deployment, always reference it with a specific version and never with `latest`.
 
 For more information see [Images](https://kubernetes.io/docs/concepts/containers/images/).
@@ -37,7 +37,7 @@ For more information see [Namespaces](https://kubernetes.io/docs/concepts/overvi
 
 ### Handling different environments
 
-If you need to deploy to different environments, you should use a tool, like Helm, that helps you with this, instead of duplication Kubernetes resource files.
+If you need to deploy to different environments, you should use a tool like Helm that helps you with this, instead of duplicating Kubernetes resource files.
 
 For more information see [Helm](https://helm.sh).
 
@@ -63,9 +63,9 @@ For more information see [Managing Compute Resources for Containers](https://kub
 
 Running containers on VMs inside of a Kubernetes cluster does not mean that you have a magic amount of endless resources. The amount of CPU, memory, IO and network resources are limited for each VM.
 
-Therefor it is a good idea to deploy your production critical systems on a different set of nodes to other CPU, memory and IO intensive workloads, like monitoring and logging stacks.
+Therefore it is a good idea to deploy your production critical systems on a different set of nodes than other CPU, memory and IO intensive workloads, like monitoring and logging stacks.
 
-You can do this with nodeSelectors, NodeAffinities, Taints and Tolerations.
+You can do this with nodeSelectors, nodeAffinities, taints and tolerations.
 
 For more information see [Assigning Pods to Nodes](https://kubernetes.io/docs/concepts/configuration/assign-pod-node/) and [Taints and Tolerations](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/).
 
@@ -93,7 +93,7 @@ For more information see [Configure a Pod to Use a ConfigMap](https://kubernetes
 
 ### Health Checks
 
-You should define sensible Liveness and Readiness Probes so tha Kubernetes knows if your application is healthy and running.
+You should define sensible Liveness and Readiness Probes so that Kubernetes knows if your application is healthy and running.
 
 For more information see [Configure Liveness and Readiness Probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/).
 
@@ -129,7 +129,7 @@ For more information see [Backups](../07.backups/default.en.md)
 
 ## Third-Party Components
 
-When you are deploying third-party components, like databases, an ingress controller or monitoring and logging infrastructure, best use already build Helm charts and configure them to your needs instead of re-inventing the wheel.
+When you are deploying third-party components, like databases, an ingress controller or monitoring and logging infrastructure, best use already built Helm charts and configure them to your needs instead of re-inventing the wheel.
 
 For more information see [Kubeapps](https://hub.kubeapps.com/).
 
@@ -141,7 +141,7 @@ For more information see [Configure a Security Context for a Pod or Container](h
 
 ## CI/CD
 
-Deployments should be triggered by a CI/CD pipeline that includes running unit and integration tests before deployments and smoke tests after a deployment.
+Deployments should be triggered by a CI/CD pipeline that includes running unit and integration tests before a deployment and smoke tests after a deployment.
 
 You should configure Deployment Strategies and may want to consider canary or blue/green deployments.
 
@@ -169,4 +169,4 @@ While `kubectl logs` is quite useful, you should use a central log management sy
 
 For more information see for example [elastic-stack](https://github.com/helm/charts/tree/master/stable/elastic-stack).
 
-SysEleven also support fully managed Elastic Stack Installations. Please contact our [Support](../../04.Support/default.en.md) for more details.
+SysEleven also supports fully managed Elastic Stack Installations. Please contact our [Support](../../04.Support/default.en.md) for more details.
