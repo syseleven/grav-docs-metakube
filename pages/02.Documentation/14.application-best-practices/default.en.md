@@ -35,6 +35,12 @@ If your application setup gets more complex with multiple different services, it
 
 For more information see [Namespaces](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/).
 
+### Handling different environments
+
+If you need to deploy to different environments, you should use a tool, like Helm, that helps you with this, instead of duplication Kubernetes resource files.
+
+For more information see [Helm](https://helm.sh).
+
 ### Amount of replicas
 
 For high availability of your application and to enable deployments without downtimes you should have **at least** 2, better more, replicas of every component in your cluster. This includes stateless applications as well as databases, proxies and caching systems. Having only 1 replica will mean that it is very likely to create downtimes for this component, which your application would need to handle.
@@ -120,6 +126,12 @@ For more information see [Persistent Volumes](https://kubernetes.io/docs/concept
 Even though persistent volumes are replicated in our OpenStack cluster, you should still configure and create backups for your stateful data.
 
 For more information see [Backups](../07.backups/default.en.md)
+
+## Third-Party Components
+
+When you are deploying third-party components, like databases, an ingress controller or monitoring and logging infrastructure, best use already build Helm charts and configure them to your needs instead of re-inventing the wheel.
+
+For more information see [Kubeapps](https://hub.kubeapps.com/).
 
 ## Security
 
