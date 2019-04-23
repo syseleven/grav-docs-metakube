@@ -31,7 +31,7 @@ For more information see [Images](https://kubernetes.io/docs/concepts/containers
 
 ### Use namespaces for logical grouping of applications
 
-If your application setup gets more complex with multiple different services, it is a good idea to use Namespaces to separate and group Deployments, StatefulSets, Services, ... logically per application.
+If your application setup gets more complex with multiple different services, it is a good idea to use Namespaces to separate and to group Deployments, StatefulSets, Services, ... logically per application.
 
 For more information see [Namespaces](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/).
 
