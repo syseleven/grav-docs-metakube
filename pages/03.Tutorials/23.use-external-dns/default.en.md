@@ -19,14 +19,14 @@ If you don't want to manage DNS manually you can configure your MetaKube cluster
 
 For easier cleanup we will create a dedicated namespace for the external DNS service
 
-```
+```shell
 $ kubectl create namespace external-dns
 namespace/external-dns created
 ```
 
 and deploy the externalDNS service into this namespace
 
-```
+```shell
 $ cat <<EOF | kubectl apply -f -
 apiVersion: v1
 kind: ServiceAccount
@@ -101,9 +101,9 @@ For `<example.com>` enter your hosted zone. The `<aws_zone_id>` can be found in 
 
 ## Test the external DNS provider
 
-When the provider was successfully deployed, you can create new LoadBalancer services for which the DNS entrys will be deployed automatically. 
+When the provider was successfully deployed, you can create new LoadBalancer services for which the DNS entrys will be deployed automatically.
 
-```
+```shell
 $ cat <<EOF | kubectl apply --namespace=external-dns -f -
 apiVersion: v1
 kind: Service
@@ -142,15 +142,15 @@ EOF
 
 When the loadbalancer was successfully created, you should be able to visit the domain `<loadbalancer.example.com>` after a short time.
 
-```
+```shell
 $ curl -I <loadbalancer.example.com>
 HTTP/1 200
 [...]
 ```
 
-This also works seamlessly with Ingress resources. To test this 
+This also works seamlessly with Ingress resources. To test this
 
-```
+```shell
 $ cat <<EOF | kubectl apply --namespace=external-dns -f -
 apiVersion: v1
 kind: Service
@@ -187,8 +187,9 @@ and visit the page `<ingress.example.com>`.
 
 If you do not plan to further use the external DNS provider, just delete the `external-dns` namespace
 
-```
+```shell
 $ kubectl delete namesapce external-dns
+namespace "external-dns" deleted
 ```
 
 If you did not remove the config option `--policy=upsert-only` from the external-dns deployment you also need to delete the DNS entries `<loadbalancer.example.com>` and `<ingress.example.com>` from Route53.
