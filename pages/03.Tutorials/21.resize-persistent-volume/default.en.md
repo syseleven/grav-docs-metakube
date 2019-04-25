@@ -95,7 +95,9 @@ pvc-9b7f6820-e695-11e8-85a5-0a580af403f8   1Gi        RWO            Delete     
 
 ## Resize the persistent volume
 
-Because of limitations in Kubernetes and OpenStack volumes can not be resized while they are in use. So we first must ensure that no running pod is using the volume. The easiest way is to scale the deployment of the NGINX application down:
+Because of limitations in Kubernetes and OpenStack volumes can not be resized while they are in use. So we first must ensure that no running pod is using the volume. The easiest way is to scale the deployment of the NGINX application down.
+
+Note that just deleting the pod is not enough, since it will be directly rescheduled. Also you have to ensure that the volume is not attached to any running pod before resizing it.
 
 ```shell
 $ kubectl scale deployment nginx-deployment --replicas 0 --namespace resize-storage-tutorial
@@ -116,7 +118,7 @@ $ kubectl patch pvc nginx-logs --namespace resize-storage-tutorial -p '{"spec":{
 persistentvolumeclaim/nginx-logs patched
 ```
 
-If you describe the PersistentVolumeClaim now, you can see that Kubernetes is waiting for a pod to restart in order to change the volume size:
+If you describe the PersistentVolumeClaim now, you can see that Kubernetes is waiting for a pod to restart in order to change the volume size. The size of the volume will still appear as 1Gi until the volume has been attached and the resize has been performed.
 
 ```shell
 $ kubectl describe pvc nginx-logs --namespace resize-storage-tutorial
