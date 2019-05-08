@@ -25,7 +25,7 @@ For easy cleanups we create a new namespace for our tutorial:
 
 ```shell
 $ kubectl create namespace hna-tutorial
-namespace/hpa-tutorial created
+namespace/hna-tutorial created
 ```
 
 For our tutorial we will just deploy an NGINX Hello World app, run:
@@ -79,7 +79,7 @@ If you describe one of these pending pods, you can see that the scheduling faile
 resources:
 
 ```shell
-kubectl describe pod hello-app-6f488fcdfc-m2n8x
+$ kubectl describe pod hello-app-6f488fcdfc-m2n8x --namespace hna-tutorial
 Name:               hello-app-6f488fcdfc-m2n8x
 Namespace:          hna-tutorial
 Priority:           0
@@ -210,7 +210,7 @@ For more details on MachineDeployments see [Cluster Management API](../../02.Doc
 If you list all available machines, you can see that a few new machines have been automatically created by the autoscaler:
 
 ```shell
-$ kubectl get machines -n kube-system
+$ kubectl get machines --namespace kube-system
 NAME                                           AGE
 machine-kubermatic-fhgbvx65xg-7flj7            8d
 machine-kubermatic-fhgbvx65xg-hmgd4            8d
@@ -222,7 +222,7 @@ scalable-machine-deployment-5c4cbbc47b-zwrts   4m
 And the replica count of the MachineDeployment has been updated:
 
 ```shell
-$ kubectl get machinedeployment -n kube-system scalable-machine-deployment -o jsonpath="{.spec.replicas}"
+$ kubectl get machinedeployment --namespace kube-system scalable-machine-deployment --output jsonpath="{.spec.replicas}"
 2
 ```
 
@@ -265,7 +265,7 @@ hello-app-6f488fcdfc-zx8st   1/1     Running   0          13s
 Delete the MachineDeployment to remove the created machines and VMs:
 
 ```shell
-$ kubectl delete machinedeployment -n kube-system scalable-machine-deployment
+$ kubectl delete machinedeployment --namespace kube-system scalable-machine-deployment
 machinedeployment.cluster.k8s.io "scalable-machine-deployment" deleted
 ```
 

@@ -94,7 +94,7 @@ ab -c 100 -n 1000 http://195.192.xxx.xxx/
 After running the above command a few times (Kubernetes needs enough data in order to decide to scale up), you should see new pods being created:
 
 ```shell
-$ kubectl get pods -w
+$ kubectl get pods --namespace hpa-tutorial --watch
 NAME                         READY     STATUS    RESTARTS   AGE
 hello-app-5d6bcff5dd-frdnl   1/1       Running   0         4s
 hello-app-5d6bcff5dd-bjkcj   0/1       Pending   0         0s
