@@ -8,6 +8,25 @@ page-toc:
     active: false
 ---
 
+## 2019-05-10
+
+* Kubernetes versions 1.14.1, 1.14.0, 1.13.6 and 1.12.8 are now available
+* When deleting a MetaKube cluster, you can now choose if you want to delete its OpenStack LoadBalancers or not
+* When creating a NodeDeployment you can define the labels that should be attached to a node
+* When upgrading a MetaKube cluster, you can also automatically update all NodeDeployments to do a rolling update of all nodes
+* The Kubernetes Software Defined Network canal has been updated: [calico](https://www.projectcalico.org/) to [2.6.12](https://docs.projectcalico.org/v2.6/releases/) and [flannel](https://github.com/coreos/flannel) to [0.11.0](https://github.com/coreos/flannel/releases/tag/v0.11.0). This brings several bugfixes and network performance improvements.
+* Every node in a MetaKube cluster now reserves 200m CPU for system components to not overload the node and increase stability
+* The Kubernetes cluster DNS service has been switched to [CoreDNS](https://coredns.io/) version [1.3.1](https://coredns.io/2019/01/13/coredns-1.3.1-release/)
+* Stability improvements when creating the initial NodeDeployment after the creation of a MetaKube cluster
+* Updated [metrics-server](https://github.com/kubernetes-incubator/metrics-server) to [0.3.2](https://github.com/kubernetes-incubator/metrics-server/releases/tag/v0.3.2)
+* When interacting with MachineDeployments, MachineSets and Machines over the kubectl CLI, you can now use the short names `md`, `ms` and `ma`
+* You can now use `kubectl scale machinedeployment` to easily scale a MachineDeployment over the kubectl CLI
+* An upgrade of a MetaKube cluster is now only available, if the versions of the existing nodes would work together with the new master components version
+* etcd is updated to 3.3.12
+* The NodeDeployment detail page in the MetaKube dashboard now also contains Node related events
+* The name of a project can now be edited
+* Kubernetes master components resource requests, limits and pod affinities have been updated to increase performance and stability
+
 ## 2019-04-02
 
 * The [Web Terminal](../../02.Documentation/10.metakube-webterminal/default.en.md) access is now restricted to owners and editors
