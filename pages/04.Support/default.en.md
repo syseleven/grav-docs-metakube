@@ -10,7 +10,7 @@ taxonomy:
         - support
 ---
 
-As vendor of [SysEleven MetaKube](https://www.syseleven.de/produkte-services/managed-kubernetes/) we provide support directly from our engineering team. We are happy to assist you.
+As vendor of [SysEleven MetaKube](https://www.syseleven.de/produkte-services/managed-kubernetes/) we provide support for our customers directly from our engineering team. We are happy to assist you.
 
 ## Help Center
 
