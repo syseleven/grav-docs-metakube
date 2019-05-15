@@ -10,7 +10,7 @@ taxonomy:
         - support
 ---
 
-Als der Hersteller von [SysEleven MetaKube](https://www.syseleven.de/produkte-services/managed-kubernetes/) bieten wir Support direkt vom Engineering Team.  Wir freuen uns Ihnen behilflich zu sein.
+Als der Hersteller von [SysEleven MetaKube](https://www.syseleven.de/produkte-services/managed-kubernetes/) bieten wir unseren Kunden Support direkt vom Engineering Team. Wir freuen uns Ihnen behilflich zu sein.
 
 ## Hilfe Center
 
