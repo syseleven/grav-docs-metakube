@@ -8,6 +8,12 @@ page-toc:
     active: false
 ---
 
+## 2019-05-16
+
+* Updated [Helm](https://www.helm.sh/) to [2.14.0](https://github.com/helm/helm/releases/tag/v2.14.0)
+* When creating a NodeDeployment you can define the taints that should be attached to a node
+* Kubernetes version 1.14.2 is now available
+
 ## 2019-05-10
 
 * Kubernetes versions 1.14.1, 1.14.0, 1.13.6 and 1.12.8 are now available
