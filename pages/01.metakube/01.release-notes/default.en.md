@@ -8,6 +8,10 @@ page-toc:
     active: false
 ---
 
+## 2019-05-28
+
+* Kubernetes version 1.12.9 is now available
+
 ## 2019-05-16
 
 * Updated [Helm](https://www.helm.sh/) to [2.14.0](https://github.com/helm/helm/releases/tag/v2.14.0)
