@@ -35,3 +35,7 @@ Your worker nodes will now be updated one by one:
 
 ![Worker node update in progress](image_edit_np_wait_for_node.png)
 ![Worker node update finished](image_edit_np_finished.png)
+
+## Downgrade a cluster
+
+You can also downgrade a cluster to an earlier version, by clicking on the version number of the cluster on the cluster detail page.
