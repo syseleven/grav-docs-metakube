@@ -8,6 +8,12 @@ page-toc:
     active: false
 ---
 
+## 2019-05-31
+
+* Kubernetes versions 1.14.2 and 1.13.6 were removed because of a [security vulnerability](https://github.com/kubernetes/kubernetes/issues/78308)
+* Major network performance and reliability improvements
+* [CoreDNS](https://coredns.io/) is not logging every dns query anymore
+
 ## 2019-05-28
 
 * Kubernetes version 1.12.9 is now available
