@@ -8,6 +8,10 @@ page-toc:
     active: false
 ---
 
+## 2019-06-05
+
+* The node deployment editor now automatically detects when a newer OpenStack image is available and allows the user to perform a rolling update
+
 ## 2019-05-31
 
 * Kubernetes versions 1.14.2 and 1.13.6 were removed because of a [security vulnerability](https://github.com/kubernetes/kubernetes/issues/78308)
