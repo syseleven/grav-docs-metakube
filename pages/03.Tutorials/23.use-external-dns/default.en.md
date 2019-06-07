@@ -13,10 +13,9 @@ If you don't want to manage DNS manually you can configure your MetaKube cluster
 
 Login to your AWS account and create a user named external-dns
 
-
 ## Add this IAM Policy to your external-dns user
 
-```
+```json
 {
  "Version": "2012-10-17",
  "Statement": [
@@ -43,12 +42,11 @@ Login to your AWS account and create a user named external-dns
 }
 ```
 
-
 ## Create a values.yaml file to configure Route53 as external DNS provider
 
 Copy the follow text block into the file values.yaml. We need this file to pass our DNS configuration to the helm chart. Please make sure to check the field with the word changeme. You will need to add access key and a secret key.
 
-```
+```yaml
 ## External DNS
 image:
   name: registry.opensource.zalan.do/teapot/external-dns
@@ -107,23 +105,19 @@ rbac:
   create: true
  ```
 
-
 ## Deploy the external DNS service with helm
 
 upate your helm sources
 
-```
+```shell
 helm repo up
 ```
 
 install the external dns helm package in the external-dns namespace
 
-```
+```shell
 helm upgrade --install external-dns --namespace=external-dns -f values.yaml stable/external-dns
 ```
-
-
-
 
 ## Test the external DNS provider
 
