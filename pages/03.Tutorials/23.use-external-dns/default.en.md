@@ -9,99 +9,125 @@ taxonomy:
 
 If you don't want to manage DNS manually you can configure your MetaKube cluster to use [external DNS](https://github.com/kubernetes-incubator/external-dns) with an compatible DNS provider (e.g. Amazon Route53). In this tutorial we will use [Amazon Route53](https://aws.amazon.com/de/route53/). For other external DNS providers please check the [official docs](https://github.com/kubernetes-incubator/external-dns/tree/master/docs/tutorials).
 
-## Prepare the nodes
+## Add an IAM user to you AWS account
 
-*This step is not required, if you cluster is running on AWS.*
+Login to your AWS account and create a user named external-dns 
 
-!! TODO !!
 
-## Deploy the external DNS service
+## Add this IAM Policy to your external-dns user
 
-For easier cleanup we will create a dedicated namespace for the external DNS service
-
-```shell
-$ kubectl create namespace external-dns
-namespace/external-dns created
+```
+{
+ "Version": "2012-10-17",
+ "Statement": [
+   {
+     "Effect": "Allow",
+     "Action": [
+       "route53:ChangeResourceRecordSets"
+     ],
+     "Resource": [
+       "arn:aws:route53:::hostedzone/*"
+     ]
+   },
+   {
+     "Effect": "Allow",
+     "Action": [
+       "route53:ListHostedZones",
+       "route53:ListResourceRecordSets"
+     ],
+     "Resource": [
+       "*"
+     ]
+   }
+ ]
+}
 ```
 
-and deploy the externalDNS service into this namespace
 
-```shell
-$ cat <<EOF | kubectl apply -f -
-apiVersion: v1
-kind: ServiceAccount
-metadata:
-  name: external-dns
-  namespace: external-dns
+## Create a values.yaml file to configure Route53 as external DNS provider
 
----
-apiVersion: rbac.authorization.k8s.io/v1beta1
-kind: ClusterRole
-metadata:
-  name: external-dns
-rules:
-- apiGroups: [""]
-  resources: ["services"]
-  verbs: ["get","watch","list"]
-- apiGroups: [""]
-  resources: ["pods"]
-  verbs: ["get","watch","list"]
-- apiGroups: ["extensions"]
-  resources: ["ingresses"]
-  verbs: ["get","watch","list"]
-- apiGroups: [""]
-  resources: ["nodes"]
-  verbs: ["watch","list"]
+Copy the follow text block into the file values.yaml. We need this file to pass our DNS configuration to the helm chart. Please make sure to check the field with the word changeme. You will need to add access key and a secret key. 
 
----
-apiVersion: rbac.authorization.k8s.io/v1beta1
-kind: ClusterRoleBinding
-metadata:
-  name: external-dns-viewer
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: external-dns
-subjects:
-- kind: ServiceAccount
-  name: external-dns
-  namespace: external-dns
+```
+## External DNS 
+image:
+  name: registry.opensource.zalan.do/teapot/external-dns
+  tag: v0.5.14
+ 
+## This controls which types of resource external-dns should 'watch' for new
+## DNS entries.
+sources:
+  - service
+  - ingress
 
----
-apiVersion: extensions/v1beta1
-kind: Deployment
-metadata:
-  name: external-dns
-  namespace: external-dns
-spec:
-  strategy:
-    type: Recreate
-  template:
-    metadata:
-      labels:
-        app: external-dns
-    spec:
-      serviceAccountName: external-dns
-      containers:
-      - name: external-dns
-        image: registry.opensource.zalan.do/teapot/external-dns:latest
-        args:
-        - --source=service
-        - --source=ingress
-        - --domain-filter=<example.com>
-        - --provider=aws
-        - --policy=upsert-only # would prevent ExternalDNS from deleting any records, omit to enable full synchronization
-        - --aws-zone-type=public
-        - --registry=txt
-        - --txt-owner-id=/hostedzone/<aws_zone_id>
-EOF
+## The DNS provider where the DNS records will be created (options: aws, google, inmemory, azure, rfc2136 )
+provider: aws
+
+# AWS Access keys to inject as environment variables
+aws:
+  secretKey: "changeme"
+  accessKey: "changeme"
+  # pre external-dns 0.5.9 home dir should be `/root/.aws`
+  credentialsPath: "/.aws"
+  roleArn: ""
+  region: "eu-central-1"
+  # Filter for zones of this type (optional, options: public, private)
+  zoneType: "public"
+
+## Limit possible target zones by domain suffixes (optional)
+domainFilters: []
+## Limit possible target zones by zone id (optional)
+zoneIdFilters: []
+# Filter sources managed by external-dns via annotation using label selector semantics (default: all sources)
+annotationFilter: ""
+## Adjust the interval for DNS updates
+interval: "1m"
+
+# Registry to use for ownership (txt or noop)
+registry: "txt"
+
+# When using the TXT registry, a name that identifies this instance of ExternalDNS
+txtOwnerId: "changeme"
+
+## Modify how DNS records are sychronized between sources and providers (options: sync, upsert-only )
+policy: upsert-only
+
+# Verbosity of the logs (options: panic, debug, info, warn, error, fatal)
+logLevel: info
+
+## CPU and Memory limit and request for external-dns
+resources: 
+  limits:
+    memory: 50Mi
+  requests:
+    memory: 50Mi
+    cpu: 10m
+
+rbac:
+  create: true
+ ```
+
+
+## Deploy the external DNS service with helm
+
+upate your helm sources
+
+```
+helm repo up
 ```
 
-For `<example.com>` enter your hosted zone. The `<aws_zone_id>` can be found in the Route53 dashboard.
+install the external dns helm package in the external-dns namespace
+
+```
+helm upgrade --install external-dns --namespace=external-dns -f values.yaml stable/external-dns
+```
+
+
+
 
 ## Test the external DNS provider
 
-When the provider was successfully deployed, you can create new LoadBalancer services for which the DNS entrys will be deployed automatically.
+When the provider is successfully deployed, you can create a new LoadBalancer service the DNS entries will be deployed automatically.
 
 ```shell
 $ cat <<EOF | kubectl apply --namespace=external-dns -f -
@@ -185,11 +211,11 @@ and visit the page `<ingress.example.com>`.
 
 ## Cleanup
 
-If you do not plan to further use the external DNS provider, just delete the `external-dns` namespace
+If you do not plan to continue using the external DNS provider, just delete the `external-dns` namespace
 
 ```shell
 $ kubectl delete namesapce external-dns
 namespace "external-dns" deleted
 ```
 
-If you did not remove the config option `--policy=upsert-only` from the external-dns deployment you also need to delete the DNS entries `<loadbalancer.example.com>` and `<ingress.example.com>` from Route53.
+If you did not remove the config option `--policy=upsert-only` from the external-dns deployment you also need to delete the DNS entries `<loadbalancer.example.com>` and `<ingress.example.com>` from you hosted zone on Route53.
