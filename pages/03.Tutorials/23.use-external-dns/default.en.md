@@ -11,7 +11,7 @@ If you don't want to manage DNS manually you can configure your MetaKube cluster
 
 ## Add an IAM user to you AWS account
 
-Login to your AWS account and create a user named external-dns 
+Login to your AWS account and create a user named external-dns
 
 
 ## Add this IAM Policy to your external-dns user
@@ -46,14 +46,14 @@ Login to your AWS account and create a user named external-dns
 
 ## Create a values.yaml file to configure Route53 as external DNS provider
 
-Copy the follow text block into the file values.yaml. We need this file to pass our DNS configuration to the helm chart. Please make sure to check the field with the word changeme. You will need to add access key and a secret key. 
+Copy the follow text block into the file values.yaml. We need this file to pass our DNS configuration to the helm chart. Please make sure to check the field with the word changeme. You will need to add access key and a secret key.
 
 ```
-## External DNS 
+## External DNS
 image:
   name: registry.opensource.zalan.do/teapot/external-dns
   tag: v0.5.14
- 
+
 ## This controls which types of resource external-dns should 'watch' for new
 ## DNS entries.
 sources:
@@ -96,7 +96,7 @@ policy: upsert-only
 logLevel: info
 
 ## CPU and Memory limit and request for external-dns
-resources: 
+resources:
   limits:
     memory: 50Mi
   requests:
