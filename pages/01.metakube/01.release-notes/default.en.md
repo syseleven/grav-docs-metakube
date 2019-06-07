@@ -49,14 +49,14 @@ page-toc:
 
 ## 2019-04-02
 
-* The [Web Terminal](../../02.Documentation/10.metakube-webterminal/default.en.md) access is now restricted to owners and editors
+* The [Web Terminal](../../02.Documentation/11.metakube-webterminal/default.en.md) access is now restricted to owners and editors
 * The kubeconfig download is now restricted to owners and editors
 
 ## 2019-04-01
 
 * Kubernetes versions 1.12.7 and 1.13.5 are now available
 * We now provide up to date default images for Ubuntu, CoreOS and CentOS, see [Supported Operating Systems](../../02.Documentation/04.supported-operating-systems/default.en.md) for details
-* The [Web Terminal](../../02.Documentation/10.metakube-webterminal/default.en.md) now contains the alpine coreutils package
+* The [Web Terminal](../../02.Documentation/11.metakube-webterminal/default.en.md) now contains the alpine coreutils package
 
 ## 2019-03-28
 
@@ -72,7 +72,7 @@ page-toc:
 
 ## 2019-03-05
 
-* OpenStack CLI tools are available in [Web Terminal](../../02.Documentation/10.metakube-webterminal/default.en.md)
+* OpenStack CLI tools are available in [Web Terminal](../../02.Documentation/11.metakube-webterminal/default.en.md)
 
 ## 2019-03-04
 
@@ -96,7 +96,7 @@ page-toc:
 
 ## 2019-02-13
 
-* Every MetaKube cluster comes now with a [web-terminal](../../02.Documentation/10.metakube-webterminal/default.en.md) that is accessible from the [MetaKube dashboard](../../02.Documentation/09.metakube-dashboard/default.en.md)
+* Every MetaKube cluster comes now with a [web-terminal](../../02.Documentation/11.metakube-webterminal/default.en.md) that is accessible from the [MetaKube dashboard](../../02.Documentation/09.metakube-dashboard/default.en.md)
 
 ## 2019-02-07
 
@@ -124,7 +124,7 @@ page-toc:
 
 * Kubernetes versions 1.10.12 and 1.12.4 are now available
 * Updated [Helm](https://www.helm.sh/) to [2.12.1](https://github.com/helm/helm/releases/tag/v2.12.1)
-* Updated [kubernetes-dashboard](../../02.Documentation/13.kubernetes-dashboard/default.en.md) to [1.10.1](https://github.com/kubernetes/dashboard/releases/tag/v1.10.1)
+* Updated [kubernetes-dashboard](../../02.Documentation/14.kubernetes-dashboard/default.en.md) to [1.10.1](https://github.com/kubernetes/dashboard/releases/tag/v1.10.1)
 
 ## 2018-12-04
 
@@ -189,7 +189,7 @@ page-toc:
 
 ## 2018-09-12
 
-* [kubernetes-dashboard](../../02.Documentation/13.kubernetes-dashboard/default.en.md) is updated to version [1.10.0](https://github.com/kubernetes/dashboard/releases/tag/v1.10.0)
+* [kubernetes-dashboard](../../02.Documentation/14.kubernetes-dashboard/default.en.md) is updated to version [1.10.0](https://github.com/kubernetes/dashboard/releases/tag/v1.10.0)
 
 ## 2018-09-05
 

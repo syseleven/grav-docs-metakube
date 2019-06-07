@@ -8,7 +8,7 @@ taxonomy:
         - cli
 ---
 
-The MetaKube [Storage Class](../../02.Documentation/11.storage-classes/default.en.md) also allows resizing persistent volumes without loosing any data, as long as they are not currently in use by a pod. This tutorial shows how to do this.
+The MetaKube [Storage Class](../../02.Documentation/12.storage-classes/default.en.md) also allows resizing persistent volumes without loosing any data, as long as they are not currently in use by a pod. This tutorial shows how to do this.
 
 ## Prerequisites
 

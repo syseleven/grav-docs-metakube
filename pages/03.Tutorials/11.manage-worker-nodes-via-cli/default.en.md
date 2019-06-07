@@ -19,7 +19,7 @@ To get a list of all nodes execute:
 kubectl get nodes -o wide
 ```
 
-Every node is managed by a machine resource in the `kube-system` namespace, which are bundled into machineDeployments (further explanation can be found in [cluster management API](../../02.Documentation/12.cluster-api/default.en.md)). To list all machineDeployment resources, execute:
+Every node is managed by a machine resource in the `kube-system` namespace, which are bundled into machineDeployments (further explanation can be found in [cluster management API](../../02.Documentation/13.cluster-api/default.en.md)). To list all machineDeployment resources, execute:
 
 ```bash
 kubectl get machineDeployments --namespace kube-system
@@ -33,4 +33,4 @@ When you want to change a machineDeployment you can edit the machineDeployment r
 kubectl edit machineDeployment ${machineDeployment} --namespace kube-system
 ```
 
-When a machineDeployment is edited the machineController will take care of updating the respective machines. Further explanation to the existing fields and update strategies can be found in [cluster management API](../../02.Documentation/12.cluster-api/default.en.md).
+When a machineDeployment is edited the machineController will take care of updating the respective machines. Further explanation to the existing fields and update strategies can be found in [cluster management API](../../02.Documentation/13.cluster-api/default.en.md).
