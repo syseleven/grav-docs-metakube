@@ -35,8 +35,9 @@ And then add or edit the `.spec.template.spec.metadata.labels` and `.spec.templa
 apiVersion: cluster.k8s.io/v1alpha1
 kind: MachineDeployment
 spec:
-  template:
   [...]
+  template:
+    [...]
     spec:
       metadata:
         name: <name>
