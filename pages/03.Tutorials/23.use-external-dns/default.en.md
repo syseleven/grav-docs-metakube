@@ -167,7 +167,7 @@ spec:
 EOF
 ```
 
-When the loadbalancer was successfully created, you should be able to visit the domain `<loadbalancer.example.com>` after a short time. 
+When the loadbalancer was successfully created, you should be able to visit the domain `<loadbalancer.example.com>` after a short time.
 
 ```shell
 $ curl -I <loadbalancer.example.com>
