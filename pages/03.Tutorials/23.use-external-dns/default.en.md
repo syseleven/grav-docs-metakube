@@ -7,13 +7,20 @@ taxonomy:
         - nameserver
 ---
 
-If you don't want to manage DNS manually you can configure your MetaKube cluster to use [external DNS](https://github.com/kubernetes-incubator/external-dns) with an compatible DNS provider (e.g. Amazon Route53). In this tutorial we will use [Amazon Route53](https://aws.amazon.com/de/route53/). For other external DNS providers please check the [official docs](https://github.com/kubernetes-incubator/external-dns/tree/master/docs/tutorials).
+To eliminate the burden of having to manage you DNS zone manually. You may use external DNS with your MetaKube cluster. [external DNS](https://github.com/kubernetes-incubator/external-dns) With a compatible DNS provider (e.g. Amazon Route53). In this tutorial we will use [Amazon Route53](https://aws.amazon.com/de/route53/). For other external DNS providers please check the [official docs](https://github.com/kubernetes-incubator/external-dns/tree/master/docs/tutorials).
 
-## Add an IAM user to you AWS account
+## First add a new IAM user to your AWS account
 
-Login to your AWS account and create a user named external-dns
+Login to your AWS account and create a user named external-dns. You can find useful help on how to accomplish this here:
+
+[AWS Create IAM User](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html)
 
 ## Add this IAM Policy to your external-dns user
+
+You can find additional information about attaching policies to IAM users here:
+
+[AWS attach policy to IAM user](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-attach-detach.html)
+
 
 ```json
 {
@@ -44,7 +51,7 @@ Login to your AWS account and create a user named external-dns
 
 ## Create a values.yaml file to configure Route53 as external DNS provider
 
-Copy the follow text block into the file values.yaml. We need this file to pass our DNS configuration to the helm chart. Please make sure to check the field with the word changeme. You will need to add access key and a secret key.
+Copy the following text block into the file values.yaml. We need this file to pass our DNS configuration to the helm chart. Please make sure to check all of the fields with the place holder "changeme". You will need to add your access key and the secret key of the user you created earlier.
 
 ```yaml
 ## External DNS
@@ -107,13 +114,13 @@ rbac:
 
 ## Deploy the external DNS service with helm
 
-upate your helm sources
+Update your helm sources
 
 ```shell
 helm repo up
 ```
 
-install the external dns helm package in the external-dns namespace
+Install the external dns helm package in the external-dns namespace
 
 ```shell
 helm upgrade --install external-dns --namespace=external-dns -f values.yaml stable/external-dns
@@ -121,7 +128,7 @@ helm upgrade --install external-dns --namespace=external-dns -f values.yaml stab
 
 ## Test the external DNS provider
 
-When the provider is successfully deployed, you can create a new LoadBalancer service the DNS entries will be deployed automatically.
+When the provider is successfully deployed, you can create a new LoadBalancer service the DNS entries will be created automatically.
 
 ```shell
 $ cat <<EOF | kubectl apply --namespace=external-dns -f -
@@ -160,7 +167,7 @@ spec:
 EOF
 ```
 
-When the loadbalancer was successfully created, you should be able to visit the domain `<loadbalancer.example.com>` after a short time.
+When the loadbalancer was successfully created, you should be able to visit the domain `<loadbalancer.example.com>` after a short time. 
 
 ```shell
 $ curl -I <loadbalancer.example.com>
