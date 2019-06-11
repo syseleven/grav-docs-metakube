@@ -67,7 +67,7 @@ Therefore it is a good idea to deploy your production critical systems on a diff
 
 You can do this with nodeSelectors, nodeAffinities, taints and tolerations.
 
-For more information see [Assigning Pods to Nodes](https://kubernetes.io/docs/concepts/configuration/assign-pod-node/) and [Taints and Tolerations](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/).
+For more information see [Assigning Pods to Nodes](https://kubernetes.io/docs/concepts/configuration/assign-pod-node/) and [Taints and Tolerations](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/) (and how to [set them in MetaKube](../10.taints-and-tolerations/default.en.md)).
 
 ### Pod Affinities and Disruption Policies
 
