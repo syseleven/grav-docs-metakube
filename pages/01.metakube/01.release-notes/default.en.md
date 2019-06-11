@@ -8,6 +8,12 @@ page-toc:
     active: false
 ---
 
+## 2019-06-11
+
+* Updated [Helm](https://www.helm.sh/) to [2.14.1](https://github.com/helm/helm/releases/tag/v2.14.1)
+* Updated the backup utility [velero](https://github.com/heptio/velero) to [1.0.0](https://github.com/heptio/velero/releases/tag/v1.0.0)
+* Updated [node-exporter](https://github.com/prometheus/node_exporter) to [0.18.1](https://github.com/prometheus/node_exporter/releases/tag/v0.18.1), this also adds a service for easier monitoring with the Prometheus operator
+
 ## 2019-06-05
 
 * The node deployment editor now automatically detects when a newer OpenStack image is available and allows the user to perform a rolling update
