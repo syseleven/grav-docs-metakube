@@ -76,3 +76,5 @@ spec:
         dedicated: web
       [...]
 ```
+
+If you require more complex selection of Nodes you can use a [NodeAffinity](https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity) rule instead of a NodeSelector, which greatly expands the type of constraints for the Node selection.
