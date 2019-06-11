@@ -7,7 +7,7 @@ taxonomy:
         - nameserver
 ---
 
-To eliminate the burden of having to manage you DNS zone manually. You may use external DNS with your MetaKube cluster. [external DNS](https://github.com/kubernetes-incubator/external-dns) With a compatible DNS provider (e.g. Amazon Route53). In this tutorial we will use [Amazon Route53](https://aws.amazon.com/de/route53/). For other external DNS providers please check the [official docs](https://github.com/kubernetes-incubator/external-dns/tree/master/docs/tutorials).
+To eliminate the burden of having to manage your DNS zone manually. You may use [external DNS](https://github.com/kubernetes-incubator/external-dns) with your MetaKube cluster and a compatible DNS provider (e.g. Amazon Route53). In this tutorial we will use [Amazon Route53](https://aws.amazon.com/de/route53/). For other external DNS providers please check the [official docs](https://github.com/kubernetes-incubator/external-dns/tree/master/docs/tutorials).
 
 ## First add a new IAM user to your AWS account
 
@@ -51,7 +51,7 @@ You can find additional information about attaching policies to IAM users here:
 
 ## Create a values.yaml file to configure Route53 as external DNS provider
 
-Copy the following text block into the file values.yaml. We need this file to pass our DNS configuration to the helm chart. Please make sure to check all of the fields with the place holder "changeme". You will need to add your access key and the secret key of the user you created earlier.
+Copy the following text block into the file `values.yaml`. We need this file to pass our DNS configuration to the helm chart. Please make sure to check all of the fields with the place holder "changeme". You will need to add your access key and the secret key of the user you created earlier.
 
 ```yaml
 ## External DNS
@@ -114,13 +114,13 @@ rbac:
 
 ## Deploy the external DNS service with helm
 
-Update your helm sources
+Update your helm repositories
 
 ```shell
 helm repo up
 ```
 
-Install the external dns helm package in the external-dns namespace
+Install the external dns helm chart in the external-dns namespace
 
 ```shell
 helm upgrade --install external-dns --namespace=external-dns -f values.yaml stable/external-dns
@@ -128,7 +128,7 @@ helm upgrade --install external-dns --namespace=external-dns -f values.yaml stab
 
 ## Test the external DNS provider
 
-When the provider is successfully deployed, you can create a new LoadBalancer service the DNS entries will be created automatically.
+When the provider is successfully deployed, you can create a new LoadBalancer service the DNS entries will be created automatically for the domain configured with the `external-dns.alpha.kubernetes.io/hostname` annotation.
 
 ```shell
 $ cat <<EOF | kubectl apply --namespace=external-dns -f -
@@ -219,4 +219,4 @@ $ kubectl delete namesapce external-dns
 namespace "external-dns" deleted
 ```
 
-If you did not remove the config option `--policy=upsert-only` from the external-dns deployment you also need to delete the DNS entries `<loadbalancer.example.com>` and `<ingress.example.com>` from you hosted zone on Route53.
+If the `policy` config option from the external-dns helm chart above is set to `upsert-only`, you also need to delete the DNS entries `<loadbalancer.example.com>` and `<ingress.example.com>` from you hosted zone on Route53.
