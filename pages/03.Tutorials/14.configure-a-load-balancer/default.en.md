@@ -20,6 +20,14 @@ Afterwards you can associate another IP by clicking on `Associate Floating IP` i
 
 ![Associate Floating IP in SysEleven Stack](image_stack-fip-associate_01.png)
 
+## Limiting access to a Load Balancer by IP ranges
+
+Every LoadBalancer automatically also receives a SecurityGroup that opens the necessary ports for this Load Balancer up. This SecurityGroup can also be configured to only allow certain source IP ranges by setting the `loadBalancerSourceRanges` field of a service.
+
+For more information see [Configure Your Cloud Provider's Firewalls](https://kubernetes.io/docs/tasks/access-application-cluster/configure-cloud-provider-firewall/).
+
+Note that because of a limitation in Kubernetes, updating or adding this field after the creation of a Load Balancer service is currently not possible.  
+
 ## Troubleshooting
 
 ### I created a load balancer but can't reach the application
