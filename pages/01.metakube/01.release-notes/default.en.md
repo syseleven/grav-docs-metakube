@@ -8,6 +8,10 @@ page-toc:
     active: false
 ---
 
+## 2019-06-20
+
+* On OpenStack MetaKube now also supports VMs with CPU:memory ratios of 1:2 and 1:8 in addition to the existing 1:4 flavors ([Details](https://docs.syseleven.de/syseleven-stack/en/reference/compute))
+
 ## 2019-06-11
 
 * Updated [Helm](https://www.helm.sh/) to [2.14.1](https://github.com/helm/helm/releases/tag/v2.14.1)
