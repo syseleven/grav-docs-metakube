@@ -8,6 +8,10 @@ page-toc:
     active: false
 ---
 
+## 2019-06-24
+
+* The [Web Terminal](../../02.Documentation/11.metakube-webterminal/default.en.md) now contains the [LinkerD CLI](https://linkerd.io/), [fluxctl](https://www.weave.works/oss/flux/) and [kubens](https://github.com/ahmetb/kubectx)
+
 ## 2019-06-20
 
 * On OpenStack MetaKube now also supports VMs with CPU:memory ratios of 1:2 and 1:8 in addition to the existing 1:4 flavors ([Details](https://docs.syseleven.de/syseleven-stack/en/reference/compute))
