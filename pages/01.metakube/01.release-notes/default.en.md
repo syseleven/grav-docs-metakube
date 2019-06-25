@@ -8,6 +8,10 @@ page-toc:
     active: false
 ---
 
+## 2019-06-25
+
+* MetaKube now supports creating Kubernetes clusters on AWS (regions eu-central-1 and eu-west-1 for now), with full feature parity between clusters on SysEleven Stack and AWS.
+
 ## 2019-06-20
 
 * On OpenStack MetaKube now also supports VMs with CPU:memory ratios of 1:2 and 1:8 in addition to the existing 1:4 flavors ([Details](https://docs.syseleven.de/syseleven-stack/en/reference/compute))
