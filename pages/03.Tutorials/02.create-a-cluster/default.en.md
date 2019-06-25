@@ -19,11 +19,11 @@ Start by choosing a name:
 
 the [provider](../../02.Documentation/05.supported-cloud-providers/default.en.md):
 
-![Menu to chose cloud provider](image_provider_01.png)
+![Menu to chose cloud provider](image_provider_01_20190625.png)
 
 and the [region](../../02.Documentation/05.supported-cloud-providers/default.en.md) where the cluster shall live:
 
-![Menu to choose datacenter](image_datacenter_01.png)
+![Menu to choose datacenter](image_provider_02_20190625.png)
 
 ## Create the cluster
 
