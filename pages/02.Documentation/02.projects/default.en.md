@@ -10,15 +10,17 @@ With projects you can group your MetaKube clusters and SSH keys and allow other 
 
 ## Switching the current project
 
-You can see and switch the currently active project with the drop-down menu in the upper left corner:
+The login page lists all of your projects:
 
 ![Show current project](show-project.png)
+
+You can switch projects from the dropdown menu on the top left corner and switch back to log in page by clicking on `back to projects` button
 
 ![Switch project](switch-project.png)
 
 ## Adding a new project
 
-In the list of all your projects you can create new projects or delete existing ones. Additionally you can find an `Add Project` button in the drop-down menu in the upper left corner.
+In the list of all your projects you can create new projects or delete existing ones. Additionally you can find an `Add Project` button in the log in page on upper right corner.
 
 ## Adding members to a project
 
