@@ -11,7 +11,7 @@ taxonomy:
 
 To gain access to SysEleven MetaKube you need to register for [SysEleven Stack](https://www.syseleven.de/syseleven-stack/). If your company already has a SysEleven Stack project and you want to add accounts for more team members, please contact our [support](../../04.Support/default.en.md).
 
-Once you have access to the SysEleven Stack, open a web browser and visit [metakube.syseleven.de](https://metakube.syseleven.de/). You will be greeted by a `Login / Sign-In` button:
+Once you have access to the SysEleven Stack, open a web browser and visit [metakube.syseleven.de](https://metakube.syseleven.de/). You will be greeted by a `Login` button:
 
 ![MetaKube Start Page](registration-login_01.png)
 

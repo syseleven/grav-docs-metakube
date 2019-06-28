@@ -11,7 +11,7 @@ taxonomy:
 
 ## Place to live
 
-To create a new cluster, open the MetaKube dashboard and select the menu entry `Create Cluster`. Clusters are tied to a [project](../../02.Documentation/02.projects/default.en.md). You can create as many clusters within one project as you want.
+To create a new cluster, select a MetaKube Project from login page and click the button entry `Add Cluster`. Clusters are tied to a [project](../../02.Documentation/02.projects/default.en.md). You can create as many clusters within one project as you want.
 Start by choosing a name:
 
 ![Overview of cluster creation](image_overview_01.png)
@@ -47,6 +47,7 @@ A default image tested and maintained by SysEleven is automatically chosen for t
 Make sure to enter the exact name of the image you want to run on your machines, as listed in the images tab of the SysEleven stack dashboard. See also [supported operating systems](../../02.Documentation/04.supported-operating-systems/default.en.md).
 The chosen SSH key will be used for authentication for the default user (e.g. `ubuntu` for Ubuntu images) on all worker nodes. When you click on next, you will see a summary and the cluster creation will start after you confirm. You will then be forwarded to the cluster creation page where you can view the cluster creation process:
 
+![Cluster summary before creation](image_cluster_summary_01.png)
 ![Cluster details in creation state](image_cluster-details_01.png)
 
 After all of the master components are ready, your cluster will create the configured number of worker nodes in your SysEleven Stack tenant. Fully created nodes will be marked with a green dot, pending ones with a yellow circle. You may [download the kubeconfig](../06.download-the-kubeconfig/default.en.md) now to be able to use `kubectl` with your cluster or just use the provided [Web Terminal](../../02.Documentation/11.metakube-webterminal/default.en.md). After all nodes are created you can use `kubectl` to view and check the status of the created nodes:
