@@ -11,11 +11,11 @@ taxonomy:
 
 ## Upgrade master components
 
-When an upgrade for the master nodes is available, a blue text `upgrade available` will be shown besides the Master version:
+When an upgrade for the master nodes is available, an upwards arrow (&uarr;) will be shown besides the Master version:
 
 ![Cluster with available upgrade](image_upgrade_master_01.png)
 
-To start the upgrade, just click on the link and choose the desired version (most recent, tested version is selected):
+To start the upgrade, just click on the arrow and choose the desired version (most recent, tested version is selected):
 
 ![Dialog to choose upgrade version](image_upgrade_master_02.png)
 
