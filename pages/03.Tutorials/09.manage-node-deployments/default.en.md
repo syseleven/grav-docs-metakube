@@ -20,9 +20,10 @@ In the popup you can then choose the number of nodes (replicas), kubelet version
 
 ## Edit the node deployment
 
-To add or delete a worker node you can easily edit the node deployment in your cluster. Navigate to the cluster overview and click on the node deployment you want to change. You will then see the node deployment overview. In this overview click on the `Edit Node Deployment` button:
+To add or delete a worker node you can easily edit your node deployment for the active cluster and MetaKube will take care of the updates. To do so, hover over the node deployment and click the edit button or open the node deployment overview and click on the `Edit` button:
 
-![Node deployment overview with highlighted edit button](image_edit_np_button_hightlight.png)
+![Node deployment overview with highlighted edit button](image_edit_np_button_hightlight_01.png)
+![Node deployment overview with highlighted edit button](image_edit_np_button_hightlight_02.png)
 
 In the popup you can now in- or decrease the number of, as well as the kubelet version, operating system, used image etc of the worker nodes which are managed by this node deployment:
 
