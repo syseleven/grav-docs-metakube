@@ -23,9 +23,10 @@ After the update is initiated, the master components will be upgraded in the bac
 
 ## Upgrade worker nodes
 
-When you want to upgrade your worker nodes you can easily edit your node deployment for the active cluster and MetaKube will take care of the updates. To do so, open the node deployment overview and click on the `Edit Node Deployment` button:
+When you want to upgrade your worker nodes you can easily edit your node deployment for the active cluster and MetaKube will take care of the updates. To do so, hover over the node deployment and click the edit button or open the node deployment overview and click on the `Edit` button:
 
-![Node deployment overview with highlighted edit button](image_edit_np_button_hightlight.png)
+![Node deployment overview with highlighted edit button](image_edit_np_button_hightlight_01.png)
+![Node deployment overview with highlighted edit button](image_edit_np_button_hightlight_02.png)
 
 This will open a popup where you can choose the to be installed Kubernetes version:
 
@@ -34,7 +35,6 @@ This will open a popup where you can choose the to be installed Kubernetes versi
 Your worker nodes will now be updated one by one:
 
 ![Worker node update in progress](image_edit_np_wait_for_node.png)
-![Worker node update finished](image_edit_np_finished.png)
 
 ## Downgrade a cluster
 
