@@ -7,6 +7,9 @@ taxonomy:
 page-toc:
     active: false
 ---
+## 2019-07-01
+
+* MetaKube dashboard now shows more prominent indicators if a node deployment is outdated.
 
 ## 2019-06-25
 
