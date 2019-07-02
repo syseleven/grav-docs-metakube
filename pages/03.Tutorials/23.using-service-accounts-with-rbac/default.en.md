@@ -1,5 +1,5 @@
 ---
-title: 'Using service accounts with rbac roles'
+title: 'Resticting cluster access with Role Based Access Control'
 published: true
 taxonomy:
     tag:
@@ -9,7 +9,7 @@ taxonomy:
         - user management
 ---
 
-The default MetaKube Cluster comes with one admin account to use.
+The default MetaKube Cluster comes with one admin (root) account to use. To restrict access to certain namespaces you may use RBAC. In this tutorial we will create a new service account with viewer permissions. We will locate the users token and create a kubeconfig with that data. The kubeconfig can be used to grant access to the kubernetes api as a viewer.
 
 ## Prerequisites
 
@@ -65,8 +65,9 @@ type: kubernetes.io/service-account-token
 ### Copy the base64 encoded token from the secret and decode it
 
 ```shell
-$ echo "bWFuYWdlZDprdWJlcm5ldGVzPW1ldGFrdWJl" | base64 --decode
-managed:kubernetes=metakube
+$ kubectl get secrets metakube-token-n9w5x -o jsonpath="{.data.token}" |base64 --decode
+
+eyJhbGciOiJSUzI1NiIsImlmfd
 ```
 
 ### Copy the decoded token to a kube config file
