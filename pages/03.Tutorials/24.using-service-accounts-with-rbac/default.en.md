@@ -66,6 +66,8 @@ type: kubernetes.io/service-account-token
 
 ```shell
 $ kubectl get secrets metakube-token-n9w5x -o jsonpath="{.data.token}" |base64 --decode
+
+eyJhbGciOiJSUzI1NiIsImlmfd
 ```
 
 ### Copy the decoded token to a kube config file
