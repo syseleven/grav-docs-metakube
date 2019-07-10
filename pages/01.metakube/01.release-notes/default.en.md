@@ -12,7 +12,7 @@ page-toc:
 
 **2019-07-10**
 
-* MetaKube configuration files now use a unique context and username to simplify usage of them.
+* MetaKube kubeconfig files now use a unique context and username to simplify usage of them.
 
 **2019-07-01**
 
