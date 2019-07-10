@@ -10,6 +10,10 @@ page-toc:
 <!-- markdownlint-disable MD036 -->
 ## July 2019
 
+**2019-07-10**
+
+* MetaKube configuration files now use a unique context and username to simplify usage of them.
+
 **2019-07-01**
 
 * MetaKube dashboard now shows more prominent indicators if a node deployment is outdated.
