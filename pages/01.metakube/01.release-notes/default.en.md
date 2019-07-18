@@ -10,6 +10,10 @@ page-toc:
 <!-- markdownlint-disable MD036 -->
 ## July 2019
 
+**2019-07-18**
+
+* On Openstack, the scheduler is now aware that only 25 additional volumes may be attached to a node. It will make sure that pods with mounted volumes are only scheduled on nodes can support them.
+
 **2019-07-10**
 
 * MetaKube kubeconfig files now use a unique context and username to simplify usage of them.
