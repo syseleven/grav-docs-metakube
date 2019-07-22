@@ -10,9 +10,16 @@ page-toc:
 <!-- markdownlint-disable MD036 -->
 ## July 2019
 
-**2019-07-18**
+**2019-07-22**
 
+* Kubernetes versions 1.14.4, 1.12.10, 1.13.8, 1.15.0 and 1.15.1 are now available
+* Updated [Helm](https://www.helm.sh/) to [2.14.2](https://github.com/helm/helm/releases/tag/v2.14.2)
 * On Openstack, the scheduler is now aware that only 25 additional volumes may be attached to a node. It will make sure that pods with mounted volumes are only scheduled on nodes can support them.
+* There are now ServiceAccounts that can be used to authenticate with the MetaKube API to automate management of clusters
+* More details are shown when using kubectl get machine/machineset/machinedeployment
+* ICMP traffic to clusters is now always permitted to allow MTU discovery
+* Cluster events are now visible on the Cluster Detail Page
+* Various design and usability improvements
 
 **2019-07-10**
 
