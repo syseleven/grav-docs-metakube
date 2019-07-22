@@ -9,7 +9,7 @@ taxonomy:
         - nginx
 ---
 
-With the NGINX Kubernetes Ingress controller, you get basic HTTP and TCP load balancing and SSL/TLS termination for all Kubernetes Ingress resources.
+With the NGINX Kubernetes Ingress controller, you get basic load balancing and SSL/TLS termination for all Kubernetes Ingress resources.
 
 You can find more information on ingresses and the nginx ingress controller and all it's configuration options at:
 
