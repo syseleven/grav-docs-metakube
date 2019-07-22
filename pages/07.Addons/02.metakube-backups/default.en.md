@@ -17,22 +17,19 @@ The addon has no configuration parameters; you can just install it from the Meta
 
 The Velero installation will be pre-configured to store the created backups in the object storage solution of the cloud provider your cluster is running on (Quobyte S3 on SysEleven Stack, Amazon S3 on AWS).
 
-See the [Backup tutorial](../../03.Tutorials/18.create-backup-and-restore/default.en.md) for more information on using this addon.
-
--- OR move the tutorial here: ---
-
-## Create a backup and restore from it
+## Tutorial: Create a backup and restore from it
 
 ### Prerequisites
 
-* You need to have [created a MetaKube cluster](../02.create-a-cluster/default.en.md) and [installed and configured kubectl](../07.using-kubectl/default.en.md).
+* The Velero Backups addon must be installed in your cluster.
+* You need to have [installed and configured kubectl](../../03.Tutorials/07.using-kubectl/default.en.md).
 * You need to have the Velero CLI installed, which can be downloaded for your OS from [GitHub](https://github.com/heptio/velero/releases).
 * If you use macOS you may install the Velero client with home brew.
 * For inspection of the S3 Bucket where the backups are stored, install and configure [S3cmd](https://s3tools.org/s3cmd) as described in the [SysEleven Stack documentation](https://docs.syseleven.de/syseleven-stack/en/reference/object-storage). The region is `s3.cbk.cloud.syseleven.net`. Your credentials can be retrieved with `openstack ec2 credentials list`.
 
 ! Because of an issue in the Velero restic integration with OpenStack Object Storage the first backup of a volume in a namespace may fail because the restic repository is not ready in time. We are working with the vendor to solve this [issue](https://github.com/heptio/velero/issues/1078). Until then, just create a second backup a few seconds later which will work as expected.
 
-## Deploy an application
+### Deploy an application
 
 For easy cleanups we create a new namespace for our tutorial:
 
@@ -105,7 +102,7 @@ NAME         STATUS    VOLUME                                     CAPACITY   ACC
 nginx-logs   Bound     pvc-4cad1837-bc17-11e8-b699-0a580af40873   1Gi        RWO            sys11-quobyte   3m
 ```
 
-## Create a backup of your application
+### Create a backup of your application
 
 We can now create a backup of the complete tutorial namespace:
 
@@ -123,7 +120,7 @@ NAME                    STATUS      CREATED                          EXPIRES   S
 backup-tutorial         Completed   2018-09-19 16:32:32 +0200 CEST   29d       <none>
 ```
 
-## Delete the application and restore the application state from the backup
+### Delete the application and restore the application state from the backup
 
 To delete the application we can just delete our complete tutorial namespace:
 
@@ -156,7 +153,7 @@ NAME         STATUS    VOLUME                                     CAPACITY   ACC
 nginx-logs   Bound     pvc-24afa31c-bc19-11e8-b699-0a580af40873   1Gi        RWO            sys11-quobyte   1m
 ```
 
-## Remove the backup backup-turorial
+### Remove the backup backup-turorial
 
 Delete the backup:
 
@@ -167,7 +164,7 @@ Request to delete backup "backup-tutorial" submitted successfully.
 The backup will be fully deleted after all associated data (disk snapshots, backup files, restores) are removed.
 ```
 
-## Create a scheduled backup
+### Create a scheduled backup
 
 In this example we will create a scheduled backup that runs every 30 minutes. We also set the backup TTL to 48 hours. If you omit the TTL the oldest backup will be removed after 30 days.
 
@@ -184,7 +181,7 @@ NAME              STATUS    CREATED                          SCHEDULE       BACK
 backup-tutorial   Enabled   2018-09-19 16:53:38 +0200 CEST   */30 * * * *   48h0m0s      5m ago        <none>
 ```
 
-## Inspect the S3 Bucket
+### Inspect the S3 Bucket
 
 If you have installed and configured S3cmd, you can use it to list the backup files Velero created in your object storage. You should at least see the folders `backups`, `restic` and `metadata` in your S3bucket. Depending on the usage you will also find a `restores` folder. Restic is responsible for the volume backups:
 
@@ -215,7 +212,7 @@ $ s3cmd la --recursive
 2018-09-19 14:32       505   s3://metakube-cluster-backup-rjxcqg4986/restic/backup-tutorial/snapshots/e976bddd8cede60046fb00780946fc32becdfa1f7bccc029de73de5fea1ac083
 ```
 
-## Clean up
+### Clean up
 
 Delete the namespace:
 
@@ -224,7 +221,7 @@ $ kubectl delete namespace backup-tutorial
 namespace "backup-tutorial" deleted
 ```
 
-## Patch an existing deployment with kubectl
+### Patch an existing deployment with kubectl
 
 Patch an existing deployment with kubectl to add the annotation to include volume backups:
 
