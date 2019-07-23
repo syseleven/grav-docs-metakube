@@ -48,7 +48,11 @@ Grafana is a powerful data visualization tool with which you can create rich das
 
 ## Customization
 
+The addon allows you to customize resource usage and data retention time for the applications installed as part of the addon:
+![addon configurations](monitoring_addon_configs_01.png)
+
 ### Scraping additional applications with Prometheus
+
 
 ### Adding alerting rules
 
