@@ -19,4 +19,4 @@ Weave Scope addon requires zero configuration. Just install the addon by clickin
 ![Weave Scope install](weave_scope_install_02.png)
 
 Click on the weave scope icon in manged applications list to access the Weave Scope dashboard.
-![Weave Scope Dashborad](weave_scope_dahsboad.png)
+![Weave Scope Dashborad](weave_scope_dashboard.png)
