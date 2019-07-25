@@ -10,6 +10,10 @@ page-toc:
 <!-- markdownlint-disable MD036 -->
 ## July 2019
 
+**2019-07-25**
+
+* Add Swagger based API Docs
+
 **2019-07-22**
 
 * Kubernetes versions 1.12.10, 1.13.8, 1.14.4, 1.15.0 and 1.15.1 are now available
