@@ -12,11 +12,12 @@ This addon installs [Weave Scope](https://www.weave.works/oss/scope/) by [weavew
 
 Weave Scope provides you a real time interactive view of all the hosts and the application(pods, services, processes etc) deployed in your kubernetes cluster. It also provides real time metrics, flexible filtering and search capabilities.
 
+![Weave Scope Dashboard](weave-scope.png)
+
+## Installation
+
+For information on how to install and uninstall an addon see [Addons](../default.en.md).
+
 ## Customization
 
-Weave Scope addon requires zero configuration. Just install the addon by clicking on the '+' button.
-![Weave Scope install](weave_scope_install_01.png)
-![Weave Scope install](weave_scope_install_02.png)
-
-Click on the weave scope icon in manged applications list to access the Weave Scope dashboard.
-![Weave Scope Dashborad](weave_scope_dashboard.png)
+There are no customization options.
