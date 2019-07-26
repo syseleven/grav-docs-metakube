@@ -1,0 +1,17 @@
+---
+title: 'Kubernetes Dashboard'
+published: false
+date: '18-07-2019 13:00'
+taxonomy:
+    tag:
+        - metakube
+        - dashboard
+---
+
+Kubernetes Dashboard is a general purpose, web-based UI for Kubernetes clusters. It allows users to manage applications running in the cluster and troubleshoot them, as well as manage the cluster itself.
+
+![Kubernetes Dashboard Main Page](kubernetes-dashboard.png)
+
+For more information also have a look at the [Kubernetes Documentation](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/).
+
+! Note that currently, when you install it, everyone with "Editor" permissions has access to the Kubernetes Dashboard and thus also full admin access to the cluster.
