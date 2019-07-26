@@ -11,7 +11,7 @@ taxonomy:
 
 With the NGINX Kubernetes Ingress controller, you get basic load balancing and SSL/TLS termination for all Kubernetes Ingress resources.
 
-You can find more information on ingresses and the nginx ingress controller and all it's configuration options at:
+You can find more information on ingresses and the nginx ingress controller and all of it's configuration options at:
 
 * the [Kubernetes Ingress Documentation](https://kubernetes.io/docs/concepts/services-networking/ingress/)
 * the [Nginx Ingress Controller Documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/)
@@ -33,5 +33,5 @@ The following customization options are possible:
 | Memory Requests | What is the maximum of used memory | 64Mi |
 | Replicas | How many replicas should be running | 2 |
 | Use Auto Scaling | Should a HorizontalPodAutoscaler be created | false |
-| Min Replicas | What should be the minimum amount of replicas in the AutoScaler | 2 |
-| Max Replicas | What should be the maximum amount of replicas in the AutoScaler | 4 |
+| Min Replicas | The minimum amount of replicas in the AutoScaler | 2 |
+| Max Replicas | The maximum amount of replicas in the AutoScaler | 4 |
