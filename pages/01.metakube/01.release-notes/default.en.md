@@ -10,16 +10,25 @@ page-toc:
 <!-- markdownlint-disable MD036 -->
 ## July 2019
 
+**2019-07-26**
+
+* [MetaKube Addons](../../07.Addons/default.en.md) are now in beta. Addons are fully managed applications that can be installed into your cluster
+* Added Addon [Nginx Ingress Controller](../../07.Addons/01.metakube-ingress/default.en.md)
+* Added Addon [Weave Scope](../../07.Addons/02.weave-scope/default.en.md)
+* Added Addon [Kubernetes Dasbhoard](../../07.Addons/03.kubernetes-dashboard/default.en.md)
+* Previously the Kubernetes Dashboard was installed in every cluster, now it can be installed manually as an addon
+* Stability and performance improvements when deleting persistent volumes during cluster deletion
+
 **2019-07-25**
 
-* Add Swagger based API Docs
+* Add Swagger based [API Docs](../../02.Documentation/16.metakube-api/default.en.md)
 
 **2019-07-22**
 
 * Kubernetes versions 1.12.10, 1.13.8, 1.14.4, 1.15.0 and 1.15.1 are now available
 * Updated [Helm](https://www.helm.sh/) to [2.14.2](https://github.com/helm/helm/releases/tag/v2.14.2)
 * On Openstack, the scheduler is now aware that only 25 additional volumes may be attached to a node. It will make sure that pods with mounted volumes are only scheduled on nodes that can support them.
-* There are now ServiceAccounts that can be used to authenticate with the MetaKube API to automate management of clusters
+* There are now Api Accounts that can be used to authenticate with the [MetaKube API](../../02.Documentation/16.metakube-api/default.en.md) to automate management of clusters
 * More details are shown when using kubectl get machine/machineset/machinedeployment
 * ICMP traffic to clusters is now always permitted to allow MTU discovery
 * Cluster events are now visible on the Cluster Detail Page

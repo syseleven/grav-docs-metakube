@@ -1,6 +1,6 @@
 ---
 title: 'Kubernetes Dashboard'
-published: false
+published: true
 date: '18-07-2019 13:00'
 taxonomy:
     tag:
@@ -15,3 +15,11 @@ Kubernetes Dashboard is a general purpose, web-based UI for Kubernetes clusters.
 For more information also have a look at the [Kubernetes Documentation](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/).
 
 ! Note that currently, when you install it, everyone with "Editor" permissions has access to the Kubernetes Dashboard and thus also full admin access to the cluster.
+
+## Installation
+
+For information on how to install and uninstall an addon see [Addons](../default.en.md).
+
+## Customization
+
+There are no customization options.
