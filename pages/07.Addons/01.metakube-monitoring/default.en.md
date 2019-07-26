@@ -58,21 +58,21 @@ The following customization options are possible:
 
 | Option | Description | Default value |
 | ------ | ----------- | ------------- |
-| Retention Time | How long should the data in Prometheus be stored | 15d |
-| Persistent Storage | How large should the persistent data volume be | |
-| CPU Requests | How many milli CPUs should be reserved | 100m |
-| Memory Requests | How much memory should be reserved | 64Mi |
-| CPU Limits | What is the maximum of used milli CPUs | 100m |
-| Memory Requests | What is the maximum of used memory | 64Mi |
+| Retention Time | How long should the data in Prometheus be stored | 7d |
+| Persistent Storage | How large should the persistent data volume be | 50Gi |
+| CPU Requests | How many milli CPUs should be reserved | 750m |
+| Memory Requests | How much memory should be reserved | 750Mi |
+| CPU Limits | What is the maximum of used milli CPUs | 1000m |
+| Memory Requests | What is the maximum of used memory | 1000Mi |
 
 ### Grafana Configuration Options
 
 | Option | Description | Default value |
 | ------ | ----------- | ------------- |
 | CPU Requests | How many milli CPUs should be reserved | 100m |
-| Memory Requests | How much memory should be reserved | 64Mi |
-| CPU Limits | What is the maximum of used milli CPUs | 100m |
-| Memory Requests | What is the maximum of used memory | 64Mi |
+| Memory Requests | How much memory should be reserved | 100Mi |
+| CPU Limits | What is the maximum of used milli CPUs | 200m |
+| Memory Requests | What is the maximum of used memory | 200Mi |
 
 ### AlertManager Configuration Options
 
@@ -80,9 +80,9 @@ The following customization options are possible:
 | ------ | ----------- | ------------- |
 | Retention Time | How long should the data in AlertManager be stored | 120h |
 | CPU Requests | How many milli CPUs should be reserved | 100m |
-| Memory Requests | How much memory should be reserved | 64Mi |
-| CPU Limits | What is the maximum of used milli CPUs | 100m |
-| Memory Requests | What is the maximum of used memory | 64Mi |
+| Memory Requests | How much memory should be reserved | 100Mi |
+| CPU Limits | What is the maximum of used milli CPUs | 200m |
+| Memory Requests | What is the maximum of used memory | 200Mi |
 
 ## Documentation
 
