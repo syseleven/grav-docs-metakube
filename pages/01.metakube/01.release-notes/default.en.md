@@ -10,25 +10,29 @@ page-toc:
 <!-- markdownlint-disable MD036 -->
 ## July 2019
 
+**2019-07-29**
+
+* Previously the [Web Terminal](../../03.addons/04.metakube-webterminal/default.en.md) was installed in every cluster, now it can be installed manually as an Addon
+
 **2019-07-26**
 
 * [MetaKube Addons](../../03.addons/default.en.md) are now in beta. Addons are fully managed applications that can be installed into your cluster
 * Added Addon [Nginx Ingress Controller](../../03.addons/01.metakube-ingress/default.en.md)
 * Added Addon [Weave Scope](../../03.addons/05.weave-scope/default.en.md)
 * Added Addon [Kubernetes Dasbhoard](../../03.addons/06.kubernetes-dashboard/default.en.md)
-* Previously the Kubernetes Dashboard was installed in every cluster, now it can be installed manually as an addon
+* Previously the Kubernetes Dashboard was installed in every cluster, now it can be installed manually as an Addon
 * Stability and performance improvements when deleting persistent volumes during cluster deletion
 
 **2019-07-25**
 
-* Add Swagger based [API Docs](../../02.documentation/16.metakube-api/default.en.md)
+* Add Swagger based [API Docs](../../02.documentation/14.metakube-api/default.en.md)
 
 **2019-07-22**
 
 * Kubernetes versions 1.12.10, 1.13.8, 1.14.4, 1.15.0 and 1.15.1 are now available
 * Updated [Helm](https://www.helm.sh/) to [2.14.2](https://github.com/helm/helm/releases/tag/v2.14.2)
 * On Openstack, the scheduler is now aware that only 25 additional volumes may be attached to a node. It will make sure that pods with mounted volumes are only scheduled on nodes that can support them.
-* There are now Api Accounts that can be used to authenticate with the [MetaKube API](../../02.documentation/16.metakube-api/default.en.md) to automate management of clusters
+* There are now Api Accounts that can be used to authenticate with the [MetaKube API](../../02.documentation/14.metakube-api/default.en.md) to automate management of clusters
 * More details are shown when using kubectl get machine/machineset/machinedeployment
 * ICMP traffic to clusters is now always permitted to allow MTU discovery
 * Cluster events are now visible on the Cluster Detail Page
@@ -50,7 +54,7 @@ page-toc:
 
 **2019-06-24**
 
-* The [Web Terminal](../../02.documentation/11.metakube-webterminal/default.en.md) now contains the [LinkerD CLI](https://linkerd.io/), [fluxctl](https://www.weave.works/oss/flux/) and [kubens](https://github.com/ahmetb/kubectx)
+* The [Web Terminal](../../03.addons/04.metakube-webterminal/default.en.md) now contains the [LinkerD CLI](https://linkerd.io/), [fluxctl](https://www.weave.works/oss/flux/) and [kubens](https://github.com/ahmetb/kubectx)
 
 **2019-06-20**
 
@@ -107,14 +111,14 @@ page-toc:
 
 **2019-04-02**
 
-* The [Web Terminal](../../02.documentation/11.metakube-webterminal/default.en.md) access is now restricted to owners and editors
+* The [Web Terminal](../../03.addons/04.metakube-webterminal/default.en.md) access is now restricted to owners and editors
 * The kubeconfig download is now restricted to owners and editors
 
 **2019-04-01**
 
 * Kubernetes versions 1.12.7 and 1.13.5 are now available
 * We now provide up to date default images for Ubuntu, CoreOS and CentOS, see [Supported Operating Systems](../../02.documentation/04.supported-operating-systems/default.en.md) for details
-* The [Web Terminal](../../02.documentation/11.metakube-webterminal/default.en.md) now contains the alpine coreutils package
+* The [Web Terminal](../../03.addons/04.metakube-webterminal/default.en.md) now contains the alpine coreutils package
 
 ## March 2019
 
@@ -132,7 +136,7 @@ page-toc:
 
 **2019-03-05**
 
-* OpenStack CLI tools are available in [Web Terminal](../../02.documentation/11.metakube-webterminal/default.en.md)
+* OpenStack CLI tools are available in [Web Terminal](../../03.addons/04.metakube-webterminal/default.en.md)
 
 **2019-03-04**
 
@@ -158,7 +162,7 @@ page-toc:
 
 **2019-02-13**
 
-* Every MetaKube cluster comes now with a [web-terminal](../../02.documentation/11.metakube-webterminal/default.en.md) that is accessible from the [MetaKube dashboard](../../02.documentation/09.metakube-dashboard/default.en.md)
+* Every MetaKube cluster comes now with a [web-terminal](../../03.addons/04.metakube-webterminal/default.en.md) that is accessible from the [MetaKube dashboard](../../02.documentation/09.metakube-dashboard/default.en.md)
 
 **2019-02-07**
 
