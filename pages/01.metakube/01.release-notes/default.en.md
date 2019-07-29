@@ -12,23 +12,23 @@ page-toc:
 
 **2019-07-26**
 
-* [MetaKube Addons](../../07.Addons/default.en.md) are now in beta. Addons are fully managed applications that can be installed into your cluster
-* Added Addon [Nginx Ingress Controller](../../07.Addons/01.metakube-ingress/default.en.md)
-* Added Addon [Weave Scope](../../07.Addons/02.weave-scope/default.en.md)
-* Added Addon [Kubernetes Dasbhoard](../../07.Addons/03.kubernetes-dashboard/default.en.md)
+* [MetaKube Addons](../../03.addons/default.en.md) are now in beta. Addons are fully managed applications that can be installed into your cluster
+* Added Addon [Nginx Ingress Controller](../../03.addons/01.metakube-ingress/default.en.md)
+* Added Addon [Weave Scope](../../03.addons/05.weave-scope/default.en.md)
+* Added Addon [Kubernetes Dasbhoard](../../03.addons/06.kubernetes-dashboard/default.en.md)
 * Previously the Kubernetes Dashboard was installed in every cluster, now it can be installed manually as an addon
 * Stability and performance improvements when deleting persistent volumes during cluster deletion
 
 **2019-07-25**
 
-* Add Swagger based [API Docs](../../02.Documentation/16.metakube-api/default.en.md)
+* Add Swagger based [API Docs](../../02.documentation/16.metakube-api/default.en.md)
 
 **2019-07-22**
 
 * Kubernetes versions 1.12.10, 1.13.8, 1.14.4, 1.15.0 and 1.15.1 are now available
 * Updated [Helm](https://www.helm.sh/) to [2.14.2](https://github.com/helm/helm/releases/tag/v2.14.2)
 * On Openstack, the scheduler is now aware that only 25 additional volumes may be attached to a node. It will make sure that pods with mounted volumes are only scheduled on nodes that can support them.
-* There are now Api Accounts that can be used to authenticate with the [MetaKube API](../../02.Documentation/16.metakube-api/default.en.md) to automate management of clusters
+* There are now Api Accounts that can be used to authenticate with the [MetaKube API](../../02.documentation/16.metakube-api/default.en.md) to automate management of clusters
 * More details are shown when using kubectl get machine/machineset/machinedeployment
 * ICMP traffic to clusters is now always permitted to allow MTU discovery
 * Cluster events are now visible on the Cluster Detail Page
@@ -50,7 +50,7 @@ page-toc:
 
 **2019-06-24**
 
-* The [Web Terminal](../../02.Documentation/11.metakube-webterminal/default.en.md) now contains the [LinkerD CLI](https://linkerd.io/), [fluxctl](https://www.weave.works/oss/flux/) and [kubens](https://github.com/ahmetb/kubectx)
+* The [Web Terminal](../../02.documentation/11.metakube-webterminal/default.en.md) now contains the [LinkerD CLI](https://linkerd.io/), [fluxctl](https://www.weave.works/oss/flux/) and [kubens](https://github.com/ahmetb/kubectx)
 
 **2019-06-20**
 
@@ -107,14 +107,14 @@ page-toc:
 
 **2019-04-02**
 
-* The [Web Terminal](../../02.Documentation/11.metakube-webterminal/default.en.md) access is now restricted to owners and editors
+* The [Web Terminal](../../02.documentation/11.metakube-webterminal/default.en.md) access is now restricted to owners and editors
 * The kubeconfig download is now restricted to owners and editors
 
 **2019-04-01**
 
 * Kubernetes versions 1.12.7 and 1.13.5 are now available
-* We now provide up to date default images for Ubuntu, CoreOS and CentOS, see [Supported Operating Systems](../../02.Documentation/04.supported-operating-systems/default.en.md) for details
-* The [Web Terminal](../../02.Documentation/11.metakube-webterminal/default.en.md) now contains the alpine coreutils package
+* We now provide up to date default images for Ubuntu, CoreOS and CentOS, see [Supported Operating Systems](../../02.documentation/04.supported-operating-systems/default.en.md) for details
+* The [Web Terminal](../../02.documentation/11.metakube-webterminal/default.en.md) now contains the alpine coreutils package
 
 ## March 2019
 
@@ -132,7 +132,7 @@ page-toc:
 
 **2019-03-05**
 
-* OpenStack CLI tools are available in [Web Terminal](../../02.Documentation/11.metakube-webterminal/default.en.md)
+* OpenStack CLI tools are available in [Web Terminal](../../02.documentation/11.metakube-webterminal/default.en.md)
 
 **2019-03-04**
 
@@ -149,16 +149,16 @@ page-toc:
 
 **2019-02-14**
 
-* Kubernetes versions 1.10.x are not available anymore corresponding to our [Supported Versions Matrix](../../02.Documentation/03.supported-kubernetes-versions/default.en.md)
+* Kubernetes versions 1.10.x are not available anymore corresponding to our [Supported Versions Matrix](../../02.documentation/03.supported-kubernetes-versions/default.en.md)
 * You can now add [tags](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) to nodes when adding them
 * For new clusters and new nodes in existing clusters, nodes are now wrapped inside of NodeDeployments which makes it possible to trigger rolling updates of nodes within a cluster from the dashboard
 * New nodes now receive Docker 18.9.2 which fixes [CVE-2019-5736 in Runc](https://kubernetes.io/blog/2019/02/11/runc-and-cve-2019-5736/) for all new nodes
-* Multiple owners can now be added to one MetaKube [project](../../02.Documentation/02.projects/default.en.md)
+* Multiple owners can now be added to one MetaKube [project](../../02.documentation/02.projects/default.en.md)
 * Detailed events for the lifecycle of a node are shown in the dashboard
 
 **2019-02-13**
 
-* Every MetaKube cluster comes now with a [web-terminal](../../02.Documentation/11.metakube-webterminal/default.en.md) that is accessible from the [MetaKube dashboard](../../02.Documentation/09.metakube-dashboard/default.en.md)
+* Every MetaKube cluster comes now with a [web-terminal](../../02.documentation/11.metakube-webterminal/default.en.md) that is accessible from the [MetaKube dashboard](../../02.documentation/09.metakube-dashboard/default.en.md)
 
 **2019-02-07**
 
@@ -182,7 +182,7 @@ page-toc:
 **2019-01-15**
 
 * Updated [Helm](https://www.helm.sh/) to [2.12.2](https://github.com/helm/helm/releases/tag/v2.12.2)
-* The cluster details page now comes with [a dashboard](../../02.Documentation/09.metakube-dashboard/default.en.md) showing the amount of pods in the cluster and the cpu and memory usage of the worker nodes
+* The cluster details page now comes with [a dashboard](../../02.documentation/09.metakube-dashboard/default.en.md) showing the amount of pods in the cluster and the cpu and memory usage of the worker nodes
 
 ## December 2018
 
@@ -190,7 +190,7 @@ page-toc:
 
 * Kubernetes versions 1.10.12 and 1.12.4 are now available
 * Updated [Helm](https://www.helm.sh/) to [2.12.1](https://github.com/helm/helm/releases/tag/v2.12.1)
-* Updated [kubernetes-dashboard](../../07.Addons/03.kubernetes-dashboard/default.en.md) to [1.10.1](https://github.com/kubernetes/dashboard/releases/tag/v1.10.1)
+* Updated [kubernetes-dashboard](../../03.addons/06.kubernetes-dashboard/default.en.md) to [1.10.1](https://github.com/kubernetes/dashboard/releases/tag/v1.10.1)
 
 **2018-12-04**
 
@@ -206,12 +206,12 @@ page-toc:
 
 **2018-11-19**
 
-* MetaKube now supports [horizontal node autoscaling](../../03.Tutorials/20.use-horizontal-node-autoscaling/default.en.md)
+* MetaKube now supports [horizontal node autoscaling](../../04.tutorials/20.use-horizontal-node-autoscaling/default.en.md)
 * Kubernetes version 1.10.10 is now available
 
 **2018-11-13**
 
-* Allow resizing of persistent volumes. See [Resizing persistent volumes](../../03.Tutorials/21.resize-persistent-volume/default.en.md).
+* Allow resizing of persistent volumes. See [Resizing persistent volumes](../../04.tutorials/21.resize-persistent-volume/default.en.md).
 
 **2018-11-09**
 
@@ -225,7 +225,7 @@ page-toc:
 
 **2018-10-31**
 
-* MetaKube now supports [projects](../../02.Documentation/02.projects/default.en.md) to group, maintain and access clusters with multiple users
+* MetaKube now supports [projects](../../02.documentation/02.projects/default.en.md) to group, maintain and access clusters with multiple users
 * Kubernetes versions 1.10.9, 1.12.1 and 1.12.2 are now available
 * etcd is updated to 3.3.9
 * Updated the backup utility [ark](https://github.com/heptio/ark) to [0.9.9](https://github.com/heptio/ark/releases/tag/v0.9.9)
@@ -245,7 +245,7 @@ page-toc:
 
 **2018-09-27**
 
-* Clusters now come with [Helm](https://www.helm.sh/) already installed and configured. See also [Using Helm](../../03.Tutorials/17.using-helm/default.en.md).
+* Clusters now come with [Helm](https://www.helm.sh/) already installed and configured. See also [Using Helm](../../04.tutorials/17.using-helm/default.en.md).
 
 **2018-09-18**
 
@@ -261,21 +261,21 @@ page-toc:
 
 **2018-09-12**
 
-* [kubernetes-dashboard](../../07.Addons/03.kubernetes-dashboard/default.en.md) is updated to version [1.10.0](https://github.com/kubernetes/dashboard/releases/tag/v1.10.0)
+* [kubernetes-dashboard](../../03.addons/06.kubernetes-dashboard/default.en.md) is updated to version [1.10.0](https://github.com/kubernetes/dashboard/releases/tag/v1.10.0)
 
 **2018-09-05**
 
 * The `default` namespace now comes with a [LimitRange](https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/memory-default-namespace/)
-  that assigns a default CPU and memory request to pods that do not define one explicitly. See also [LimitRange](../../02.Documentation/08.kubernetes-limitrange/default.en.md).
+  that assigns a default CPU and memory request to pods that do not define one explicitly. See also [LimitRange](../../02.documentation/08.kubernetes-limitrange/default.en.md).
 
 ## August 2018
 
 **2018-08-22**
 
 * Kubernetes version 1.11.1 and 1.11.2 are now available
-* Clusters now come with managed cross-region cluster backup solution, see [Backups](../../02.Documentation/07.backups/default.en.md)
-* Security groups in [LoadBalancer services](../../03.Tutorials/13.create-a-load-balancer/default.en.md) are managed automatically
-* Clusters now come with managed metrics-server which enables [Horizontal Pod AutoScaling](../../03.Tutorials/19.use-horizontal-pod-autoscaling/default.en.md)
+* Clusters now come with managed cross-region cluster backup solution, see [Backups](../../02.documentation/07.backups/default.en.md)
+* Security groups in [LoadBalancer services](../../04.tutorials/13.create-a-load-balancer/default.en.md) are managed automatically
+* Clusters now come with managed metrics-server which enables [Horizontal Pod AutoScaling](../../04.tutorials/19.use-horizontal-pod-autoscaling/default.en.md)
 * Cluster creation: Drop-downs instead of free-text input boxes to choose from available floating IP pools, security groups, networks and subnets
 
 **2018-08-08**
