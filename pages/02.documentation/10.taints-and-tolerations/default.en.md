@@ -58,7 +58,7 @@ Please be aware that your machines will be recreated when you edit the MachineDe
 Pods which shall run on dedicated Nodes then need two settings: The toleration to be _allowed_ to be scheduled on these Nodes and a NodeSelector to be _restricted_ to only these Nodes. When creating the pods with a Deployment, you need to add both settings in the PodSpec of the Deployment (e.g. Key `dedicated` and Value `web`):
 
 ```yaml
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: web

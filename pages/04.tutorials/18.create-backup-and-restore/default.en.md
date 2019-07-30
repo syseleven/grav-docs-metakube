@@ -34,7 +34,7 @@ Note: [hostPath](https://kubernetes.io/docs/concepts/storage/volumes/#hostpath) 
 ```shell
 cat <<'EOF' | kubectl --namespace=backup-tutorial apply -f -
 ---
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-deployment
