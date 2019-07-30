@@ -40,6 +40,9 @@ metadata:
   name: nginx-deployment
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: backup
   template:
     metadata:
       labels:

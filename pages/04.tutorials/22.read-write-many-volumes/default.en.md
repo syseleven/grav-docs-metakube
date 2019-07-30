@@ -318,6 +318,9 @@ metadata:
   name: nginx-deployment
 spec:
   replicas: 2
+  selector:
+    matchLabels:
+      app: read-write-many
   template:
     metadata:
       labels:
@@ -453,6 +456,9 @@ metadata:
   name: nginx-deployment
 spec:
   replicas: 2
+  selector:
+    matchLabels:
+      app: read-write-many
   template:
     metadata:
       labels:

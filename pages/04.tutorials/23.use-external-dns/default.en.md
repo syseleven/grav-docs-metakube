@@ -153,6 +153,9 @@ kind: Deployment
 metadata:
   name: nginx
 spec:
+  selector:
+    matchLabels:
+      app: nginx
   template:
     metadata:
       labels:
