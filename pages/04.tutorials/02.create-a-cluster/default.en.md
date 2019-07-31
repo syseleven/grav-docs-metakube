@@ -45,7 +45,13 @@ A default image tested and maintained by SysEleven is automatically chosen for t
 ![Overview of openstack images](image_stack-images_01.png)
 
 Make sure to enter the exact name of the image you want to run on your machines, as listed in the images tab of the SysEleven stack dashboard. See also [supported operating systems](../../02.documentation/04.supported-operating-systems/default.en.md).
-The chosen SSH key will be used for authentication for the default user (e.g. `ubuntu` for Ubuntu images) on all worker nodes. When you click on next, you will see a summary and the cluster creation will start after you confirm. You will then be forwarded to the cluster creation page where you can view the cluster creation process:
+The chosen SSH key will be used for authentication for the default user (e.g. `ubuntu` for Ubuntu images) on all worker nodes.
+
+In the next step, you get to choose which Metakube addons should be installed into your cluster from the start. You can also install or uninstall addons at any time while the cluster is already running. See the chapter on [addons](../../03.addons/default.en.md) for more details.
+
+![Overview of cluster settings for addons](image_cluster-settings_04.png)
+
+When you click on next, you will see a summary and the cluster creation will start after you confirm. You will then be forwarded to the cluster creation page where you can view the cluster creation process:
 
 ![Cluster summary before creation](image_cluster_summary_01.png)
 ![Cluster details in creation state](image_cluster-details_01.png)

@@ -7,9 +7,19 @@ MetaKube Addons are a fully managed services that you can optionally install int
 
 ## Installation of addons
 
-You can install an addon by clicking on the '+' button of the addon in the addon tab.
+You can install an addon either during cluster creation or later into an already running cluster.
 
-![Install addon](install-addon.png)
+During cluster creation, there is a wizard page that lets you choose the addons to install:
+
+![Install addon during cluster creation](../04.tutorials/02.create-a-cluster/image_cluster-settings_04.png)
+
+See the [cluster creation tutorial](../04.tutorials/02.create-a-cluster/default.en.md) for more details.
+
+In an already running cluster, select the Addons tab in the cluster overview to get an overview of the available addons:
+
+![Install addon into a runnin cluster](install-addon.png)
+
+Both these user interfaces look and work the same. You install an addon by clicking on the '+' button of the addon in the addon tab.
 
 If the addon has any configuration options, you can configure them in the installation dialog.
 
