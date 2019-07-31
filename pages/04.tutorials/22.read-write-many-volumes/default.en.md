@@ -312,12 +312,15 @@ For the tutorial we will deploy a NGINX container with two replicas and a persis
 ```shell
 cat <<'EOF' | kubectl apply --namespace=read-write-many-tutorial -f -
 ---
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-deployment
 spec:
   replicas: 2
+  selector:
+    matchLabels:
+      app: read-write-many
   template:
     metadata:
       labels:
@@ -447,12 +450,15 @@ For the tutorial we will deploy a NGINX container with two replicas and a persis
 ```shell
 cat <<'EOF' | kubectl --namespace=read-write-many-tutorial apply -f -
 ---
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-deployment
 spec:
   replicas: 2
+  selector:
+    matchLabels:
+      app: read-write-many
   template:
     metadata:
       labels:

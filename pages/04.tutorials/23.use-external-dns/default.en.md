@@ -148,11 +148,14 @@ spec:
     app: nginx
 
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx
 spec:
+  selector:
+    matchLabels:
+      app: nginx
   template:
     metadata:
       labels:
@@ -192,7 +195,7 @@ spec:
     app: nginx
 
 ---
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: external-dns

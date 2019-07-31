@@ -24,7 +24,7 @@ For this tutorial we are going the deploy the [nginx hello image](https://hub.do
 ```bash
 cat <<'EOF' | kubectl apply -f -
 kind: Deployment
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 metadata:
   name: nginx-hello
 spec:
@@ -78,8 +78,8 @@ And then create an [Ingress](https://kubernetes.io/docs/concepts/services-networ
 
 ```bash
 cat <<'EOF' | kubectl apply -f -
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
-apiVersion: extensions/v1beta1
 metadata:
   name: nginx-hello
   annotations:
