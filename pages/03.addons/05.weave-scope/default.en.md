@@ -6,6 +6,7 @@ taxonomy:
     tag:
         - weave scop
         - weave works
+        - addon
 ---
 
 This addon installs [Weave Scope](https://www.weave.works/oss/scope/) by [weaveworks](https://www.weave.works/).
@@ -16,7 +17,7 @@ Weave Scope provides you a real time interactive view of all the hosts and the a
 
 ## Installation
 
-For information on how to install and uninstall an addon see [Addons](../default.en.md).
+For information on how to install and uninstall an addon see [MetaKube Addons](../default.en.md).
 
 ## Customization
 

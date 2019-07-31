@@ -50,7 +50,7 @@ The chosen SSH key will be used for authentication for the default user (e.g. `u
 ![Cluster summary before creation](image_cluster_summary_01.png)
 ![Cluster details in creation state](image_cluster-details_01.png)
 
-After all of the master components are ready, your cluster will create the configured number of worker nodes in your SysEleven Stack tenant. Fully created nodes will be marked with a green dot, pending ones with a yellow circle. You may [download the kubeconfig](../06.download-the-kubeconfig/default.en.md) now to be able to use `kubectl` with your cluster or just use the provided [Web Terminal](../../02.documentation/11.metakube-webterminal/default.en.md). After all nodes are created you can use `kubectl` to view and check the status of the created nodes:
+After all of the master components are ready, your cluster will create the configured number of worker nodes in your SysEleven Stack tenant. Fully created nodes will be marked with a green dot, pending ones with a yellow circle. You may [download the kubeconfig](../06.download-the-kubeconfig/default.en.md) now to be able to use `kubectl` with your cluster or just use the provided [Web Terminal](../../03.addons/04.metakube-webterminal/default.en.md). After all nodes are created you can use `kubectl` to view and check the status of the created nodes:
 
 ```bash
 $ kubectl get nodes

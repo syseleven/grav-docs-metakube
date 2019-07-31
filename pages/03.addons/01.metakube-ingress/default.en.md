@@ -7,6 +7,7 @@ taxonomy:
         - metakube
         - ingress
         - nginx
+        - addon
 ---
 
 With the NGINX Kubernetes Ingress controller, you get basic load balancing and SSL/TLS termination for all Kubernetes Ingress resources.
@@ -19,7 +20,7 @@ You can find more information on ingresses and the nginx ingress controller and 
 
 ## Installation
 
-For information on how to install and uninstall an addon see [Addons](../default.en.md).
+For information on how to install and uninstall an addon see [MetaKube Addons](../default.en.md).
 
 ## Customization
 

@@ -8,6 +8,7 @@ taxonomy:
         - monitoring
         - prometheus
         - grafana
+        - addon
 ---
 
 The monitoring addon installs a complete monitoring and alerting stack which enables monitoring the cluster as well as all workloads in it.
@@ -48,7 +49,7 @@ Grafana is a powerful data visualization tool with which you can create rich das
 
 ## Installation
 
-For information on how to install and uninstall an addon see [Addons](../default.en.md).
+For information on how to install and uninstall an addon see [MetaKube Addons](../default.en.md).
 
 ## Customization
 
