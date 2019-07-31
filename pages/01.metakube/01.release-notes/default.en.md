@@ -10,9 +10,10 @@ page-toc:
 <!-- markdownlint-disable MD036 -->
 ## July 2019
 
-**2019-07-29**
+**2019-07-31**
 
 * Previously the [Web Terminal](../../03.addons/04.metakube-webterminal/default.en.md) was installed in every cluster, now it can be installed manually as an addon
+* Updated [Helm](https://www.helm.sh/) to [2.14.3](https://github.com/helm/helm/releases/tag/v2.14.3)
 
 **2019-07-26**
 
