@@ -6,6 +6,7 @@ taxonomy:
     tag:
         - metakube
         - dashboard
+        - addon
 ---
 
 The Kubernetes Dashboard is a general purpose, web-based UI for Kubernetes clusters. It allows users to manage applications running in the cluster and troubleshoot them, as well as manage the cluster itself.
@@ -18,7 +19,7 @@ For more information also have a look at the [Kubernetes Documentation](https://
 
 ! Note that after installation everyone with "Editor" permissions has access to the Kubernetes Dashboard and thus also full admin access to the cluster.
 
-For information on how to install and uninstall an addon see [Addons](../default.en.md).
+For information on how to install and uninstall an addon see [MetaKube Addons](../default.en.md).
 
 ## Customization
 

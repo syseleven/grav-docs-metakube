@@ -3,7 +3,7 @@ published: true
 title: MetaKube Addons
 ---
 
-MetaKube addons are a fully managed services that you can optionally install into your MetaKube cluster.
+MetaKube Addons are a fully managed services that you can optionally install into your MetaKube cluster.
 
 ## Installation of addons
 

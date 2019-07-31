@@ -12,15 +12,15 @@ page-toc:
 
 **2019-07-29**
 
-* Previously the [Web Terminal](../../03.addons/04.metakube-webterminal/default.en.md) was installed in every cluster, now it can be installed manually as an Addon
+* Previously the [Web Terminal](../../03.addons/04.metakube-webterminal/default.en.md) was installed in every cluster, now it can be installed manually as an addon
 
 **2019-07-26**
 
 * [MetaKube Addons](../../03.addons/default.en.md) are now in beta. Addons are fully managed applications that can be installed into your cluster
-* Added Addon [Nginx Ingress Controller](../../03.addons/01.metakube-ingress/default.en.md)
-* Added Addon [Weave Scope](../../03.addons/05.weave-scope/default.en.md)
-* Added Addon [Kubernetes Dasbhoard](../../03.addons/06.kubernetes-dashboard/default.en.md)
-* Previously the Kubernetes Dashboard was installed in every cluster, now it can be installed manually as an Addon
+* Added addon [Nginx Ingress Controller](../../03.addons/01.metakube-ingress/default.en.md)
+* Added addon [Weave Scope](../../03.addons/05.weave-scope/default.en.md)
+* Added addon [Kubernetes Dasbhoard](../../03.addons/06.kubernetes-dashboard/default.en.md)
+* Previously the Kubernetes Dashboard was installed in every cluster, now it can be installed manually as an addon
 * Stability and performance improvements when deleting persistent volumes during cluster deletion
 
 **2019-07-25**
