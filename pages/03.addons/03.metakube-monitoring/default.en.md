@@ -31,9 +31,9 @@ Prometheus is a powerful open-source systems monitoring and alerting toolkit, th
 
 * [Documentation](https://prometheus.io/docs/)
 
-### AlertManager
+### Alertmanager
 
-AlertManager enables sending out alerts based on Prometheus metrics and queries.
+Alertmanager enables sending out alerts based on Prometheus metrics and queries.
 
 * [Documentation](https://prometheus.io/docs/alerting/alertmanager/)
 
@@ -75,15 +75,18 @@ The following customization options are possible:
 | CPU Limits | What is the maximum of used milli CPUs | 200m |
 | Memory Requests | What is the maximum of used memory | 200Mi |
 
-### AlertManager Configuration Options
+### Alertmanager Configuration Options
 
 | Option | Description | Default value |
 | ------ | ----------- | ------------- |
-| Retention Time | How long should the data in AlertManager be stored | 120h |
+| Retention Time | How long should the data in Alertmanager be stored | 120h |
 | CPU Requests | How many milli CPUs should be reserved | 100m |
 | Memory Requests | How much memory should be reserved | 100Mi |
 | CPU Limits | What is the maximum of used milli CPUs | 200m |
 | Memory Requests | What is the maximum of used memory | 200Mi |
+| Config | Allows to configure where Alertmanager should send alerts | Default Configuration which sends no alerts |
+
+For more information on configuring Alertmanager rules see [Alertmanager Configuration](https://prometheus.io/docs/alerting/configuration/#configuration-file) or the examples below.
 
 ## Documentation
 
@@ -166,7 +169,37 @@ spec:
 
 For additional information on configuring PrometheusRules have a look at the [API Documentation](https://github.com/coreos/prometheus-operator/blob/master/Documentation/api.md) as well as the [Prometheus Documentation](https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/).
 
-### Configuring where AlertManager should send alerts
+### Configuring where Alertmanager should send alerts
+
+You can configure where Alertmanager should send alerts with YAML in the "Config" field when installing or configuring the Addon. For more information on configuring Alertmanager rules see [Alertmanager Configuration](https://prometheus.io/docs/alerting/configuration/#configuration-file).
+
+For example this config would send every alert to an email address and a slack channel:
+
+```yaml
+global:
+  resolve_timeout: 5m
+  smtp_smarthost: 'smtp.example.org:25'
+  smtp_from: 'alertmanager@example.org'
+  smtp_auth_username: 'alertmanager'
+  smtp_auth_password: 'password'
+  slack_api_url: 'https://hooks.slack.com/services/...'
+route:
+  group_by: ['job']
+  group_wait: 30s
+  group_interval: 5m
+  repeat_interval: 12h
+  receiver: 'alert-mails'
+  routes:
+  - match:
+      alertname: Watchdog
+    receiver: 'null'
+receivers:
+- name: 'alert-mails'
+  email_configs:
+  - to: 'alerts@example.org'
+  slack_configs:
+  - channel: '#alerts'
+```
 
 ### Adding Grafana dashboards
 
