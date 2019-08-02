@@ -9,9 +9,15 @@ taxonomy:
 
 MetaKube provides a REST API that can be used to automate the management of MetaKube clusters.
 
+## API Documentation
+
+You can find the full API documentation in the MetaKube Dashboard under [API Docs](https://metakube.syseleven.de/rest-api). Note that the executable examples in the API docs use your personal API access token. For integrations into other tools you should use a token from an API Account.
+
+We also provider a [Swagger](https://swagger.io/resources/open-api/) OpenAPI specification at [https://metakube.syseleven.de/api/swagger.json](https://metakube.syseleven.de/api/swagger.json).
+
 ## Location
 
-The REST API is available at `https://metakube.syseleven.de/api`.
+All resources of the REST API are located under `https://metakube.syseleven.de/api`.
 
 ## Authentication
 
@@ -34,9 +40,3 @@ To get a list of clusters in the project where the API Account was created in, y
 ```bash
 curl 'https://metakube.syseleven.de/api/v1/projects/<PROJECT_ID>/clusters' -H 'authorization: Bearer <YOUR_TOKEN>' -H 'accept: application/json'
 ```
-
-## API Documentation
-
-You can find the full API documentation in the MetaKube Dashboard under [API Docs](https://metakube.syseleven.de/rest-api). Note that the executable examples in the API docs use your personal API access token. For integrations into other tools you should use a token from an API Account.
-
-We also provider a [Swagger](https://swagger.io/resources/open-api/) OpenAPI specification at [https://metakube.syseleven.de/api/swagger.json](https://metakube.syseleven.de/api/swagger.json).
