@@ -37,6 +37,6 @@ curl 'https://metakube.syseleven.de/api/v1/projects/<PROJECT_ID>/clusters' -H 'a
 
 ## API Documentation
 
-You can find the full API documentation in the MetaKube Dashboard under [API Docs](https://metakube.syseleven.de/api-docs). Note that the executable examples in the API docs use your personal API access token. For integrations into other tools you should use a token from an API Account.
+You can find the full API documentation in the MetaKube Dashboard under [API Docs](https://metakube.syseleven.de/rest-api). Note that the executable examples in the API docs use your personal API access token. For integrations into other tools you should use a token from an API Account.
 
 We also provider a [Swagger](https://swagger.io/resources/open-api/) OpenAPI specification at [https://metakube.syseleven.de/api/swagger.json](https://metakube.syseleven.de/api/swagger.json).
