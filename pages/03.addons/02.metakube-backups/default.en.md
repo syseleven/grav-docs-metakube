@@ -1,6 +1,6 @@
 ---
 title: 'Velero Backups'
-published: false
+published: true
 date: '22-07-2019 19:00'
 taxonomy:
     tag:

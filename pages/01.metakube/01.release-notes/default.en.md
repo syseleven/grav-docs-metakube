@@ -8,6 +8,20 @@ page-toc:
     active: false
 ---
 <!-- markdownlint-disable MD036 -->
+## August 2019
+
+**2019-08-05**
+
+* Previously [Velero](../../03.addons/02.metakube-backups/default.en.md) was installed in every cluster, now it can be installed manually as an addon
+
+**2019-08-02**
+
+* [CoreDNS](https://coredns.io/) has been updated to version [1.6.1](https://coredns.io/2019/08/01/coredns-1.6.1-release/)
+
+**2019-08-01**
+
+* [CoreDNS](https://coredns.io/) has been updated to version [1.6.0](https://coredns.io/2019/07/28/coredns-1.6.0-release//)
+
 ## July 2019
 
 **2019-07-31**
