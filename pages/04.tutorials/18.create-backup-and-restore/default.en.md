@@ -13,6 +13,7 @@ taxonomy:
 ## Prerequisites
 
 * You need to have [created a MetaKube cluster](../02.create-a-cluster/default.en.md) and [installed and configured kubectl](../07.using-kubectl/default.en.md).
+* You need to have [installed the Velero Backups addon](../../03.addons/02.metakube-backups/default.en.md)
 * You need to have the Velero CLI installed, which can be downloaded for your OS from [GitHub](https://github.com/heptio/velero/releases).
 * If you use macOS you may install the Velero client with home brew.
 * For inspection of the S3 Bucket where the backups are stored, install and configure [S3cmd](https://s3tools.org/s3cmd) as described in the [SysEleven Stack documentation](https://docs.syseleven.de/syseleven-stack/en/reference/object-storage). The region is either `s3.cbk.cloud.syseleven.net` or `s3.dbl.cloud.syseleven.net`. Your credentials can be retrieved with `openstack ec2 credentials list`.
