@@ -29,9 +29,9 @@ The following customization options are possible:
 | Option | Description | Default value |
 | ------ | ----------- | ------------- |
 | CPU Requests | How many milli CPUs should be reserved | 100m |
-| Memory Requests | How much memory should be reserved | 64Mi |
-| CPU Limits | What is the maximum of used milli CPUs | 100m |
-| Memory Requests | What is the maximum of used memory | 64Mi |
+| Memory Requests | How much memory should be reserved | 128Mi |
+| CPU Limits | What is the maximum of used milli CPUs | 200m |
+| Memory Limits | What is the maximum of used memory | 512Mi |
 | Replicas | How many replicas should be running | 2 |
 | Use Auto Scaling | Should a HorizontalPodAutoscaler be created | false |
 | Min Replicas | The minimum amount of replicas in the AutoScaler | 2 |
