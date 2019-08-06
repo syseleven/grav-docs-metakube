@@ -14,6 +14,7 @@ page-toc:
 
 * Kubernetes versions 1.13.9, 1.14.5 and 1.15.2 are now available, because of two security vulnerabilities in previous releases clusters should be updated to the newest patch release. See [#80983](https://github.com/kubernetes/kubernetes/issues/80983) and [#80984](https://github.com/kubernetes/kubernetes/issues/80984) for details
 * The name of a cluster can now be changed from the dashboard
+* Added default addon [Nodelocal DNS Cache](https://docs.syseleven.de/metakube/en/documentation/dns)
 
 **2019-08-05**
 
