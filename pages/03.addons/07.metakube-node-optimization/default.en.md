@@ -1,5 +1,5 @@
 ---
-title: 'Kubernetes Dashboard'
+title: 'Experimental Node Optimizations'
 published: true
 taxonomy:
     tag:
