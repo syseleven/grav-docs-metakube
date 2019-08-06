@@ -10,6 +10,11 @@ page-toc:
 <!-- markdownlint-disable MD036 -->
 ## August 2019
 
+**2019-08-06**
+
+* Kubernetes versions 1.13.9, 1.14.5 and 1.15.2 are now available, because of two security vulnerabilities in previous releases clusters should be updated to the newest patch release. See [#80983](https://github.com/kubernetes/kubernetes/issues/80983) and [#80984](https://github.com/kubernetes/kubernetes/issues/80984) for details
+* The name of a cluster can now be changed from the dashboard
+
 **2019-08-05**
 
 * Previously [Velero](../../03.addons/02.metakube-backups/default.en.md) was installed in every cluster, now it can be installed manually as an addon
