@@ -163,7 +163,7 @@ spec:
           labels:
             severity: warning
           annotations:
-            description: Deployment {{ $labels.namespace }}/{{ $labels.deployment }} has not matched the expected number of replicas for longer than an hour.
+            description: Deployment \{\{\$labels.namespace\}\}/\{\{\$labels.deployment\}\} has not matched the expected number of replicas for longer than an hour.
 ```
 
 For additional information on configuring PrometheusRules have a look at the [API Documentation](https://github.com/coreos/prometheus-operator/blob/master/Documentation/api.md) as well as the [Prometheus Documentation](https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/).
