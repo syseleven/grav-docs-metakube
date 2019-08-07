@@ -25,6 +25,10 @@ If the addon has any configuration options, you can configure them in the instal
 
 ![Configure addon](addon-config.png)
 
+### Installation channels
+
+For several addons we provide two installation channels, a "beta" channel and a "stable" channel. Updates and changes on these addons, will always be rolled out on the beta channel first, and one week later on the stable channel. Within one cluster you can only install either the beta or the stable channel addon, but not both. This allows to test an addon with any custom integrations in a development or staging cluster by deploying the beta channel there before an update is rolled out to a production cluster where the stable channel is used. The installation channel can not be changed while an addon is installed. To change the channel you have to uninstall the addon and re-install it.
+
 ## Deinstallation of addons
 
 To remove an addon from your cluster, click on the delete icon of the addon and confirm the deletion. Note that all the resources of the addon including all persistent data will be removed.
