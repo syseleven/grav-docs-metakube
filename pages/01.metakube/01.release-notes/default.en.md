@@ -10,6 +10,11 @@ page-toc:
 <!-- markdownlint-disable MD036 -->
 ## August 2019
 
+**2019-08-07**
+
+* Added addon Experimental Node Optimizations. This addon configures system settings to optimize your virtual machine for using docker containers under load. This should improve your general system and network performance: [Node Optimizations](https://docs.syseleven.de/metakube/en/addons/metakube-node-optimization)
+* Added addon MetaKube Monitoring (Prometheus Operator). The Prometheus Operator deloys a full monitoring stack. Including Grafana, Prometheus and the Alertmanager. You can configure several setting like the retention period of your data. You can also configure a mail address or a slack channel to recieve you alerts. Additional information for this addon can be found here: [MetaKube Monitoring](https://docs.syseleven.de/metakube/en/addons/metakube-monitoring)
+
 **2019-08-06**
 
 * Kubernetes versions 1.13.9, 1.14.5 and 1.15.2 are now available, because of two security vulnerabilities in previous releases clusters should be updated to the newest patch release. See [#80983](https://github.com/kubernetes/kubernetes/issues/80983) and [#80984](https://github.com/kubernetes/kubernetes/issues/80984) for details

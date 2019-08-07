@@ -1,6 +1,5 @@
 ---
 title: 'Cluster Monitoring Stack'
-published: false
 date: '18-07-2019 13:00'
 taxonomy:
     tag:
