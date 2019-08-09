@@ -14,6 +14,8 @@ The monitoring addon installs a complete monitoring and alerting stack which ena
 
 It automatically comes with sensible, generic dashboards and alerting rules for Kubernetes clusters, and can be easily extended with custom metric sources, dashboards and alerting rules.
 
+![Grafana](grafana.png)
+
 ## Installed applications
 
 The following applications are installed:
