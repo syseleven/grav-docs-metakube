@@ -10,11 +10,11 @@ taxonomy:
 
 By default Pod Security Policies are deactivated in MetaKube clusters, but you can optionally activate them on the cluster detail page in the dashboard. Pod Security Policies allow you to specify fine-grained authorization settings for Pod creation and updates.
 
-! If you activate Pod Security Policy a lot of Pod specifications, Operators and Helm charts will not work out of the box anymore. Only activate it if you know what you are doing.
+! If you activate Pod Security Policy, a lot of Pod specifications, Operators and Helm charts will not work out of the box anymore. Only activate it if you know what you are doing.
 
 ## Configuring Pod Security Policy
 
-You can activate Pod Security Polices on the cluster detail page under "Configure Pod Security Policy".
+You can activate Pod Security Polices on the cluster details page under "Configure Pod Security Policy".
 
 ![Configure Pod Security Policy](psp.png)
 
@@ -24,7 +24,7 @@ The Kubernetes documentation has a detailed article about [Pod Security Policies
 
 ### Example
 
-After activating Pod Security Policies, every Pod nees a Policy in order to be started or updated.
+After activating Pod Security Policies, every Pod needs a Policy in order to be started or updated.
 
 If you create a new deployment:
 
@@ -60,7 +60,7 @@ spec:
 EOF
 ```
 
-You can see, that the Deployment and a subsequent ReplicaSet were created, but the pods can not be scheduled:
+You can see that the Deployment and a subsequent ReplicaSet were created, but the pods can not be scheduled:
 
 ```bash
 $ kubectl describe replicaset nginx-hello-f4cb7b776 --namespace default
@@ -180,7 +180,7 @@ subjects:
 EOF
 ```
 
-To force Kubernetes to retry creating the Pods directly instead of waiting for the back-off interval, you can delete the existing ReplicaSet, a new ReplicaSet will be automatically created because of the Deployment:
+To force Kubernetes to retry creating the Pods directly instead of waiting for the back-off interval, you can delete the existing ReplicaSet. A new ReplicaSet will be automatically created because of the Deployment:
 
 ```bash
 kubectl delete replicaset nginx-hello-f4cb7b776 --namespace default
