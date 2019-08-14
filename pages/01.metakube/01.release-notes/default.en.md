@@ -10,6 +10,10 @@ page-toc:
 <!-- markdownlint-disable MD036 -->
 ## August 2019
 
+**2019-08-14**
+
+* The Calico CNI Plugin recieved an update to the version 3.8.0 today
+
 **2019-08-07**
 
 * Added addon Experimental Node Optimizations. This addon configures system settings to optimize your virtual machine for using docker containers under load. This should improve your general system and network performance: [Node Optimizations](https://docs.syseleven.de/metakube/en/addons/metakube-node-optimization)
