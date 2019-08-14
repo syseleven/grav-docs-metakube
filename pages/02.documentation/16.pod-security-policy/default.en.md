@@ -60,7 +60,7 @@ spec:
 EOF
 ```
 
-You can see that the Deployment and a subsequent ReplicaSet were created, but the pods can not be scheduled:
+You can see that the Deployment and a subsequent ReplicaSet were created, but the pods were not:
 
 ```bash
 $ kubectl describe replicaset nginx-hello-f4cb7b776 --namespace default
