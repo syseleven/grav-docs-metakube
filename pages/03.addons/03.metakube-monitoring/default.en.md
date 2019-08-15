@@ -10,7 +10,7 @@ taxonomy:
         - addon
 ---
 
-The monitoring addon installs a complete monitoring and alerting stack which enables monitoring the cluster as well as all workloads in it.
+The monitoring Add-On installs a complete monitoring and alerting stack which enables monitoring the cluster as well as all workloads in it.
 
 It automatically comes with sensible, generic dashboards and alerting rules for Kubernetes clusters, and can be easily extended with custom metric sources, dashboards and alerting rules.
 
@@ -50,7 +50,7 @@ Grafana is a powerful data visualization tool with which you can create rich das
 
 ## Installation
 
-For information on how to install and uninstall an addon see [MetaKube Addons](../default.en.md).
+For information on how to install and uninstall an Add-On see [MetaKube Add-Ons](../default.en.md).
 
 ## Customization
 
@@ -172,7 +172,7 @@ For additional information on configuring PrometheusRules have a look at the [AP
 
 ### Configuring where Alertmanager should send alerts
 
-You can configure where Alertmanager should send alerts with YAML in the "Config" field when installing or configuring the Addon. For more information on configuring Alertmanager rules see [Alertmanager Configuration](https://prometheus.io/docs/alerting/configuration/#configuration-file).
+You can configure where Alertmanager should send alerts with YAML in the "Config" field when installing or configuring the Add-On. For more information on configuring Alertmanager rules see [Alertmanager Configuration](https://prometheus.io/docs/alerting/configuration/#configuration-file).
 
 For example this config would send every alert to an email address and a slack channel:
 

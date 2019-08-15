@@ -16,18 +16,18 @@ page-toc:
 
 **2019-08-07**
 
-* Added addon Experimental Node Optimizations. This addon configures system settings to optimize your virtual machine for using docker containers under load. This should improve your general system and network performance: [Node Optimizations](https://docs.syseleven.de/metakube/en/addons/metakube-node-optimization)
-* Added addon MetaKube Monitoring (Prometheus Operator). The Prometheus Operator deloys a full monitoring stack. Including Grafana, Prometheus and the Alertmanager. You can configure several setting like the retention period of your data. You can also configure a mail address or a slack channel to recieve you alerts. Additional information for this addon can be found here: [MetaKube Monitoring](https://docs.syseleven.de/metakube/en/addons/metakube-monitoring)
+* Added Add-On Experimental Node Optimizations. This Add-On configures system settings to optimize your virtual machine for using docker containers under load. This should improve your general system and network performance: [Node Optimizations](https://docs.syseleven.de/metakube/en/addons/metakube-node-optimization)
+* Added Add-On MetaKube Monitoring (Prometheus Operator). The Prometheus Operator deloys a full monitoring stack. Including Grafana, Prometheus and the Alertmanager. You can configure several setting like the retention period of your data. You can also configure a mail address or a slack channel to recieve you alerts. Additional information for this Add-On can be found here: [MetaKube Monitoring](https://docs.syseleven.de/metakube/en/Add-Ons/metakube-monitoring)
 
 **2019-08-06**
 
 * Kubernetes versions 1.13.9, 1.14.5 and 1.15.2 are now available, because of two security vulnerabilities in previous releases clusters should be updated to the newest patch release. See [#80983](https://github.com/kubernetes/kubernetes/issues/80983) and [#80984](https://github.com/kubernetes/kubernetes/issues/80984) for details
 * The name of a cluster can now be changed from the dashboard
-* Added default addon [Nodelocal DNS Cache](https://docs.syseleven.de/metakube/en/documentation/dns)
+* Added default Add-On [Nodelocal DNS Cache](https://docs.syseleven.de/metakube/en/documentation/dns)
 
 **2019-08-05**
 
-* Previously [Velero](../../03.addons/02.metakube-backups/default.en.md) was installed in every cluster, now it can be installed manually as an addon
+* Previously [Velero](../../03.addons/02.metakube-backups/default.en.md) was installed in every cluster, now it can be installed manually as an Add-On
 
 **2019-08-02**
 
@@ -41,17 +41,17 @@ page-toc:
 
 **2019-07-31**
 
-* Previously the [Web Terminal](../../03.addons/04.metakube-webterminal/default.en.md) was installed in every cluster, now it can be installed manually as an addon
+* Previously the [Web Terminal](../../03.addons/04.metakube-webterminal/default.en.md) was installed in every cluster, now it can be installed manually as an Add-On
 * Updated [Helm](https://www.helm.sh/) to [2.14.3](https://github.com/helm/helm/releases/tag/v2.14.3)
-* Addons can now directly be installed during cluster creation
+* Add-Ons can now directly be installed during cluster creation
 
 **2019-07-26**
 
-* [MetaKube Addons](../../03.addons/default.en.md) are now in beta. Addons are fully managed applications that can be installed into your cluster
-* Added addon [Nginx Ingress Controller](../../03.addons/01.metakube-ingress/default.en.md)
-* Added addon [Weave Scope](../../03.addons/05.weave-scope/default.en.md)
-* Added addon [Kubernetes Dasbhoard](../../03.addons/06.kubernetes-dashboard/default.en.md)
-* Previously the Kubernetes Dashboard was installed in every cluster, now it can be installed manually as an addon
+* [MetaKube Add-Ons](../../03.addons/default.en.md) are now in beta. Add-Ons are fully managed applications that can be installed into your cluster
+* Added Add-On [Nginx Ingress Controller](../../03.addons/01.metakube-ingress/default.en.md)
+* Added Add-On [Weave Scope](../../03.addons/05.weave-scope/default.en.md)
+* Added Add-On [Kubernetes Dasbhoard](../../03.addons/06.kubernetes-dashboard/default.en.md)
+* Previously the Kubernetes Dashboard was installed in every cluster, now it can be installed manually as an Add-On
 * Stability and performance improvements when deleting persistent volumes during cluster deletion
 
 **2019-07-25**

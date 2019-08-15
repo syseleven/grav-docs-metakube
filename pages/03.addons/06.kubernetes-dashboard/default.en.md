@@ -19,7 +19,7 @@ For more information also have a look at the [Kubernetes Documentation](https://
 
 ! Note that after installation everyone with "Editor" permissions has access to the Kubernetes Dashboard and thus also full admin access to the cluster.
 
-For information on how to install and uninstall an addon see [MetaKube Addons](../default.en.md).
+For information on how to install and uninstall an Add-On see [MetaKube Add-Ons](../default.en.md).
 
 ## Customization
 

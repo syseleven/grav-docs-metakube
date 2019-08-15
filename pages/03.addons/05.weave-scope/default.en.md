@@ -9,7 +9,7 @@ taxonomy:
         - addon
 ---
 
-This addon installs [Weave Scope](https://www.weave.works/oss/scope/) by [weaveworks](https://www.weave.works/).
+This Add-On installs [Weave Scope](https://www.weave.works/oss/scope/) by [weaveworks](https://www.weave.works/).
 
 Weave Scope provides you a real time interactive view of all the hosts and the application (pods, services, processes etc) deployed in your kubernetes cluster. It also provides real time metrics, flexible filtering and search capabilities.
 
@@ -17,7 +17,7 @@ Weave Scope provides you a real time interactive view of all the hosts and the a
 
 ## Installation
 
-For information on how to install and uninstall an addon see [MetaKube Addons](../default.en.md).
+For information on how to install and uninstall an Add-On see [MetaKube Add-Ons](../default.en.md).
 
 ## Customization
 

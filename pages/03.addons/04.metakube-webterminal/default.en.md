@@ -10,7 +10,7 @@ taxonomy:
 ---
 
 The web-terminal gives you command line access to your cluster and your openstack resources directly from the browser.
-To access the web-terminal install the addon and click on the `Web Terminal` link on the addon web interfaces list:
+To access the web-terminal install the Add-On and click on the `Web Terminal` link on the Add-On web interfaces list:
 
 ![MetaKube Dashboard](metakube-dashboard.png)
 
@@ -29,7 +29,7 @@ This bash terminal runs on Alpine Linux in the background and comes installed wi
 
 ! Note that after installation everyone with "Editor" permissions has access to the Web Terminal and thus also full admin access to the cluster.
 
-For information on how to install and uninstall an addon see [MetaKube Addons](../default.en.md).
+For information on how to install and uninstall an Add-On see [MetaKube Add-Ons](../default.en.md).
 
 ## Customization
 

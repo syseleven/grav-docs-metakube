@@ -9,9 +9,9 @@ taxonomy:
         - addon
 ---
 
-! Usage of this addon is currently highly experimental, use at your own risk.
+! Usage of this Add-On is currently highly experimental, use at your own risk.
 
-The node optimization addon reconfigures various Linux kernel settings on every node to improve cluster performance, especially in larger clusters.
+The node optimization Add-On reconfigures various Linux kernel settings on every node to improve cluster performance, especially in larger clusters.
 
 ## Optimized Kernel Settings
 
@@ -39,7 +39,7 @@ net.ipv4.neigh.default.gc_thresh3=16384
 
 ## Installation
 
-For information on how to install and uninstall an addon see [MetaKube Addons](../default.en.md).
+For information on how to install and uninstall an Add-On see [MetaKube Add-Ons](../default.en.md).
 
 ## Customization
 
