@@ -10,9 +10,14 @@ page-toc:
 <!-- markdownlint-disable MD036 -->
 ## August 2019
 
+**2019-08-19**
+
+* [Pod Security Policies](../../02.documentation/16.pod-security-policy/default.en.md) can now be activated in a MetaKube cluster
+* The Add-On [Nginx Ingress Controller](../../03.addons/01.metakube-ingress/default.en.md) was updated to version [0.25.1](https://github.com/kubernetes/ingress-nginx/releases/tag/nginx-0.25.1) with fixes for for CVE-2018-16843, CVE-2018-16844, CVE-2019-9511, CVE-2019-9513, and CVE-2019-9516
+
 **2019-08-14**
 
-* The Calico CNI Plugin recieved an update to the version 3.8.0 today
+* The [Calico](https://www.projectcalico.org/) CNI Plugin received an update to the version 3.8.0 today
 
 **2019-08-07**
 
