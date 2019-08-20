@@ -10,6 +10,11 @@ page-toc:
 <!-- markdownlint-disable MD036 -->
 ## August 2019
 
+**2019-08-20**
+
+* Kubernetes versions 1.13.10, 1.14.6 and 1.15.3 are now available, because of a Denial-of-Service vulnerability in the HTTP/2 stack all clusters have been updated to the next patch version automatically. For details on the vulnerability see [Security Advisory NFLX-2019-002](https://github.com/Netflix/security-bulletins/blob/master/advisories/third-party/2019-002.md)
+* The Add-On [Nodelocal DNS Cache](https://docs.syseleven.de/metakube/en/documentation/dns) has been updated to version 1.15.3
+
 **2019-08-19**
 
 * [Pod Security Policies](../../02.documentation/16.pod-security-policy/default.en.md) can now be activated in a MetaKube cluster
