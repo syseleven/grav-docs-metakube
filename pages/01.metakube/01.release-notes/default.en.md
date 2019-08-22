@@ -10,6 +10,15 @@ page-toc:
 <!-- markdownlint-disable MD036 -->
 ## August 2019
 
+**2019-08-22**
+
+* On OpenStack clusters the root disk size is now configurable for network storage flavors
+
+**2019-08-21**
+
+* The [Calico](https://www.projectcalico.org/) CNI Plugin received an update to the version [3.8.2](https://docs.projectcalico.org/v3.8/release-notes/)
+* [CoreDNS](https://coredns.io/) has been updated to version [1.6.2](https://coredns.io/2019/08/13/coredns-1.6.2-release/)
+
 **2019-08-20**
 
 * Kubernetes versions 1.13.10, 1.14.6 and 1.15.3 are now available, because of a Denial-of-Service vulnerability in the HTTP/2 stack all clusters have been updated to the next patch version automatically. For details on the vulnerability see [Security Advisory NFLX-2019-002](https://github.com/Netflix/security-bulletins/blob/master/advisories/third-party/2019-002.md)
@@ -22,7 +31,7 @@ page-toc:
 
 **2019-08-14**
 
-* The [Calico](https://www.projectcalico.org/) CNI Plugin received an update to the version 3.8.0 today
+* The [Calico](https://www.projectcalico.org/) CNI Plugin received an update to the version 3.8.0
 
 **2019-08-07**
 
