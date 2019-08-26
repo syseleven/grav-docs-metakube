@@ -34,6 +34,12 @@ If you want to use [Let's Encrypt](https://letsencrypt.org/) to automatically ma
 
 ### Cert-Manager Installation
 
+#### Addon
+
+The easiest way to install the cert-manager is to use the [managed Addon](../../03.addons/08.metakube-cert-manager/default.en.md). After installation you only need to configure the issuers you want to use.
+
+#### Manual installation
+
 This can be done through [Helm](../17.using-helm/default.en.md) as well:
 
 ```bash
@@ -50,9 +56,11 @@ helm repo update
 helm install --name cert-manager --namespace cert-manager --version v0.7.0 jetstack/cert-manager
 ```
 
+If you want to use the [SysEleven DNS service](https://docs.syseleven.de/syseleven-stack/en/reference/dns) for certificate DNS validation (e.g. required for wildcard certificates) you need to install the [designate webhook](https://github.com/syseleven/designate-certmanager-webhook) in the cluster. Please follow instructions from the provided [README](https://github.com/syseleven/designate-certmanager-webhook/blob/master/README.md).
+
 ### Configure cluster issuer
 
-After installing the cert-manager you have to configure how it can fetch certificates. For that you have to add a _ClusterIssuer_ to your Kubernetes cluster:
+After installing the cert-manager you have to configure how it shall fetch certificates. For that you have to add a _ClusterIssuer_ to your Kubernetes cluster:
 
 ```bash
 cat <<'EOF' | kubectl apply -f -
@@ -71,6 +79,32 @@ spec:
       name: letsencrypt-prod
     # Enable HTTP01 validations
     http01: {}
+EOF
+```
+
+If you want to use DNS validation, please use the ClusterIssuer accordingly:
+
+```bash
+cat <<'EOF' | kubectl apply -f -
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: ClusterIssuer
+metadata:
+  name: letsencrypt-prod
+spec:
+  acme:
+    # The ACME server URL
+    server: https://acme-v02.api.letsencrypt.org/directory
+    # Email address used for ACME registration
+    email: your-email@example.com
+    # Name of a secret used to store the ACME account private key
+    privateKeySecretRef:
+      name: letsencrypt-prod
+    # Use designate webhook for DNS01 validations
+    solvers:
+    - dns01:
+        webhook:
+          groupName: acme.syseleven.de
+          solverName: designatedns
 EOF
 ```
 
