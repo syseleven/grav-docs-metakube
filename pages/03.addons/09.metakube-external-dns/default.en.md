@@ -1,4 +1,3 @@
-
 ---
 title: 'ExternalDNS'
 published: true
@@ -13,7 +12,7 @@ taxonomy:
 
  external-dns integrates with [OpenStack Designate](https://docs.openstack.org/designate/latest/), [AWS Route53](https://aws.amazon.com/route53), [Cloudflare](https://www.cloudflare.com/dns/) and many more DNS providers to synchronize exposed Kubernetes Services and [Ingresses](https://kubernetes.io/docs/concepts/services-networking/ingress/) with these public DNS servers.
 
- In [Deploy Application](../16.deploy-an-application/default.en.md) you can see how you can add external-dns annotation to your kubernetes services to register
+ In [Deploy Application](../../04.tutorials/16.deploy-an-application/default.en.md) you can see how you can add external-dns annotation to your kubernetes services to register
 corresponding hostname with your public DNS provider.
 
  You can find more information on
@@ -21,11 +20,11 @@ corresponding hostname with your public DNS provider.
 * the [github repository](https://github.com/kubernetes-incubator/external-dns)
 * the [external-dns tutorials](https://github.com/kubernetes-incubator/external-dns/blob/master/docs/tutorials)
 
- ## Installation
+## Installation
 
  For information on how to install and uninstall an Add-On see [MetaKube Add-Ons](../default.en.md).
 
- ## Customization
+## Customization
 
   The following customization options are possible:
 
@@ -37,4 +36,4 @@ corresponding hostname with your public DNS provider.
   | CPU Limits | What is the maximum of used milli CPUs | 200m |
   | Memory Limits | What is the maximum of used memory | 512Mi |
 
- ### Note: Depending on `DNS Provider` selection of further credential options will required to be filled in
+### Note: Depending on `DNS Provider` selection of further credential options will required to be filled in
