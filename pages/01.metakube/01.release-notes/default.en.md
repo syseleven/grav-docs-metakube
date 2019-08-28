@@ -10,6 +10,12 @@ page-toc:
 <!-- markdownlint-disable MD036 -->
 ## August 2019
 
+**2019-09-03**
+
+* CentOS is now removed as a supported OS.
+* Added external-dns Add-on
+* Added cert-manager Addon
+
 **2019-08-29**
 
 * The beta channel of the Add-On [velero](https://github.com/heptio/velero) has been updated to version [1.1.0](https://github.com/heptio/velero/releases/tag/v1.1.0)

@@ -19,7 +19,6 @@ For more information on supported images and how to upload your own see the [Sys
 | Name and Version | SSH username |
 | ---------------- | ------------ |
 | Ubuntu Bionic 18.04 | ubuntu |
-| CentOS 7 | centos |
 | CoreOS stable | core |
 
 ## Timezone
