@@ -99,5 +99,6 @@ spec:
           servicePort: 80
 EOF
 ```
+If you have our [external-dns Add-on](../../03.addons/09.metakube-external-dns/default.en.md) already installed, this step will automatically register `nginx-hello.your-domain.com` with your DNS provider, given that the zone for `your-domain.com` already exists in your DNS provider.
 
 The application is now reachable at ```https://nginx-hello.your-domain.com```.
