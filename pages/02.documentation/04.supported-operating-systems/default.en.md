@@ -8,7 +8,7 @@ taxonomy:
         - cluster
 ---
 
-The default operating system for MetaKube clusters is **Ubuntu**. You can also create clusters with **CentOS** or **CoreOS Container Linux**. We provide images for the latest tested release of all operating systems.
+The default operating system for MetaKube clusters is **Ubuntu**. You can also create clusters with **CoreOS Container Linux**. We provide images for the latest tested release of all operating systems.
 
 You can also [upload and use your own images](../../04.tutorials/12.how-to-use-custom-images-for-your-worker-nodes/default.en.md), though you need to ensure that you are using an image with a supported version of the correct operating systems (see below).
 
