@@ -10,6 +10,10 @@ page-toc:
 <!-- markdownlint-disable MD036 -->
 ## August 2019
 
+**2019-08-29**
+
+* The beta channel of the Add-On [velero](https://github.com/heptio/velero) has been updated to version [1.1.0](https://github.com/heptio/velero/releases/tag/v1.1.0)
+
 **2019-08-22**
 
 * On OpenStack clusters the root disk size is now configurable for network storage flavors
