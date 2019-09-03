@@ -9,9 +9,10 @@ taxonomy:
         - certmanager
         - cert-manager
         - certificates
+        - lets encrypt
 ---
 
-The Jetstack cert-manager seamlessly integrates with the [NGINX Ingress](../01.metakube-ingress/default.en.md) to automatically create and extend SSL/TLS certificates for your Ingress.
+The Jetstack cert-manager allows to automatically create and extend SSL/TLS certificates with [Let's Encrypt](https://letsencrypt.org). It also seamlessly integrates with [Ingress Controllers](../01.metakube-ingress/default.en.md) to automatically create certificates for [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/) resources.
 
 You can find more information on
 
