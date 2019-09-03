@@ -10,6 +10,12 @@ page-toc:
 <!-- markdownlint-disable MD036 -->
 ## August 2019
 
+**2019-09-03**
+
+* CentOS is now removed as a supported OS.
+* Added external-dns Add-On
+* Added cert-manager Add-On
+
 **2019-08-29**
 
 * The beta channel of the Add-On [velero](https://github.com/heptio/velero) has been updated to version [1.1.0](https://github.com/heptio/velero/releases/tag/v1.1.0)
@@ -39,8 +45,8 @@ page-toc:
 
 **2019-08-07**
 
-* Added Add-On Experimental Node Optimizations. This Add-On configures system settings to optimize your virtual machine for using docker containers under load. This should improve your general system and network performance: [Node Optimizations](https://docs.syseleven.de/metakube/en/addons/metakube-node-optimization)
-* Added Add-On MetaKube Monitoring (Prometheus Operator). The Prometheus Operator deloys a full monitoring stack. Including Grafana, Prometheus and the Alertmanager. You can configure several setting like the retention period of your data. You can also configure a mail address or a slack channel to recieve you alerts. Additional information for this Add-On can be found here: [MetaKube Monitoring](https://docs.syseleven.de/metakube/en/Add-Ons/metakube-monitoring)
+* Added experimental [Node Optimizations](../../03.addons/07.metakube-node-optimization/default.en.md) Add-On. This Add-On configures system settings to optimize your virtual machine for using docker containers under load. This should improve your general system and network performance.
+* Added [MetaKube Monitoring](../../03.addons/03.metakube-monitoring/default.en.md) Add-On (Prometheus Operator). The Prometheus Operator deloys a full monitoring stack. Including Grafana, Prometheus and the Alertmanager. You can configure several setting like the retention period of your data. You can also configure a mail address or a slack channel to recieve your alerts.
 
 **2019-08-06**
 
