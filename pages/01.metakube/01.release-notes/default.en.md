@@ -8,13 +8,18 @@ page-toc:
     active: false
 ---
 <!-- markdownlint-disable MD036 -->
-## August 2019
+## September 2019
 
 **2019-09-03**
 
-* CentOS is now removed as a supported OS.
-* Added external-dns Add-On
-* Added cert-manager Add-On
+* Added Add-On [external-dns](../../03.addons/09.metakube-external-dns/default.en.md)
+* Added Add-On [cert-manager](../../03.addons/08.metakube-cert-manager/default.en.md)
+
+**2019-09-02**
+
+* CentOS is now removed as a supported OS for new clusters and NodeDeployments, we recommend you also change your existing NodeDeployments to either Ubuntu or CoreOS to improve performance and stability due to newer Linux kernels in these images.
+
+## August 2019
 
 **2019-08-29**
 
