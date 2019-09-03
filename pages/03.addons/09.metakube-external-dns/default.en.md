@@ -10,7 +10,7 @@ taxonomy:
         - DNS
 ---
 
-External-dns integrates with [OpenStack Designate](https://docs.openstack.org/designate/latest/), [AWS Route53](https://aws.amazon.com/route53), [Cloudflare](https://www.cloudflare.com/dns/) and many more DNS providers to synchronize the external IPs of exposed Kubernetes [Services](https://kubernetes.io/docs/concepts/services-networking/service/) and [Ingresses](https://kubernetes.io/docs/concepts/services-networking/ingress/) with these public DNS servers.
+External-dns integrates with [OpenStack Designate](https://docs.syseleven.de/syseleven-stack/reference/dns), [AWS Route53](https://aws.amazon.com/route53), [Cloudflare](https://www.cloudflare.com/dns/) and many more DNS providers to synchronize the external IPs of exposed Kubernetes [Services](https://kubernetes.io/docs/concepts/services-networking/service/) and [Ingresses](https://kubernetes.io/docs/concepts/services-networking/ingress/) with these public DNS servers.
 
 In [Deploy Application](../../04.tutorials/16.deploy-an-application/default.en.md) you can see how you can add and external-dns annotation to your kubernetes services to register the corresponding hostname with your public DNS provider.
 
