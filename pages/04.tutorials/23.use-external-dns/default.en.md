@@ -31,7 +31,7 @@ For more details on how to use Designate follow our [documentation](https://docs
 
 For easy deployment use our fully managed [External DNS Add-on](https://docs.syseleven.de/metakube/de/addons/metakube-external-dns)
 
-For manual deployment copy the following text block into the file `values.yaml`. We need this file to pass our DNS configuration to the helm chart. Please make sure to check all of the fields with the place holder "changeme". You will need to add your OpenStack credentials.
+For manual deployment of ExternalDNS copy the following text block into the file `values.yaml`. We need this file to pass our DNS configuration to the helm chart. Please make sure to check all of the fields with the place holder "changeme". You will need to add your OpenStack credentials.
 
 ```yaml
 ## Use Syseleven hosted image for designate to work properly until upstream PR for record update bug (https://github.com/kubernetes-incubator/external-dns/pull/1136)
@@ -142,7 +142,9 @@ You can find additional information about attaching policies to IAM users here:
 
 ### Create a values.yaml file to configure Route53 as external DNS provider
 
-Copy the following text block into the file `values.yaml`. We need this file to pass our DNS configuration to the helm chart. Please make sure to check all of the fields with the place holder "changeme". You will need to add your access key and the secret key of the user you created earlier.
+For easy deployment use our fully managed [External DNS Add-on](https://docs.syseleven.de/metakube/de/addons/metakube-external-dns)
+
+For manual deployment of ExternalDNS copy the following text block into the file `values.yaml`. We need this file to pass our DNS configuration to the helm chart. Please make sure to check all of the fields with the place holder "changeme". You will need to add your access key and the secret key of the user you created earlier.
 
 ```yaml
 ## External DNS
