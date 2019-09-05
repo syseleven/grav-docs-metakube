@@ -10,6 +10,10 @@ page-toc:
 <!-- markdownlint-disable MD036 -->
 ## September 2019
 
+**2019-09-05**
+
+* Node deployments on OpenStack can now be created without floating IPs.
+
 **2019-09-03**
 
 * Added Add-On [external-dns](../../03.addons/09.metakube-external-dns/default.en.md)
