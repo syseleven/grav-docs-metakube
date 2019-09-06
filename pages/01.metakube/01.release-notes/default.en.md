@@ -8,6 +8,21 @@ page-toc:
     active: false
 ---
 <!-- markdownlint-disable MD036 -->
+## September 2019
+
+**2019-09-05**
+
+* Node deployments on OpenStack can now be created without floating IPs.
+
+**2019-09-03**
+
+* Added Add-On [external-dns](../../03.addons/09.metakube-external-dns/default.en.md)
+* Added Add-On [cert-manager](../../03.addons/08.metakube-cert-manager/default.en.md)
+
+**2019-09-02**
+
+* CentOS is now removed as a supported OS for new clusters and NodeDeployments, we recommend you also change your existing NodeDeployments to either Ubuntu or CoreOS to improve performance and stability due to newer Linux kernels in these images.
+
 ## August 2019
 
 **2019-08-29**
@@ -39,8 +54,8 @@ page-toc:
 
 **2019-08-07**
 
-* Added Add-On Experimental Node Optimizations. This Add-On configures system settings to optimize your virtual machine for using docker containers under load. This should improve your general system and network performance: [Node Optimizations](https://docs.syseleven.de/metakube/en/addons/metakube-node-optimization)
-* Added Add-On MetaKube Monitoring (Prometheus Operator). The Prometheus Operator deloys a full monitoring stack. Including Grafana, Prometheus and the Alertmanager. You can configure several setting like the retention period of your data. You can also configure a mail address or a slack channel to recieve you alerts. Additional information for this Add-On can be found here: [MetaKube Monitoring](https://docs.syseleven.de/metakube/en/Add-Ons/metakube-monitoring)
+* Added experimental [Node Optimizations](../../03.addons/07.metakube-node-optimization/default.en.md) Add-On. This Add-On configures system settings to optimize your virtual machine for using docker containers under load. This should improve your general system and network performance.
+* Added [MetaKube Monitoring](../../03.addons/03.metakube-monitoring/default.en.md) Add-On (Prometheus Operator). The Prometheus Operator deloys a full monitoring stack. Including Grafana, Prometheus and the Alertmanager. You can configure several setting like the retention period of your data. You can also configure a mail address or a slack channel to recieve your alerts.
 
 **2019-08-06**
 
