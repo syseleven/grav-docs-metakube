@@ -12,7 +12,8 @@ page-toc:
 
 **2019-09-05**
 
-* Node deployments on OpenStack can now be created without floating IPs.
+* Node deployments on OpenStack can now be created without floating IPs
+* The stable channel of the Add-On [velero](https://github.com/heptio/velero) has been updated to version [1.1.0](https://github.com/heptio/velero/releases/tag/v1.1.0)
 
 **2019-09-03**
 
