@@ -17,7 +17,7 @@ This example describes how to setup ExternalDNS for usage within a Kubernetes cl
 
 Before setting up ExternalDNS you will need to setup [API access](https://docs.syseleven.de/syseleven-stack/de/tutorials/api-access) to OpenStack and create a DNS Zone.
 
-All domain names that are ExternalDNS is going to create must belong to one of DNS zones created in advance. Here is an example of how to create `example.com` DNS zone:
+All domain names that ExternalDNS is going to create must belong to one of DNS zones created in advance. Here is an example of how to create `example.com` DNS zone:
 
 ```console
 openstack zone create --email dnsmaster@example.com example.com.
@@ -27,9 +27,9 @@ It is important to manually create all the zones that are going to be used for k
 
 For more details on how to use Designate follow our [documentation](https://docs.syseleven.de/syseleven-stack/de/tutorials/dnsaas)
 
-### Deploy ExternalDNS
+### Create a values.yaml file to configure OpenStack Designate as external DNS provider
 
-For easy deployment use our fully managed [External DNS Add-on](https://docs.syseleven.de/metakube/de/addons/metakube-external-dns)
+For easy deployment use our fully managed [External DNS Add-on](../../03.addons/09.metakube-external-dns/default.en.md)
 
 For manual deployment of ExternalDNS copy the following text block into the file `values.yaml`. We need this file to pass our DNS configuration to the helm chart. Please make sure to check all of the fields with the place holder "changeme". You will need to add your OpenStack credentials.
 
@@ -97,16 +97,15 @@ rbac:
   create: true
  ```
 
-
 ## Setting up ExternalDNS for Services on AWS
 
-### First add a new IAM user to your AWS account
+### Add a new IAM user to your AWS account
 
 Login to your AWS account and create a user named external-dns. You can find useful help on how to accomplish this here:
 
 [AWS Create IAM User](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html)
 
-## Add this IAM Policy to your external-dns user
+### Add this IAM Policy to your external-dns user
 
 You can find additional information about attaching policies to IAM users here:
 
