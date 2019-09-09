@@ -15,8 +15,7 @@ To add a new node deployment navigate to your cluster view and click on the `Add
 
 ![Cluster overview with highlighted add button](image_add_np_overview.png)
 
-In the popup you can then choose the number of nodes (replicas), kubelet version, flavor, etc for your newly created nodedeployment. All nodes created in this nodedeployment will have the chosen settings.
-
+In the popup you can then choose the number of nodes (replicas), kubelet version, flavor, etc for your newly created nodedeployment. All nodes created in this nodedeployment will have the chosen settings. For a detailed description of the settings have a look at our [cluster-api documentation](../../02.documentation/12.cluster-api/default.en.md).
 
 ## Edit the node deployment
 
