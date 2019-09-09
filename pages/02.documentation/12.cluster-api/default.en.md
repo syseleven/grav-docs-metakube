@@ -25,6 +25,50 @@ machineDeployments wrap a rolling update mechanism around machineSets. This mean
 
 They also provide autoscaling support through the [node autoscaler](../../04.tutorials/20.use-horizontal-node-autoscaling/default.en.md).
 
+### Settings
+
+#### Name
+
+The name of the machineDeployment. The machines will have this name as part of their name. Leave empty for server side generation.
+
+#### Replicas
+
+The amount of machines in this machineDeployment. For a production cluster we recommend at least 3 replicas.
+
+#### Kubelet Version
+
+The version of the kubelet. You can [upgrade the master- and node-versions](../../04.tutorials/03.upgrade-a-cluster/default.en.md) independently, but need to have in mind, that kubernetes supports only one major version difference between API and kubelet.
+
+#### Flavor and type
+
+##### Flavor Type
+
+You can choose between network storage and local storage. While local storage is generally faster, it can not be recovered in case of hardware failure.
+
+##### Flavor
+
+The flavor defines the sizing of the nodes. We provide an [overview of all flavors](https://docs.syseleven.de/syseleven-stack/en/reference/compute#flavors) on the SysEleven Stack docs.
+
+##### Custom disk (only network storage)
+
+You can choose to use a network volume of custom size for the root filesystem of your nodes.
+
+!! While the default disk is free of charge, you will be billed for the complete disk, if you choose a custom size - even if the disk size is smaller than the default size.
+
+#### Allocate Floating IP
+
+You can choose to allocate floating IPs on all of your nodes.
+
+!! If you disable the floating IPs for your machines, you can not directly access your nodes anymore. Thus you can not SSH directly into the machines, daemonSets which require host-network might not work as expected, etc. To access your nodes via SSH you should create a jumphost in the same network.
+
+#### Image
+
+The image field is pre-filled with the latest image provided by us for the selected operating system. You can choose to use your own image.
+
+#### Node Labels & Taints
+
+You can choose a set of labels and taints, which will be added to each node of the node deployment. Have a look at [Taints and Tolerations](../10.taints-and-tolerations/default.en.md) for the implications.
+
 ### API specification
 
 A machineDeployment spec will look like the following:
