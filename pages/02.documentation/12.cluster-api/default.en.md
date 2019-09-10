@@ -53,13 +53,13 @@ The flavor defines the sizing of the nodes. We provide an [overview of all flavo
 
 You can choose to use a network volume of custom size for the root filesystem of your nodes.
 
-!! While the default disk is free of charge, you will be billed for the complete disk, if you choose a custom size - even if the disk size is smaller than the default size.
+!!! While the default disk is free of charge, you will be billed for the complete disk, if you choose a custom size - even if the disk size is smaller than the default size.
 
 #### Allocate Floating IP
 
 You can choose to allocate floating IPs on all of your nodes.
 
-!! If you disable the floating IPs for your machines, you can not directly access your nodes anymore. Thus you can not SSH directly into the machines, daemonSets which require host-network might not work as expected, etc. To access your nodes via SSH you should create a jumphost in the same network.
+!!! If you disable the floating IPs for your machines, you can not directly access your nodes anymore. Thus you can not SSH directly into the machines, daemonSets which require host-network might not work as expected, etc. To access your nodes via SSH you should create a jumphost in the same network.
 
 #### Image
 
