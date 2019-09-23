@@ -10,6 +10,11 @@ page-toc:
 <!-- markdownlint-disable MD036 -->
 ## September 2019
 
+**2019-09-23**
+
+* The Add-On [external-dns](../../03.addons/09.metakube-external-dns/default.en.md) supports now [RcodeZero AnyCast DNS](https://www.rcodezero.at/)
+* Beta test for authentication with SysEleven Login started
+
 **2019-09-05**
 
 * Node deployments on OpenStack can now be created without floating IPs. For the implications have a look at our [cluster-api documentation](../../02.documentation/12.cluster-api/default.en.md).
