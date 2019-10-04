@@ -8,6 +8,13 @@ page-toc:
     active: false
 ---
 <!-- markdownlint-disable MD036 -->
+## October 2019
+
+**2019-10-04**
+
+* Kubernetes versions 1.13.11, 1.14.7 and 1.15.4 are now available
+* In the Add-On [Cluster Monitoring Stack](../../03.addons/03.metakube-monitoring/default.en.md) Grafana has been updated to version [6.3.6](https://github.com/grafana/grafana/releases/tag/v6.3.6)
+
 ## September 2019
 
 **2019-09-23**
