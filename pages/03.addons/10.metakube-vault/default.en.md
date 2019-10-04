@@ -28,12 +28,15 @@ For information on how to install and uninstall an Add-On see [MetaKube Add-Ons]
 
 The following customization options are possible:
 
-## Getting root tokens and unseal keys
+## Getting root token and unseal keys
 
-After the installation of the addon you can get the Vault root tokens by
+After the installation of the addon you can get the Vault root token and unseal key with our secret sharing service secrets.syseleven.de. You can get a one-time link to fetch them with:
 
+```bash
+kubectl get secret -n syseleven-vault initial-keys -o "jsonpath={.data.link}" | base64 --decode
+```
 
-This tokens should be kept in a secure location.
+These tokens should be kept in a secure location.
 
 ## Accessing the Vault UI
 
