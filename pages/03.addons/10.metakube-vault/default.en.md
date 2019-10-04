@@ -30,7 +30,7 @@ The following customization options are possible:
 
 ## Getting root token and unseal keys
 
-After the installation of the addon you can get the Vault root token and unseal key with our secret sharing service secrets.syseleven.de. You can get a one-time link to fetch them with:
+After the installation of the add-on you can get the Vault root token and unseal key with our secret sharing service `secrets.syseleven.de`. You can get a one-time link to fetch them with:
 
 ```bash
 kubectl get secret -n syseleven-vault initial-keys -o "jsonpath={.data.link}" | base64 --decode
