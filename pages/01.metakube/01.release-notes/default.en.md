@@ -13,6 +13,8 @@ page-toc:
 **2019-10-10**
 
 * The Add-On [external-dns](../../03.addons/09.metakube-external-dns/default.en.md) has been updated to version [0.5.17](https://github.com/kubernetes-incubator/external-dns/releases/tag/v0.5.17)
+* [CoreDNS](https://coredns.io/) has been updated to version [1.6.4](https://coredns.io/2019/09/27/coredns-1.6.4-release/)
+
 
 **2019-10-04**
 
