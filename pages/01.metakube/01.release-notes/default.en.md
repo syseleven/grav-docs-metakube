@@ -10,9 +10,9 @@ page-toc:
 <!-- markdownlint-disable MD036 -->
 ## October 2019
 
-**2019-10-04**
+**2019-10-10**
 
-* Updated external-dns Add-on to latest release 0.5.17 of ExternalDNS.
+* The Add-On [external-dns](../../03.addons/09.metakube-external-dns/default.en.md) has been updated to version [0.5.17](https://github.com/kubernetes-incubator/external-dns/releases/tag/v0.5.17)
 
 **2019-10-04**
 
