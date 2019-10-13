@@ -10,6 +10,11 @@ page-toc:
 <!-- markdownlint-disable MD036 -->
 ## October 2019
 
+**2019-10-13**
+
+* New Add-on [Linkerd](../../03.addons/10.metakube-linkerd/default.en.md) has been added to enable service mesh in metakube
+clusters.
+
 **2019-10-10**
 
 * The Add-On [external-dns](../../03.addons/09.metakube-external-dns/default.en.md) has been updated to version [0.5.17](https://github.com/kubernetes-incubator/external-dns/releases/tag/v0.5.17)
