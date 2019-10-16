@@ -10,7 +10,9 @@ page-toc:
 <!-- markdownlint-disable MD036 -->
 ## October 2019
 
-* Added Add-On [HashiCorp Vault](../../03.addons/10.metakube-vault/default.en.md)
+**2019-10-16**
+
+* The Add-On [cert-manager](../../03.addons/08.metakube-cert-manager/default.en.md) has been updated to version [0.10.1](https://github.com/jetstack/cert-manager/releases/tag/v0.10.1)
 
 **2019-10-10**
 
