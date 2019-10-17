@@ -10,10 +10,6 @@ page-toc:
 <!-- markdownlint-disable MD036 -->
 ## October 2019
 
-**2019-10-16**
-
-* The Add-On [cert-manager](../../03.addons/08.metakube-cert-manager/default.en.md) has been updated to version [0.10.1](https://github.com/jetstack/cert-manager/releases/tag/v0.10.1)
-
 **2019-10-10**
 
 * The Add-On [external-dns](../../03.addons/09.metakube-external-dns/default.en.md) has been updated to version [0.5.17](https://github.com/kubernetes-incubator/external-dns/releases/tag/v0.5.17)
