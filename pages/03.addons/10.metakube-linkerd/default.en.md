@@ -19,8 +19,8 @@ For information on how to install and uninstall an Add-On see [Add-Ons](../defau
 
 ## Resource Requests
 
-Linkerd Add-on requests at-least 5 CPUs and 2 Gi of memory from your Metakube cluster. Please make sure enough resources are available
-in your cluster while installing Linkerd Add-on
+Linkerd Add-on requests at least 5 CPUs and 2 Gi of memory from your Metakube cluster. Please make sure enough resources are available
+in your cluster while installing the Linkerd Add-on
 
 ## Customization
 
