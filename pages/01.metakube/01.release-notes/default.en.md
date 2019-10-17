@@ -10,6 +10,13 @@ page-toc:
 <!-- markdownlint-disable MD036 -->
 ## October 2019
 
+**2019-10-17**
+
+* The Add-On [cert-manager](../../03.addons/08.metakube-cert-manager/default.en.md) has been updated to version [0.10.1](https://github.com/jetstack/cert-manager/releases/tag/v0.10.1)
+* The Add-On [external-dns](../../03.addons/09.metakube-external-dns/default.en.md) has now configuration options for a domain filter and the Cloudflare proxy feature
+* The Add-On [Nginx Ingress Controller](../../03.addons/01.metakube-ingress/default.en.md) has now a configuration option for a default tls certificate
+* etcd is updated to 3.4.1
+
 **2019-10-10**
 
 * The Add-On [external-dns](../../03.addons/09.metakube-external-dns/default.en.md) has been updated to version [0.5.17](https://github.com/kubernetes-incubator/external-dns/releases/tag/v0.5.17)

@@ -36,3 +36,4 @@ The following customization options are possible:
 | Use Auto Scaling | Should a HorizontalPodAutoscaler be created | false |
 | Min Replicas | The minimum amount of replicas in the AutoScaler | 2 |
 | Max Replicas | The maximum amount of replicas in the AutoScaler | 4 |
+| Default TLS certificate | Path to a secret in the form `namespace/secret-name` that contains a tls certificate that should be used if an Ingress does not define one | |

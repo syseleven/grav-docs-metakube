@@ -29,6 +29,7 @@ The following customization options are possible:
 
 | Option | Description | Default value |
 | ------ | ----------- | ------------- |
+| Domain filter | A filter for domains where DNS entries should be created for | |
 | DNS Provider | Public DNS provider to use. | designate |
 | CPU Requests | How many milli CPUs should be reserved | 100m |
 | Memory Requests | How much memory should be reserved | 128Mi |
