@@ -15,7 +15,7 @@ taxonomy:
 
 With [Vault](https://www.vaultproject.io/) from HashiCorp you can manage and store credentials and other sensitive data in a secure way.
 
-You can find more information on
+You can find more information about Vault here:
 
 * [Vault documentation](https://www.vaultproject.io/docs/)
 * [Vault learning platform](https://learn.hashicorp.com/vault)
@@ -30,17 +30,17 @@ The following customization options are possible:
 
 ## Getting root token and unseal keys
 
-After the installation of the add-on you can get the Vault root token and unseal key with our secret sharing service `secrets.syseleven.de`. You can get a one-time link to fetch them with:
+After the installation of the Add-On you can retrive the Vault root token and unseal key with our secret sharing service `secrets.syseleven.de`. You recieve a one-time link to fetch them with:
 
 ```bash
 kubectl get secret -n syseleven-vault initial-keys -o "jsonpath={.data.link}" | base64 --decode
 ```
 
-These tokens should be kept in a secure location.
+These tokens should be kept in a secure location. We cannot recreate them for you. If lost you will not be able to access your data.
 
 ## Accessing the Vault UI
 
-You can reach the Vault Web UI from the Cluster Detail Page. In addition to the standard SysEleven authentication, you have to log into Vault itself as well, either with a root Token or with any other authentication method that you can set up.
+You can reach the Vault Web UI from the cluster detail page. In addition to the standard SysEleven authentication, you have to log into Vault itself as well, either with a root token or with any other authentication method that you can setup.
 
 For more information see [Auth Methods](https://www.vaultproject.io/docs/auth/index.html).
 
@@ -59,7 +59,7 @@ pod "vault-cli" deleted
 
 ## Unsealing Vault
 
-Initially, or if a Vault Pod is updated or restarted, Vault seals itself to prevent malicious access. In order to use Vault, you have to unseal it with your unseal keys. The easiest way for this is by using the unseal dialog from the cluster detail page.
+Initially, or if a Vault Pod is updated or restarted, Vault seals itself to prevent malicious access. In order to use Vault, you have to unseal it with your unseal keys. The easiest way to do this is by using the unseal dialog from the cluster detail page.
 
 See also [Seal/Unseal](https://www.vaultproject.io/docs/concepts/seal.html).
 
@@ -69,11 +69,11 @@ When installing Vault it is automatically set up so that services running inside
 
 First create a namespace for the tutorial
 
-```consol
+```console
 kubectl create namespace vault-tutorial
 ```
 
-Then write a secret into vault:
+Then write a secret to vault:
 
 ```console
 $ kubectl run --generator=run-pod/v1 vault-cli --image=vault --env VAULT_ADDR=http://syseleven-vault.syseleven-vault:8200 -i --tty --rm --command sh
@@ -90,7 +90,7 @@ Then create a service account in Kubernetes for the Pod that should access Vault
 kubectl create serviceaccount my-service --namespace vault-tutorial
 ```
 
-Next you have to allow this new service account to access the created secret:
+Next you grant access for the service account to the created secret with a policy:
 
 ```console
 $ kubectl run --generator=run-pod/v1 vault-cli --image=vault --env VAULT_ADDR=http://syseleven-vault.syseleven-vault:8200 -i --tty --rm --command sh
@@ -107,7 +107,7 @@ Success! Data written to: sys/policy/my-service-policy
 Success! Data written to: auth/kubernetes/role/my-service
 ```
 
-You can now use the token of this ServiceAccount to access Vault and retrieve the secret. There are multiple options for doing it, one is to have an init container that reads a secret from Vault and writes the data onto a shared volume:
+You can now use the token of this service account to access Vault and retrieve the secret. There are multiple options for doing this. One option is to have an init container that reads a secret from Vault and writes the data to a shared volume:
 
 ```bash
 cat <<'EOF' | kubectl apply --namespace vault-tutorial -f -
@@ -174,7 +174,7 @@ EOF
 kubectl --namespace vault-tutorial port-forward service/vault-tutorial-app 8080:80
 ```
 
-If you access `http://localhost:8080` now this nginx will respond with `world.
+If you access `http://localhost:8080` now the nginx will respond with world.
 
 For some other options see for example:
 
