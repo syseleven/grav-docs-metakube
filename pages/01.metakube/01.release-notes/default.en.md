@@ -12,7 +12,10 @@ page-toc:
 
 **2019-10-22**
 
-* Kubernetes versions 1.13.12, 1.14.8 and 1.15.5 are now available. The vulnerability, CVE-2019-11253, renders the Kubernetes API server vulnerable to a denial-of-service attack [Security Advisory](https://blog.paloaltonetworks.com/2019/10/cloud-kubernetes-vulnerabilities/)
+* In the Add-On [Cluster Monitoring Stack](../../03.addons/03.metakube-monitoring/default.en.md) Grafana has been updated to version [6.4.3](https://github.com/grafana/grafana/releases/tag/v6.4.3)
+* In the Add-On [Cluster Monitoring Stack](../../03.addons/03.metakube-monitoring/default.en.md) Prometheus has been updated to version [2.13.1](https://github.com/prometheus/prometheus/releases/tag/v2.13.1)
+* In the Add-On [Cluster Monitoring Stack](../../03.addons/03.metakube-monitoring/default.en.md) prometheus-operator has been updated to version [0.32.0](https://github.com/coreos/prometheus-operator/releases/tag/v0.32.0)
+* Kubernetes versions 1.13.12, 1.14.8 and 1.15.5 are now available. This fixes CVE-2019-11253, which renders the Kubernetes API server vulnerable to a denial-of-service attack [Security Advisory](https://blog.paloaltonetworks.com/2019/10/cloud-kubernetes-vulnerabilities/)
 
 **2019-10-17**
 
