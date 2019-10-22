@@ -10,6 +10,10 @@ page-toc:
 <!-- markdownlint-disable MD036 -->
 ## October 2019
 
+**2019-10-22**
+
+* Kubernetes versions 1.13.12, 1.14.8 and 1.15.5 are now available. The vulnerability, CVE-2019-11253, renders the Kubernetes API server vulnerable to a denial-of-service attack [Security Advisory](https://blog.paloaltonetworks.com/2019/10/cloud-kubernetes-vulnerabilities/)
+
 **2019-10-17**
 
 * The Add-On [cert-manager](../../03.addons/08.metakube-cert-manager/default.en.md) has been updated to version [0.10.1](https://github.com/jetstack/cert-manager/releases/tag/v0.10.1)
