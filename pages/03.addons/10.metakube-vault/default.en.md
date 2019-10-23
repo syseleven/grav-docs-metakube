@@ -182,3 +182,45 @@ For some other options see for example:
 * [kubernetes-mutation-webhook-vault-secrets](https://github.com/innovia/kubernetes-mutation-webhook-vault-secrets)
 * [vault-sidekick](https://github.com/UKHomeOffice/vault-sidekick)
 * [vault-creds](https://github.com/uswitch/vault-creds)
+
+
+## Backup and Restore
+
+Managed Vault Add-on comes with automatic backups of your Vault cluster every hour. At any time if you can restore your vault
+cluster to the last stored backup by running the following job:
+
+```bash
+cat <<'EOF' | kubectl apply --namespace syseleven-vault -f -
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: restore-vault
+  namespace: syseleven-vault
+spec:
+  template:
+    metadata:
+      name: restore-vault
+    spec:
+      restartPolicy: Never
+      serviceAccountName: syseleven-vault
+      containers:
+        - name: vault-restore
+          image: syseleven/metakube-s3-uploader:0.2.0
+          envFrom:
+            - secretRef:
+                name: cloud-config
+          env:
+            - name: CONSUL_HTTP_ADDR
+              value: syseleven-consul-consul-server:8500
+          command:
+            - /bin/bash
+            - -c
+            - |
+              create-credentials && restore-consul
+          imagePullPolicy: Always
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+EOF
+```
+
+After the job has completed your Vault cluster might go into sealed state. To unseal Vault refer the the relevant section above.
