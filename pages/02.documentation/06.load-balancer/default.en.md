@@ -15,8 +15,8 @@ MetaKube clusters come with built-in support for external load balancers through
 ### Important note(s)
 
 * Traffic sent to the load balancers will have the load balancer IP as origin. If you rely on client IPs, you currently need to pass them in another way, e.g. with a HTTP header.
-* Currently, MetaKube creates no health checks when using external load balancers, therefore `service.spec.healthCheckNodePort` has no effect
-* If you want to use `service.spec.externalTrafficPolicy: Local`, you need to ensure that every node has a pod of your service - e.g. by using a DaemonSet. This is needed as all nodes without a pod of your service will drop the traffic received for the service.
+* Currently, MetaKube creates no health checks when using external load balancers, therefore `service.spec.healthCheckNodePort` has no effect.
+* We recommend to not set the `service.spec.externalTrafficPolicy` attribute - the default value of `Cluster` is a well tested [best practice to spread traffic evenly](https://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer/#preserving-the-client-source-ip). If you want to set it to `Local` to reduce the amount of hops in your cluster, you need to ensure that every node has a pod of your service - e.g. by using a DaemonSet. This is needed as all nodes without a pod of your service will drop the traffic received for the service.
 
 ## Ingress Controllers
 
