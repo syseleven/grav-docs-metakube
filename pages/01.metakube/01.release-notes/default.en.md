@@ -10,6 +10,10 @@ page-toc:
 <!-- markdownlint-disable MD036 -->
 ## October 2019
 
+**2019-10-28**
+
+* Updated [Helm](https://www.helm.sh/) to [2.15.1](https://github.com/helm/helm/releases/tag/v2.15.1)
+
 **2019-10-22**
 
 * In the Add-On [Cluster Monitoring Stack](../../03.addons/03.metakube-monitoring/default.en.md) Grafana has been updated to version [6.4.3](https://github.com/grafana/grafana/releases/tag/v6.4.3)
