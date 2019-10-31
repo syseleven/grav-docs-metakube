@@ -11,8 +11,8 @@ page-toc:
 
 **2019-10-31**
 
-* New Add-on [Linkerd](../../03.addons/11.metakube-linkerd/default.en.md) has been added to enable service mesh in metakube clusters.
-* New Add-on [Vault](../../03.addons/10.metakube-vault/default.en.md) has been added to allow you to secure, store and control access to tokens, passwords, certificates and encryption codes. With Vault you can protect your secrets and other sensitive data.
+* New Add-on [Linkerd](../../03.addons/10.metakube-linkerd/default.en.md) has been added to enable service mesh in metakube clusters.
+* New Add-on [Vault](../../03.addons/11.metakube-vault/default.en.md) has been added to allow you to secure, store and control access to tokens, passwords, certificates and encryption codes. With Vault you can protect your secrets and other sensitive data.
 
 **2019-10-28**
 
