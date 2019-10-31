@@ -155,7 +155,7 @@ You should also add Prometheus exporters for all the other services and database
 
 For more information see [Prometheus Exporters and Integrations](https://prometheus.io/docs/instrumenting/exporters/) and [Grafana Dashboards](https://grafana.com/dashboards).
 
-If you have multiple services in your application architecture, have a look at Service Mesh technologies like [Istio](https://istio.io/) or [LinkerD](https://linkerd.io/) that help you with setting up transparent monitoring, tracing, routing and traffic encryption between these services.
+If you have multiple services in your application architecture, have a look at our [Linkerd Addon](../../03.addons/10.metakube-linkerd/default.en.md) or other Service Mesh technologies like [Istio](https://istio.io/) that help you with setting up transparent monitoring, tracing, routing and traffic encryption between these services.
 
 You should have external checks that validate that your application is up and running and alert you if it is not.
 
