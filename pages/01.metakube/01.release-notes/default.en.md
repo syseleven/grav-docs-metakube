@@ -7,13 +7,30 @@ taxonomy:
 page-toc:
     active: false
 ---
-<!-- markdownlint-disable MD036 -->
 ## October 2019
 
-**2019-10-13**
+**2019-10-31**
 
-* New Add-on [Linkerd](../../03.addons/10.metakube-linkerd/default.en.md) has been added to enable service mesh in metakube
-clusters.
+* New Add-on [Linkerd](../../03.addons/11.metakube-linkerd/default.en.md) has been added to enable service mesh in metakube clusters.
+* New Add-on [Vault](../../03.addons/10.metakube-vault/default.en.md) has been added to allow you to secure, store and control access to tokens, passwords, certificates and encryption codes. With Vault you can protect your secrets and other sensitive data.
+
+**2019-10-28**
+
+* Updated [Helm](https://www.helm.sh/) to [2.15.1](https://github.com/helm/helm/releases/tag/v2.15.1)
+
+**2019-10-22**
+
+* In the Add-On [Cluster Monitoring Stack](../../03.addons/03.metakube-monitoring/default.en.md) Grafana has been updated to version [6.4.3](https://github.com/grafana/grafana/releases/tag/v6.4.3)
+* In the Add-On [Cluster Monitoring Stack](../../03.addons/03.metakube-monitoring/default.en.md) Prometheus has been updated to version [2.13.1](https://github.com/prometheus/prometheus/releases/tag/v2.13.1)
+* In the Add-On [Cluster Monitoring Stack](../../03.addons/03.metakube-monitoring/default.en.md) prometheus-operator has been updated to version [0.32.0](https://github.com/coreos/prometheus-operator/releases/tag/v0.32.0)
+* Kubernetes versions 1.13.12, 1.14.8 and 1.15.5 are now available. This fixes CVE-2019-11253, which renders the Kubernetes API server vulnerable to a denial-of-service attack [Security Advisory](https://blog.paloaltonetworks.com/2019/10/cloud-kubernetes-vulnerabilities/)
+
+**2019-10-17**
+
+* The Add-On [cert-manager](../../03.addons/08.metakube-cert-manager/default.en.md) has been updated to version [0.10.1](https://github.com/jetstack/cert-manager/releases/tag/v0.10.1)
+* The Add-On [external-dns](../../03.addons/09.metakube-external-dns/default.en.md) has now configuration options for a domain filter and the Cloudflare proxy feature
+* The Add-On [Nginx Ingress Controller](../../03.addons/01.metakube-ingress/default.en.md) has now a configuration option for a default tls certificate
+* etcd is updated to 3.4.1
 
 **2019-10-10**
 
