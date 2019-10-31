@@ -399,4 +399,3 @@ page-toc:
 **2018-08-01**
 
 * MetaKube is now generally available
-<!-- markdownlint-enable MD036 -->
