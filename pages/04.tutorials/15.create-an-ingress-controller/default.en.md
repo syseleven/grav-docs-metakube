@@ -34,9 +34,9 @@ If you want to use [Let's Encrypt](https://letsencrypt.org/) to automatically ma
 
 ### Cert-Manager Installation
 
-#### Addon
+#### Add-On
 
-The easiest way to install the cert-manager is to use the [managed Addon](../../03.addons/08.metakube-cert-manager/default.en.md). After installation you only need to configure the issuers you want to use.
+The easiest way to install the cert-manager is to use the [managed Add-On](../../03.addons/08.metakube-cert-manager/default.en.md). After installation you only need to configure the issuers you want to use.
 
 #### Manual installation
 
