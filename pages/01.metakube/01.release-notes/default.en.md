@@ -7,6 +7,7 @@ taxonomy:
 page-toc:
     active: false
 ---
+<!-- markdownlint-disable MD036 -->
 ## October 2019
 
 **2019-10-31**
@@ -399,3 +400,4 @@ page-toc:
 **2018-08-01**
 
 * MetaKube is now generally available
+<!-- markdownlint-disable MD036 -->
