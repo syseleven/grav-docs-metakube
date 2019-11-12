@@ -7,6 +7,14 @@ taxonomy:
 page-toc:
     active: false
 ---
+### November 2019
+
+#### 2019-11-12
+
+* In the Add-On [Cluster Monitoring Stack](../../03.addons/03.metakube-monitoring/default.en.md) Grafana has been updated to version [6.4.4](https://github.com/grafana/grafana/releases/tag/v6.4.4)
+* The Add-On [velero](https://github.com/heptio/velero) has been updated to version [1.2.0](https://github.com/heptio/velero/releases/tag/v1.2.0)
+* [CoreDNS](https://coredns.io/) has been updated to version [1.6.5](https://coredns.io/2019/11/05/coredns-1.6.5-release/)
+
 ### October 2019
 
 #### 2019-10-31
