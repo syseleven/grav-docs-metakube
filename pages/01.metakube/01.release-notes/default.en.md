@@ -9,6 +9,15 @@ page-toc:
 ---
 ### November 2019
 
+#### 2019-11-18
+
+* In the Add-On [Vault](../../03.addons/11.metakube-vault/default.en.md)  Consul has been updated to version [1.6.2](https://www.hashicorp.com/blog/hashicorp-consul-1-6/)
+
+#### 2019-11-14
+
+* Updated [Helm](https://www.helm.sh/) to [2.16.1](https://github.com/helm/helm/releases/tag/v2.16.1)
+* The kubelet has been patched to address an [issue](https://github.com/kubernetes/kubernetes/issues/80968), where a Pod can be stuck in NotReady. We advise to rebuild your worker nodes so that the patched version gets installed.
+
 #### 2019-11-12
 
 * In the Add-On [Cluster Monitoring Stack](../../03.addons/03.metakube-monitoring/default.en.md) Grafana has been updated to version [6.4.4](https://github.com/grafana/grafana/releases/tag/v6.4.4)
