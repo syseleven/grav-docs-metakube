@@ -9,6 +9,10 @@ page-toc:
 ---
 ### November 2019
 
+#### 2019-11-20
+
+* In the Add-On [Cluster Monitoring Stack](../../03.addons/03.metakube-monitoring/default.en.md) Grafana has now also the plugin [grafana-piechart-panel](https://grafana.com/grafana/plugins/grafana-piechart-panel) pre-installed
+
 #### 2019-11-18
 
 * In the Add-On [Vault](../../03.addons/11.metakube-vault/default.en.md)  Consul has been updated to version [1.6.2](https://www.hashicorp.com/blog/hashicorp-consul-1-6/)
