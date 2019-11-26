@@ -9,6 +9,11 @@ page-toc:
 ---
 ### November 2019
 
+#### 2019-11-26
+
+* Kubernetes versions 1.14.9 and 1.15.6 are now available.
+* MetaKube now supports creating Kubernetes clusters on AWS regions eu-west-2, eu-west-3 and eu-north-1
+
 #### 2019-11-20
 
 * In the Add-On [Cluster Monitoring Stack](../../03.addons/03.metakube-monitoring/default.en.md) Grafana has now also the plugin [grafana-piechart-panel](https://grafana.com/grafana/plugins/grafana-piechart-panel) pre-installed
