@@ -7,6 +7,20 @@ taxonomy:
 page-toc:
     active: false
 ---
+### December 2019
+
+#### 2019-12-02
+
+* Kubernetes version 1.16.3 is now available.
+* In the Add-On [Cluster Monitoring Stack](../../03.addons/03.metakube-monitoring/default.en.md) Grafana has been updated to version [6.5.1](https://github.com/grafana/grafana/releases/tag/v6.5.1)
+* In the Add-On [Cluster Monitoring Stack](../../03.addons/03.metakube-monitoring/default.en.md) Prometheus has been updated to version [2.14.0](https://github.com/prometheus/prometheus/releases/tag/v2.14.0)
+* The [Calico](https://www.projectcalico.org/) CNI Plugin received an update to the version [3.10.1](https://docs.projectcalico.org/v3.10/release-notes/)
+* For Kubernetes 1.16 clusters the [kubernetes-dashboard](../../03.addons/06.kubernetes-dashboard/default.en.md) has been updated to [2.0.0-beta6](https://github.com/kubernetes/dashboard/releases/tag/v2.0.0-beta6)
+* It is now possible to activate audit logging in a MetaKube cluster
+* AWS clusters can now have NodeDeployments in different availability zones of the chosen region
+* Labels can now be added to MetaKube projects and clusters. Nodes inherit these labels automatically
+* There is now an indicator that warns you while editing a NodeDeployment if the edit would result in recreating the nodes
+
 ### November 2019
 
 #### 2019-11-26
