@@ -9,6 +9,16 @@ page-toc:
 ---
 ### December 2019
 
+#### 2019-12-19
+
+* In the Add-On [Cluster Monitoring Stack](../../03.addons/03.metakube-monitoring/default.en.md) Grafana has been updated to version [6.5.2](https://github.com/grafana/grafana/releases/tag/v6.5.2)
+* For Kubernetes 1.16 clusters the [kubernetes-dashboard](../../03.addons/06.kubernetes-dashboard/default.en.md) has been updated to [2.0.0-beta8](https://github.com/kubernetes/dashboard/releases/tag/v2.0.0-beta8)
+* In the Add-On [Cluster Monitoring Stack](../../03.addons/03.metakube-monitoring/default.en.md) alertmanager has been updated to version [0.20.0](https://github.com/prometheus/alertmanager/releases/tag/v0.20.0)
+
+#### 2019-12-17
+
+* On OpenStack every Node now gets an additional label `machine-controller/host-id` that contains the id of the physical server the Node is scheduled on.
+
 #### 2019-12-02
 
 * Kubernetes version 1.16.3 is now available.
