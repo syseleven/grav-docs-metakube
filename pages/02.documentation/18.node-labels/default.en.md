@@ -1,6 +1,6 @@
 ---
 title: 'Node Labels'
-published: false
+published: true
 taxonomy:
     tag:
         - metakube
@@ -26,8 +26,8 @@ MetaKube adds the following additional labels:
 
 - **system/cluster**
 
-  This label contains MetaKube cluster id.
+  This label contains the MetaKube cluster id.
 
 - **system/project**
 
-  This label contains MetaKube project id.
+  This label contains the MetaKube project id.
