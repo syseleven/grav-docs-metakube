@@ -37,3 +37,21 @@ The following customization options are possible:
 | Min Replicas | The minimum amount of replicas in the AutoScaler | 2 |
 | Max Replicas | The maximum amount of replicas in the AutoScaler | 4 |
 | Default TLS certificate | Path to a secret in the form `namespace/secret-name` that contains a tls certificate that should be used if an Ingress does not define one | |
+
+## Customizing the NGINX Ingress Controller configuration
+
+There are two ways to configure the NGINX Ingress Controller configuration:
+
+## Annotations
+
+You can configure values for a specific Ingress by adding annotations to the Ingress object. See [Annotations](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/) for more details.
+
+## ConfigMap
+
+You can change the default values for all Ingress objects by adding a ConfigMap called `syseleven-ingress-nginx-ingress-controller` in the `syseleven-ingress` namespace. See [ConfigMap](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/configmap/) for more details.
+
+Note that after initially creating the ConfigMap you have to restart all ingress controller pods once:
+
+```bash
+kubectl rollout restart deployment syseleven-ingress-nginx-ingress-controller -n syseleven-ingress
+```

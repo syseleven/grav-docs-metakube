@@ -1,6 +1,6 @@
 ---
 title: 'Node Labels'
-published: false
+published: true
 taxonomy:
     tag:
         - metakube
@@ -9,26 +9,25 @@ taxonomy:
         - debugging nodes
 ---
 
-Node objects in Metakube cluster come with a set of useful labels that can be used for debugging purposes or setting
-affinity/anti-affinity rules while deploying applications
+Node objects in a MetaKube cluster come with a set of useful labels that can be used for debugging purposes or setting
+[affinity/anti-affinity](https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity) rules while deploying applications.
 
 In addition to the built in [node labels](https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#built-in-node-labels)
-Metakube add the following additional labels:
+MetaKube adds the following additional labels:
 
 - **machine-controller/owned-by**
 
-  This label maps the node object to corresponding machine objects.
+  This label contains the id of the machine object that manages the node. See [Cluster API](../12.cluster-api/default.en.md) for details.
 
 - **machine-controller/host-id**
 
-  This label maps node objects to servers where the machine for that specific node is running. This is perticularly
-  useful in scenarios where you might want to spread pod replicas across different physical servers, using pod anti-affinity
-  rules, for better HA of your applications.
+  This label contains the id of the physical server where the node is running on. This is particularly
+  useful in scenarios where you might want to spread pod replicas across different physical servers, using pod anti-affinity rules to increase availability of your application.
 
 - **system/cluster**
 
-  This label adds the metakube cluster ID to the node object.
+  This label contains the MetaKube cluster id.
 
 - **system/project**
 
-  This label adds the metakube project ID to the node object.
+  This label contains the MetaKube project id.
