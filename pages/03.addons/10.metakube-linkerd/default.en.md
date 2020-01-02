@@ -24,4 +24,8 @@ in your cluster while installing the Linkerd Add-on
 
 ## Customization
 
-There are no customization options.
+The following customization options are possible:
+
+| Option | Description | Default value |
+| ------ | ----------- | ------------- |
+| High availability | Installs Linkerd in highly-available mode (recommended for production) | true |

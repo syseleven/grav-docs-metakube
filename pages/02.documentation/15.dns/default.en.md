@@ -26,7 +26,7 @@ For more information also have a look at the [Nodelocal DNS Cache GitHub Page](h
 Metakube allows the user to add additional configurations to CoreDNS and NodeLocal DNS Cache. This is achieved by creating a config map as follows:
 
 ### CoreDNS
-Create a configmap witht the name `coredns-extra-configs`, containing a CoreDNS style [configuration file](https://coredns.io/manual/toc/#configuration).
+Create a configmap witht the name `coredns-extra-configs`, containing a valid CoreDNS style [configuration file](https://coredns.io/manual/toc/#configuration).
 The configuration file name must be `Corefile` or end in `Corefile` as shown below.
 ```bash
 cat <<'EOF' | kubectl apply --namespace kube-system -f -
@@ -52,7 +52,7 @@ kubectl scale deployment.v1.apps/coredns --replicas=2 -n kube-system
 ```
 
 ### NodeLocal DNS cache
-Create a configmap witht the name `node-local-dns-extra-configs`, containing a CoreDNS style [configuration file](https://coredns.io/manual/toc/#configuration).
+Create a configmap witht the name `node-local-dns-extra-configs`, containing a valid CoreDNS style [configuration file](https://coredns.io/manual/toc/#configuration).
 The configuration file name must be `Corefile` or end in `Corefile` as shown below.
 ```bash
 cat <<'EOF' | kubectl apply --namespace kube-system -f -
