@@ -46,9 +46,7 @@ EOF
 Once the configmap has been created, use the following code block to restart pods to load the newly added configuration to CoreDNS
 
 ```bash
-kubectl scale deployment.v1.apps/coredns --replicas=0 -n kube-system
-sleep 5
-kubectl scale deployment.v1.apps/coredns --replicas=2 -n kube-system
+kubectl rollout restart deployment coredns
 ```
 
 ### NodeLocal DNS cache
@@ -72,7 +70,5 @@ EOF
 Once the configmap has been created, use the following code block to restart pods to load the newly added configuration to CoreDNS
 
 ```bash
-kubectl -n kube-system patch daemonset node-local-dns -p '{"spec": {"template": {"spec": {"nodeSelector": {"non-existing": "true"}}}}}'
-sleep 5
-kubectl -n kube-system patch daemonset node-local-dns --type json -p='[{"op": "remove", "path": "/spec/template/spec/nodeSelector/non-existing"}]'
+kubectl rollout restart daemonset node-local-dns
 ```
