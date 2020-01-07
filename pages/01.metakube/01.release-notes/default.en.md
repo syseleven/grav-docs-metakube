@@ -7,6 +7,12 @@ taxonomy:
 page-toc:
     active: false
 ---
+### January 2020
+
+#### 2020-01-07
+
+* The CoreDNS configuration in a MetaKube cluster can now be [extended with a ConfigMap](../../02.documentation/15.dns/default.en.md)
+
 ### December 2019
 
 #### 2019-12-20

@@ -21,20 +21,21 @@ Due to the way service discovery in Kubernetes works, the internal DNS resolutio
 
 For more information also have a look at the [Nodelocal DNS Cache GitHub Page](https://github.com/kubernetes/kubernetes/tree/master/cluster/addons/dns/nodelocaldns).
 
-## Configure Metakube DNS servers
+## Configure MetaKube DNS servers
 
-Metakube allows the user to add additional configurations to CoreDNS and NodeLocal DNS Cache. This is achieved by creating a config map as follows:
+MetaKube allows the user to add additional configurations to CoreDNS and NodeLocal DNS Cache. This is achieved by creating a ConfigMap as follows:
 
-### CoreDNS
-Create a configmap witht the name `coredns-extra-configs`, containing a valid CoreDNS style [configuration file](https://coredns.io/manual/toc/#configuration).
+Create a ConfigMap with the name `coredns-extra-configs` in the Namespace `kube-system`, containing a valid CoreDNS style [configuration file](https://coredns.io/manual/toc/#configuration).
+
 The configuration file name must be `Corefile` or end in `Corefile` as shown below.
+
 ```bash
 cat <<'EOF' | kubectl apply --namespace kube-system -f -
 apiVersion: v1
 data:
   Corefile: |
     <Add zone information> {
-      <Add additional DNS configurations here>   
+      <Add additional DNS configurations here>
     }
 kind: ConfigMap
 metadata:
@@ -43,32 +44,9 @@ metadata:
 EOF
 ```
 
-Once the configmap has been created, use the following code block to restart pods to load the newly added configuration to CoreDNS
+Once the ConfigMap has been created, use the following code block to restart all CoreDNS and NodeLocal DNS Cache pods to load the newly added configuration:
 
 ```bash
-kubectl rollout restart deployment coredns
-```
-
-### NodeLocal DNS cache
-Create a configmap witht the name `node-local-dns-extra-configs`, containing a valid CoreDNS style [configuration file](https://coredns.io/manual/toc/#configuration).
-The configuration file name must be `Corefile` or end in `Corefile` as shown below.
-```bash
-cat <<'EOF' | kubectl apply --namespace kube-system -f -
-apiVersion: v1
-data:
-  Corefile: |
-    <Add zone information> {
-      <Add additional DNS configurations here>   
-    }
-kind: ConfigMap
-metadata:
-  name: node-local-dns-extra-configs
-  namespace: kube-system
-EOF
-```
-
-Once the configmap has been created, use the following code block to restart pods to load the newly added configuration to CoreDNS
-
-```bash
-kubectl rollout restart daemonset node-local-dns
+kubectl rollout restart deployment coredns --namespace kube-system
+kubectl rollout restart daemonset node-local-dns --namespace kube-system
 ```
