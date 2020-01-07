@@ -12,6 +12,7 @@ page-toc:
 #### 2020-01-07
 
 * The CoreDNS configuration in a MetaKube cluster can now be [extended with a ConfigMap](../../02.documentation/15.dns/default.en.md)
+* When creating a new Node, taints from the NodeDeployment are now added synchronously during the registration of the Node instead of asynchronously shortly after
 
 ### December 2019
 
