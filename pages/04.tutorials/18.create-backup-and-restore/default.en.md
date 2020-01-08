@@ -145,6 +145,63 @@ NAME         STATUS    VOLUME                                     CAPACITY   ACC
 nginx-logs   Bound     pvc-24afa31c-bc19-11e8-b699-0a580af40873   1Gi        RWO            sys11-quobyte   1m
 ```
 
+## Access and restore single files from a restic volume backup
+
+Velero uses restic to store the data of attached volumes.
+Restic can be used to [mount](https://restic.readthedocs.io/en/latest/050_restore.html#restore-using-mount) the backup volume on a running Linux server. When mounted, you can access the files as normal files on your file system. From there you may do what you need to do to restore singles files.
+
+To access the backup data, you may setup [s3cmd](#inspect-the-s3-bucket) and sync the backup of your volumes.
+
+Below is an example of a volume called `nopaste` and the cluster `dfrwfpdndx`.
+
+```sh
+# Find bucket
+$ s3cmd ls
+
+# Sync data
+$ s3cmd sync s3://metakube-cluster-backup-dfrwfpdndx/restic/nopaste backup
+
+# Get restic encryption key
+$ kubectl get -n velero secrets velero-restic-credentials -o json | jq -r '.data."repository-password"' | base64 -D
+
+# Mount volume (works on Ubuntu-18.04, currently not macOS)
+$ restic -r backup/nopaste/ mount /mnt/
+enter password for repository:
+password is correct
+Now serving the repository at /mnt/
+Don't forget to umount after quitting!
+
+# Open another shell
+# Access the actual files
+$ cd /mnt
+$ ls
+hosts  ids  snapshots  tags
+
+$ ls snapshots/
+2019-11-27T14:19:45Z  2019-12-10T01:01:07Z  2019-12-13T01:01:15Z  2019-12-16T01:01:28Z  2019-12-19T01:00:58Z  2019-12-22T01:01:06Z  2019-12-25T01:01:32Z  2019-12-28T01:01:39Z  2019-12-31T01:01:45Z  2020-01-03T01:01:17Z  2020-01-06T01:01:21Z
+2019-11-27T16:29:34Z  2019-12-11T01:01:03Z  2019-12-14T01:01:22Z  2019-12-17T01:00:40Z  2019-12-20T01:00:57Z  2019-12-23T01:01:06Z  2019-12-26T01:01:33Z  2019-12-29T01:01:37Z  2020-01-01T01:01:47Z  2020-01-04T01:01:19Z  2020-01-07T01:01:21Z
+2019-12-09T01:01:05Z  2019-12-12T01:01:08Z  2019-12-15T01:01:23Z  2019-12-18T01:00:49Z  2019-12-21T01:01:03Z  2019-12-24T01:01:50Z  2019-12-27T01:01:34Z  2019-12-30T01:01:42Z  2020-01-02T01:00:54Z  2020-01-05T01:01:17Z  latest
+
+$ find snapshots/|head -n 10
+snapshots/
+snapshots/2019-12-19T01:00:58Z
+snapshots/2019-12-19T01:00:58Z/foobar.php
+snapshots/2019-12-19T01:00:58Z/bar.php
+snapshots/2019-12-19T01:00:58Z/baz.php
+snapshots/2019-12-19T01:00:58Z/.htaccess
+snapshots/2019-12-19T01:00:58Z/.velero
+snapshots/2019-12-19T01:00:58Z/.velero/bd93910e-1c7c-462c-9650-578767027055
+snapshots/2019-12-19T01:00:58Z/8f
+snapshots/2019-12-19T01:00:58Z/8f/94
+
+
+$ head snapshots/2019-12-19T01:00:58Z/foobar.php
+<?php
+$GLOBALS['foobar'] = 1575466530;
+
+[...]
+```
+
 ## Remove the backup backup-turorial
 
 Delete the backup:
@@ -175,7 +232,7 @@ backup-tutorial   Enabled   2018-09-19 16:53:38 +0200 CEST   */30 * * * *   48h0
 
 ## Inspect the S3 Bucket
 
-If you have installed and configured S3cmd, you can use it to list the backup files Velero created in your object storage. You should at least see the folders `backups`, `restic` and `metadata` in your S3bucket. Depending on the usage you will also find a `restores` folder. Restic is responsible for the volume backups:
+If you have installed and configured S3cmd (see [syseleven-stack object storage](https://docs.syseleven.de/syseleven-stack/en/reference/object-storage#s3cmd)), you can use it to list the backup files Velero created in your object storage. You should at least see the folders `backups`, `restic` and `metadata` in your S3bucket. Depending on the usage you will also find a `restores` folder. Restic is responsible for the volume backups:
 
 ```shell
 $ s3cmd la --recursive
