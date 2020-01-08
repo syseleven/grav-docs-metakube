@@ -31,6 +31,9 @@ Supported regions:
 
 * EU Frankfurt
 * EU Ireland
+* EU Stockholm
+* EU London
+* EU Paris
 
 If you have any questions about the Account or require different regions, please contact our [Support](../../05.support/default.en.md).
 
