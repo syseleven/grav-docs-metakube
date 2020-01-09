@@ -9,6 +9,10 @@ page-toc:
 ---
 ### January 2020
 
+#### 2020-01-09
+
+* We extended our Cluster Monitoring Stack Add-On. The Add-On now creates a persistant volume to store your Grafana users and plugins. You can still continue to use configmap if you prefer to.
+
 #### 2020-01-08
 
 * The Kubernetes Software Defined Network canal has been updated: [calico](https://www.projectcalico.org/) to [3.11.1](https://docs.projectcalico.org/v3.1.1/releases/). This brings several bugfixes and network performance improvements.
