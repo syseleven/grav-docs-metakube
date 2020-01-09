@@ -9,6 +9,10 @@ page-toc:
 ---
 ### January 2020
 
+#### 2020-01-09
+
+* In the Add-On [Cluster Monitoring Stack](../../03.addons/03.metakube-monitoring/default.en.md) Prometheus has been updated to version [2.15.2](https://github.com/prometheus/prometheus/releases/tag/v2.15.2)
+
 #### 2020-01-08
 
 * The Kubernetes Software Defined Network canal has been updated: [calico](https://www.projectcalico.org/) to [3.11.1](https://docs.projectcalico.org/v3.1.1/releases/). This brings several bugfixes and network performance improvements.
