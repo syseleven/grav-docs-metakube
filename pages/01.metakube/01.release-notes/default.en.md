@@ -9,6 +9,8 @@ page-toc:
 ---
 ### January 2020
 
+* In the Add-On [Cluster Monitoring Stack](../../03.addons/03.metakube-monitoring/default.en.md) Prometheus has been updated to version [2.15.2](https://github.com/prometheus/prometheus/releases/tag/v2.15.2)
+
 #### 2020-01-07
 
 * The CoreDNS configuration in a MetaKube cluster can now be [extended with a ConfigMap](../../02.documentation/15.dns/default.en.md)
