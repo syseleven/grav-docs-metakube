@@ -11,7 +11,8 @@ page-toc:
 
 #### 2020-01-09
 
-* We extended our Cluster Monitoring Stack Add-On. The Add-On now creates a persistant volume to store your Grafana users and plugins. You can still continue to use configmap if you prefer to.
+* We extended our Cluster Monitoring Stack Add-On. The Add-On now creates a persistant volume to store your Grafana users and plugins. You can still continue to use configmaps if you prefer to.
+* In the Add-On [Cluster Monitoring Stack](../../03.addons/03.metakube-monitoring/default.en.md) Prometheus has been updated to version [2.15.2](https://github.com/prometheus/prometheus/releases/tag/v2.15.2)
 
 #### 2020-01-08
 
