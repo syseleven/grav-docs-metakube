@@ -221,6 +221,6 @@ data:
     }
 ```
 
-After a few second the new dashboard will be added to Grafana automatically.
+After a few second the new dashboard will be added to Grafana automatically. You can also install grafana dashboards through the grafana webinterface. We have now added a volume to the grafana pod. To store dashboard, plugins users etc.
 
 A good source for ready made dashboards is the [Grafana Dashboard Directory](https://grafana.com/grafana/dashboards).
