@@ -9,6 +9,10 @@ page-toc:
 ---
 ### January 2020
 
+#### 2020-01-08
+
+* The Kubernetes Software Defined Network canal has been updated: [calico](https://www.projectcalico.org/) to [3.11.1](https://docs.projectcalico.org/v3.1.1/releases/). This brings several bugfixes and network performance improvements.
+
 #### 2020-01-07
 
 * The CoreDNS configuration in a MetaKube cluster can now be [extended with a ConfigMap](../../02.documentation/15.dns/default.en.md)
