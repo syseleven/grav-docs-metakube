@@ -9,6 +9,8 @@ page-toc:
 ---
 ### January 2020
 
+#### 2020-01-09
+
 * In the Add-On [Cluster Monitoring Stack](../../03.addons/03.metakube-monitoring/default.en.md) Prometheus has been updated to version [2.15.2](https://github.com/prometheus/prometheus/releases/tag/v2.15.2)
 
 #### 2020-01-07
