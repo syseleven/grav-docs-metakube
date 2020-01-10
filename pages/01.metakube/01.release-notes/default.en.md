@@ -11,6 +11,7 @@ page-toc:
 
 #### 2020-01-10
 
+* Kubernetes versions 1.15.7, 1.16.4 and 1.17.0 are now available.
 * In the Add-On [Linkerd](../../03.addons/10.metakube-linkerd/default.en.md) Flagger has been updated to version [0.21.0](https://github.com/weaveworks/flagger/releases/tag/0.21.0)
 
 #### 2020-01-09
