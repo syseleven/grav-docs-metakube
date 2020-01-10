@@ -9,6 +9,10 @@ page-toc:
 ---
 ### January 2020
 
+#### 2020-01-10
+
+* In the Add-On [Linkerd](../../03.addons/10.metakube-linkerd/default.en.md) Flagger has been updated to version [0.21.0](https://github.com/weaveworks/flagger/releases/tag/0.21.0)
+
 #### 2020-01-09
 
 * We extended our Cluster Monitoring Stack Add-On. The Add-On now creates a persistent volume to store your Grafana users and plugins. You can still continue to use ConfigMaps if you prefer to.
