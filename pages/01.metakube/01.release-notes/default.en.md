@@ -9,6 +9,10 @@ page-toc:
 ---
 ### January 2020
 
+#### 2020-01-16
+
+* On clusters with CoreOS Container Linux nodes, the time window where nodes are rebooted after an update is now [configurable](../../02.documentation/04.supported-operating-systems/default.en.md)
+
 #### 2020-01-10
 
 * Kubernetes versions 1.15.7, 1.16.4 and 1.17.0 are now available.
