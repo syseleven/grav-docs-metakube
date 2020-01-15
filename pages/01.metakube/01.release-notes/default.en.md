@@ -9,6 +9,10 @@ page-toc:
 ---
 ### January 2020
 
+#### 2020-01-15
+
+* The Add-On [Nginx Ingress Controller](../../03.addons/01.metakube-ingress/default.en.md) was updated to version [0.27.0](https://github.com/kubernetes/ingress-nginx/releases/tag/nginx-0.27.0)
+
 #### 2020-01-10
 
 * Kubernetes versions 1.15.7, 1.16.4 and 1.17.0 are now available.
