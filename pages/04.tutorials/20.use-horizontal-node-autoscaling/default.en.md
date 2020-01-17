@@ -136,7 +136,7 @@ SSH_PUBLIC_KEY=$(cat ~/.ssh/id_rsa.pub)
 CLUSTER_NAME=$(kubectl config current-context)
 
 # Set up the flavor for the node
-FLAVOR="m1c.tiny"
+FLAVOR="m1.small"
 
 # Set up the correct region and availability zone
 REGION="dbl"
