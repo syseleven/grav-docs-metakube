@@ -114,7 +114,7 @@ spec:
           cloudProviderSpec:
             availabilityZone: dbl1
             domainName: ""
-            flavor: m1.micro
+            flavor: m1.small
             floatingIpPool: ext-net
             identityEndpoint: https://api.dbl.cloud.syseleven.net:5000/v3
             image: Ubuntu Bionic 18.04 (2019-03-27)
