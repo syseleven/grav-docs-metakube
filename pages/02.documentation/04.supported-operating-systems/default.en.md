@@ -29,9 +29,9 @@ The timezone on all provided images is UTC. If you want to set a different timez
 
 On CoreOS Container Linux updates are applied automatically (though this can be disabled when creating a NodeDeployment). For more information see [CoreOS Update Philosophy](https://coreos.com/why/#updates).
 
-If an update requires a reboot of the Node, MetaKube will drain the node and reboot it after all Pods have been rescheduled. It is also ensured that only one Node is rebooted at a time. By default this can happen at any point in time. Optionally you can configure a time window where these reboots occur.
+If an update requires a reboot of the node, MetaKube will drain the node and reboot it after all Pods have been rescheduled. It is also ensured that only one node is rebooted at a time. By default this can happen at any point in time. Optionally you can configure a time window where these reboots occur.
 
-This is possible either it in the "Settings" step of the cluster creation wizard
+This is possible either in the "Settings" step of the cluster creation wizard
 
 ![Update window wizard](update-window-wizard.png)
 
