@@ -12,6 +12,8 @@ page-toc:
 #### 2020-01-16
 
 * On clusters with CoreOS Container Linux nodes, the time window where nodes are rebooted after an update is now [configurable](../../02.documentation/04.supported-operating-systems/default.en.md)
+* The Add-On [Nginx Ingress Controller](../../03.addons/01.metakube-ingress/default.en.md) was updated to version [0.27.1](https://github.com/kubernetes/ingress-nginx/releases/tag/nginx-0.27.1)
+* For Kubernetes 1.16 clusters the [kubernetes-dashboard](../../03.addons/06.kubernetes-dashboard/default.en.md) has been updated to [2.0.0-rc2](https://github.com/kubernetes/dashboard/releases/tag/v2.0.0-rc2)
 
 #### 2020-01-10
 

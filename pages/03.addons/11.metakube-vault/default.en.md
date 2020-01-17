@@ -47,13 +47,13 @@ The following customization options are possible for Consul:
 
 ## Getting root token and unseal keys
 
-After the installation of the Add-On you can retrive the Vault root token and unseal key with our secret sharing service `secrets.syseleven.de`. You recieve a one-time link to fetch them with:
+After the installation of the Add-On you can retrive the Vault root token and unseal keys with our secret sharing service `secrets.syseleven.de`. You recieve a one-time link to fetch them with:
 
 ```bash
 kubectl get secret -n syseleven-vault initial-keys -o "jsonpath={.data.link}" | base64 --decode
 ```
 
-These tokens should be kept in a secure location. We cannot recreate them for you. If lost you will not be able to access your data.
+These tokens should be kept in a secure location. We cannot recreate them for you. If they are lost you will not be able to access your data.
 
 ## Accessing the Vault UI
 
@@ -63,7 +63,7 @@ For more information see [Auth Methods](https://www.vaultproject.io/docs/auth/in
 
 ## Using the Vault CLI
 
-By default the Vault API is not exposed publicly but only available within your cluster. If you want to use the Vault CLI to manage and operate your cluster, the easiest option is, to start a pod with the Vault CLI in your cluster:
+By default the Vault API is not exposed publicly and only available within your cluster. If you want to use the Vault CLI to manage and operate your cluster, the easiest option is, to start a pod with the Vault CLI in your cluster:
 
 ```console
 $ kubectl run --generator=run-pod/v1 vault-cli --image=vault --env VAULT_ADDR=http://syseleven-vault.syseleven-vault:8200 -i --tty --rm --command sh
@@ -76,7 +76,7 @@ pod "vault-cli" deleted
 
 ## Unsealing Vault
 
-Initially, or if a Vault Pod is updated or restarted, Vault seals itself to prevent malicious access. In order to use Vault, you have to unseal it with your unseal keys. The easiest way to do this is by using the unseal dialog from the cluster detail page.
+Initially Vault is unsealed for you during the installation process. If a Vault Pod is updated or restarted, Vault seals itself to prevent malicious access. In order to use Vault, you have to unseal it with your unseal keys. The easiest way to do this is by using the unseal dialog from the cluster detail page.
 
 See also [Seal/Unseal](https://www.vaultproject.io/docs/concepts/seal.html).
 
@@ -203,7 +203,7 @@ For some other options see for example:
 
 ## Backup and Restore
 
-Managed Vault Add-on comes with automatic backups of your Vault cluster every hour. At any time if you can restore your vault
+The Managed Vault Add-on comes with automatic backups of your Vault cluster every hour. You may restore your vault
 cluster to the last stored backup by running the following job:
 
 ```bash
