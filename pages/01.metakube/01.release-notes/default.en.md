@@ -9,10 +9,11 @@ page-toc:
 ---
 ### January 2020
 
-#### 2020-01-16
+#### 2020-01-17
 
 * The Add-On [Nginx Ingress Controller](../../03.addons/01.metakube-ingress/default.en.md) was updated to version [0.27.1](https://github.com/kubernetes/ingress-nginx/releases/tag/nginx-0.27.1)
 * For Kubernetes 1.16 clusters the [kubernetes-dashboard](../../03.addons/06.kubernetes-dashboard/default.en.md) has been updated to [2.0.0-rc2](https://github.com/kubernetes/dashboard/releases/tag/v2.0.0-rc2)
+* In the Add-On [Linkerd](../../03.addons/10.metakube-linkerd/default.en.md) Flagger has been updated to version [0.22.0](https://github.com/weaveworks/flagger/releases/tag/0.22.0)
 
 #### 2020-01-10
 
@@ -27,7 +28,7 @@ page-toc:
 
 #### 2020-01-08
 
-* The Kubernetes Software Defined Network canal has been updated: [calico](https://www.projectcalico.org/) to [3.11.1](https://docs.projectcalico.org/v3.1.1/releases/). This brings several bugfixes and network performance improvements.
+* The Kubernetes Software Defined Network canal has been updated: [calico](https://www.projectcalico.org/) to [3.11.1](https://docs.projectcalico.org/v3.11/releases/). This brings several bugfixes and network performance improvements.
 
 #### 2020-01-07
 
