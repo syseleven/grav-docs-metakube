@@ -9,6 +9,11 @@ page-toc:
 ---
 ### January 2020
 
+### 2020-01-24
+
+* Kubernetes versions 1.15.9, 1.16.6 and 1.17.2 are now available.
+* We limited the Docker max log size to 100mb pro container.  
+
 #### 2020-01-17
 
 * On clusters with CoreOS Container Linux nodes, the time window where nodes are rebooted after an update is now [configurable](../../02.documentation/04.supported-operating-systems/default.en.md)
