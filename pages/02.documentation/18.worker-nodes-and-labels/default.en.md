@@ -1,5 +1,5 @@
 ---
-title: 'Node Labels'
+title: 'Node configuration and labels'
 published: true
 taxonomy:
     tag:
@@ -32,6 +32,6 @@ MetaKube adds the following additional labels:
 
   This label contains the MetaKube project id.
 
-- **Docker configuration**
+## Docker configuration
 
-  All Docker daemons that are installed with our provided images. Have the Docker logging option Max-Size set to 100MB. This limits the Max log file size to 100MB for each container created. The idea is to prevent your worker nodes disks being filed by logs created by the Docker containers. If you would like to store and keep track of your logs for a long period of time. We recommend installing additional software to accomplish this. For example Elasticsearch, logstash and kibana. Or alternatively you may use Loki, Promtail and Grafana.
+All Docker daemons that are installed with our provided images have the [Docker logging option](https://docs.docker.com/config/containers/logging/json-file/) `max-size` set to 100MB. This limits the maximum log file size to 100MB for each container created. The idea is to prevent your worker node's disks being filled up by logs created by the Docker containers. If you would like to store and keep track of your logs for a longer period of time, we recommend installing additional software to accomplish this. For example Elasticsearch, Logstash and Kibana or Loki, Promtail and Grafana.
