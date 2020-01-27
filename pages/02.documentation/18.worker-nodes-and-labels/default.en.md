@@ -31,3 +31,7 @@ MetaKube adds the following additional labels:
 - **system/project**
 
   This label contains the MetaKube project id.
+
+- **Docker configuration**
+
+  All Docker daemons that are installed with our provided images. Have the Docker logging option Max-Size set to 100MB. This limits the Max log file size to 100MB for each container created. The idea is to prevent your worker nodes disks being filed by logs created by the Docker containers. If you would like to store and keep track of your logs for a long period of time. We recommend installing additional software to accomplish this. For example Elasticsearch, logstash and kibana. Or alternatively you may use Loki, Promtail and Grafana.
