@@ -9,6 +9,13 @@ page-toc:
 ---
 ### January 2020
 
+### 2020-01-30
+
+* Each cluster now runs [node-problem-detector](https://github.com/kubernetes/node-problem-detector) with
+  a customization that sets an initial taint on each newly created node that will only be removed when
+  pod networking and dns are up and running on the node. This prevents pods, especially from Jobs or CronJobs,
+  from being scheduled and started even though the node has no working DNS or network.
+
 ### 2020-01-28
 
 * [Horizontal node autoscaling](../../04.tutorials/20.use-horizontal-node-autoscaling/default.en.md) is now configurable from the MetaKube dashboard.
