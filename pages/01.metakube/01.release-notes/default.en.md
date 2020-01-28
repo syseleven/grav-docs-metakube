@@ -12,7 +12,7 @@ page-toc:
 ### 2020-01-24
 
 * Kubernetes versions 1.15.9, 1.16.6 and 1.17.2 are now available.
-* We limited the Docker max log size to 100mb pro container.  
+* We limited the Docker max log size to 100mb per container.  
 
 #### 2020-01-17
 
