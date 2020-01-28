@@ -9,6 +9,8 @@ taxonomy:
         - debugging nodes
 ---
 
+## Node labels
+
 Node objects in a MetaKube cluster come with a set of useful labels that can be used for debugging purposes or setting
 [affinity/anti-affinity](https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity) rules while deploying applications.
 
