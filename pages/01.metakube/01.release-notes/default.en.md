@@ -9,6 +9,11 @@ page-toc:
 ---
 ### January 2020
 
+### 2020-01-28
+
+* [Horizontal node autoscaling](../../04.tutorials/20.use-horizontal-node-autoscaling/default.en.md) is now configurable from the MetaKube dashboard.
+* In the Add-On [Cluster Monitoring Stack](../../03.addons/03.metakube-monitoring/default.en.md) Grafana has been updated to version [6.6.0](https://github.com/grafana/grafana/releases/tag/v6.6.0)
+
 ### 2020-01-24
 
 * Kubernetes versions 1.15.9, 1.16.6 and 1.17.2 are now available.
