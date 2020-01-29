@@ -35,3 +35,16 @@ Save your changes and wait for MetaKube to add or delete your extra worker node(
 ![Overview of currently built worker node](image_edit_np_wait_for_node.png)
 
 The nodes will be upgraded in a rolling upgrade, which means it does a one-by-one upgrade of all machines. Therefore it will create a new node and when this node is ready will drain and delete an old node and so on until all nodes are updated.
+
+## Horizontal node autoscaling
+
+When creating or editing a node deployment, it is also possible to activate automatic horizontal node autoscaling. This means as soon as your cluster does not have enough free resources anymore to schedule new pods, new nodes will be created automatically up to the maximum limit of configured nodes.
+
+![Configure Horizontal Node Autoscaler](horizontal-node-autoscaler.png)
+
+
+!!! Currently the node autoscaler can only automatically create nodes, removing nodes automatically to scale a cluster down is on our [roadmap](../../01.metakube/02.roadmap/default.en.md) and will be released in the near future.
+
+!!! Scaling up a MachineDeployment from 0 replicas does currently only work on clusters running on OpenStack.
+
+For more information have a look at the [tutorial](../../04.tutorials/20.use-horizontal-node-autoscaling/default.en.md).
