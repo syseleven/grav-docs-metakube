@@ -11,9 +11,9 @@ taxonomy:
 MetaKube Kubernetes clusters support horizontal node autoscaling out of the box. This tutorial shows how
 you can configure and activate it and how it plays together nicely with [horizontal pod autoscaling](../19.use-horizontal-pod-autoscaling/default.en.md).
 
-!!! Currently the node autoscaler can only automatically create nodes, removing nodes automatically to scale a cluster down is on our [roadmap](../../01.metakube/02.roadmap/default.en.md) and will be released in the near future.
+!!! Currently the node autoscaler only automatically create nodes, removing nodes automatically to scale a cluster down is on our [roadmap](../../01.metakube/02.roadmap/default.en.md) and will be released in the near future.
 
-!!! Scaling up a MachineDeployment from 0 replicas does currently only work on clusters running on OpenStack.
+!!! Scaling up a MachineDeployment from 0 replicas currently only works with clusters running on OpenStack.
 
 ## Prerequisites
 
@@ -44,16 +44,16 @@ hello-app-5c7477d7b7-n44wq     1/1       Running   0          9s
 ```
 
 Not that we defined fairly high CPU and memory requests for our pod. This way we will quickly get to the point where the
-scheduler can not schedule new pods due to insufficient resources, if we try to scale the deployment up.
+scheduler can not schedule new pods due to insufficient resources, when scaling the deployment up.
 
-Let's now manually scale the deployment, in real life this would likely be done by the horizontal pod autoscaler:
+Now let's manually scale the deployment, in real life this would likely be done by the horizontal pod autoscaler:
 
 ```shell
 $ kubectl scale deployment/hello-app --replicas 15 --namespace hna-tutorial
 deployment.extensions/hello-app scaled
 ```
 
-If you list all pods now, there should be several pods stuck in a "pending" state:
+If you list all pods, there should be several pods stuck in "pending" state:
 
 ```shell
 $ kubectl get pods --namespace hna-tutorial
@@ -147,9 +147,9 @@ REGION="dbl"
 AVAILABILITY_ZONE="dbl1"
 
 OPERATING_SYSTEM="ubuntu"
-IMAGE_NAME="Ubuntu Bionic 18.04 (2019-03-27)"
+IMAGE_NAME="Ubuntu Bionic 18.04 (2020-01-25)"
 FLOATING_IP_POOL="ext-net"
-K8S_VERSION="1.12.2"
+K8S_VERSION="1.17.2"
 
 cat <<EOF | kubectl apply -f -
 apiVersion: cluster.k8s.io/v1alpha1
