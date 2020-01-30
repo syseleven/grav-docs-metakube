@@ -219,10 +219,9 @@ spec:
       name: restore-vault
     spec:
       restartPolicy: Never
-      serviceAccountName: syseleven-vault
       containers:
         - name: vault-restore
-          image: syseleven/metakube-s3-uploader:0.2.0
+          image: syseleven/metakube-s3-uploader:0.4.0
           envFrom:
             - secretRef:
                 name: cloud-config
@@ -233,10 +232,7 @@ spec:
             - /bin/bash
             - -c
             - |
-              create-credentials && restore-consul
-          imagePullPolicy: Always
-          terminationMessagePath: /dev/termination-log
-          terminationMessagePolicy: File
+              init-bucket && restore-consul
 EOF
 ```
 
