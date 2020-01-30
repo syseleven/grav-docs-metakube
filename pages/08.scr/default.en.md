@@ -14,7 +14,7 @@ body_classes: 'title-center title-h1h2'
 
 The following document explains in detail the architechture of [Harbor](https://goharbor.io/)
 
-![Harbor Architecture Overview](https://github.com/goharbor/harbor/wiki/Architecture-Overview-of-Harbor)
+[Harbor Architecture Overview](https://github.com/goharbor/harbor/wiki/Architecture-Overview-of-Harbor)
 
 ## User Guide
 
