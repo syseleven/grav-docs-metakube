@@ -228,6 +228,8 @@ spec:
           env:
             - name: CONSUL_HTTP_ADDR
               value: syseleven-consul-consul-server:8500
+            - name: BUCKET_PREFIX
+              value: metakube-consul-backup-
           command:
             - /bin/bash
             - -c
