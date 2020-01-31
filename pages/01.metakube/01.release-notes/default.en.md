@@ -9,6 +9,11 @@ page-toc:
 ---
 ### January 2020
 
+### 2020-01-31
+
+* For Kubernetes 1.16 clusters the [kubernetes-dashboard](../../03.addons/06.kubernetes-dashboard/default.en.md) has been updated to [2.0.0-rc3](https://github.com/kubernetes/dashboard/releases/tag/v2.0.0-rc3)
+* The Kubernetes Software Defined Network canal has been updated: [calico](https://www.projectcalico.org/) to [3.12.0](https://docs.projectcalico.org/release-notes/). This brings several bugfixes and network performance improvements.
+
 ### 2020-01-28
 
 * [Horizontal node autoscaling](../../04.tutorials/20.use-horizontal-node-autoscaling/default.en.md) is now configurable from the MetaKube dashboard.
