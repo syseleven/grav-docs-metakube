@@ -9,7 +9,7 @@ page-toc:
 ---
 ### February 2020
 
-## 2020-02-04
+#### 2020-02-04
 
 * Each cluster now runs [node-problem-detector](https://github.com/kubernetes/node-problem-detector) with
   a customization that sets an initial taint on each newly created node that will only be removed when
@@ -18,17 +18,17 @@ page-toc:
 
 ### January 2020
 
-### 2020-01-31
+#### 2020-01-31
 
 * For Kubernetes 1.16 clusters the [kubernetes-dashboard](../../03.addons/06.kubernetes-dashboard/default.en.md) has been updated to [2.0.0-rc3](https://github.com/kubernetes/dashboard/releases/tag/v2.0.0-rc3)
 * The Kubernetes Software Defined Network canal has been updated: [calico](https://www.projectcalico.org/) to [3.12.0](https://docs.projectcalico.org/release-notes/). This brings several bugfixes and network performance improvements.
 
-### 2020-01-28
+#### 2020-01-28
 
 * [Horizontal node autoscaling](../../04.tutorials/20.use-horizontal-node-autoscaling/default.en.md) is now configurable from the MetaKube dashboard.
 * In the Add-On [Cluster Monitoring Stack](../../03.addons/03.metakube-monitoring/default.en.md) Grafana has been updated to version [6.6.0](https://github.com/grafana/grafana/releases/tag/v6.6.0)
 
-### 2020-01-24
+#### 2020-01-24
 
 * Kubernetes versions 1.15.9, 1.16.6 and 1.17.2 are now available.
 * We limited the Docker max log size to 100mb per container.  
@@ -494,7 +494,7 @@ that assigns a default CPU and memory request to pods that do not define one exp
 
 ### August 2018
 
-### 2018-08-22
+#### 2018-08-22
 
 * Kubernetes version 1.11.1 and 1.11.2 are now available
 * Clusters now come with managed cross-region cluster backup solution, see [Backups](../../02.documentation/07.backups/default.en.md)
