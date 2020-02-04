@@ -7,14 +7,16 @@ taxonomy:
 page-toc:
     active: false
 ---
-### January 2020
+### February 2020
 
-### 2020-01-30
+## 2020-02-04
 
 * Each cluster now runs [node-problem-detector](https://github.com/kubernetes/node-problem-detector) with
   a customization that sets an initial taint on each newly created node that will only be removed when
   pod networking and dns are up and running on the node. This prevents pods, especially from Jobs or CronJobs,
   from being scheduled and started even though the node has no working DNS or network.
+
+### January 2020
 
 ### 2020-01-28
 
