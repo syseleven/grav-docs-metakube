@@ -9,6 +9,11 @@ page-toc:
 ---
 ### February 2020
 
+#### 2020-02-10
+
+* In the Add-On [Linkerd](../../03.addons/10.metakube-linkerd/default.en.md) Linkerd has been updated to version [2.7.0](https://github.com/linkerd/linkerd2/releases/tag/stable-2.7.0)
+* For Kubernetes >= 1.16 clusters the [kubernetes-dashboard](../../03.addons/06.kubernetes-dashboard/default.en.md) has been updated to [2.0.0-rc5](https://github.com/kubernetes/dashboard/releases/tag/v2.0.0-rc5)
+
 #### 2020-02-07
 
 * In the Add-On [Cluster Monitoring Stack](../../03.addons/03.metakube-monitoring/default.en.md) Grafana has been updated to version [6.6.1](https://github.com/grafana/grafana/releases/tag/v6.6.1)
