@@ -59,3 +59,17 @@ that's deployed into every cluster. That customization will add a node condition
 networking or DNS aren't functional. Additional logic in MetaKube tracks this condition and adds a taint `node.syseleven.de/not-ready:NoSchedule` to
 the node as long as the condition is not `True`. As a result, all nodes in MetaKube clusters will have a taint `node.syseleven.de/not-ready:NoSchedule`
 when they start up, which will be removed when we determine that the network and DNS on the node are really up and running.
+
+## Node, Service and Pod IP ranges
+
+By default when [creating a cluster](../../04.tutorials/02.create-a-cluster/default.en.md), MetaKube automatically configures Kubernetes to use a sensible internal IP range for Pod and Service IPs as well as an internal IP range for the worker nodes in the cloud provider's software-defined-network.
+
+The defaults are:
+
+- Node IPs: 192.168.1.0/24
+- Pod IPs: 172.25.0.0/16
+- Service IPs: 10.240.16.0/20
+
+In some situations, for example when connecting Kubernetes clusters from different regions, you may want to change this.
+
+Changing these defaults possible in the extended options of the cluster creation wizard.
