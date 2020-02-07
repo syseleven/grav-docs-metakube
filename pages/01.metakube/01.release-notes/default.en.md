@@ -9,6 +9,12 @@ page-toc:
 ---
 ### February 2020
 
+#### 2020-02-07
+
+* In the Add-On [Cluster Monitoring Stack](../../03.addons/03.metakube-monitoring/default.en.md) Grafana has been updated to version [6.6.1](https://github.com/grafana/grafana/releases/tag/v6.6.1)
+* In the Add-On [Linkerd](../../03.addons/10.metakube-linkerd/default.en.md) Flagger has been updated to version [0.23.0](https://github.com/weaveworks/flagger/releases/tag/0.23.0)
+* For Kubernetes >= 1.16 clusters the [kubernetes-dashboard](../../03.addons/06.kubernetes-dashboard/default.en.md) has been updated to [2.0.0-rc4](https://github.com/kubernetes/dashboard/releases/tag/v2.0.0-rc4)
+
 #### 2020-02-04
 
 * Each cluster now runs [node-problem-detector](https://github.com/kubernetes/node-problem-detector) with
@@ -20,7 +26,7 @@ page-toc:
 
 #### 2020-01-31
 
-* For Kubernetes 1.16 clusters the [kubernetes-dashboard](../../03.addons/06.kubernetes-dashboard/default.en.md) has been updated to [2.0.0-rc3](https://github.com/kubernetes/dashboard/releases/tag/v2.0.0-rc3)
+* For Kubernetes >= 1.16 clusters the [kubernetes-dashboard](../../03.addons/06.kubernetes-dashboard/default.en.md) has been updated to [2.0.0-rc3](https://github.com/kubernetes/dashboard/releases/tag/v2.0.0-rc3)
 * The Kubernetes Software Defined Network canal has been updated: [calico](https://www.projectcalico.org/) to [3.12.0](https://docs.projectcalico.org/release-notes/). This brings several bugfixes and network performance improvements.
 
 #### 2020-01-28
@@ -37,7 +43,7 @@ page-toc:
 
 * On clusters with CoreOS Container Linux nodes, the time window where nodes are rebooted after an update is now [configurable](../../02.documentation/04.supported-operating-systems/default.en.md)
 * The Add-On [Nginx Ingress Controller](../../03.addons/01.metakube-ingress/default.en.md) was updated to version [0.27.1](https://github.com/kubernetes/ingress-nginx/releases/tag/nginx-0.27.1)
-* For Kubernetes 1.16 clusters the [kubernetes-dashboard](../../03.addons/06.kubernetes-dashboard/default.en.md) has been updated to [2.0.0-rc2](https://github.com/kubernetes/dashboard/releases/tag/v2.0.0-rc2)
+* For Kubernetes >= 1.16 clusters the [kubernetes-dashboard](../../03.addons/06.kubernetes-dashboard/default.en.md) has been updated to [2.0.0-rc2](https://github.com/kubernetes/dashboard/releases/tag/v2.0.0-rc2)
 * In the Add-On [Linkerd](../../03.addons/10.metakube-linkerd/default.en.md) Flagger has been updated to version [0.22.0](https://github.com/weaveworks/flagger/releases/tag/0.22.0)
 
 #### 2020-01-10
@@ -71,7 +77,7 @@ page-toc:
 #### 2019-12-19
 
 * In the Add-On [Cluster Monitoring Stack](../../03.addons/03.metakube-monitoring/default.en.md) Grafana has been updated to version [6.5.2](https://github.com/grafana/grafana/releases/tag/v6.5.2)
-* For Kubernetes 1.16 clusters the [kubernetes-dashboard](../../03.addons/06.kubernetes-dashboard/default.en.md) has been updated to [2.0.0-beta8](https://github.com/kubernetes/dashboard/releases/tag/v2.0.0-beta8)
+* For Kubernetes >= 1.16 clusters the [kubernetes-dashboard](../../03.addons/06.kubernetes-dashboard/default.en.md) has been updated to [2.0.0-beta8](https://github.com/kubernetes/dashboard/releases/tag/v2.0.0-beta8)
 * In the Add-On [Cluster Monitoring Stack](../../03.addons/03.metakube-monitoring/default.en.md) alertmanager has been updated to version [0.20.0](https://github.com/prometheus/alertmanager/releases/tag/v0.20.0)
 
 #### 2019-12-17
@@ -84,7 +90,7 @@ page-toc:
 * In the Add-On [Cluster Monitoring Stack](../../03.addons/03.metakube-monitoring/default.en.md) Grafana has been updated to version [6.5.1](https://github.com/grafana/grafana/releases/tag/v6.5.1)
 * In the Add-On [Cluster Monitoring Stack](../../03.addons/03.metakube-monitoring/default.en.md) Prometheus has been updated to version [2.14.0](https://github.com/prometheus/prometheus/releases/tag/v2.14.0)
 * The [Calico](https://www.projectcalico.org/) CNI Plugin received an update to the version [3.10.1](https://docs.projectcalico.org/v3.10/release-notes/)
-* For Kubernetes 1.16 clusters the [kubernetes-dashboard](../../03.addons/06.kubernetes-dashboard/default.en.md) has been updated to [2.0.0-beta6](https://github.com/kubernetes/dashboard/releases/tag/v2.0.0-beta6)
+* For Kubernetes >= 1.16 clusters the [kubernetes-dashboard](../../03.addons/06.kubernetes-dashboard/default.en.md) has been updated to [2.0.0-beta6](https://github.com/kubernetes/dashboard/releases/tag/v2.0.0-beta6)
 * It is now possible to activate audit logging in a MetaKube cluster
 * AWS clusters can now have NodeDeployments in different availability zones of the chosen region
 * Labels can now be added to MetaKube projects and clusters. Nodes inherit these labels automatically
