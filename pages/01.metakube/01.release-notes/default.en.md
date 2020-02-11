@@ -9,6 +9,10 @@ page-toc:
 ---
 ### February 2020
 
+#### 2020-02-11
+
+* When creating a cluster you can now change the IP ranges for Pods, Services and Nodes
+
 #### 2020-02-07
 
 * In the Add-On [Cluster Monitoring Stack](../../03.addons/03.metakube-monitoring/default.en.md) Grafana has been updated to version [6.6.1](https://github.com/grafana/grafana/releases/tag/v6.6.1)
