@@ -9,6 +9,10 @@ page-toc:
 ---
 ### February 2020
 
+#### 2020-02-11
+
+* When creating a cluster you can now change the IP ranges for Pods, Services and Nodes
+
 #### 2020-02-10
 
 * In the Add-On [Linkerd](../../03.addons/10.metakube-linkerd/default.en.md) Linkerd has been updated to version [2.7.0](https://github.com/linkerd/linkerd2/releases/tag/stable-2.7.0)
