@@ -72,4 +72,4 @@ The defaults are:
 
 In some situations, for example when connecting Kubernetes clusters from different regions, you may want to change this.
 
-Changing these defaults possible in the extended options of the cluster creation wizard.
+Changing these defaults is possible in the extended options of the cluster creation wizard.
