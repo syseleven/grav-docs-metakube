@@ -9,6 +9,10 @@ page-toc:
 ---
 ### February 2020
 
+#### 2020-02-26
+
+* Kubernetes versions 1.15.10, 1.16.7 and 1.17.3 are now available.
+
 #### 2020-02-11
 
 * When creating a cluster you can now change the IP ranges for Pods, Services and Nodes
@@ -46,7 +50,7 @@ page-toc:
 #### 2020-01-24
 
 * Kubernetes versions 1.15.9, 1.16.6 and 1.17.2 are now available.
-* We limited the Docker max log size to 100mb per container.  
+* We limited the Docker max log size to 100mb per container.
 
 #### 2020-01-17
 
