@@ -24,3 +24,5 @@ You can use the external IP to ssh into the node using the SSH key you added as 
 ```bash
 ssh -i ~/.ssh/id_rsa ubuntu@123.123.123.1
 ```
+
+The default username depends on the used operating system, for a complete list see [Supported Operating Systems](../../02.documentation/04.supported-operating-systems/default.en.md).
