@@ -61,7 +61,7 @@ After all of the master components are ready, your cluster will create the confi
 ```bash
 $ kubectl get nodes
 NAME                          STATUS    ROLES     AGE       VERSION
-kubermatic-w9tk8cmw62-22wgv   Ready     <none>    1m        v1.9.6
-kubermatic-w9tk8cmw62-58pd6   Ready     <none>    1m        v1.9.6
-kubermatic-w9tk8cmw62-hm5vl   Ready     <none>    1m        v1.9.6
+metakube-w9tk8cmw62-22wgv     Ready     <none>    1m        v1.9.6
+metakube-w9tk8cmw62-58pd6     Ready     <none>    1m        v1.9.6
+metakube-w9tk8cmw62-hm5vl     Ready     <none>    1m        v1.9.6
 ```

@@ -29,9 +29,9 @@ Each cluster has a unique identifier. If you don't know your identifier, you can
 ```bash
 $ kubectl get nodes
 NAME                          STATUS    ROLES     AGE       VERSION
-kubermatic-vwj2q4slrk-jrwll   Ready     <none>    13d       v1.10.2
-kubermatic-vwj2q4slrk-s4j85   Ready     <none>    13d       v1.10.2
-kubermatic-vwj2q4slrk-z25vc   Ready     <none>    13d       v1.10.2
+metakube-vwj2q4slrk-jrwll     Ready     <none>    13d       v1.10.2
+metakube-vwj2q4slrk-s4j85     Ready     <none>    13d       v1.10.2
+metakube-vwj2q4slrk-z25vc     Ready     <none>    13d       v1.10.2
 ```
 
 In this example the cluster name is `vwj2q4slrk`.

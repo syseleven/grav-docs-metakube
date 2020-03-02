@@ -187,11 +187,11 @@ spec:
             floatingIpPool: ${FLOATING_IP_POOL}
             identityEndpoint: "https://api.${REGION}.cloud.syseleven.net:5000/v3"
             image: "${IMAGE_NAME}"
-            network: kubermatic-${CLUSTER_NAME}
+            network: metakube-${CLUSTER_NAME}
             password: ""
             region: ${REGION}
             securityGroups:
-            - kubermatic-${CLUSTER_NAME}
+            - metakube-${CLUSTER_NAME}
             tenantName: ""
             tokenId: ""
             username: ""
@@ -216,9 +216,9 @@ If you list all available machines, you can see that a few new machines have bee
 ```shell
 $ kubectl get machines --namespace kube-system
 NAME                                           AGE
-machine-kubermatic-fhgbvx65xg-7flj7            8d
-machine-kubermatic-fhgbvx65xg-hmgd4            8d
-machine-kubermatic-fhgbvx65xg-q287t            8d
+machine-metakube-fhgbvx65xg-7flj7              8d
+machine-metakube-fhgbvx65xg-hmgd4              8d
+machine-metakube-fhgbvx65xg-q287t              8d
 scalable-machine-deployment-5c4cbbc47b-62wsd   4m
 scalable-machine-deployment-5c4cbbc47b-zwrts   4m
 ```
@@ -235,9 +235,9 @@ After a few minutes, once the VMs are started and provisioned, new nodes will ap
 ```shell
 $ kubectl get nodes
 NAME                                           STATUS     ROLES    AGE     VERSION
-kubermatic-fhgbvx65xg-7flj7                    Ready      <none>   8d      v1.12.2
-kubermatic-fhgbvx65xg-hmgd4                    Ready      <none>   8d      v1.12.2
-kubermatic-fhgbvx65xg-q287t                    Ready      <none>   8d      v1.12.2
+metakube-fhgbvx65xg-7flj7                      Ready      <none>   8d      v1.12.2
+metakube-fhgbvx65xg-hmgd4                      Ready      <none>   8d      v1.12.2
+metakube-fhgbvx65xg-q287t                      Ready      <none>   8d      v1.12.2
 scalable-machine-deployment-5c4cbbc47b-62wsd   Ready      <none>   2m58s   v1.12.2
 scalable-machine-deployment-5c4cbbc47b-zwrts   Ready      <none>   2m30s   v1.12.2
 ```

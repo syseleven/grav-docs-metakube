@@ -80,12 +80,12 @@ metadata:
   annotations:
     machineDeployment.clusters.k8s.io/revision: "2"
   creationTimestamp: "2019-02-18T18:10:57Z"
-  generateName: kubermatic-92r62cx8j6-
+  generateName: metakube-92r62cx8j6-
   generation: 2
-  name: kubermatic-92r62cx8j6-xmljg
+  name: metakube-92r62cx8j6-xmljg
   namespace: kube-system
   resourceVersion: "4015"
-  selfLink: /apis/cluster.k8s.io/v1alpha1/namespaces/kube-system/machineDeployments/kubermatic-92r62cx8j6-xmljg
+  selfLink: /apis/cluster.k8s.io/v1alpha1/namespaces/kube-system/machineDeployments/metakube-92r62cx8j6-xmljg
   uid: 89e8b9f0-33a8-11e9-9e48-0a580af40383
 spec:
   minReadySeconds: 0
@@ -118,14 +118,14 @@ spec:
             floatingIpPool: ext-net
             identityEndpoint: https://api.dbl.cloud.syseleven.net:5000/v3
             image: Ubuntu Bionic 18.04 (2019-03-27)
-            network: kubermatic-92r62cx8j6
+            network: metakube-92r62cx8j6
             password: ""
             region: dbl
             securityGroups:
-            - kubermatic-92r62cx8j6
+            - metakube-92r62cx8j6
             subnet: 86db31c3-d5dd-4a88-bc92-ab8a148062c8
             tags:
-              kubermatic-cluster: 92r62cx8j6
+              metakube-cluster: 92r62cx8j6
             tenantName: ""
             tokenId: ""
             username: ""
