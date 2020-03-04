@@ -9,6 +9,12 @@ page-toc:
 ---
 ### February 2020
 
+#### 2020-03-05
+
+* In the Add-On [Cluster Monitoring Stack](../../03.addons/03.metakube-monitoring/default.en.md) Grafana has been updated to version [6.6.2](https://github.com/grafana/grafana/releases/tag/v6.6.2)
+* In the Add-On [Cluster Monitoring Stack](../../03.addons/03.metakube-monitoring/default.en.md) Prometheus has been updated to version [2.16.0](https://github.com/prometheus/prometheus/releases/tag/v2.16.0)
+* The Add-On [external-dns](../../03.addons/09.metakube-external-dns/default.en.md) has been updated to version [0.6.0](https://github.com/kubernetes-incubator/external-dns/releases/tag/v0.6.0)
+
 #### 2020-02-26
 
 * Kubernetes versions 1.15.10, 1.16.7 and 1.17.3 are now available.
