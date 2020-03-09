@@ -9,7 +9,7 @@ page-toc:
 ---
 ### February 2020
 
-#### 2020-03-05
+#### 2020-03-09
 
 * In the Add-On [Cluster Monitoring Stack](../../03.addons/03.metakube-monitoring/default.en.md) Grafana has been updated to version [6.6.2](https://github.com/grafana/grafana/releases/tag/v6.6.2)
 * In the Add-On [Cluster Monitoring Stack](../../03.addons/03.metakube-monitoring/default.en.md) Prometheus has been updated to version [2.16.0](https://github.com/prometheus/prometheus/releases/tag/v2.16.0)
