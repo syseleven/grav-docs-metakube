@@ -7,7 +7,11 @@ taxonomy:
 page-toc:
     active: false
 ---
-### February 2020
+### March 2020
+
+#### 2020-03-17
+
+* Kubernetes versions 1.15.11, 1.16.8 and 1.17.4 are now available.
 
 #### 2020-03-09
 
