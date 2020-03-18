@@ -15,6 +15,7 @@ page-toc:
 * The Add-On [Nginx Ingress Controller](../../03.addons/01.metakube-ingress/default.en.md) was updated to version [0.30.0](https://github.com/kubernetes/ingress-nginx/releases/tag/nginx-0.30.0)
 * The Add-On [velero](https://github.com/heptio/velero) has been updated to version [1.3.1](https://github.com/heptio/velero/releases/tag/v1.3.1)
 * The Kubernetes Software Defined Network canal has been updated: [calico](https://www.projectcalico.org/) to [3.13.0](https://docs.projectcalico.org/release-notes/). This brings several bugfixes and network performance improvements.
+* Kubernetes versions 1.15.11, 1.16.8 and 1.17.4 are now available.
 
 #### 2020-03-09
 
