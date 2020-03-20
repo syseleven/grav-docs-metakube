@@ -22,7 +22,7 @@ For more information see [Download a kubeconfig with a central admin token](../.
 
 You can authenticate against a cluster with a ServiceAccount token. This is especially useful for technical accounts like your CI system.
 
-For more information see [Role Based Access Control with ServiceAccounts](../../04.tutorials/23.using-service-accounts-with-rbac/default.en.md).
+For more information see [Role Based Access Control with ServiceAccounts](../../04.tutorials/24.using-service-accounts-with-rbac/default.en.md).
 
 ## Authentication with OpenID Connect over SysEleven Login (beta)
 
