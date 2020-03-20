@@ -57,6 +57,15 @@ When you authenticate at a cluster with OpenID Connect, you don't have any permi
 
 In order to give a user or a group of users permissions in the cluster, you have to authenticate with the [central admin token](../06.download-the-kubeconfig/default.en.md) and then add either a ClusterRoleBinding or a namespace bound RoleBinding that maps the user or group to a ClusterRole or Role which specifies the permission the user or group should have.
 
+### Via the MetaKube dashboard
+
+The easiest way to give permissions to a user is to use the builtin RBAC support in the MetaKube dashboard. At the cluster details page you can expand the RBAC section by clicking on it. There you can give view, edit or admin permissions to individual users. You can give the permissions for the whole cluster or limit it to a single namespace. (In the background these are translated to ClusterRoleBindings and RoleBindings.)
+For the e-mail address you always have to use the same address that the user has stored in SysEleven Login.
+
+### Manually
+
+If the default roles are not enough for your use case and you need more fine-grained control, you can manage the ClusterRoleBindings and RoleBindings manually. Remember, you need to use the same e-mail addresses as in SysEleven Login here as well. Using the simple webinterface and manually managed roles at the same time is also possible.
+
 The following ClusterRoleBinding example would map the cluster-admin ClusterRole to the user "user@xample.com" and all users in the SysEleven Login Group "kubernetes". The cluster-admin ClusterRole allows to perform all operations on all resources in the whole cluster.
 
 ```yaml
@@ -83,4 +92,4 @@ Kubernetes already provides some predefined ClusterRoles:
 * edit
 * cluster-admin
 
-You can of course also create your own ClusterRoles or Roles. For more information see [Using RBAC Authorization](https://kubernetes.io/docs/reference/access-authn-authz/rbac/).
+You can of course also create your own ClusterRoles or Roles. For more information see [Using RBAC Authorization](https://kubernetes.io/docs/reference/access-authn-authz/rbac/). If you manage a lot of roles manually, [rbac-manager](https://github.com/FairwindsOps/rbac-manager) can make it easier.
