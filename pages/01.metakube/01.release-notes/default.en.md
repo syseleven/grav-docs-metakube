@@ -9,6 +9,10 @@ page-toc:
 ---
 ### March 2020
 
+#### 2020-03-24
+
+* In the Add-On [Cluster Monitoring Stack](../../03.addons/03.metakube-monitoring/default.en.md) Grafana has been updated to version [6.7.1](https://github.com/grafana/grafana/releases/tag/v6.7.1)
+
 #### 2020-03-18
 
 * The Add-On [external-dns](../../03.addons/09.metakube-external-dns/default.en.md) has been updated to version [0.7.0](https://github.com/kubernetes-incubator/external-dns/releases/tag/v0.7.0)
