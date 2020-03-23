@@ -59,12 +59,12 @@ In order to give a user or a group of users permissions in the cluster, you have
 
 ### Via the MetaKube dashboard
 
-The easiest way to give permissions to a user is to use the builtin RBAC support in the MetaKube dashboard. At the cluster details page you can expand the RBAC section by clicking on it. There you can give view, edit or admin permissions to individual users. You can give the permissions for the whole cluster or limit it to a single namespace. (In the background these are translated to ClusterRoleBindings and RoleBindings.)
-For the e-mail address you always have to use the same address that the user has stored in SysEleven Login.
+The easiest way to give permissions to a user or group is to use the builtin RBAC support in the MetaKube dashboard. In the authorization tab of the cluster detail page, you can grant view, edit or admin permissions to individual users. You can grant these permissions for the whole cluster or limit it to a single namespace. In the background these are translated to ClusterRoleBindings and RoleBindings.
+For the e-mail address or group name you have to use the same information which is stored in SysEleven Login.
 
 ### Manually
 
-If the default roles are not enough for your use case and you need more fine-grained control, you can manage the ClusterRoleBindings and RoleBindings manually. Remember, you need to use the same e-mail addresses as in SysEleven Login here as well. Using the simple webinterface and manually managed roles at the same time is also possible.
+If the default roles are not enough for your use case and you need more fine-grained control, you can manage the ClusterRoleBindings and RoleBindings manually. Remember, you need to use the same e-mail addresses or group name as in SysEleven Login here as well. Using the simple web interface and manually managed roles at the same time is also possible.
 
 The following ClusterRoleBinding example would map the cluster-admin ClusterRole to the user "user@xample.com" and all users in the SysEleven Login Group "kubernetes". The cluster-admin ClusterRole allows to perform all operations on all resources in the whole cluster.
 
