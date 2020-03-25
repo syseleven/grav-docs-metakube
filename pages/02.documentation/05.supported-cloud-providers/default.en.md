@@ -140,3 +140,30 @@ Ensure that the user used to create clusters via MetaKube has (at least) the fol
 ```
 
 You can find more information on how to create and manage AWS IAM roles and access keys in the [AWS documentation](https://docs.aws.amazon.com/general/latest/gr/managing-aws-access-keys.html).
+
+## Microsoft Azure
+
+In order to create clusters with Azure, you need to sign up for Azure separately.
+
+Supported regions:
+
+* EU Netherlands
+
+If you have any questions about the Account or require different regions, please contact our [Support](../../05.support/default.en.md).
+
+When creating a cluster you have to provide valid SysEleven OpenStack credentials for the OpenStack tenant that you want to get the MetaKube fee billed to and your AWS IAM information. So that MetaKube can create and manage VMs, Networks, LoadBalancers and Volumes.
+
+### Creating App credentials
+
+In order to create a cluster, you need to provide the following information:
+
+* Client ID
+* Client Secret
+* Tenant ID
+* Subscript ID
+
+To get a Client ID, Client Secret and Tenant ID, you have to create an "App registration", in the "Azure Active Directory". For this go to "Azure Active Directory", "App registrations" and create a "New registration". You do not need to provide a Redirect URI. After the creation note download the "Application (client) ID" and "Directory (tenant) ID".
+Then for this "App registration" go to "Certificates & secrets" and create a new "Client secret", this secret should either not expire or you have to update it in your MetaKube cluster before it expires since Kubernetes needs this information continuously to manage volumes, nodes and load balancers.
+
+Next you have to give the new "App registration" permissions to manage the above resources. For this go to "Subscriptions", choose the subscription that you want to create your cluster in, take a note of the "Subscription ID" and then go to "Access control (IAM)" in your subscription.
+There add a new "Role assignment" between the role "Contributor" and the "Azure AD user, group or service principal" that you just created.
