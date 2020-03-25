@@ -9,6 +9,11 @@ page-toc:
 ---
 ### March 2020
 
+#### 2020-03-25
+
+* MetaKube now supports creating Kubernetes clusters on Azure regions westeurope, northeurope, francecentral, uksouth, ukwest, germanywestcentral, switzerlandnorth and norwayeast
+* You can now configure authentication at MetaKube clusters with [SysEleven Login](../../04.tutorials/06.external-authentication/default.en.md)
+
 #### 2020-03-24
 
 * In the Add-On [Cluster Monitoring Stack](../../03.addons/03.metakube-monitoring/default.en.md) Grafana has been updated to version [6.7.1](https://github.com/grafana/grafana/releases/tag/v6.7.1)
