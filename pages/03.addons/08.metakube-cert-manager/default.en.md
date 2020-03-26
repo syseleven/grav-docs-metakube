@@ -16,7 +16,7 @@ The Jetstack cert-manager allows to automatically create and extend SSL/TLS cert
 
 You can find more information on
 
-* the [cert-manager docs](https://docs.cert-manager.io/en/latest/)
+* the [cert-manager docs](https://docs.cert-manager.io/en/release-0.10/)
 * the [github repository](https://github.com/jetstack/cert-manager)
 * the [ingress controller tutorial](../../04.tutorials/15.create-an-ingress-controller/default.en.md)
 
