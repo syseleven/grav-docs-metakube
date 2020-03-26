@@ -148,6 +148,13 @@ In order to create clusters with Azure, you need to sign up for Azure separately
 Supported regions:
 
 * EU Netherlands
+* EU Ireland
+* EU France Central
+* EU UK South
+* EU UK West
+* EU Germany West
+* EU Switzerland North
+* EU Norway East
 
 If you have any questions about the Account or require different regions, please contact our [Support](../../05.support/default.en.md).
 
