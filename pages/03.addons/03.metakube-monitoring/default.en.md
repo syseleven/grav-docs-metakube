@@ -65,7 +65,7 @@ The following customization options are possible:
 | CPU Requests | How many milli CPUs should be reserved | 750m |
 | Memory Requests | How much memory should be reserved | 750Mi |
 | CPU Limits | What is the maximum of used milli CPUs | 1000m |
-| Memory Requests | What is the maximum of used memory | 1000Mi |
+| Memory Limits | What is the maximum of used memory | 1000Mi |
 
 ### Grafana Configuration Options
 
@@ -74,7 +74,7 @@ The following customization options are possible:
 | CPU Requests | How many milli CPUs should be reserved | 100m |
 | Memory Requests | How much memory should be reserved | 100Mi |
 | CPU Limits | What is the maximum of used milli CPUs | 200m |
-| Memory Requests | What is the maximum of used memory | 200Mi |
+| Memory Limits | What is the maximum of used memory | 200Mi |
 
 ### Alertmanager Configuration Options
 
@@ -84,7 +84,7 @@ The following customization options are possible:
 | CPU Requests | How many milli CPUs should be reserved | 100m |
 | Memory Requests | How much memory should be reserved | 100Mi |
 | CPU Limits | What is the maximum of used milli CPUs | 200m |
-| Memory Requests | What is the maximum of used memory | 200Mi |
+| Memory Limits | What is the maximum of used memory | 200Mi |
 | Config | Allows to configure where Alertmanager should send alerts | Default Configuration which sends no alerts |
 
 For more information on configuring Alertmanager rules see [Alertmanager Configuration](https://prometheus.io/docs/alerting/configuration/#configuration-file) or the examples below.
