@@ -14,7 +14,7 @@ The log management Add-On installs a [Loki](https://github.com/grafana/loki/blob
 
 Because of this the Monitoring Add-On is required to be installed before installing the Log Management Add-On.
 
-All logs provided via stdout or sterr by Pods in the cluster will be collected and stored for the configured retention time.
+All logs provided via stdout or stderr by Pods in the cluster will be collected and stored for the configured retention time.
 
 ![Grafana Loki Source](grafana_loki_source.png)
 
