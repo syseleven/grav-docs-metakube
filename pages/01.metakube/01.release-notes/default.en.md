@@ -9,6 +9,10 @@ page-toc:
 ---
 ### March 2020
 
+#### 2020-03-xx
+
+* New Add-on [Cluster Log Management](../../03.addons/12.metakube-logging/default.en.md) has been added to provide central log management with Loki and Grafana.
+
 #### 2020-03-25
 
 * MetaKube now supports creating Kubernetes clusters on Azure regions westeurope, northeurope, francecentral, uksouth, ukwest, germanywestcentral, switzerlandnorth and norwayeast
