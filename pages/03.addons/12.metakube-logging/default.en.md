@@ -10,7 +10,7 @@ taxonomy:
         - addon
 ---
 
-The log management Add-On installs a [Loki](https://github.com/grafana/loki/blob/master/docs/README.md) log management stack that integrates into the Grafana instace from the [Monitoring Add-On](../03.metakube-monitoring/default.en.md).
+The log management Add-On installs a [Loki](https://github.com/grafana/loki/blob/master/docs/README.md) log management stack that integrates into the Grafana instance from the [Monitoring Add-On](../03.metakube-monitoring/default.en.md).
 
 Because of this the Monitoring Add-On is required to be installed before installing the Log Management Add-On.
 
