@@ -46,7 +46,7 @@ The following customization options are possible:
 | ------ | ----------- | ------------- |
 | Retention Time | Amount of weeks the logs should be kept | 1 |
 | Persistent Storage | How large should the persistent data volume be | 10Gi |
-| Reject samples older | Log messages older then this value will never be stored | 168h |
+| Reject samples older | If Promtail sends messages older then this value they will be rejected by Loki | 168h |
 | CPU Requests | How many milli CPUs should be reserved | 500m |
 | Memory Requests | How much memory should be reserved | 750Mi |
 | CPU Limits | What is the maximum of used milli CPUs | 1000m |
