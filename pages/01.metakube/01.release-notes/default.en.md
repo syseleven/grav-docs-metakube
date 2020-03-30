@@ -9,6 +9,10 @@ page-toc:
 ---
 ### March 2020
 
+#### 2020-03-30
+
+* For Kubernetes >= 1.16 clusters the [kubernetes-dashboard](../../03.addons/06.kubernetes-dashboard/default.en.md) has been updated to [2.0.0-rc7](https://github.com/kubernetes/dashboard/releases/tag/v2.0.0-rc7)
+
 #### 2020-03-25
 
 * MetaKube now supports creating Kubernetes clusters on Azure regions westeurope, northeurope, francecentral, uksouth, ukwest, germanywestcentral, switzerlandnorth and norwayeast
