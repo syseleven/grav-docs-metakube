@@ -12,6 +12,7 @@ page-toc:
 #### 2020-03-30
 
 * For Kubernetes >= 1.16 clusters the [kubernetes-dashboard](../../03.addons/06.kubernetes-dashboard/default.en.md) has been updated to [2.0.0-rc7](https://github.com/kubernetes/dashboard/releases/tag/v2.0.0-rc7)
+* The Kubernetes Software Defined Network canal has been updated: [flannel](https://github.com/coreos/flannel) to [0.12.0](https://github.com/coreos/flannel/releases/tag/v0.12.0). This brings several bugfixes and network performance improvements.
 
 #### 2020-03-25
 
