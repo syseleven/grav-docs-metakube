@@ -7,6 +7,14 @@ taxonomy:
 page-toc:
     active: false
 ---
+
+### April 2020
+
+#### 2020-04-06
+
+* New Add-on [Cluster Log Management](../../03.addons/12.metakube-logging/default.en.md) has been added to provide central log management with Loki and Grafana.
+* In the Add-On [Cluster Monitoring Stack](../../03.addons/03.metakube-monitoring/default.en.md) Prometheus has been updated to version [2.17.1](https://github.com/prometheus/prometheus/releases/tag/v2.17.1)
+
 ### March 2020
 
 #### 2020-03-30
