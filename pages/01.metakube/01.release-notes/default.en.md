@@ -7,13 +7,39 @@ taxonomy:
 page-toc:
     active: false
 ---
-### February 2020
+### March 2020
+
+#### 2020-03-30
+
+* For Kubernetes >= 1.16 clusters the [kubernetes-dashboard](../../03.addons/06.kubernetes-dashboard/default.en.md) has been updated to [2.0.0-rc7](https://github.com/kubernetes/dashboard/releases/tag/v2.0.0-rc7)
+* The Kubernetes Software Defined Network canal has been updated: [flannel](https://github.com/coreos/flannel) to [0.12.0](https://github.com/coreos/flannel/releases/tag/v0.12.0). This brings several bugfixes and network performance improvements.
+
+#### 2020-03-25
+
+* MetaKube now supports creating Kubernetes clusters on Azure regions westeurope, northeurope, francecentral, uksouth, ukwest, germanywestcentral, switzerlandnorth and norwayeast
+* You can now configure authentication at MetaKube clusters with [SysEleven Login](../../04.tutorials/06.external-authentication/default.en.md)
+
+#### 2020-03-24
+
+* In the Add-On [Cluster Monitoring Stack](../../03.addons/03.metakube-monitoring/default.en.md) Grafana has been updated to version [6.7.1](https://github.com/grafana/grafana/releases/tag/v6.7.1)
+* For Kubernetes >= 1.16 clusters the [kubernetes-dashboard](../../03.addons/06.kubernetes-dashboard/default.en.md) has been updated to [2.0.0-rc6](https://github.com/kubernetes/dashboard/releases/tag/v2.0.0-rc6)
+* The Add-On [weave-scope](../../03.addons/05.weave-scope/default.en.md) has been updated to version [1.13.0](https://github.com/weaveworks/scope/releases/tag/1.13.0)
+
+#### 2020-03-18
+
+* The Add-On [external-dns](../../03.addons/09.metakube-external-dns/default.en.md) has been updated to version [0.7.0](https://github.com/kubernetes-incubator/external-dns/releases/tag/v0.7.0)
+* The Add-On [Nginx Ingress Controller](../../03.addons/01.metakube-ingress/default.en.md) was updated to version [0.30.0](https://github.com/kubernetes/ingress-nginx/releases/tag/nginx-0.30.0)
+* The Add-On [velero](https://github.com/heptio/velero) has been updated to version [1.3.1](https://github.com/heptio/velero/releases/tag/v1.3.1)
+* The Kubernetes Software Defined Network canal has been updated: [calico](https://www.projectcalico.org/) to [3.13.0](https://docs.projectcalico.org/release-notes/). This brings several bugfixes and network performance improvements.
+* Kubernetes versions 1.15.11, 1.16.8 and 1.17.4 are now available.
 
 #### 2020-03-09
 
 * In the Add-On [Cluster Monitoring Stack](../../03.addons/03.metakube-monitoring/default.en.md) Grafana has been updated to version [6.6.2](https://github.com/grafana/grafana/releases/tag/v6.6.2)
 * In the Add-On [Cluster Monitoring Stack](../../03.addons/03.metakube-monitoring/default.en.md) Prometheus has been updated to version [2.16.0](https://github.com/prometheus/prometheus/releases/tag/v2.16.0)
 * The Add-On [external-dns](../../03.addons/09.metakube-external-dns/default.en.md) has been updated to version [0.6.0](https://github.com/kubernetes-incubator/external-dns/releases/tag/v0.6.0)
+
+### February 2020
 
 #### 2020-02-26
 

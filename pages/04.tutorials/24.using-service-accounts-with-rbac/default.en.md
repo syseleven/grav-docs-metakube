@@ -11,7 +11,7 @@ taxonomy:
 
 By default a MetaKube cluster only comes with one admin token pre-configured to use. This admin token is included in the kubeconfig that you can [download](../06.download-the-kubeconfig/default.en.md) in the dashboard.
 
-This tutorial shows, how you can create ServiceAccounts with more limited access that you can use for a personalized access to the cluster.
+This tutorial shows, how you can create ServiceAccounts with more limited access that you can use for a personalized access to the cluster. This is especially useful for technical accounts like your CI system.
 
 ## Prerequisites
 

@@ -1,11 +1,13 @@
 ---
-title: 'Download the kubeconfig'
+title: 'Download the kubeconfig with a central admin token'
 published: true
 date: '18-07-2018 13:00'
 taxonomy:
     tag:
         - metakube
         - gui
+        - login
+        - authentication
 ---
 
 To download the kubeconfig, from clusters view select the correct cluster. On the top right you can find a button `Download config`:

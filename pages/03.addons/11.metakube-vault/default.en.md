@@ -33,7 +33,7 @@ The following customization options are possible for Vault:
 | CPU Requests | How many milli CPUs should be reserved | 100m |
 | Memory Requests | How much memory should be reserved | 128Mi |
 | CPU Limits | What is the maximum of used milli CPUs | 200m |
-| Memory Requests | What is the maximum of used memory | 512Mi |
+| Memory Limits | What is the maximum of used memory | 512Mi |
 
 The following customization options are possible for Consul:
 
@@ -42,7 +42,7 @@ The following customization options are possible for Consul:
 | CPU Requests | How many milli CPUs should be reserved | 100m |
 | Memory Requests | How much memory should be reserved | 128Mi |
 | CPU Limits | What is the maximum of used milli CPUs | 200m |
-| Memory Requests | What is the maximum of used memory | 512Mi |
+| Memory Limits | What is the maximum of used memory | 512Mi |
 | Storage size | How large should the persistent data volume be | 10Gi |
 
 ## Getting root token and unseal keys
