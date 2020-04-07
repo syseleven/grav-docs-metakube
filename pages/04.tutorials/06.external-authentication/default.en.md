@@ -29,6 +29,8 @@ SysEleven Admin User Login: `https://login.syseleven.de/auth/admin/{REALM-NAME}/
 
 SysEleven User Realm Login: `https://login.syseleven.de/auth/realm/{REALM-NAME}/account`
 
+SysEleven OpenID Realm Configuration `https://login.syseleven.de/auth/realms/{REALM-NAME}/.well-known/openid-configuration`
+
 ## Configure cluster authentication
 
 By default it is only possible to authenticate at a cluster with the [central admin token](../06.download-the-kubeconfig/default.en.md). In order to use SysEleven Login via OpenID Connect, you have to go the cluster detail page and activate it in the Auth tab.
