@@ -12,13 +12,13 @@ taxonomy:
 
 ## Overview
 
-You can configure any ingress object to use keycloak as auth backend. This can be a substitute for auth basic or any other frontend you want proteted by an auth mechanism.
+You can configure any ingress object to use keycloak as auth backend. This can be a substitute for auth basic or any other frontend you want protected by an auth mechanism.
 
 For this you need to deploy an **oauth-proxy** and configure your **ingress object(s)**.
 
 ## Prerequisites
 
-Before you can configure this you need to set a **client_id** (and get the **client_secret**) in your **keycloak realm**. You can find more about this in the [keycloak tutorial](../06.external-authentication/default.en.md)
+Before you can configure this you need a **client_id** (and the **client_secret**) from your **keycloak realm**. You can find more about this in the [keycloak tutorial](../06.external-authentication/default.en.md).
 
 ## Configure oauth-proxy
 
@@ -29,12 +29,12 @@ Before you can configure this you need to set a **client_id** (and get the **cli
 extraArgs:
   provider: keycloak
   provider-display-name: SysEleven Login
-  client-id: XXX # please fill in your client_id
-  client-secret: XXX # please fill in your client_secret
-  login-url: "https://login.syseleven.de/auth/realms/syseleven/protocol/openid-connect/auth"
-  redeem-url: "https://login.syseleven.de/auth/realms/syseleven/protocol/openid-connect/token"
-  validate-url: "https://login.syseleven.de/auth/realms/syseleven/protocol/openid-connect/userinfo"
-  keycloak-group: XXX # please fill in your group that shall have access to it
+  client-id: XXX # Change XXX to your client_id
+  client-secret: XXX # Change XXX to your client_secret
+  login-url: "https://login.syseleven.de/auth/realms/REAL_NAME/protocol/openid-connect/auth" # Change REALM_NAME to your realm
+  redeem-url: "https://login.syseleven.de/auth/realms/REALM_NAME/protocol/openid-connect/token" # Change REALM_NAME to your realm
+  validate-url: "https://login.syseleven.de/auth/realms/REAL_NAME/protocol/openid-connect/userinfo" # Change REALM_NAME to your realm
+  keycloak-group: XXX # Change XXX by your group that shall have access to it
 
 replicaCount: 2
 affinity:
@@ -53,23 +53,16 @@ resources:
     memory: 25Mi
 ```
 
-### Makefile
+### Deployment
 
 ```shell
 OAUTH_CHART_VERSION=2.4.1
-[...]
-test:
-    helm diff -C5 --allow-unreleased upgrade --namespace MYNAMESPACE -f values.yaml oauth2-proxy stable/oauth2-proxy --version ${OAUTH_CHART_VERSION}
-deploy:
-    helm upgrade -i --namespace MYNAMESPACE -f values.yaml oauth2-proxy stable/oauth2-proxy --version ${OAUTH_CHART_VERSION}
-```
 
-```shell
 # See what would be deployed
-make test
+helm diff -C5 --allow-unreleased upgrade --namespace MYNAMESPACE -f values.yaml oauth2-proxy stable/oauth2-proxy --version "${OAUTH_CHART_VERSION}"
 
-# Deploy
-make deploy
+# Deploy oauth-proxy
+helm upgrade -i --namespace MYNAMESPACE -f values.yaml oauth2-proxy stable/oauth2-proxy --version "${OAUTH_CHART_VERSION}"
 ```
 
 ## Configure ingress
@@ -115,7 +108,7 @@ apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: oauth2-proxy
-  namespace: monitoring
+  namespace: MYNAMESPACE
   annotations:
     certmanager.k8s.io/cluster-issuer: designate-clusterissuer-prod
     kubernetes.io/ingress.class: nginx
