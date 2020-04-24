@@ -127,6 +127,7 @@ Ensure that the user used to create clusters via MetaKube has (at least) the fol
                 "iam:CreateRole",
                 "iam:DeleteRole",
                 "iam:AttachRolePolicy",
+                "iam:PutRolePolicy",
                 "iam:CreateServiceLinkedRole"
             ],
             "Resource": [
