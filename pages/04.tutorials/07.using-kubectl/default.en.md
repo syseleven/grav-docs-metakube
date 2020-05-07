@@ -28,7 +28,7 @@ If you regularly use different kubeconfig files, switching them manually can bec
 
 When configured, you can use `kubectx mycontext` to switch to a different context. By default, each kubeconfig file defines its own context - For more info on contexts, see the [documentation about contexts](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/#context).
 
-To achive this:
+To achieve this:
 
 * [Install kubectx](https://github.com/ahmetb/kubectx#installation) for your operating system
 * Create the directory `~/.kube/configs`
