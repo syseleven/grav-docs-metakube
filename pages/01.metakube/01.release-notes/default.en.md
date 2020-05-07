@@ -8,6 +8,17 @@ page-toc:
     active: false
 ---
 
+
+### May 2020
+
+#### 2020-05-06
+
+* Changes of the SSH-keys do not require a rebuild of existing nodes anymore, instead they are updated in realtime.
+* The MetaKube dashboard offers an easy way to manage user/group [permissions](../../04.tutorials/06.external-authentication/default.en.md).
+* MetaKube supports additional Azure regions in the US and Canada.
+* For new OpenStack clusters MetaKube uses the external cloud controller manager and CSI.
+
+
 ### April 2020
 
 #### 2020-04-06
