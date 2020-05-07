@@ -15,6 +15,10 @@ taxonomy:
 
 This tutorial describes how you can activate authentication on your cluster with SysEleven Login (powered by [KeyCloak](https://www.keycloak.org)) and how to connect it to an external user management system.
 
+## Create a SysEleven Login realm
+
+To get access to a SysEleven Login realm, please contact us at support@syseleven.de. We will then provision a realm for you and provide you with admin credentials to configure it.
+
 ## Configure SysEleven Login realm
 
 SysEleven Login allows you to manager users and groups that should have access to SysEleven services as well as your Kubernetes clusters yourself. You can also set up user federation to external identity providers like LDAP, Active Directory or any OpenID Connect provider. For that you are provided with your own realm that only contains your users and settings.
