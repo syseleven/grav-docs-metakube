@@ -11,6 +11,10 @@ page-toc:
 
 ### May 2020
 
+#### 2020-05-10
+
+* etcd is updated to 3.4.7
+
 #### 2020-05-06
 
 * Changes of the SSH-keys do not require a rebuild of existing nodes anymore, instead they are updated in realtime.
