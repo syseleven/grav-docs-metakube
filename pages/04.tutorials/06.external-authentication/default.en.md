@@ -31,7 +31,7 @@ You can find a detailed documentation on managing users, groups, user federation
 
 SysEleven Admin User Login: `https://login.syseleven.de/auth/admin/{REALM-NAME}/console`
 
-SysEleven User Realm Login: `https://login.syseleven.de/auth/realm/{REALM-NAME}/account`
+SysEleven User Realm Login: `https://login.syseleven.de/auth/realms/{REALM-NAME}/account`
 
 SysEleven OpenID Realm Configuration `https://login.syseleven.de/auth/realms/{REALM-NAME}/.well-known/openid-configuration`
 
