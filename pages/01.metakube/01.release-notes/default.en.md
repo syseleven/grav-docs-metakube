@@ -7,7 +7,12 @@ taxonomy:
 page-toc:
     active: false
 ---
+### June 2020
 
+#### 2020-06-09
+
+* Kubernetes versions 1.15.12, 1.16.10 and 1.17.6 are now available.
+* We replaced the current CoreOS image with the new Flatcar image. CoreOS will not be further maintained by Redhat. The new Flatcar image is a friendly fork of CoreOS Container Linux and as such, compatible with it.
 
 ### May 2020
 
@@ -21,7 +26,6 @@ page-toc:
 * The MetaKube dashboard offers an easy way to manage user/group [permissions](../../04.tutorials/06.external-authentication/default.en.md).
 * MetaKube supports additional Azure regions in the US and Canada.
 * For new OpenStack clusters MetaKube uses the external cloud controller manager and CSI.
-
 
 ### April 2020
 
