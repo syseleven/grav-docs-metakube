@@ -8,12 +8,13 @@ page-toc:
     active: false
 ---
 
+### June 2020
 
-### May 2020
+* Kubernetes versions 1.15.12, 1.16.10 and 1.17.6 are now available.
+* We replaced the current CoreOS image with the new Flatcar image. CoreOS will not be further maintained by Redhat. The new Flatcar image is a friendly fork of CoreOS Container Linux and as such, compatible with it.
 
-#### 2020-05-10
 
-* etcd is updated to 3.4.7
+#### 2020-06-09
 
 #### 2020-05-06
 
