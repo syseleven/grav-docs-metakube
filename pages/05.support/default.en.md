@@ -31,4 +31,4 @@ You can open tickets directly on the web-frontend if you already have an account
 
 ## Newsletter
 
-To subscribe to our MetaKube Newsletter, go to [this page](http://mailings.syseleven.de/f/114065-190267/).
+To subscribe to our MetaKube Newsletter, go to [this page](https://www.syseleven.de/newsletter).
