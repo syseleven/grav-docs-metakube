@@ -120,6 +120,20 @@ We will create a test file on the deployment pod and see that we can access and 
 
 (Your pod names will be different because the suffix is automatically generated.)
 
+You can see that your pods are all being spawned on the same compute node:
+
+```shell
+$ kubectl get pod,job -o wide
+NAME                               READY   STATUS    RESTARTS   AGE   IP            NODE                                     NOMINATED NODE   READINESS GATES
+pod/test-client-859c9f78dc-5tddj   1/1     Running   0          40s   172.25.1.50   metakube-worker-vwkkx-57d85bfc67-s8l5b   <none>           <none>
+pod/test1-cfd4v                    1/1     Running   0          19s   172.25.1.54   metakube-worker-vwkkx-57d85bfc67-s8l5b   <none>           <none>
+pod/test2-846w5                    1/1     Running   0          12s   172.25.1.55   metakube-worker-vwkkx-57d85bfc67-s8l5b   <none>           <none>
+
+NAME              COMPLETIONS   DURATION   AGE   CONTAINERS         IMAGES         SELECTOR
+job.batch/test1   0/1           19s        19s   test-client-cron   ubuntu         controller-uid=ce570829-5066-4a53-8de0-4f272190b667
+job.batch/test2   0/1           12s        12s   test-client-cron   ubuntu         controller-uid=80bd4789-2314-4ff0-8a50-b568e060858b
+```
+
 #### Create a test file on deployment pod
 
 ```shell
