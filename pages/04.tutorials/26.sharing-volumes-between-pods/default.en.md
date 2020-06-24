@@ -125,14 +125,13 @@ We will create a test file on the deployment pod and see that we can access and 
 ```shell
 $ kubectl exec -it test-client-859c9f78dc-5tddj -- touch /mnt/ThisIsNew
 ```
- 
+
 #### Check if test1-job pod can see the test file
 
 ```shell
 $ kubectl exec -it test1-cfd4v -- ls -la /mnt/ThisIsNew
 -rw-r--r-- 1 root root 0 Jun 24 13:14 /mnt/ThisIsNew
 ```
- 
 
 #### Delete the test file via test2-job pod
 
