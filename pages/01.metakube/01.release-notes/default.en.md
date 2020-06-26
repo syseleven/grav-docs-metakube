@@ -9,6 +9,10 @@ page-toc:
 ---
 ### June 2020
 
+#### 2020-06-29
+
+* [CoreDNS](https://coredns.io/) has been updated to version [1.7.0](https://coredns.io/2020/06/15/coredns-1.7.0-release/)
+
 #### 2020-06-09
 
 * Kubernetes versions 1.15.12, 1.16.10 and 1.17.6 are now available.
