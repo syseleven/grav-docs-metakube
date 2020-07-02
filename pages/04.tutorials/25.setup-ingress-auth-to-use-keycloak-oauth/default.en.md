@@ -31,9 +31,9 @@ extraArgs:
   provider-display-name: SysEleven Login
   client-id: XXX # Change XXX to your client_id
   client-secret: XXX # Change XXX to your client_secret
-  login-url: "https://login.syseleven.de/auth/realms/REAL_NAME/protocol/openid-connect/auth" # Change REALM_NAME to your realm
+  login-url: "https://login.syseleven.de/auth/realms/REALM_NAME/protocol/openid-connect/auth" # Change REALM_NAME to your realm
   redeem-url: "https://login.syseleven.de/auth/realms/REALM_NAME/protocol/openid-connect/token" # Change REALM_NAME to your realm
-  validate-url: "https://login.syseleven.de/auth/realms/REAL_NAME/protocol/openid-connect/userinfo" # Change REALM_NAME to your realm
+  validate-url: "https://login.syseleven.de/auth/realms/REALM_NAME/protocol/openid-connect/userinfo" # Change REALM_NAME to your realm
   keycloak-group: XXX # Change XXX by your group that shall have access to it
 
 replicaCount: 2
