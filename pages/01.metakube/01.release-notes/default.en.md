@@ -7,6 +7,14 @@ taxonomy:
 page-toc:
     active: false
 ---
+### July 2020
+
+#### 2020-07-13
+
+* We updated MetaKube to 2.14. Which includes many new features and UI improvments. This release includes full support for FlatcarOS our replacement for CoreOS which is EOL. You can also change the UI theme to a dark or light theme.
+* We also added a new feature to download the cluster usage data of your running clusters in JSON or CSV format. To ensure that you are always aware of your current usage.
+* We now add a soft affinity policy to all clusters in openstack. This will help to ensure that your worker VM's are distributed between multiple compute nodes in openstack. We also add a label with the host id of the compute node to every worker. This allows you to check if the soft affinity policy is working as expected.
+
 ### June 2020
 
 #### 2020-06-29
