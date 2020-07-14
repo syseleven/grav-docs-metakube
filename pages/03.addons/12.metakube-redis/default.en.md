@@ -28,7 +28,7 @@ The following customization options are possible for Vault:
 
 | Option | Description | Default value |
 | ------ | ----------- | ------------- |
-| High availability | Provides a redis cluster in more that one instance | false |
+| High availability | Provides a redis cluster with more than one instance | false |
 | CPU Requests | How many milli CPUs should be reserved | 100m |
 | Memory Requests | How much memory should be reserved | 128Mi |
 | CPU Limits | What is the maximum of used milli CPUs | 200m |
@@ -44,8 +44,8 @@ If `High Availability` is set to `true`, a cluster with 3 Redis instances is pro
 ## Add-on specification
 
 If redis has high-availability set to `true`, communication with the database is provided via [ha-proxy](https://www.haproxy.org/),
-it enhances communication speed from outside the cluster. A redis [sentinel](https://redis.io/topics/sentinel) is also provided for high-availability purposes.
+it enhances communication speed from outside the redis cluster. A redis [sentinel](https://redis.io/topics/sentinel) is also provided for high-availability purposes.
 
 
-The redis service is provided only within the cluster by default with the service names `syseleven-redis-redis-ha.syseleven-redis`
+The redis service is provided only within the cluster by default with the service name `syseleven-redis-redis-ha.syseleven-redis`
 if High Availability is off; and`syseleven-redis-redis-ha-haproxy.syseleven-redis` if High Availability is on.
