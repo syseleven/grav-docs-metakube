@@ -34,7 +34,7 @@ The following customization options are possible for Vault:
 | CPU Limits | What is the maximum of used milli CPUs | 200m |
 | Memory Limits | What is the maximum of used memory by the pod | 512Mi |
 | Disk Size | What is the size of the Persistent Volume provided to Redis | 10Gi |
-| Redis Max Memory | What is the maximum amount of Memory allocated by Redis | 512Mi | 
+| Redis Max Memory | What is the maximum amount of Memory allocated by Redis | 512Mi |
 
 It is recommended to set `Memory Limits` and `Disk Size` to an amount 20% higher
 than your intended `Redis Memory Size`.
@@ -47,4 +47,5 @@ If redis has high-availability set to `true`, communication with the database is
 it enhances communication speed from outside the cluster. A redis [sentinel](https://redis.io/topics/sentinel) is also provided for high-availability purposes.
 
 
-The redis service is provided only within the cluster by default with the service names `syseleven-redis-redis-ha.syseleven-redis` if High Availability is off; and`syseleven-redis-redis-ha-haproxy.syseleven-redis` if High Availability is on.
+The redis service is provided only within the cluster by default with the service names `syseleven-redis-redis-ha.syseleven-redis`
+if High Availability is off; and`syseleven-redis-redis-ha-haproxy.syseleven-redis` if High Availability is on.
