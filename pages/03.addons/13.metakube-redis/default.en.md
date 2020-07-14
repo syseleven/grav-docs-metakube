@@ -46,6 +46,5 @@ If `High Availability` is set to `true`, a cluster with 3 Redis instances is pro
 If redis has high-availability set to `true`, communication with the database is provided via [ha-proxy](https://www.haproxy.org/),
 it enhances communication speed from outside the redis cluster. A redis [sentinel](https://redis.io/topics/sentinel) is also provided for high-availability purposes.
 
-
 The redis service is provided only within the cluster by default with the service name `syseleven-redis-redis-ha.syseleven-redis`
-if High Availability is off; and`syseleven-redis-redis-ha-haproxy.syseleven-redis` if High Availability is on.
+if High Availability is off; and `syseleven-redis-redis-ha-haproxy.syseleven-redis` if High Availability is on.
