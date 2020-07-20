@@ -20,14 +20,15 @@ For more information on supported images and how to upload your own see the [Sys
 | ---------------- | ------------ |
 | Ubuntu Bionic 18.04 | ubuntu |
 | CoreOS stable | core |
+| Flatcar stable | core |
 
 ## Timezone
 
 The timezone on all provided images is UTC. If you want to set a different timezone you have to use your own image, though using UTC is generally recommended to not run into problems with daylight saving times.
 
-## CoreOS
+## CoreOS / Flatcar
 
-On CoreOS Container Linux updates are applied automatically (though this can be disabled when creating a NodeDeployment). For more information see [CoreOS Update Philosophy](https://coreos.com/why/#updates).
+On CoreOS Container Linux and Flatcat updates are applied automatically (though this can be disabled when creating a NodeDeployment). For more information see [CoreOS Update Philosophy](https://coreos.com/why/#updates).
 
 If an update requires a reboot of the node, MetaKube will drain the node and reboot it after all Pods have been rescheduled. It is also ensured that only one node is rebooted at a time. By default this can happen at any point in time. Optionally you can configure a time window where these reboots occur.
 
