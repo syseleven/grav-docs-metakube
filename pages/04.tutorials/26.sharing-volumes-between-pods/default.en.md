@@ -160,7 +160,9 @@ $ kubectl exec -it test-client-859c9f78dc-5tddj -- ls -la /mnt/ThisIsNew
 ls: cannot access '/mnt/ThisIsNew': No such file or directory
 ```
 
-#### Delete demo
+## Clean up
+
+Delete all created resources.
 
 ```shell
 $ kubectl delete -f deployment.yaml
