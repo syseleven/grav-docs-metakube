@@ -67,7 +67,7 @@ helm upgrade -i --namespace MYNAMESPACE -f values.yaml oauth2-proxy stable/oauth
 
 ## Configure ingress
 
-Setup the original ingress object to use **nginx.ingress.kubernetes.io/auth*** to point to the */oauth2* path. This path needs to be defined in a seperate ingress object (because this one does not have auth configured for itself).
+Setup the original ingress object to use **nginx.ingress.kubernetes.io/auth** to point to the */oauth2* path. This path needs to be defined in a seperate ingress object (because this one does not have auth configured for itself).
 
 The second ingress objects defines the */oauth2* path under the same domain and points to the oauth2-proxy deployed aboved.
 
