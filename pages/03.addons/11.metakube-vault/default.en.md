@@ -47,7 +47,7 @@ The following customization options are possible for Consul:
 
 ## Getting root token and unseal keys
 
-After the installation of the Add-On you can retrive the Vault root token and unseal keys with our secret sharing service `secrets.syseleven.de`. You recieve a one-time link to fetch them with:
+After the installation of the Add-On you can retrieve the Vault root token and unseal keys with our secret sharing service `secrets.syseleven.de`. You recieve a one-time link to fetch them with:
 
 ```bash
 kubectl get secret -n syseleven-vault initial-keys -o "jsonpath={.data.link}" | base64 --decode
