@@ -9,6 +9,10 @@ page-toc:
 ---
 ### July 2020
 
+#### 2020-07-14
+
+* New Add-on [Redis](../../03.addons/13.metakube-redis/default.en.md) has been added to provide redis key-value storage.
+
 #### 2020-07-13
 
 * We updated MetaKube to 2.14. Which includes many new features and UI improvments. This release includes full support for FlatcarOS our replacement for CoreOS which is EOL. You can also change the UI theme to a dark or light theme.
