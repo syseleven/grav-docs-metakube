@@ -11,7 +11,7 @@ page-toc:
 
 #### 2020-07-14
 
-* New Add-on [Redis](../../03.addons/13.metakube-redis/default.en.md) has been added to provide redis key-value storage.
+* New Add-on [Redis](../../03.addons/14.metakube-redis/default.en.md) has been added to provide redis key-value storage.
 
 #### 2020-07-13
 
