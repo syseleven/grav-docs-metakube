@@ -12,7 +12,7 @@ body_classes: 'title-center title-h1h2'
 
 ## Architectural Overview
 
-The following document explains in detail the architechture of [Harbor](https://goharbor.io/)
+The following document explains the architechture of [Harbor](https://goharbor.io/) in detail.
 
 [Harbor Architecture Overview](https://github.com/goharbor/harbor/wiki/Architecture-Overview-of-Harbor)
 
@@ -43,7 +43,7 @@ This section describes how to work with images and tags in the SysEleven Contain
 
 SCR provides static analysis of vulnerabilities in images through the open source project [Trivy](https://github.com/aquasecurity/trivy).
 
-You can manually initiate scanning on a particular image, or on all images in SCR. Additionally, you can also set a policy to automatically scan all of the images at specific intervals.
+You can manually initiate scanning on a particular image, or you can configure a project to scan all images when pushing to the registry.
 
 - [Vulnerability Scanning with Trivy](https://goharbor.io/docs/2.0.0/administration/vulnerability-scanning/)
 - [Configuring CVE whitelists](https://goharbor.io/docs/2.0.0/working-with-projects/project-configuration/configure-project-whitelist/)
