@@ -5,6 +5,8 @@ page-toc:
 body_classes: 'title-center title-h1h2'
 ---
 
+! This project is still in beta. Please contact us if you want to get early access. Feel free to give us feedback if you experience any kind of issue.
+
 [SysEleven Container Registry (SCR)](https://scr.syseleven.de) is the managed registry for container images and Helm charts from [SysEleven](https://www.syseleven.de).
 
 [SCR](https://scr.syseleven.de) is based on the [Cloud Native Computing Foundation](https://cncf.io) incubated, open source project [Harbor](https://goharbor.io/)
