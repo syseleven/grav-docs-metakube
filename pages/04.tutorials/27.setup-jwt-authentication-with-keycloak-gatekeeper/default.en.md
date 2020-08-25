@@ -170,7 +170,7 @@ curl $CURL_OPTS -X POST \
   -d 'grant_type=password'  \
   -d "client_id=$CLIENT_ID"   \
   -d "client_secret=$CLIENT_SECRET"  \
-  "https://login-stage.syseleven.de/auth/realms/YOUR_REALM/protocol/openid-connect/token" | jq .
+  "https://login.syseleven.de/auth/realms/YOUR_REALM/protocol/openid-connect/token" | jq .
 ```
 
 The response will be in the following format:
