@@ -5,14 +5,17 @@ taxonomy:
     tag:
         - kubernetes
         - Keycloak
+        - Keycloak-gatekeeper
         - JWT
 ---
 
 ## Overview
 
-For applications that are API-only, setting up authentication with JWT tokens is a reasonable choice,
-as OpenID connect can not only offer token-based authentication, but alse finer grained authorization
-policies if you need.
+For applications that are API-only, setting up authentication with JWT tokens is a reasonable choice, as
+the standard OpenID authentication flow might not be available for exemple CLI applications, for example.
+
+Also, if you're using `nginx-ingress` controller, this tutorial can provide an alternative
+method to add keycloak authentication since it is not supported out of the box.
 
 For this you need to deploy an **keycloak-gatekeeper sidecar** and configure your **deployment object(s)**.
 
@@ -27,8 +30,8 @@ Then, you need another pair of **client_id** and **client_secret** to be used by
 This one will have the following differences from the first one when adding the Client:
 
 - **client_id** here can be anything, like `my_client_app`
-- On **Advanced settings** it is advisable to increase the **Access token lifespan**,
-  if your API is called frequently
+- On **Advanced settings** it is advisable to increase the **Access token lifespan** from 10-30 minutes,
+  so that you don't need to issue a new token as frequently.
 - At **Authentication flow overrides** set **Browser flow** to `Browser` and **Direct Grant Flow** `Direct grant`
 
 Recent keycloak versions no longer adds the **client_id** to the audience field `aud` in the **access token**. That said we need create and configure a [Client Scope](https://www.keycloak.org/docs/latest/server_admin/#_client_scopes):
@@ -41,7 +44,7 @@ Recent keycloak versions no longer adds the **client_id** to the audience field 
 3. Go back to the **Clients** menu on the sidebar then to do the following for both clients you created at the **Client Scopes** tab in their settings page:
     - Add the **Client scope** you created (`api`) to the assigned default client scopes.
 
-Finally, you'll need to add an user to be used by your API's client applications.
+Finally, you'll need to add an user into the same realm as the clients are be used by your API's client applications.
 
 ## Configuring gatekeeper to proxy requests to your application
 
@@ -144,4 +147,57 @@ spec:
   selector:
     app: myservice
   type: ClusterIP
+```
+
+## How to access the protected URIs
+
+In order to authenticate against an application proxied by **keycloak-gatekeeper**,
+only two steps are needed:
+
+1. Retrieve the token
+2. Use it as `Authorization` header on requests
+
+### Authenticating - Retrieving your token
+
+To acquire your token you need to call **Keycloak API**,
+which can be done as the example below:
+
+```bash
+curl $CURL_OPTS -X POST \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -d "username=$YOUR_USERNAME" \
+  -d "password=$PASSWORD"   \
+  -d 'grant_type=password'  \
+  -d "client_id=$CLIENT_ID"   \
+  -d "client_secret=$CLIENT_SECRET"  \
+  "https://login-stage.syseleven.de/auth/realms/YOUR_REALM/protocol/openid-connect/token" | jq .
+```
+
+The response will be in the following format:
+
+```json
+{
+  "access_token": "eyJhbGci...",
+  "expires_in": 28800,
+  "refresh_expires_in": 1800,
+  "refresh_token": "eyUqi...",
+  "token_type": "bearer",
+  "not-before-policy": 0,
+  "session_state": "5ad82043-7c15-4497-bf80-2428a270eebb",
+  "scope": "api profile email"
+}
+```
+
+Notice the scope `api` is included. Get the `"access_token"`, it will be used
+as an Authentication header to access your application.
+
+### Accessing the protected URL
+
+Now that you have the token, you need to included it in the `Authorization` header,
+as the example shows:
+
+```bash
+curl https://yourapp.net/api \
+    -H 'Content-Type: application/json' \
+    -H 'Authorization: Bearer eyJhbGc...'
 ```
