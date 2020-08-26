@@ -11,7 +11,7 @@ taxonomy:
 
 ## Overview
 
-You can configure the Nginx Ingress controller in various ways. To use the Openstack load balancer Octavia with ssl offloading you will need to configure the ingress controller with the proxy protocol. The alternative would be to use the Openstack service barbican to store your ssl certificate. Which is currently not directly supported by Kubernetes.
+You can configure the nginx ingress controller in various ways. To use the Openstack load balancer Octavia with ssl offloading you will need to configure the ingress controller with the proxy protocol. The alternative would be to use the Openstack service barbican to store your ssl certificate. Which is currently not directly supported by Kubernetes.
 
 
 ## Configure the nginx ingress controller via the helm values.yaml file
@@ -76,7 +76,7 @@ controller:
     type: LoadBalancer
 ```
 
-This will deploy three replicas of the nginx ingress controller with autoscaling enabled. You will recieve an external IP address via the openstack load balancer. This uses the service type load balancer in Kubernetes. The service will include additional annotations for the proxy protocol. Which will ensure that the original client IP address is inserted into the HTTP header. So that the backend service is able to get the real source IP of the request. Please check the version of the nginx ingress contoller that you are deploying. The version in the example maybe outdated.
+This will deploy three replicas of the nginx ingress controller with autoscaling enabled. You will recieve an external IP address via the openstack load balancer Octavia. This uses the service type load balancer in Kubernetes. The service will include additional annotations for the proxy protocol. Which will ensure that the original client IP address is inserted into the HTTP header. So that the backend service is able to get the real source IP of the request. Please check the version of the nginx ingress contoller that you are deploying. The version in this example maybe outdated.
 
 ### Deployment
 
