@@ -98,7 +98,7 @@ The example below configures the nginx ingress controller after the first update
 ```yaml
   service:
     enabled: true
-    loadBalancerIP: "195.192.130.193"
+    loadBalancerIP: "198.51.100.10"
 
     annotations:
       loadbalancer.openstack.org/keep-floatingip: true
