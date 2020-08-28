@@ -41,15 +41,6 @@ This section describes how to work with images and tags in the SysEleven Contain
 - [Re-Tagging images](https://goharbor.io/docs/2.0.0/working-with-projects/working-with-images/retagging-images/)
 - [Working with tag retention rules](https://goharbor.io/docs/2.0.0/working-with-projects/working-with-images/create-tag-retention-rules/)
 
-### Vulnerability Scanning
-
-SCR provides static analysis of vulnerabilities in images through the open source project [Trivy](https://github.com/aquasecurity/trivy).
-
-You can manually initiate scanning on a particular image, or you can configure a project to scan all images when pushing to the registry.
-
-- [Vulnerability Scanning with Trivy](https://goharbor.io/docs/2.0.0/administration/vulnerability-scanning/)
-- [Configuring CVE whitelists](https://goharbor.io/docs/2.0.0/working-with-projects/project-configuration/configure-project-whitelist/)
-
 ### Working with Helm charts
 
 Helm is a package manager for kubernetes applications. SysEleven Container Registry comes with built in support for helm repositories.
