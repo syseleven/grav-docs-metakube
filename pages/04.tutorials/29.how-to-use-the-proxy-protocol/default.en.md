@@ -17,23 +17,59 @@ The proxy protocol is an industry standard to pass client connection information
 
 ## Configuring nginx to use the proxy protocol
 
-There are multiple webservers and ways of configuring the proxy protocol. We also provide a tutorial on how to do this with the nginx ingress controller here [Setup and nginx ingress controller with the proxy protocol](../27.setup-an-nginx-ingress-controller-with-the-proxy-protocol/default.en.md). This tutorial will show you how to configure the proxy protocol with nginx. For further information please refer to [Accepting the proxy protocol](https://docs.nginx.com/nginx/admin-guide/load-balancer/using-proxy-protocol/). In general nginx will require an http or a stream block to activate the proxy protocol. This block can only be set once. So it often makes sense to configure your domain (vhost) via the main nginx config. Because the http block is normally set there.
+There are multiple webservers and ways of configuring the proxy protocol. We also provide a tutorial on how to do this with the nginx ingress controller here [Setup and nginx ingress controller with the proxy protocol](../27.setup-an-nginx-ingress-controller-with-the-proxy-protocol/default.en.md). This tutorial will show you how to configure the proxy protocol with nginx. For further information please refer to [Accepting the proxy protocol](https://docs.nginx.com/nginx/admin-guide/load-balancer/using-proxy-protocol/). In general nginx will require an http or a stream block to activate the proxy protocol. This block can only be set once. So it often makes sense to configure your domain (vhost) via the main nginx config. Because the http block is normally set there. This is a minimal example on how to accomplish this
 
 ``` bash
+http {
+    server {
+        listen 8080 proxy_protocol;
+
+        root /usr/share/nginx/html;
+        try_files /index.html =404;
+
+        proxy_set_header X-Real-IP              $remote_addr;
+
+        # Pass the original X-Forwarded-For
+        proxy_set_header X-Original-Forwarded-For $http_x_forwarded_for;
+
+        # mitigate HTTPoxy Vulnerability
+        # https://www.nginx.com/blog/mitigating-the-httpoxy-vulnerability-with-nginx/
+        proxy_set_header Proxy                  "";
+        }
+}
 ```
 
-## Upload to SysEleven Stack via CLI
+## Configuring other webservers
 
-Alternatively to the upload via GUI, you can upload a new image to the SysEleven Stack via CLI. You need to have the `python-openstackclient` installed, which includes the CLI tool `glance`. You can simply upload it to the cloud with the following command:
+It is also possible to configure other webserver to use the proxy protocol
+
+If you would like to use the apache webserver you may use the apache module remoteip. Instructions on how to configure the remote ip module can be found here:
+
+[apache module remote ip](https://httpd.apache.org/docs/2.4/mod/mod_remoteip.html)
+
+## Configuring you kubernetes service endpoint for the proxy protocol
+
+The openstack load balancer octavia can be configured via kubernetes annotations. To configure a service endpoint to use the proxy protocol you may use the following yaml
 
 ``` bash
-glance image-create \
-  --name <imageName> \
-  --container-format bare \
-  --disk-format qcow2 \
-  --file <path/to/image>
+apiVersion: v1
+kind: Service
+metadata:
+  annotations
+:
+    loadbalancer.openstack.org/proxy-protocol: "true"
+  name: webapp-svc
+  labels:
+    app: webapp-svc
+spec:
+  ports:
+  - port: 80
+    targetPort: 8080
+  selector:
+    app: webapp
+  type: LoadBalancer
 ```
 
-## Choose in cluster creation
+## Further information
 
-In the [cluster creation process](../02.create-a-cluster/default.en.md) you will be asked which image and operating system you want to use. Choose the correct OS and enter the name you chose for your image before. The cluster will then be created with your custom image:
+[Exposing applications using services of LoadBalancer type](https://github.com/kubernetes/cloud-provider-openstack/blob/master/docs/expose-applications-using-loadbalancer-type-service.md#exposing-applications-using-services-of-loadbalancer-type)
