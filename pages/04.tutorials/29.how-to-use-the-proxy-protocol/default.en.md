@@ -9,22 +9,18 @@ taxonomy:
         - octavia
         - proxy protocol
         - client ip
-menu: 'How to use the proxy protocol'
 ---
 
-To use a custom image for your MetaKube clusters, you need to upload an image of a [supported operating system](../../02.documentation/04.supported-operating-systems/default.en.md) to SysEleven Stack and choose it in the worker node creation afterwards.
+## What is the Proxy Protocol?
 
-## Upload to SysEleven Stack
+The proxy protocol is an industry standard to pass client connection information through a load balancer on to the destination server. Activating the proxy protocol allows you to see the original client ip address in your application logs.
 
-Log into the [SysEleven Stack dashboard](https://dashboard.cloud.syseleven.net/) and navigate to `Project -> Compute -> Images`. In the top right corner you can find the `Create Image` button to upload a new image:
+## Configuring nginx to use the proxy protocol
 
-![Overview of the images tab](image_images-overview.png)
+There are multiple webservers and ways of configuring the proxy protocol. We also provide a tutorial on how to do this with the nginx ingress controller here [Setup and nginx ingress controller with the proxy protocol](../27.setup-an-nginx-ingress-controller-with-the-proxy-protocol/default.en.md). This tutorial will show you how to configure the proxy protocol with nginx. For further information please refer to [Accepting the proxy protocol](https://docs.nginx.com/nginx/admin-guide/load-balancer/using-proxy-protocol/). In general nginx will require an http or a stream block to activate the proxy protocol. This block can only be set once. So it often makes sense to configure your domain (vhost) via the main nginx config. Because the http block is normally set there.
 
-When you click on this button, the image creation dialog will open. Enter a name, choose the image file and format and click on `Create Image`:
-
-![Image creation tab with filled out information](image_images-creation.png)
-
-When the upload is finished, the image will be visible in your images Tab.
+``` bash
+```
 
 ## Upload to SysEleven Stack via CLI
 
@@ -41,5 +37,3 @@ glance image-create \
 ## Choose in cluster creation
 
 In the [cluster creation process](../02.create-a-cluster/default.en.md) you will be asked which image and operating system you want to use. Choose the correct OS and enter the name you chose for your image before. The cluster will then be created with your custom image:
-
-![Cluster creation tab with custom image chosen](image_cluster-creation.png)
