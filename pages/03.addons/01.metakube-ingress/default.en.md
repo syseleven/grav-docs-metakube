@@ -10,7 +10,7 @@ taxonomy:
         - addon
 ---
 
-With the NGINX Kubernetes Ingress controller, you get basic load balancing and SSL/TLS termination for all Kubernetes Ingress resources.
+With the NGINX Kubernetes Ingress controller, you get basic load balancing and SSL/TLS termination for all Kubernetes Ingress resources. **Important**: this Add-On is only compatible with Kubernetes versions <=1.18.0.
 
 You can find more information on ingresses and the nginx ingress controller and all of it's configuration options at:
 
