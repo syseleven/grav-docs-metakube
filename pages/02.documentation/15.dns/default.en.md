@@ -39,7 +39,7 @@ data:
     }
 kind: ConfigMap
 metadata:
-  name: dns-extra-configs
+  name: coredns-extra-configs
   namespace: kube-system
 EOF
 ```
