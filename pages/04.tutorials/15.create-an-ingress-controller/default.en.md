@@ -47,7 +47,7 @@ kubectl apply -f https://raw.githubusercontent.com/jetstack/cert-manager/release
 
 kubectl create namespace cert-manager
 
-kubectl label namespace cert-manager certmanager.k8s.io/disable-validation=true
+kubectl label namespace cert-manager cert-manager.io/disable-validation=true
 
 helm repo add jetstack https://charts.jetstack.io
 
@@ -64,7 +64,7 @@ After installing the cert-manager you have to configure how it shall fetch certi
 
 ```bash
 cat <<'EOF' | kubectl apply -f -
-apiVersion: certmanager.k8s.io/v1alpha1
+apiVersion: cert-manager.io/v1alpha3
 kind: ClusterIssuer
 metadata:
   name: letsencrypt-prod
@@ -77,8 +77,6 @@ spec:
     # Name of a secret used to store the ACME account private key
     privateKeySecretRef:
       name: letsencrypt-prod
-    # Enable HTTP01 validations
-    http01: {}
 EOF
 ```
 
@@ -86,7 +84,7 @@ If you want to use DNS validation, please use the ClusterIssuer accordingly:
 
 ```bash
 cat <<'EOF' | kubectl apply -f -
-apiVersion: certmanager.k8s.io/v1alpha1
+apiVersion: cert-manager.io/v1alpha3
 kind: ClusterIssuer
 metadata:
   name: letsencrypt-prod
