@@ -83,7 +83,7 @@ kind: Ingress
 metadata:
   name: nginx-hello
   annotations:
-    certmanager.k8s.io/cluster-issuer: letsencrypt-prod
+    cert-manager.io/cluster-issuer: letsencrypt-prod
 spec:
   tls:
   - hosts:

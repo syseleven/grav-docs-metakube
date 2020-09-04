@@ -81,7 +81,7 @@ apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   annotations:
-    certmanager.k8s.io/cluster-issuer: designate-clusterissuer-prod
+    cert-manager.io/cluster-issuer: designate-clusterissuer-prod
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/auth-url: "https://$host/oauth2/auth"
     nginx.ingress.kubernetes.io/auth-signin: "https://$host/oauth2/start?rd=$escaped_request_uri"
@@ -112,7 +112,7 @@ metadata:
   name: oauth2-proxy
   namespace: MYNAMESPACE
   annotations:
-    certmanager.k8s.io/cluster-issuer: designate-clusterissuer-prod
+    cert-manager.io/cluster-issuer: designate-clusterissuer-prod
     kubernetes.io/ingress.class: nginx
 spec:
   rules:
