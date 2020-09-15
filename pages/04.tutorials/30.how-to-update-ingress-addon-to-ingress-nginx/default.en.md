@@ -19,7 +19,7 @@ The development of the chart will be closer to the development of the ingress co
 
 ## Why do you need manual intervetion?
 
-Manual intervention is needed because changing the helm repository from `stable/nginx-ingress` to `ingress-nginx/ingress-nginx` will override existing componenents on the helm chart by new ones, especially the load balancer service used by the controller. This will cause the ExternalIP of the load balancer to change, then probably you'll need to change your DNS entries.
+Manual intervention is needed because changing the helm repository from `stable/nginx-ingress` to `ingress-nginx/ingress-nginx` will override existing components on the helm chart by new ones, especially the load balancer service used by the controller. This will cause the ExternalIP of the load balancer to change, then probably you'll need to change your DNS entries.
 
 We delivered an interface to make the changes needed easier using our dashboard.
 
