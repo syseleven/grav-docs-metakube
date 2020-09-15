@@ -13,7 +13,7 @@ taxonomy:
 
 ## Why the new `ingress-nginx` helm chart repository?
 
-In an effort to move out of a central repository for heml charts, the nginx ingress controller developers moved out of the `stable` central repository and deprecated this repository in favor of `ingress-nginx`.
+As of August 2020, in an effort to move out of a central repository for heml charts, the nginx ingress controller developers moved out of the ["stable" central repository](https://github.com/helm/charts/tree/master/stable/nginx-ingress) and deprecated this repository in favour of [`ingress-nginx`](https://github.com/helm/charts/tree/master/stable/nginx-ingress).
 
 The development of the chart will be closer to the development of the ingress controller code, delivering more agility on updats of importante features.
 
@@ -26,7 +26,7 @@ We delivered an interface to make the changes needed easier using our dashboard.
 ## Step by step process
 
 
-### Change the **Helm Chart Repository** on the addon ingress options
+### Change the Helm Chart Repository on the addon ingress options
 
 Click on the _Add-Ons_ tab of your cluster dashboard. Then click on _nginx Ingress Controller_ card.
 Change the option for _Helm Chart Repository_ to _`https://kubernetes.github.io/ingress-nginx (ingress-nginx)`_ as show in the screenshot below.
