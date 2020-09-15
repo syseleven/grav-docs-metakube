@@ -13,7 +13,7 @@ taxonomy:
 
 ## Why the new `ingress-nginx` helm chart repository?
 
-In an effort to move out of a central repository for heml charts, the nginx ingress controller developers moved out of the `stable` repository and deprecated this repository in favor of `ingress-nginx`.
+In an effort to move out of a central repository for heml charts, the nginx ingress controller developers moved out of the `stable` central repository and deprecated this repository in favor of `ingress-nginx`.
 
 The development of the chart will be closer to the development of the ingress controller code, delivering more agility on updats of importante features.
 
