@@ -1,7 +1,7 @@
 ---
-title: 'How to use the proxy protocol'
+title: 'How to update the ingress addon helm chart repository'
 published: true
-date: '27-08-2020 14:26'
+date: '22-09-2020 13:22'
 taxonomy:
     tag:
         - metakube
