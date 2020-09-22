@@ -28,7 +28,7 @@ We provide an interface to make the required changes easier using our dashboard.
 
 ### Change the Helm Chart Repository on the addon ingress options
 
-Click on the _Add-Ons_ tab of your cluster dashboard. Then click on _nginx Ingress Controller_ card.
+Click on the _Add-Ons_ tab of your cluster dashboard. Then click on the _nginx Ingress Controller_ card.
 Change the option for _Helm Chart Repository_ to _`https://kubernetes.github.io/ingress-nginx (ingress-nginx)`_ as show in the screenshot below.
 
 ![Update Helm Chart Repository](update-ingress-helm-repo.png)
