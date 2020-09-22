@@ -23,7 +23,8 @@ The easiest way to install it in your cluster is by installing the fully managed
 Alternatively you can install it manually through [Helm](../17.using-helm/default.en.md). When Helm is ready to be used, run:
 
 ```bash
-helm install stable/nginx-ingress --name nginx-ingress --namespace kube-system  --set "rbac.create=true" --set "controller.replicaCount=2" --set "defaultBackend.replicaCount=2"
+helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+helm install ingress-nginx/ingress-nginx --name nginx-ingress --namespace kube-system  --set "rbac.create=true" --set "controller.replicaCount=2" --set "defaultBackend.replicaCount=2"
 ```
 
 to install the NGINX Ingress Controller in the cluster. This will automatically create a [Type Load Balancer service](../13.create-a-load-balancer/default.en.md) for you.

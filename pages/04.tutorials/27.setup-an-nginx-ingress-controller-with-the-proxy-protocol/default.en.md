@@ -84,8 +84,11 @@ This will deploy three replicas of the nginx ingress controller with autoscaling
 # Create a namespace to deploy the nginx ingress controller into
 kubectl create namespace nginx-ingress
 
+# Add the ingress contrller helm repository if it is not added.
+helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+
 # Deploy the nginx ingress controller
-helm upgrade --install -f values.yaml --namespace nginx-ingress nginx-ingress stable/nginx-ingress
+helm upgrade --install -f values.yaml --namespace nginx-ingress nginx-ingress ingress-nginx/ingress-nginx
 ```
 
 ## Additional configuration options. Preserve the Load balancers external IP address (floating IP)
