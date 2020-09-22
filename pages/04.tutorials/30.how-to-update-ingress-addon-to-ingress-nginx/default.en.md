@@ -23,6 +23,10 @@ Manual intervention is needed because changing the helm repository from `stable/
 
 We provide an interface to make the required changes easier using our dashboard.
 
+> There will be a short downtime during the update of helm chart repositories for the NGINX Ingress addon.
+  You should do this update in an approppriate and pre-planned time.
+
+
 ## Step by step process
 
 
