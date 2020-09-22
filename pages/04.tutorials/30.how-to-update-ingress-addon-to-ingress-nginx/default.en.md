@@ -15,7 +15,7 @@ taxonomy:
 
 As of August 2020, in an effort to move out of a central repository for helm charts, the nginx ingress controller developers moved out of the ["stable" central repository](https://github.com/helm/charts/tree/master/stable/nginx-ingress) and deprecated this repository in favor of [`ingress-nginx`](https://github.com/helm/charts/tree/master/stable/nginx-ingress).
 
-The development of the chart will be closer to the development of the ingress controller code, delivering more agility on updats of important features.
+The development of the chart will be closer to the development of the ingress controller code, delivering more agility on updates of important features.
 
 ## Why do you need manual intervetion?
 
@@ -50,3 +50,7 @@ Wait for the load-balancer 'syseleven-ingress-ingress-nginx-controller' to updat
 
 You'll have to change your DNS entries to the new ExternalIP on the new service created by the helm chart update.
 If you have external DNS installed, this step is not needed since the external-dns addon will take car of updating the DNS entries accordingly.
+
+
+---
+Please don't hesitate to reach out to our support if you have any questions or encounter any problems.
