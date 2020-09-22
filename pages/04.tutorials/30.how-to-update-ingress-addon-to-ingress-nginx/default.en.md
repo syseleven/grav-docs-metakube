@@ -47,3 +47,6 @@ Wait for the load-balancer 'syseleven-ingress-ingress-nginx-controller' to updat
 
 
 ### Change your DNS entries to point to the ExternalIP of the new Load Balancer
+
+You'll have to change your DNS entries to the new ExternalIP on the new service created by the helm chart update.
+If you have external DNS installed, this step is not needed since the external-dns addon will take car of updating the DNS entries accordingly.
