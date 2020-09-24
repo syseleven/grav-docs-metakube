@@ -7,7 +7,37 @@ taxonomy:
 page-toc:
     active: false
 ---
+
+### September 2020
+
+#### 2020-09-18
+
+* Remove datacenters without valid VM types on Azure.
+
+#### 2020-09-09
+
+* Update velero on backups addon to 1.4.0
+* Provide octavia load balancer for cluster in version 1.18.
+
+#### 2020-09-03
+
+* Update cert-manager addon to 0.15.2.
+
+### August 2020
+
+#### 2020-08-11
+
+* Provide autoscaling and antiaffinity policies for [CoreDNS](https://coredns.io/). 
+
 ### July 2020
+
+#### 2020-07-30
+
+* New Add-on [RabbitMQ](../../03.addons/13.metakube-rabbitmq/default.en.md) added.
+
+#### 2020-07-20
+
+* Kubernetes versions 1.16 and 1.17 updated to 1.16.13 and 1.17.9.
 
 #### 2020-07-14
 
