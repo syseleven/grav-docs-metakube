@@ -21,10 +21,12 @@ MetaKube adds the following additional labels:
 
   This label contains the id of the machine object that manages the node. See [Cluster API](../12.cluster-api/default.en.md) for details.
 
-- **machine-controller/host-id**
+- **machine-controller/physical-host-id**
 
   This label contains the id of the physical server where the node is running on. This is particularly
   useful in scenarios where you might want to spread pod replicas across different physical servers, using pod anti-affinity rules to increase availability of your application.
+
+  Previously used label `machine-controller/host-id` is deprecated and is going to be permanently deleted.
 
 - **system/cluster**
 
