@@ -63,7 +63,7 @@ metadata:
   labels:
     app: resize-storage
 spec:
-  storageClassName: sys11-quobyte
+  storageClassName: kubermatic-fast
   accessModes:
     - ReadWriteOnce
   resources:
