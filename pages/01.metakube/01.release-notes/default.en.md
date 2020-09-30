@@ -27,7 +27,7 @@ page-toc:
 
 #### 2020-08-11
 
-* Provide autoscaling and antiaffinity policies for [CoreDNS](https://coredns.io/).
+* Provide autoscaling and pod-anti-affinity policies for [CoreDNS](https://coredns.io/).
 
 ### July 2020
 
