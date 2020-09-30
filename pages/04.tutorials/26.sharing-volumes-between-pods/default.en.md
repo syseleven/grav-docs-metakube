@@ -13,7 +13,7 @@ taxonomy:
 ## Overview
 
 This document describes how to setup a demo deployment with a [persistent volume](https://kubernetes.io/docs/concepts/storage/persistent-volumes/). Normally, when using a ReadWriteOnce Volume, you cannot mount this volume onto another pod.
-This is normally only possible with RWX (ReadWriteMany), which is currently not supported by MetaKube. For some use cases the following can be a valuable workaround to achive similar results.
+This is normally only possible with [RWX (ReadWriteMany)](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes), which is currently not supported by MetaKube. For some use cases the following can be a valuable workaround to achieve similar results.
 
 When you spawn a pod, other pods on the same compute node may mount this volume too. This can be achieved by using [Kubernetes Pod Affinities](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity). In this example we are going to use this method to spawn a deployment with a volume and we will spawn multiple cronjob pods that can access this volume.
 
