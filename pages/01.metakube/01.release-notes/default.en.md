@@ -16,7 +16,7 @@ page-toc:
 
 #### 2020-09-09
 
-* Update velero on backups addon to 1.4.0
+* Update [velero](https://velero.io/) (backups) addon to [1.4.0](https://github.com/vmware-tanzu/velero/releases/tag/v1.4.0).
 * Provide octavia load balancer for cluster in version 1.18.
 
 #### 2020-09-03
