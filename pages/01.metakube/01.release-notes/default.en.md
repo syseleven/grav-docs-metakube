@@ -33,7 +33,7 @@ page-toc:
 
 #### 2020-07-30
 
-* New Add-on [RabbitMQ](../../03.addons/13.metakube-rabbitmq/default.en.md) added.
+* New Add-on [RabbitMQ](../../03.addons/13.metakube-rabbitmq/default.en.md) has been added to provide a popular message broker.
 
 #### 2020-07-20
 
