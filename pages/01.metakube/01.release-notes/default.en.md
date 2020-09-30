@@ -21,7 +21,7 @@ page-toc:
 
 #### 2020-09-03
 
-* Update cert-manager addon to 0.15.2.
+* Update [cert-manager](https://cert-manager.io/) addon to [0.15.2](https://cert-manager.io/docs/release-notes/release-notes-0.15/).
 
 ### August 2020
 
