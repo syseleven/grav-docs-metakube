@@ -37,7 +37,7 @@ page-toc:
 
 #### 2020-07-20
 
-* Kubernetes versions 1.16 and 1.17 updated to 1.16.13 and 1.17.9.
+* Kubernetes versions 1.16.10 and 1.17.6 got updated to [1.16.13](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.16.md#changelog-since-v11612) and [1.17.9](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.17.md#changelog-since-v1178).
 
 #### 2020-07-14
 
