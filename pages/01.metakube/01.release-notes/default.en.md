@@ -10,6 +10,10 @@ page-toc:
 
 ### September 2020
 
+#### 2020-09-30
+
+* On OpenStack every Node now gets an additional label `machine-controller/physical-host-id` that contains the id of the physical server the Node is scheduled. It is meant to replace `machine-controller/host-id`.
+
 #### 2020-09-18
 
 * Remove datacenters without valid VM types on Azure.
