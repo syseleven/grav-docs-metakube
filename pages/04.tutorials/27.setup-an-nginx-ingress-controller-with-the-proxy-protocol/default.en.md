@@ -9,6 +9,9 @@ taxonomy:
         - proxy protocol
 ---
 
+! This tutorial only works with clusters using kubernetes version > 1.17
+! Starting with kubernetes version 1.18 we are using octavia to create loadbalancers which has some new configuration options that the old one doesn't support
+
 ## Overview
 
 You can configure the nginx ingress controller in various ways. To use the Openstack load balancer Octavia with ssl offloading you will need to configure the ingress controller with the proxy protocol. The alternative would be to use the Openstack service barbican to store your ssl certificate. Which is currently not directly supported by Kubernetes.
