@@ -13,7 +13,7 @@ page-toc:
 
 #### 2020-10-15
 
-* New clusters get created with etcd on local-storage.
+* New clusters get created with etcd launcher.
 * Add tolerations to cinder CSI plugin to be able to mount volumes in tainted nodes.
 * Updated seed infrastructure nodes to Ubuntu 20.04 LTS.
 * Add validation for taints when creating and updating node deployments using the Web UI.
