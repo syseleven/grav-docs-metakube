@@ -28,7 +28,7 @@ page-toc:
 #### 2020-09-09
 
 * Update [velero](https://velero.io/) (backups) addon to [1.4.0](https://github.com/vmware-tanzu/velero/releases/tag/v1.4.0).
-* Provide octavia load balancers for clusters in version 1.18.
+* Provide Octavia load balancers for clusters in version 1.18 on Openstack. [See here](https://docs.syseleven.de/syseleven-stack/en/reference/network/lbaas#octavia-lbaas) for more information on Octavia in over Syseleven Stack.
 
 #### 2020-09-03
 
