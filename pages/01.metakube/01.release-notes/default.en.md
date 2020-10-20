@@ -10,6 +10,13 @@ page-toc:
 
 ### September 2020
 
+
+#### 2020-10-15
+
+* New clusters get created with etcd on local-storage.
+* Add tolerations to cinder CSI plugin to be able to mount volumes in tainted nodes.
+* Updated seed infrastructure nodes to Ubuntu 20.04 LTS.
+
 #### 2020-09-30
 
 * On OpenStack every Node now gets an additional label `machine-controller/physical-host-id` that contains the id of the physical server the Node is scheduled. It is meant to replace `machine-controller/host-id`.
