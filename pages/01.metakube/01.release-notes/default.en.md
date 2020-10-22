@@ -18,7 +18,7 @@ page-toc:
 * Updated seed infrastructure nodes to Ubuntu 20.04 LTS.
 * Added validation for taints when creating and updating node deployments using the Web UI.
 * Fixed kubeconfig API endpoint.
-* Fixed issue with kubelet restart.
+* Fixed issue with kubelet restart for new/updated clusters.
 
 #### 2020-09-30
 
