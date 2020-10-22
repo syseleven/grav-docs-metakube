@@ -10,6 +10,16 @@ page-toc:
 
 ### September 2020
 
+
+#### 2020-10-20
+
+* New clusters get created with etcd launcher.
+* Added tolerations to cinder CSI plugin to be able to mount volumes in tainted nodes.
+* Updated seed infrastructure nodes to Ubuntu 20.04 LTS.
+* Added validation for taints when creating and updating node deployments using the Web UI.
+* Fixed kubeconfig API endpoint.
+* Fixed issue with kubelet restart for new/updated clusters.
+
 #### 2020-09-30
 
 * On OpenStack every Node now gets an additional label `machine-controller/physical-host-id` that contains the id of the physical server the Node is scheduled. It is meant to replace `machine-controller/host-id`.
@@ -21,7 +31,7 @@ page-toc:
 #### 2020-09-09
 
 * Update [velero](https://velero.io/) (backups) addon to [1.4.0](https://github.com/vmware-tanzu/velero/releases/tag/v1.4.0).
-* Provide octavia load balancers for clusters in version 1.18.
+* Provide Octavia load balancers for clusters in version 1.18 on Openstack. [See here](https://docs.syseleven.de/syseleven-stack/en/reference/network/lbaas#octavia-lbaas) for more information on Octavia in over Syseleven Stack.
 
 #### 2020-09-03
 
