@@ -14,10 +14,11 @@ page-toc:
 #### 2020-10-20
 
 * New clusters get created with etcd launcher.
-* Add tolerations to cinder CSI plugin to be able to mount volumes in tainted nodes.
+* Added tolerations to cinder CSI plugin to be able to mount volumes in tainted nodes.
 * Updated seed infrastructure nodes to Ubuntu 20.04 LTS.
-* Add validation for taints when creating and updating node deployments using the Web UI.
-* Fix kubeconfig API endpoint.
+* Added validation for taints when creating and updating node deployments using the Web UI.
+* Fixed kubeconfig API endpoint.
+* Fixed issue with kubelet restart.
 
 #### 2020-09-30
 
