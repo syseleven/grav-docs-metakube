@@ -11,7 +11,7 @@ page-toc:
 ### September 2020
 
 
-#### 2020-10-15
+#### 2020-10-20
 
 * New clusters get created with etcd launcher.
 * Add tolerations to cinder CSI plugin to be able to mount volumes in tainted nodes.
