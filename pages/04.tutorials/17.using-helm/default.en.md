@@ -26,7 +26,7 @@ helm ls
 to get a list of all installed charts, which initially is empty. You can find a list of publicly available Helm charts at [Kubeapps Hub](https://hub.kubeapps.com/). To install for example wordpress, just run:
 
 ```bash
-helm install stable/wordpress --namespace default --name my-wordpress
+helm install my-wordpress stable/wordpress --namespace default
 ```
 
 This will deploy WordPress, MariaDB and configure a [LoadBalancer](../13.create-a-load-balancer/default.en.md). It may take a few minutes for the LoadBalancer IP and pods to be available. You can watch the status of the service until an external IP appears with:
@@ -59,7 +59,7 @@ echo Password: $(kubectl get secret --namespace default my-wordpress-wordpress -
 To delete WordPress again, you can run:
 
 ```bash
-helm del --purge my-wordpress
+helm uninstall my-wordpress
 ```
 
 For more information on how to use helm have a look at the [documentation](https://docs.helm.sh/using_helm/).
