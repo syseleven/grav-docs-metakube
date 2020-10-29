@@ -24,7 +24,7 @@ Alternatively you can install it manually through [Helm](../17.using-helm/defaul
 
 ```bash
 helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
-helm install ingress-nginx/ingress-nginx --name nginx-ingress --namespace kube-system  --set "rbac.create=true" --set "controller.replicaCount=2" --set "defaultBackend.replicaCount=2"
+helm install nginx-ingress ingress-nginx/ingress-nginx --namespace nginx-ingress  --set "rbac.create=true" --set "controller.replicaCount=2" --set "defaultBackend.replicaCount=2"
 ```
 
 to install the NGINX Ingress Controller in the cluster. This will automatically create a [Type Load Balancer service](../13.create-a-load-balancer/default.en.md) for you.
@@ -54,7 +54,7 @@ helm repo add jetstack https://charts.jetstack.io
 
 helm repo update
 
-helm install --name cert-manager --namespace cert-manager --version v0.7.0 jetstack/cert-manager
+helm install cert-manager --namespace cert-manager --version v0.7.0 jetstack/cert-manager
 ```
 
 If you want to use the [SysEleven DNS service](https://docs.syseleven.de/syseleven-stack/en/reference/dns) for certificate DNS validation (e.g. required for wildcard certificates) you need to install the [designate webhook](https://github.com/syseleven/designate-certmanager-webhook) in the cluster. Please follow instructions from the provided [README](https://github.com/syseleven/designate-certmanager-webhook/blob/master/README.md).

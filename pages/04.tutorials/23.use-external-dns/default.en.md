@@ -209,7 +209,7 @@ rbac:
 Update your helm repositories
 
 ```shell
-helm repo up
+helm repo update
 ```
 
 Install the external dns helm chart in the external-dns namespace
