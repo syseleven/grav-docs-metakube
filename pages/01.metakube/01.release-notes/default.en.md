@@ -8,8 +8,7 @@ page-toc:
     active: false
 ---
 
-### September 2020
-
+### October 2020
 
 #### 2020-10-20
 
@@ -19,6 +18,8 @@ page-toc:
 * Added validation for taints when creating and updating node deployments using the Web UI.
 * Fixed kubeconfig API endpoint.
 * Fixed issue with kubelet restart for new/updated clusters.
+
+### September 2020
 
 #### 2020-09-30
 
