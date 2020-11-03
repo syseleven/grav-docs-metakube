@@ -19,7 +19,7 @@ For more detailed information about CORS, check out [Mozilla’s great documenta
 You will need:
 
 * A MetaKube Cluster with [ingress-nginx](https://kubernetes.github.io/ingress-nginx/deploy/) installed
-* A SysEleven Object Storage bucket, see [the reference](https://docs.syseleven.de/syseleven-stack/en/reference/object-storage) for details
+* A **public** SysEleven Object Storage bucket (all assets need to be public, too), see [the reference](https://docs.syseleven.de/syseleven-stack/en/reference/object-storage) for details
 * (optional) A deployed application
 
 For this configuration to work, your assets have to be served at one or more distinct paths, e.g. `/assets` or `/img` as all requests to those paths will be served from the S3 bucket.
@@ -82,3 +82,11 @@ and add as many elements to `path` as you need.
 Once you’ve applied both resources, all requests to the specified paths for your hostname will be served from the bucket, all other requests will still go to your application.
 
 Please note that for this to work, the asset paths in the Ingress above must always be the most specific paths. If the Ingress resource of your application has e.g. configuration for the path `/img/backend`, requests to this path will still go to your application.
+
+## Additional notes
+
+To use this in production, you need to consider that this adds the Object Storage bucket as a dependency on the server side. Therefore, faults of the backend should be handled gracefully by tuning timeouts and retry values for the Ingress object.
+
+For assets, allowing them to be cached for a very long time is usually desirable. Consider adding the relevant headers with a `nginx.ingress.kubernetes.io/configuration-snippet` annotation.
+
+As resources are served indirectly from the bucket, this will introduce a small latency overhead.
