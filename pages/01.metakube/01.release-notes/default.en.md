@@ -10,10 +10,12 @@ page-toc:
 
 ### November 2020
 
-### 2020-11-09
+### 2020-11-10
 
 * Provide kubernetes versions 1.18.8, 1.17.11 and 1.15.14
 * Provide ingress addon with PROXY protocol on Octavia for clusters in version 1.18.x.
+* Fix external network used by Octavia on differet datacenters.
+* Finished migration of cluster etcds to local storage nodes.
 
 ### October 2020
 
