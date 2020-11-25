@@ -72,7 +72,7 @@ spec:
 Among others this makes a few interesting scenarios possible:
 
 - Delete and recreate an existing service without loosing the IP. Sometimes this is for example necessary to reinstall/upgrade a helm chart.
-- Move a floating IP to another cluster in the same region. (The nodes of the new cluster need to be created before the old service is deleted, otherwise a node gets the IP assigned.)
+- Move a floating IP to another cluster in the same region (and the same project). (The nodes of the new cluster need to be created before the old service is deleted, otherwise a node gets the IP assigned.)
 - Making sure to always have the same IP because other systems/firewalls depend on it.
 
 !!! If you need even more control of your used IP addresses you can also [bring your own IP space](https://docs.syseleven.de/syseleven-stack/de/reference/network#customer-public-ip-space-bring-your-own-ip), please contact us if you are interested.
