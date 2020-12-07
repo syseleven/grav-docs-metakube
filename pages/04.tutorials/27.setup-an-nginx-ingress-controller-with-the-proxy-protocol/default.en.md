@@ -112,25 +112,12 @@ The example below configures the nginx ingress controller after the first update
     type: LoadBalancer
 ```
 
-## Additional configuration options. Use a custom floating ip network (optional)
-
-The example below configures the nginx ingress controller below to use a custom floating ip network. You will need to add the floating ip network id you have created to the service.
-By default the standard metakube floating ip network will be used and no further configuration is required.
-
-### Additional yaml to add to the nginx ingress controller for a custom floating ip network (optional)
-
-```yaml
-  service:
-    enabled: true
-
-    annotations:
-      loadbalancer.openstack.org/floating-network-id: "*****"
-
-    type: LoadBalancer
-```
-
 ## Documentation with further configuration options
 
 The openstack external cloud provider has a list of all supported service annotations you may use. You can find the documentation here:
 
 [Exposing applications using services of LoadBalancer type](https://github.com/kubernetes/cloud-provider-openstack/blob/master/docs/expose-applications-using-loadbalancer-type-service.md)
+
+For more informations about how to configure a loadbalancer service you can read this tutorial:
+
+[Create a Load Balancer](https://docs.syseleven.de/metakube/en/tutorials/create-a-load-balancer)
