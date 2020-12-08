@@ -76,3 +76,21 @@ Among others this makes a few interesting scenarios possible:
 - Making sure to always have the same IP because other systems/firewalls depend on it.
 
 !!! If you need even more control of your used IP addresses you can also rent a dedicated IP space from us or [bring your own IP space](https://docs.syseleven.de/syseleven-stack/de/reference/network#customer-public-ip-space-bring-your-own-ip), please contact us if you are interested.
+
+## Use a custom floating ip network
+
+The example below configures the service to use a custom floating ip network. You will need to add the floating ip network id you have to the service.
+By default the standard metakube floating ip network will be used and no further configuration is required.
+
+### Additional yaml to add to the service for a custom floating ip network
+
+```yaml
+kind: Service
+apiVersion: v1
+metadata:
+  name: ...
+  annotations:
+    loadbalancer.openstack.org/floating-network-id: "*****"
+spec:
+  ...
+```

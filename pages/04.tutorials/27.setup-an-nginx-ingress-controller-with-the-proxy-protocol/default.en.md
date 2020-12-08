@@ -117,3 +117,7 @@ The example below configures the nginx ingress controller after the first update
 The openstack external cloud provider has a list of all supported service annotations you may use. You can find the documentation here:
 
 [Exposing applications using services of LoadBalancer type](https://github.com/kubernetes/cloud-provider-openstack/blob/master/docs/expose-applications-using-loadbalancer-type-service.md)
+
+For more informations about how to configure a loadbalancer service you can read this tutorial:
+
+[Create a Load Balancer](https://docs.syseleven.de/metakube/en/tutorials/create-a-load-balancer)
