@@ -22,61 +22,28 @@ You can configure the nginx ingress controller in various ways. To use the Opens
 ### values.yaml
 
 ```yaml
-## nginx configuration
-##
+rbac:
+  create: true
+
 controller:
-  name: controller
-  image:
-    registry: eu.gcr.io
-    repository: k8s-artifacts-prod/ingress-nginx/controller
-    tag: "v0.34.1"
-    pullPolicy: IfNotPresent
-    # www-data -> uid 101
-    runAsUser: 101
-    allowPrivilegeEscalation: true
-
-  # Configures the ports the nginx-controller listens on
-  containerPort:
-    http: 80
-    https: 443
-
-  config:
-    use-forwarded-headers: "true"
-    compute-full-forwarded-for: "true"
-    use-proxy-protocol: "true"
-
-  ## Allows customization of the external service
-  ## the ingress will be bound to via DNS
   publishService:
     enabled: true
-
   replicaCount: 3
   minAvailable: 1
-
   autoscaling:
     enabled: false
     minReplicas: 3
     maxReplicas: 6
     targetCPUUtilizationPercentage: 50
     targetMemoryUtilizationPercentage: 50
-
+  # Octavia config
+  config:
+    use-forwarded-headers: "true"
+    compute-full-forwarded-for: "true"
+    use-proxy-protocol: "true"
   service:
-    enabled: true
-
     annotations:
-      loadbalancer.openstack.org/proxy-protocol: true
-
-    enableHttp: true
-    enableHttps: true
-
-    ports:
-      https: 443
-
-    targetPorts:
-      http: http
-      https: https
-
-    type: LoadBalancer
+      loadbalancer.openstack.org/proxy-protocol: "true"
 ```
 
 This will deploy three replicas of the nginx ingress controller with autoscaling enabled. You will recieve an external IP address via the openstack load balancer Octavia. This uses the service type load balancer in Kubernetes. The service will include additional annotations for the proxy protocol. Which will ensure that the original client IP address is inserted into the HTTP header. So that the backend service is able to get the real source IP of the request. Please check the version of the nginx ingress contoller that you are deploying. The version in this example maybe outdated.
@@ -85,13 +52,13 @@ This will deploy three replicas of the nginx ingress controller with autoscaling
 
 ```shell
 # Create a namespace to deploy the nginx ingress controller into
-kubectl create namespace nginx-ingress
+kubectl create namespace ingress-nginx
 
 # Add the ingress contrller helm repository if it is not added.
 helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
 
 # Deploy the nginx ingress controller
-helm upgrade --install -f values.yaml --namespace nginx-ingress nginx-ingress ingress-nginx/ingress-nginx
+helm upgrade --install -f values.yaml --namespace ingress-nginx ingress-nginx ingress-nginx/ingress-nginx --version 3.13.0
 ```
 
 ## Additional configuration options. Preserve the Load balancers external IP address (floating IP)
