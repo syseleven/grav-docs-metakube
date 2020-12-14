@@ -78,11 +78,9 @@ spec:
     # Name of a secret used to store the ACME account private key
     privateKeySecretRef:
       name: letsencrypt-prod
-    # Add a single challenge solver, HTTP01 using nginx
     solvers:
-    - http01:
-        ingress:
-          class: nginx
+    - dns01:
+      {<Your DNS provider details>
 EOF
 ```
 
