@@ -25,7 +25,7 @@ The option can be toggled while creating a new node deployment or when editing a
 
 When this option is enabled multiple configmaps for all supported kubernetes versions will be created in the `kube-system` namespace.
 
-All nodes are watching for changes in the configmap with the same kubernetes version that is running on the node.
+All nodes for the node-deployment are watching for changes in the configmap with the same kubernetes version that is running on the node.
 Please keep this in mind because nodes will be using a different configmap after upgrading to a newer kubernetes minor version (e.g. 1.17 -> 1.18).
 
 Once a change is noticed `systemd` will restart the kubelet so that it can use the new configuration.
