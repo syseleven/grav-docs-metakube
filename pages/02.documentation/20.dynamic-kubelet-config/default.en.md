@@ -31,7 +31,8 @@ Please keep this in mind because nodes will be using a different configmap after
 Once a change is noticed `systemd` will restart the kubelet so that it can use the new configuration.
 
 This is an example configmap to configure the kubelet. It shows how we are configuring the kubelet for kubernetes 1.17 clusters:
-```
+
+```yaml
 apiVersion: v1
 kind: ConfigMap
 metadata:
