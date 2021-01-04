@@ -13,8 +13,8 @@ page-toc:
 #### 2021-01-04
 
 * Provide kubernetes versions 1.18.13, 1.17.15 and 1.16.15
-* Provide dynamic kubelet configuration via a configmap in the MetaKube cluster. Please consult the documentation for additional information.
-* Added a second storage class (sys11-quobyte-multi) to support Read Write Many volumes (RWX). Please consult the documentation for additional information.
+* Provide dynamic kubelet configuration via a configmap in the MetaKube cluster. Please consult the [documentation](../../02.documentation/20.dynamic-kubelet-config/default.en.md) for additional information.
+* Added a second storage class (sys11-quobyte-multi) to support Read Write Many volumes (RWX). Please consult the [documentation](../../04.tutorials/31.use-multi-attach-volumes/default.en.md) for additional information.
 * Updated the external cloud controller to v1.19.2 which adds support for RWX volumes and fixes a few open issues.
 
 ### November 2020
