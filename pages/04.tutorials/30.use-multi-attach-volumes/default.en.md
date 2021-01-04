@@ -52,16 +52,16 @@ spec:
   volumes:
   - name: webapp-pv-tmp
     persistentVolumeClaim:
-    claimName: webapp-pv-tmp
+      claimName: webapp-pv-tmp
   - name: webapp-pv-test
     persistentVolumeClaim:
-    claimName: webapp-pv-test
+      claimName: webapp-pv-test
 ```
 
 In this case the pod metakube-hello is running as the user nginx or the uid/gid 101. This is specified in the Dockerfile. You can check that you are using the correct storage class and access mode. All you need to do is to query your PVC:
 
 ``` bash
- kubectl get pvc
+kubectl get pvc
 NAME             STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS          AGE
 webapp-pv-test   Bound    pvc-aab781b8-05b7-44bc-9fda-048adc25792f   1Gi        RWX            sys11-quobyte-multi   21m
 webapp-pv-tmp    Bound    pvc-88c3625a-34ba-48ea-810a-d972ded0b7fe   1Gi        RWX            sys11-quobyte-multi   21m
