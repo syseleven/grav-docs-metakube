@@ -47,7 +47,7 @@ You can choose between network storage and local storage. While local storage is
 
 ##### Flavor
 
-The flavor defines the sizing of the nodes. We provide an [overview of all flavors](https://docs.syseleven.de/syseleven-stack/en/reference/compute#flavors) on the SysEleven Stack docs.
+The flavor defines the sizing of the nodes. We provide an [overview of all flavors](https://docs.syseleven.de/syseleven-stack/en/reference/compute#flavors) in the SysEleven Stack docs.
 
 ##### Custom disk (only network storage)
 
