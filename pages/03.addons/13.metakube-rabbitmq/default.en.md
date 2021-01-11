@@ -10,7 +10,7 @@ taxonomy:
 
 [RabbitMQ](https://www.rabbitmq.com/) is the most widely deployed open source message broker.
 
-You can find more information at [RabbitMQ documentation page](https://www.rabbitmq.com/documentation.html)
+You can find more information at [RabbitMQ documentation page](https://www.rabbitmq.com/documentation.html).
 
 ## Installation
 
