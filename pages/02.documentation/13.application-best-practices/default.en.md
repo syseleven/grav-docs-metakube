@@ -43,7 +43,7 @@ For more information see [Helm](https://helm.sh).
 
 ### Amount of replicas
 
-For high availability of your application and to enable deployments without downtimes you should have **at least** 2, better more, replicas of every component in your cluster. This includes stateless applications as well as databases, proxies and caching systems. Having only 1 replica will mean that it is very likely to create downtimes for this component, which your application would need to handle.
+For high availability of your application and to enable deployments without downtimes you should have **at least** 2, better more, replicas of every component in your cluster. This includes stateless applications as well as databases, proxies and caching systems. Having only 1 replica will likely cause downtime for that component, which your application would need to handle.
 
 Of course you should also test that your service stays available when you delete and recreate a pod or trigger a deployment.
 
