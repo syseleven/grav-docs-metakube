@@ -18,7 +18,7 @@ When writing your application, you should keep in mind that it will run inside o
 
 ## Deployments
 
-When creating Deployments, DaemonSets, StatefulSets or CronJobs there are certain settings you should take:
+When creating Deployments, DaemonSets, StatefulSets or CronJobs consider the following:
 
 ### Docker Images
 
