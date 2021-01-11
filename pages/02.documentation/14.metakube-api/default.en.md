@@ -35,7 +35,7 @@ This Token can then be used as a `Bearer` token in the `Authentication` header o
 
 ### Example
 
-To get a list of clusters in the project where the API Account was created in, you get call:
+To get a list of clusters in the project where the API Account was created in, call:
 
 ```bash
 curl 'https://metakube.syseleven.de/api/v1/projects/<PROJECT_ID>/clusters' -H 'authorization: Bearer <YOUR_TOKEN>' -H 'accept: application/json'
