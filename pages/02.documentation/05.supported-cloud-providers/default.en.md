@@ -168,7 +168,7 @@ In order to create a cluster, you need to provide the following information:
 * Client ID
 * Client Secret
 * Tenant ID
-* Subscript ID
+* Subscription ID
 
 To get a Client ID, Client Secret and Tenant ID, you have to create an "App registration", in the "Azure Active Directory". For this go to "Azure Active Directory", "App registrations" and create a "New registration". You do not need to provide a Redirect URI. After the creation note download the "Application (client) ID" and "Directory (tenant) ID".
 Then for this "App registration" go to "Certificates & secrets" and create a new "Client secret", this secret should either not expire or you have to update it in your MetaKube cluster before it expires since Kubernetes needs this information continuously to manage volumes, nodes and load balancers.
