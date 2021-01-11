@@ -21,7 +21,7 @@ To get access to a SysEleven Login realm, please contact us at support@syseleven
 
 ## Configure SysEleven Login realm
 
-SysEleven Login allows you to manager users and groups that should have access to SysEleven services as well as your Kubernetes clusters yourself. You can also set up user federation to external identity providers like LDAP, Active Directory or any OpenID Connect provider. For that you are provided with your own realm that only contains your users and settings.
+SysEleven Login allows you to manage users and groups that should have access to SysEleven services as well as your Kubernetes clusters yourself. You can also set up user federation to external identity providers like LDAP, Active Directory or any OpenID Connect provider. For that you are provided with your own realm that only contains your users and settings.
 
 To configure your realm go to the SysEleven Realm Admin Login `https://login.syseleven.de/auth/admin/{REALM-NAME}/console` and log in with the provided admin credentials.
 
