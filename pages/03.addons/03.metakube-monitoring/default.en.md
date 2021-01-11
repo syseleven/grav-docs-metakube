@@ -143,7 +143,7 @@ For additional information on configuring PodMonitors and ServiceMonitors have a
 
 ### Adding alerting rules
 
-You can configure additional alerting rules in Prometheus by creating a `PrometheusRule` resource in the `syseleven-monitoring namespace.
+You can configure additional alerting rules in Prometheus by creating a `PrometheusRule` resource in the `syseleven-monitoring` namespace.
 
 Example:
 
